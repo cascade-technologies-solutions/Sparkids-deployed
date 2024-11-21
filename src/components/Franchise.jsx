@@ -7,4 +7,4 @@ const Franchise = () => {
   );
 };
 
-export default Franchise;
+export default Franchise; 
