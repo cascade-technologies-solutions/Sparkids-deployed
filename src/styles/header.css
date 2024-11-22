@@ -1,0 +1,78 @@
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  padding: 10px 110px;
+  background: linear-gradient(to right, #fff, #fef6f0); 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  border-bottom: 1px solid #e0e0e0; 
+  position: sticky; /* Ensures navbar sticks to the top */
+  top: 0;
+  z-index: 1000; /* Keeps it above other content */
+  font-family: 'Arial', sans-serif;
+  height: 80px; 
+}
+
+/* Logo Section */
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+/* Navigation Menu */
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav li {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4a4a4a;
+  transition: color 0.3s ease;
+}
+
+
+
+.nav li:hover {
+  color: #ff6600; 
+  cursor: pointer;
+}
+
+/* Contact Us Button */
+.contact-us {
+  padding: 0.5rem 1.2rem;
+  border: 2px solid #ff6600;
+  background: none;
+  border-radius: 8px; 
+  color: #ff6600;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  display: inline-flex; 
+  align-items: center; 
+  justify-content: center; 
+  height: 100%;
+}
+
+.contact-us:hover {
+  background: #ff6600;
+  color: #fff;
+}
+
+/* Sticky Bottom Border Shadow */
+.header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(to right, #fff, #e0e0e0);
+}
