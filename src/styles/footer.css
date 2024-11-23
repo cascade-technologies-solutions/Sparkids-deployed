@@ -1,0 +1,115 @@
+/* General Footer Styling */
+.footer {
+    background-color: #f8f8f8;
+    padding: 20px 20px;
+    font-family: "Arial", sans-serif;
+    color: #333;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    align-items: start;
+  }
+
+
+  .address {
+    display: grid;
+    width: 500px;
+    padding: 0.5rem 1.2rem;
+    background: none;
+    font-size: 1rem;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+  }  
+
+  .footer-section h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .footer-section p,
+  .footer-section ul li a {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-section ul li a {
+    text-decoration: none;
+    color: #666;
+  }
+  
+  .footer-section ul li a:hover {
+    color: #ff6600;
+  }
+  
+  .footer-logo {
+    max-width: 80px;
+  }
+  
+  .social-icons a {
+    margin-right: 10px;
+    font-size: 25px;
+    color: #ff6600;
+    display: inline-block;
+    background-color: rgb(235, 235, 235);
+    border-radius: 8px;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    color: #ff6600;
+  }
+  
+  /* Subscribe Section */
+  .subscribe form {
+    margin-top: 10px;
+    padding-right: 100px;
+  }
+  
+  .subscribe input {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: rgb(235, 235, 235);
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .subscribe button {
+    background-color: #ff6600;
+    width: 150px;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscribe button:hover {
+    background-color: #e65c00;
+  }
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+    height: 20px;
+  }
+  
