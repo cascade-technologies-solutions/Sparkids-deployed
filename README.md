@@ -6,6 +6,9 @@ Home page components created
 - footer section completed
 - Opportunity section completed
 - Career section completed
+- sight section completed
+
+# Home Page completed
 
 ## Run live 👇🏻
 [Sparkid](https://AmullyaPatil.github.io/Sparkids)

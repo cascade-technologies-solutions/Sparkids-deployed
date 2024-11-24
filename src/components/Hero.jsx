@@ -1,6 +1,6 @@
 import React from 'react';
-import person from '../Assets/person1.jpg';
-import brain from '../Assets/brain.png';
+import person from '../Assets/home-img/person1.jpg';
+import brain from '../Assets/home-img/brain.png';
 import '../styles/hero.css';
 
 const Hero = () => {

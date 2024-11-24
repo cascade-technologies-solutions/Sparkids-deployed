@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/educator.css';
-import Educators from '../Assets/educators.png';
-import Shape from '../Assets/edushape.png';
+import Educators from '../Assets/home-img/educators.png';
+import Shape from '../Assets/home-img/edushape.png';
 
 const Educator = () => {
   return (

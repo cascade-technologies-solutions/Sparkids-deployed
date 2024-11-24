@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Assets/logo.png"; // Make sure the logo image is available
+import logo from "../Assets/home-img/logo.png"; // Make sure the logo image is available
 import "../styles/header.css";
 
 function Header() {

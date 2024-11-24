@@ -1,7 +1,7 @@
 import React from "react";
-import opport1 from "../Assets/opport1.jpg";
-import opport2 from "../Assets/opport2.jpg";
-import opport3 from "../Assets/opport3.jpg";
+import opport1 from "../Assets/home-img/opport1.jpg";
+import opport2 from "../Assets/home-img/opport2.jpg";
+import opport3 from "../Assets/home-img/opport3.jpg";
 import "../styles/opportunity.css";
 
 const Opportunity = () => {
