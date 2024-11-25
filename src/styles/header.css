@@ -2,16 +2,39 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
   padding: 10px 110px;
   background: linear-gradient(to right, #fff, #fef6f0); 
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  border-bottom: 1px solid #e0e0e0; 
-  position: sticky; /* Ensures navbar sticks to the top */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e0e0e0;
+  position: sticky;
   top: 0;
-  z-index: 1000; /* Keeps it above other content */
+  z-index: 1000;
   font-family: 'Arial', sans-serif;
-  height: 80px; 
+  height: 80px;
+}
+
+.active {
+  font-weight: bold;
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #4a4a4a;
+}
+
+/* Active Link Style */
+.nav a.active {
+  font-weight: bold;
+  color: #ff6600;
+}
+
+/* Hover State */
+.nav a:hover {
+  color: #ff6600;
+  text-decoration: none;
 }
 
 /* Logo Section */
@@ -28,20 +51,22 @@
   margin: 0;
   padding: 0;
   align-items: center;
+  text-decoration: none;
 }
 
 .nav li {
   font-size: 1rem;
   font-weight: 600;
   color: #4a4a4a;
-  transition: color 0.3s ease;
+  text-decoration: none;
 }
 
 
 
 .nav li:hover {
-  color: #ff6600; 
+  color: #ff6600;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /* Contact Us Button */

@@ -1,5 +1,6 @@
 import React from "react";
-import logo from "../Assets/home-img/logo.png"; // Make sure the logo image is available
+import { NavLink } from "react-router-dom";
+import logo from "../Assets/home-img/logo.png";
 import "../styles/header.css";
 
 function Header() {
@@ -10,10 +11,14 @@ function Header() {
       </div>
       <nav className="nav">
         <ul>
-          <li>Home</li>
-          <li>About Us</li>
+          <li>
+            <NavLink to="/home" activeClassName="active">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" activeClassName="active">About Us</NavLink>
+          </li>
           <li>Courses</li>
-          <li>Franchise</li>
+          <li>Opportunity</li>
           <li>Careers</li>
           <li>Insights</li>
           <li>
