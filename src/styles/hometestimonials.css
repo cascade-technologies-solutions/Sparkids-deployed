@@ -1,0 +1,195 @@
+
+
+.home-course {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .home-course-text {
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  .home-course-text h2 {
+    font-size: 20px;
+    font-weight: regular;
+    color: #f58634;
+    margin-bottom: 10px;
+    font-style: geologica;
+  }
+  
+  .home-course-text h3 {
+    font-size: 50px;
+    font-weight: regular;
+    color: #455a64;
+    margin-top: -5px;
+    font-style: Lilita One;;
+  }
+  
+  .home-course-text p {
+    font-size: 1rem;
+    max-width: 800px;
+    color: #455a64;
+    margin: 10px auto;
+    margin-top: -35px;
+  }
+  
+.carousel-container {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .carousel {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    height: 300px;
+    width: 1200px;
+  }
+  
+  .testimonialcard {
+    width: 339px;
+    height: 150px;
+    background: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: center;
+    border: 2px solid hsl(0deg 12.48% 95.32%);
+}
+  .testimonialcard-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    padding: 10px 0;
+  }
+
+  .testimonialcard-content .quote-icon {
+    font-size: 24px;
+    color: orange;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .author-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: -20px;
+  }
+  
+  .author-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .rating {
+    color: orange;
+    margin-top: 4px;
+    font-size: 14px;
+    margin-top: -22px; 
+}
+  
+.testimonialcard p {
+    margin-bottom: 6px; 
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  
+.top-image {
+    position: absolute;
+    top: 1px;
+    right: 15px;
+    width: 80px;
+    height: 20px;
+    z-index: 5;
+}
+
+.top-image img {
+    width: 44px;
+    height: 32px;
+    margin-top: 10px;
+}  
+  .arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #f58634;
+    border: 2px solid #f58634;
+    width: 40px; 
+    height: 40px; 
+    border-radius: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    opacity: 1;
+    color: #f9f9f9;
+  }
+  
+  .arrow-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  
+  .arrow-button:hover {
+    background:#f58634;
+    color: white;
+  }
+  
+  .left-arrow {
+    left: -110px;
+  }
+  
+  .right-arrow {
+    right: -110px;
+  }
+  
+  .dots {
+    display: flex;
+    gap: 8px;
+    margin-top: -30px;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    background: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .dot.active {
+    background: orange;
+  }
+  
+  .arrow-button.highlighted {
+    background-color: orange;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-container {
+      width: 100%;
+    }
+    .card {
+      width: 45%; 
+    }
+  }
+  

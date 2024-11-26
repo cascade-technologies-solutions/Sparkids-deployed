@@ -8,7 +8,7 @@ const Opportunity = () => {
   return (
     <section className="opportunity-section">
       {/* Text Content */}
-      <div className="text-container">
+      <div className="opportunity-text-container">
         <h3>Franchise Opportunities</h3>
         <h1>Franchise With Brave</h1>
         <p>
@@ -19,16 +19,16 @@ const Opportunity = () => {
           At Brave Sparkids Academy, we <br/>believe in the power of hands <br/>on
           learning.</b>
         </p>
-        <a href="#!" className="cta-button">
+        <a href="#!" className="opportunity-cta-button">
           Know More
         </a>
       </div>
 
       {/* Image Content */}
-      <div className="image-container">
+      <div className="opportunity-image-container">
         {/* Top Image with Overlay */}
-        <div className="top-image">
-          <div className="info-card">
+        <div className="opportunity-top-image">
+          <div className="opportunity-info-card">
             <h4>Revolutionize Education</h4>
             <p>
               Educational Programs are carefully crafted to stimulate
@@ -38,13 +38,13 @@ const Opportunity = () => {
         </div>
 
         {/* Middle Images */}
-        <div className="middle-images">
+        <div className="opportunity-middle-images">
           <img src={opport2} alt="Middle educational opportunity" />
-          <div className="middle2"><img src={opport1} alt="Another educational opportunity" />
+          <div className="opportunity-middle2"><img src={opport1} alt="Another educational opportunity" />
         </div></div>
 
         {/* Bottom Image */}
-        <div className="bottom-image">
+        <div className="opportunity-bottom-image">
           <img src={opport3} alt="Hands-on learning" />
         </div>
       </div>

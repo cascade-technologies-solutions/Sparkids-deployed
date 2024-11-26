@@ -1,0 +1,139 @@
+/* General Container */
+.course-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #fef6f1;
+}
+
+/* Card Styles */
+.course-card {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Course Image */
+.course-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Course Content */
+.course-content {
+  padding: 15px;
+}
+
+.course-title {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0;
+  font-weight: bold;
+}
+
+.course-rating {
+  font-size: 1rem;
+  color: #f58634;
+  margin: 5px 0;
+}
+
+.course-description {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.course-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #777;
+  gap: 5px;
+}
+
+/* Button */
+.learn-more-btn {
+  display: inline-block;
+  background-color: #f58634;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.learn-more-btn:hover {
+  background-color: #d4722c;
+}
+.courses {
+  text-align: center;
+  padding: 2rem;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.course-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.course-card:hover {
+  transform: scale(1.05);
+}
+
+.course-image {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.course-info {
+  margin: 1rem 0;
+  color: #333;
+}
+
+.learn-more {
+  background: #f57c00;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.learn-more:hover {
+  background: #e64a19;
+}
