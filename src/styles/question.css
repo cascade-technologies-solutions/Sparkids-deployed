@@ -1,0 +1,126 @@
+/* Main Section */
+.question-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Adjust height as needed */
+    max-width: 100%; /* Ensure responsiveness */
+    margin: 50px auto;
+    overflow: hidden;
+  }
+  
+  /* Background Image */
+  .question-bg {
+    position: absolute;
+    width: 1152px;
+    height: 331px;
+    z-index: 0; /* Keep the background behind the content */
+  }
+  
+  /* Overlay Content */
+  .content {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the background */
+    text-align: center;
+    color: white;
+  }
+  
+  .bg-overlay {
+    width: 661px;
+    height: 110px;
+    margin-bottom: 100px;
+  }
+  
+  .heading {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff6600;
+  }
+  
+  .subheading {
+    font-size: 1.1rem;
+  }
+  
+  .contact-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .phone-input {
+    border: none;
+    border-radius: 10px 0 0 10px;
+    width: 367px;
+    height: 58px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    background-color: #444;
+  }
+  
+  .contact-button {
+    background-color: #ff6600;
+    color: white;
+    width: 142px;
+    height: 60px;
+    border-radius: 0 10px 10px 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .contact-button:hover {
+    background-color: #e5803b;
+  }
+  
+  /* Decorative Images */
+  .decorative-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interaction with these images */
+    z-index: 1;
+  }
+  
+  .decorative-image {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+  }
+  
+  .decorative-images img:nth-child(1) {
+    top: -20px;
+    left: -150px;
+  }
+  
+  .decorative-images img:nth-child(2) {
+    top: -30px;
+    right: -120px;
+  }
+  
+  .decorative-images img:nth-child(3) {
+    bottom: -20px;
+    left: -80px;
+  }
+  
+  .decorative-images img:nth-child(4) {
+    bottom: -10px;
+    right: -140px;
+  }
+  
+  .decorative-images img:nth-child(5) {
+    bottom: 65px;
+    right: -20px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .decorative-images img:nth-child(6) {
+    bottom: 95px;
+    left: 10px;
+  }
