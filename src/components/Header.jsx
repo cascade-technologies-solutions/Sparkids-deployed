@@ -17,12 +17,12 @@ function Header() {
           <li>
             <NavLink to="/about" activeClassName="active">About Us</NavLink>
           </li>
-          <li><
-            NavLink to="/courses" activeClassName="active">Courses</NavLink>
+          <li>
+            <NavLink to="/courses" activeClassName="active">Courses</NavLink>
           </li>
-          <li>Franchise</li>
-          <li>Careers</li>
-          <li>Insights</li>
+          <li><NavLink to="/franchise" activeClassName="active">Franchise</NavLink></li>
+          <li><NavLink to="/careers" activeClassName="active">Careers</NavLink></li>
+          <li><NavLink to="/insight" activeClassName="active">Insights</NavLink></li>
           <li>
             <button className="contact-us">Contact Us</button>
           </li>

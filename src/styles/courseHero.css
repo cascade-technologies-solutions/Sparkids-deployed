@@ -1,0 +1,86 @@
+.coursehero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 10px;
+    /* background: linear-gradient(to right, #fff, #ffe6cc); */
+    background: linear-gradient(to right, #fff, #fff6eb); 
+  }
+  
+  .coursehero-content {
+    flex: 1;
+    max-width: 50%;
+    margin-left: 80px;
+  }
+  
+  /* Move pagename to the top with reduced margin */
+  .coursehero-pagename {
+    font-size: 24px;
+    color: #888;
+    margin-top: 0; /* Remove any unnecessary space above */
+    margin-bottom: 8px; /* Slight gap to the next element */
+    position: relative;
+    top: -84px; /* Adjust the vertical positioning */
+  }
+  
+  .coursehero-pagename span {
+    color: #ff6600;
+  }
+  
+  .coursehero-headline1{
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    font-family: "Lilita One";
+    margin: 0 0 -155px 0; /* Reduced margin-bottom for closer spacing */
+  }
+  
+  .coursehero-headline2 span {
+    color: #ff6600;
+    font-size: 66px;
+    font-size: 80px;
+    margin-bottom: 10px;
+  }
+  
+  .coursehero-headline2  {
+    color: #333;
+    font-size: 66px;
+    font-size: 80px;
+  }
+  
+  .coursehero-subheadline {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: "geologica";
+    color: #555;
+    margin: 8px 0; /* Reduced margin for closer spacing */
+  }
+  
+  .coursehero-description {
+    font-size: 22px;
+    color: #666;
+    font-style: "geologica";
+    font-weight: 100;
+    line-height: 1.4; /* Slightly reduced line spacing */
+    margin-top: 8px; /* Close spacing from the subheadline */
+  }
+  
+  .coursehero-image {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    margin-right: 120px;
+  }
+  
+  .coursehero-image img {
+    /* max-width: 100%; */
+    /* border-radius: 68px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); */
+    height: 662px;
+    width:702px;
+    margin-right: 30px;
+  }
+  
