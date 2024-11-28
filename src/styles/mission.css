@@ -3,15 +3,16 @@
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 0 20px;
+  padding: 0 0px;
   align-items: center;
-  height: 600px;
+  width:1498px;
+  height: 100vh;
   margin-top: 200px;
 }
 
 .mission-wrapper img {
-  width: 1441px;
-  height: 536px;
+  width: 1545px;
+  height: 573px;
   object-fit: cover;
 }
 
@@ -83,12 +84,12 @@
 /* Image Section (Small Image) */
 .image-section {
   position: absolute;
-  bottom: 28px; /* Adjust position from the bottom */
+  bottom: 75px; /* Adjust position from the bottom */
   right: 100px; /* Align on the right side */
   z-index: 2; /* Above the central image */
 }
 
 .image-section img {
-  width: 606px; /* Small image size */
-  height: 736px;
+  width: 656px; /* Small image size */
+  height: 786px;
 }

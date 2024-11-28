@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/mission.css'; // Updated CSS path
-import centralImage from '../Assets/about-img/missionbg.png'; // Main background image
+import centralImage from '../Assets/about-img/missionbg.png'; 
 import smallImage from '../Assets/about-img/mission.png'; // Smaller overlapping image
 import missionicon from '../Assets/about-img/missionicon.png'; // Icon for training
 import missionicon2 from '../Assets/about-img/missionicon2.png'; // Icon for partnerships
