@@ -16,6 +16,7 @@ Home page components created
 
 # Franchise Page
 - hero , Investment section completed
+- application section
 
 ## Run live 👇🏻
 [Sparkid](https://AmullyaPatil.github.io/Sparkids)

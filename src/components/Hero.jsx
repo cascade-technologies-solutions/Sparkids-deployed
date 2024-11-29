@@ -17,7 +17,7 @@ const Hero = () => {
         </p>
         <div className="hero-buttons">
           <button className="explore-btn">Explore Courses</button>
-          <button className="franchise-btn glow">Get Franchise</button>
+          <button className="opportunity-btn glow">Get opportunity</button>
         </div>
         <div className="hero-stats">
           <div className="stats-images">
@@ -29,9 +29,9 @@ const Hero = () => {
             <h1>9000+ Students <br/><span className="highlight"> have started their studies </span> </h1>
           </p>
         </div>
-        <p className="franchise-note">
+        <p className="opportunity-note">
           <h1>
-            More than <span className="highlight">50+</span> Franchises <br/> partner with us
+            More than <span className="highlight">50+</span> opportunitys <br/> partner with us
           </h1>
         </p>
       </div>

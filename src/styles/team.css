@@ -1,0 +1,97 @@
+.team-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+  background: linear-gradient(to right, #fff, #fff6eb);  
+
+}
+
+.team-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+  gap: 30px; /* space between cards */
+  justify-items: center;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  background: #fff;
+  border-radius: 17px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* padding: 20px; */
+  width: 564px;
+  height: 213px; 
+  transition: transform 0.2s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+}
+
+.team-card-image {
+  flex: 1;
+  max-width: 150px;
+}
+
+.team-image {
+  width: 228.75px;
+  height: 213.73px;
+  /* border-radius: 50%; */
+  object-fit: cover;
+  border-radius: 17px;
+}
+
+.team-card-details {
+  flex: 2;
+  text-align: left;
+  padding-left: 96px;
+}
+
+.team-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: -17px;
+  color: #333;
+}
+
+.team-position {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.team-social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.team-social-icon {
+  /* width: 24px;
+  height: 24px; */
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.team-social-icons img{
+  width: 24px;
+  height: 24px;
+}
+
+.team-social-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Ensure that on smaller screens it still displays two per row */
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+  }
+}

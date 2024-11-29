@@ -8,7 +8,7 @@ const franchisehero = () => {
       <div className="franchisehero-content">
         <p className="franchisehero-pagename">Home |<span>Franchise</span> </p>
         <h1 className="franchisehero-headline1">
-          Build a Bright Future</h1>
+          Build a Bright future</h1>
           <h1 className="franchisehero-headline2"> <br/><span> Partner with </span><br/>Brave Sparkids<br/>Academy <span>Today!</span>
         </h1>
         <p className="franchisehero-subheadline">

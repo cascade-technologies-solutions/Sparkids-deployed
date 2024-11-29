@@ -1,0 +1,79 @@
+.our-culture{
+  background: linear-gradient(to left, #fff, #fff6eb);  
+}
+.our-culture-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    padding: 1px;
+    gap: 20px;
+  }
+  
+  .our-culture-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    margin-left: -11px;
+    margin-right: 167px;
+    
+  }
+  .our-culture-image img{
+  width: 558px; 
+  height: 559px;
+  }
+  
+  /* .culture-image {
+    width: 558px; 
+    height: 559px; 
+   
+   margin-right:40px;
+   background-color: transparent;
+  } */
+  
+  .our-culture-content {
+    flex: 2;
+    margin-left: 205px;
+    padding: 20px;
+  }
+  
+  .culture-title {
+    font-size: 50px;
+    font-weight: 400; 
+    color: #ff6600;
+    margin: 0 0 10px 0; 
+    font-family: "Lilita One", sans-serif;
+  }
+  
+  .culture-description {
+    font-size: 24px;
+    font-weight: 350; 
+    color: #555;
+    line-height: 1.4; 
+    margin-top: 10px; 
+  }
+  .culture-sub-div{
+    display: flex;
+    flex-direction: column;
+
+  }
+  /* .culture-subdiv-image {
+    /* height: 28px;
+    width: 28px;  */
+   
+   
+
+  .culture-subdiv-image img{
+    height: 25px;
+    width:25px;
+  }
+  .culture-subdiv-point{
+    font: size 24px; 
+    font-style: "geologica";
+    font-weight: regular;
+    margin-top: -48px;
+    margin-left: 33px;
+  }
+  

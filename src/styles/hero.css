@@ -44,7 +44,7 @@
 }
 
 .explore-btn,
-.franchise-btn {
+.opportunity-btn {
   padding: 10px 20px;
   margin-right: 15px;
   font-size: 1rem;
@@ -67,14 +67,14 @@
   color: #fff;
 }
 
-/* Franchise Button */
-.franchise-btn {
+/* opportunity Button */
+.opportunity-btn {
   background-color: #f58634;
   color: #fff;
 }
 
-/* Glow Effect for Franchise Button */
-.franchise-btn.glow {
+/* Glow Effect for opportunity Button */
+.opportunity-btn.glow {
   box-shadow: 0 0 10px #f58634;
   animation: glowing 1.5s infinite alternate;
 }
@@ -104,7 +104,7 @@
   font-weight: bold;
 }
 
-.franchise-note {
+.opportunity-note {
   font-size: 0.9rem;
   color: #666;
 }

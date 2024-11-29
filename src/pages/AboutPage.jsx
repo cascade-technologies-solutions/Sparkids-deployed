@@ -3,15 +3,24 @@ import Header from '../components/Header';
 import Mission from '../components/mission';
 import QuestionSection from '../components/Question';
 import Footer from '../components/Footer';
-import Card from '../components/cardtest';
+
+import OurStory from '../components/Ourstory';
+import Team from '../components/Team';
+import Culture from '../components/AboutusCulture';
+import AboutHero from '../components/AboutusHero';
+import MissionVision from '../components/Aboutusvision'; 
 
 export const AboutPage = () => {
   return (
     <div>
       <Header />
-      
+      <AboutHero/>
+      <OurStory/>
+      <MissionVision/>
       <Mission />
-      <Card /><QuestionSection />
+      <Team/>
+      <Culture/>
+      <QuestionSection />
       <Footer />
     </div>
   );

@@ -1,0 +1,107 @@
+/* Container styles */
+.franchise-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 50px;
+    font-family: "Lilita One", sans-serif;
+    color: #f58634;
+    margin-bottom: -20px;
+  }
+  
+  .subheading {
+    font-size: 30px;
+    color: #455a64;
+    font-family: "Lilita One", sans-serif;
+    font-weight: regular;
+    margin-bottom: 50px;
+  }
+  
+  /* Steps container */
+  .steps-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 10px; /* Space between steps */
+  }
+  
+  /* Wrapper for each step and arrow */
+  .step-wrapper {
+    position: relative;
+    width: 600px; 
+  }
+  
+  /* Single step box */
+  .step-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #f58634; /* Orange border */
+    border-radius: 12.1px;
+    padding: 15px 20px;
+    width: 570px;
+    height: 110px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .step-number-line {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+  }
+  
+  .step-number {
+    font-size: 33.51px;
+    font-weight: bold;
+    color: #1c1c1c;
+    font-family: "Poppins", sans-serif;
+    margin-right: 10px;
+  }
+  
+  .thin-line {
+    width: 1px;
+    height: 50px;
+    background-color: #000000;
+    margin-right: 10px;
+  }
+  
+  .step-content {
+    text-align: left;
+    color: #343434;
+    font-size: 24px;
+    font-family: Geologica, sans-serif;
+  }
+  
+  .step-content span {
+    font-size: 22px;
+    color: #343434;
+    line-height: 1.4;
+  }
+  
+  /* Arrow styles */
+  .arrow-image {
+    width: 55px; 
+    height: 120px; 
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 1;
+  }
+  
+  .arrow-right {
+    left: -60px; 
+    top:150px;
+  }
+  
+  .arrow-left {
+    right: -70px;
+    top:150px; 
+    transform: translateY(-50%) scaleX(-1); /* Flip the arrow */
+  }
+  

@@ -4,16 +4,15 @@
     justify-content: space-between;
     align-items: center;
     padding: 3rem 8rem;
-    background: linear-gradient(to left, #ffffff, #fff6eb);
     gap: 2rem;
-    flex-direction: row-reverse; /* Flips the order of content */
+    flex-direction: row-reverse; 
 }
   
 /* Left Content Section (Now positioned on the right) */
 .handwriting-content {
     flex: 1;
-    direction: rtl; /* Sets text direction to right-to-left */
-    text-align: right; /* Aligns text to the right */
+    direction: rtl; 
+    text-align: right; 
 }
   
 .handwriting-heading {
@@ -97,6 +96,6 @@
   
 .handwriting-image img {
     width: 541px;
-    height: 591px;
+    height: 595px;
     border-radius: 10px;
 }
