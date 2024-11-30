@@ -2,13 +2,19 @@ import React from 'react';
 import '../styles/mission.css'; // Updated CSS path
 import centralImage from '../Assets/about-img/missionbg.png'; // Main background image
 import smallImage from '../Assets/about-img/mission.png'; // Smaller overlapping image
-import missionicon from '../Assets/about-img/missionicon.png'; // Icon for training
-import missionicon2 from '../Assets/about-img/missionicon2.png'; // Icon for partnerships
+import missionicon from '../Assets/about-img/missionicon.png';
+import missionicon2 from '../Assets/about-img/missionicon2.png';
+import mission1 from '../Assets/about-img/mission1.png';
+import mission2 from '../Assets/about-img/mission2.png';
+import mission3 from '../Assets/about-img/mission3.png';
+import mission4 from '../Assets/about-img/mission4.png';
+import mission5 from '../Assets/about-img/mission5.png';
+import mission6 from '../Assets/about-img/mission6.png';
 
 function Mission() {
   return (
     <div className="mission-wrapper">
-      {/* Central Image */}
+      {/* Central Background Image */}
       <img src={centralImage} alt="Central Background" className="central-image" />
 
       {/* Overlapping Text Section */}
@@ -50,9 +56,15 @@ function Mission() {
         </div>
       </div>
 
-      {/* Overlapping Image */}
+      {/* Image Section with Surrounding Icons */}
       <div className="image-section">
-        <img src={smallImage} alt="Small Overlapping" />
+        <img src={mission1} alt="Mission Icon 1" className="mission-icon icon1" />
+        <img src={mission2} alt="Mission Icon 2" className="mission-icon icon2" />
+        <img src={mission3} alt="Mission Icon 3" className="mission-icon icon3" />
+        <img src={mission4} alt="Mission Icon 4" className="mission-icon icon4" />
+        <img src={mission5} alt="Mission Icon 5" className="mission-icon icon5" />
+        <img src={mission6} alt="Mission Icon 6" className="mission-icon icon6" />
+        <img src={smallImage} alt="Small Overlapping" className="main-image" />
       </div>
     </div>
   );

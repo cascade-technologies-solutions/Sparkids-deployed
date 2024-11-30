@@ -33,13 +33,15 @@
   }
   
   .abt-heading {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #ff6600;
+    font-size: 30px;
+    font-family: lilita one;
+    font-weight: 400;
+    color: #f58634;
   }
   
   .abt-subheading {
-    font-size: 1.1rem;
+    font-size: 24px;
+    font-family: geologica;
   }
   
   .contact-form {
@@ -53,19 +55,20 @@
     border-radius: 10px 0 0 10px;
     width: 367px;
     height: 58px;
-    font-size: 1.2rem;
+    font-size: 22px;
     text-align: center;
     color: white;
     background-color: #444;
+    font-family: geologica;
   }
   
   .contact-button {
-    background-color: #ff6600;
+    background-color: #f58634;
     color: white;
     width: 142px;
     height: 60px;
     border-radius: 0 10px 10px 0;
-    font-size: 1.2rem;
+    font-size: 24px;
     cursor: pointer;
     border: none;
   }
@@ -116,11 +119,11 @@
   
   .abt-decorative-images img:nth-child(5) {
     bottom: 65px;
-    right: -20px;
+    right: -90px;
     transform: translate(-50%, -50%);
   }
   
   .abt-decorative-images img:nth-child(6) {
     bottom: 95px;
-    left: 10px;
+    left: -46px;
   }

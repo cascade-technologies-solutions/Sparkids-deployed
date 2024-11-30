@@ -7,10 +7,11 @@
 }
 
 .team-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 50px;
+  font-weight: 400;
   margin-bottom: 40px;
-  color: #333;
+  font-family: lilita one;
+  color: #343434;
 }
 
 .team-grid {
@@ -57,15 +58,17 @@
 }
 
 .team-name {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: lilita one;
   margin-bottom: -17px;
-  color: #333;
+  color: #19213d
 }
 
 .team-position {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 24px;
+  color: #19213d;
+  font-family: geologica;
   margin-bottom: 20px;
 }
 

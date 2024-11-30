@@ -15,8 +15,8 @@ Home page components created
 # Courses Page completed
 
 # Franchise Page completed
+- done wuth font & color modification
 
-# minor chnages shd be done
 
 ## Run live 👇🏻
 [Sparkid](https://AmullyaPatil.github.io/Sparkids)

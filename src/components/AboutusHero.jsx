@@ -14,8 +14,8 @@ const AboutHero = () => {
           Empowering the Next Generation with Knowledge, Skills, and Confidence
         </p>
         <p className="description">
-          Unlock your child’s potential with programs designed to sharpen skills,
-          foster creativity, and nurture lifelong success.
+          Unlock your child’s potential with programs<br/> designed to sharpen skills,
+          foster creativity, and <br/>nurture lifelong success.
         </p>
       </div>
       <div className="about-us-image">

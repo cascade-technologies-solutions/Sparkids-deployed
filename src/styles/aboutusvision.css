@@ -30,22 +30,23 @@
   .vision-title {
     font-size: 50px;
     font-weight: 400; 
-    color: #ff6600;
+    color: #f58634;
     margin: 0 0 10px 0; 
-    font-family: "Lilita One", sans-serif;
+    font-family: Lilita One;
   }
   
   .vision-description {
     font-size: 24px;
     font-weight: 400; 
-    color: #555;
+    color: #343434;
     line-height: 1.4; 
+    font-family: geologica;
     margin-bottom: 10px; 
   }
   
   .vision-subtext {
     font-size: 22px;
-    color: #666;
+    color: #343434;
     line-height: 1.3; 
     margin-top: 10px; 
   }

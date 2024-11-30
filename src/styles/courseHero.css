@@ -16,49 +16,51 @@
   /* Move pagename to the top with reduced margin */
   .coursehero-pagename {
     font-size: 24px;
-    color: #888;
-    margin-top: 0; 
+    color: #455a64;
+    margin-top: 0;
+    font-family: geologica;
     margin-bottom: 8px; 
     position: relative;
     top: -84px; 
   }
   
   .coursehero-pagename span {
-    color: #ff6600;
+    color: #f58634;
   }
   
   .coursehero-headline1{
     font-size: 50px;
-    font-weight: bold;
-    color: #333;
-    font-family: "Lilita One";
+    font-weight: 400;
+    color: #455a64;
+    font-family: Lilita One;
     margin: 0 0 -155px 0; /* Reduced margin-bottom for closer spacing */
   }
   
   .coursehero-headline2 span {
-    color: #ff6600;
-    font-size: 66px;
+    color: #f58634;
     font-size: 80px;
-    margin-bottom: 10px;
+    font-family: lilita one;
+    margin-bottom: 30px;
   }
   
   .coursehero-headline2  {
-    color: #333;
-    font-size: 66px;
+    color: #455a64;
     font-size: 80px;
+    font-family: lilita one;
+    font-weight: 400;
   }
   
   .coursehero-subheadline {
     font-size: 24px;
     font-weight: 400;
-    font-style: "geologica";
-    color: #555;
-    margin: 8px 0; 
+    font-family: "geologica";
+    color: #343434;
+    margin: 2px 0; 
   }
   
   .coursehero-description {
     font-size: 22px;
-    color: #666;
+    color: #455a64;
     font-style: Geologica;
     font-weight: 100;
     line-height: 1.4; 
