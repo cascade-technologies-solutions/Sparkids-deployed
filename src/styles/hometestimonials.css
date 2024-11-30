@@ -1,15 +1,9 @@
-/* .testimonial{
-  background: linear-gradient(to right, #ffffff, #fff6eb);
-  margin-top: -17px;
-} */
-
 .testimonial {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 60px 20px;
   margin-top: -17px;
-  background: linear-gradient(to right, #fff5ee, #ffffff);
 }
 
 .testimonial-text {
@@ -22,7 +16,7 @@
   font-weight: 400;
   color: #f58634;
   margin-bottom: 10px;
-  font-style: geologica;
+  font-family: geologica;
 }
 
 .testimonial-text h3 {
@@ -30,7 +24,7 @@
   font-weight: regular;
   color: #455a64;
   margin-top: -5px;
-  font-style: Lilita One;;
+  font-family: Lilita One;;
 }
 
 .testimonial-text p {
@@ -39,6 +33,7 @@
   color: #455a64;
   margin: 10px auto;
   margin-top: -35px;
+  font-family: geologica;
 }
 
 .carousel-container {
@@ -97,7 +92,7 @@ border: 0.1px solid hsl(0deg 12.48% 95.32%);
 
 .testimonialcard-content .quote-icon {
   font-size: 24px;
-  color: orange;
+  color: rgb(45, 14, 168);
   position: absolute;
   top: 8px;
   right: 8px;
@@ -112,7 +107,7 @@ border: 0.1px solid hsl(0deg 12.48% 95.32%);
 .author-section h4 {
  text-align: center;
  font-size: 22px;
- font-style: "geologica";
+ font-family: "geologica";
  font-weight: 300;
 }
 .author-image {
@@ -133,11 +128,12 @@ border: 0.1px solid hsl(0deg 12.48% 95.32%);
 
 .testimonialcard p {
   margin-bottom: 6px; 
-  font-size: 14px;
+  font-size: 14.82px;
   line-height: 1.4;
   text-align: left;
   font-weight: 100;
   line-height: 22px;
+  font-family: geologica;
 }
 
 
@@ -159,13 +155,13 @@ margin-left: 31px;
 
 .arrow-button {
   position: absolute;
-  top: 50%;
+  top: 110px;
   transform: translateY(-50%);
   background: #f58634;
   border: 2px solid #f58634;
   width: 40px; 
   height: 40px; 
-  border-radius: 0; 
+  border-radius: 50px; 
   display: flex;
   justify-content: center;
   align-items: center;

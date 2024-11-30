@@ -3,40 +3,46 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 30px;
   background: linear-gradient(to bottom, #fff, #fdf4f2);
   font-family: 'Poppins', sans-serif;
 }
 
 .hero-content {
   max-width: 600px;
-  padding-left: 150px;
+  padding-left: 100px;
   padding-top: 30px;
 }
 
 .hero-heading {
-  font-size: 2.8rem;
-  font-weight: 700;
+  font-size: 50px;
+  font-weight: 400;
   color: #455a64;
   margin: 0;
+  font-family: lilita one;
 }
 
 .hero-heading span {
-  font-size: larger;
+  font-size: 80px;
   color: #f58634;
+  font-family: lilita one;
+  font-weight: 400;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #444;
+  font-size: 24px;
+  font-weight: 400;
+  color: #343434;
   margin: 10px 0;
+  font-family: Geologica;
 }
 
 .hero-description {
-  font-size: 1rem;
-  color: #666;
+  font-size: 22px;
+  color: #455a64;
   line-height: 1.6;
+  font-family: Geologica;
+  font-weight: 100;
 }
 
 .hero-buttons {
@@ -45,10 +51,9 @@
 
 .explore-btn,
 .opportunity-btn {
-  padding: 10px 20px;
   margin-right: 15px;
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 19.19px;
+  font-weight: 400;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -57,9 +62,12 @@
 /* Explore Button */
 .explore-btn {
   background-color: #fff;
+  width: 189px;
+  height: 56px;
   border: 2px solid #f58634;
   color: #f58634;
   transition: all 0.3s ease;
+  font-family: geologica;
 }
 
 .explore-btn:hover {
@@ -67,13 +75,18 @@
   color: #fff;
 }
 
-/* opportunity Button */
+/* Opportunity Button */
 .opportunity-btn {
   background-color: #f58634;
   color: #fff;
+  width: 189px;
+  height: 56px;
+  border: 2px solid #f58634;
+  transition: all 0.3s ease;
+  font-family: geologica;
 }
 
-/* Glow Effect for opportunity Button */
+/* Glow Effect for Opportunity Button */
 .opportunity-btn.glow {
   box-shadow: 0 0 10px #f58634;
   animation: glowing 1.5s infinite alternate;
@@ -96,26 +109,188 @@
 
 .stats-text {
   font-size: 1rem;
-  color: #444;
+  color: #343434;
+  font-family: lilita one;
 }
 
 .highlight {
   color: #f58634;
-  font-weight: bold;
+  font-weight: 400;
+  font-family: geologica;
 }
 
 .opportunity-note {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 30px;
+  font-family: lilita one;
+  font-weight: 400;
+  color: #343434;
 }
 
-.hero-image img {
-  width: 600px;
-  height: 600px;
-  max-width: 100%;
+.note-highlight {
+  color: #f58634;
 }
 
+/* Hero Image Layout */
 .hero-image {
+  position: relative;
+  width: 600px; /* Adjust the container size */
+  height: 600px; /* Adjust the container size */
   margin-left: 10px;
   padding-right: 90px;
+}
+
+/* Brain Layout Container */
+.brain-layout {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  top: -110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Left Brain and Right Brain Images */
+/* Left Brain and Right Brain Images */
+.brain-right {
+  position: absolute;
+  width: 163.14px;
+  height: 390.63px;
+  top: 100px;
+  right: 125px;
+  animation: slideInRight 1s ease-in-out;
+  transition: transform 0.3s ease-in-out; 
+}
+
+.brain-left {
+  position: absolute;
+  width: 163.14px;
+  height: 390.63px;
+  top: 100px;
+  left: 135px;
+  animation: slideInLeft 1s ease-in-out;
+  transition: transform 0.3s ease-in-out; 
+}
+
+/* Hover Effect for Brain Images */
+.brain-right:hover,
+.brain-left:hover {
+  transform: translateY(-2%) scale(1.02);
+}
+
+
+/* Icons around the brain */
+.brain-icon {
+  position: absolute;
+  width: 50px; /* Set size for icons */
+  height: auto;
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+/* Position-specific icons */
+.puzzle1 {
+  width: 81.16px;
+  height: 88.55px;
+  top: 245px;
+  left: 48px;
+  animation: slideInLeft 1.2s ease forwards;
+}
+
+.symbol {
+  width: 64.82px;
+  height: 63.14px;
+  bottom: 115px;
+  left: 93px;
+  animation: slideInLeft 1.4s ease forwards;
+}
+
+.bulb {
+  top: 225px;
+  right: 32px;
+  width: 83.4px;
+  height: 105.83px;
+  animation: slideInRight 1.2s ease forwards;
+}
+
+.puzzle2 {
+  top: 80px;
+  left: 152px;
+  width: 92.86px;
+  height: 65.5px;
+  animation: slideInLeft 1.6s ease forwards;
+}
+
+.pencil {
+  bottom: 112px;
+  right: 95px;
+  width: 133.03px;
+  height: 121.02px;
+  animation: slideInRight 1.4s ease forwards;
+}
+
+.gear{
+  width:518.86px;
+  height: 512.81px;
+}
+/* Keyframes for Sideways Animation */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Keyframes for Fade-In Animation (Optional for opacity only) */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Wiggle Animation */
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* Wiggle Effect on Hover */
+.puzzle1:hover,
+.puzzle2:hover,
+.pencil:hover ,.bulb:hover,
+.symbol:hover {
+  animation: wiggle 0.5s ease-in-out;
+  animation-iteration-count: infinite;
 }

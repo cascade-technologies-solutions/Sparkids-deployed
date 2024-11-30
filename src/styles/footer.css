@@ -26,15 +26,16 @@
   }  
 
   .footer-section h3 {
-    font-size: 18px;
-    color: #333;
+    font-size: 24px;
+    color: #343434;
     margin-bottom: 10px;
+    font-family: geologica;
   }
   
   .footer-section p,
   .footer-section ul li a {
-    font-size: 14px;
-    color: #666;
+    font-size: 14.82px;
+    color: #455a64;
     line-height: 1.5;
   }
   
@@ -50,7 +51,9 @@
   
   .footer-section ul li a {
     text-decoration: none;
-    color: #666;
+    color: #455a64;
+    font-size: 14.82px;
+    font-family: geologica;
   }
   
   .footer-section ul li a:hover {

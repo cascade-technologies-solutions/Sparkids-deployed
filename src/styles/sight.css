@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5rem 10rem;
-    background: #fff7f0;
+    
     gap: 2rem;
   }
   
@@ -12,22 +12,23 @@
   }
   
   .insights-heading {
-    color: #fa8701;
-    font-size: 1.2rem;
-    font-weight: bold;
+    color: #F58634;
+    font-size: 24px;
+    font-family: Geologica;
     margin-bottom: 1rem;
   }
   
   .insights-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
+    font-size: 30px;
+    font-family: Lilita One;
+    color: #343434;
     margin-bottom: 1.5rem;
   }
   
   .insights-description {
-    font-size: 1.2rem;
-    color: #555;
+    font-size: 24px;
+    color: #455a64;
+    font-family: Geologica;
     margin-bottom: 1.5rem;
     line-height: 1.6;
   }
@@ -39,9 +40,10 @@
   }
   
   .insights-list li {
-    font-size: 1.1rem;
-    color: #555;
+    font-size: 22px;
+    color: #343434;
     margin-bottom: 1rem;
+    font-family: Geologica;
     display: flex;
     align-items: center;
   }
@@ -55,17 +57,18 @@
   
   .insights-button {
     display: inline-block;
-    padding: 10px 20px;
-    color: #ff7c2e;
-    border: 2px solid #ff7c2e;
-    border-radius: 5px;
+    padding: 10px 26px;
+    color: #F58634;
+    border: 2px solid #F58634;
+    border-radius: 8px;
     text-decoration: none;
-    font-weight: bold;
+    font-family: KoHo;
+    font-size: 19.19px;
     transition: all 0.3s ease;
   }
   
   .insights-button:hover {
-    background-color: #ff7c2e;
+    background-color: #F58634;
     color: #fff;
   }
   

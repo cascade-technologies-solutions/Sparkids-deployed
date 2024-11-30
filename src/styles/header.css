@@ -47,7 +47,7 @@
 .nav ul {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 65px;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -55,16 +55,14 @@
 }
 
 .nav li {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 18.52px;
+  font-weight: bold;
   color: #4a4a4a;
   text-decoration: none;
 }
 
-
-
 .nav li:hover {
-  color: #ff6600;
+  color: #f58634;
   cursor: pointer;
   text-decoration: none;
 }

@@ -4,6 +4,9 @@ import Footer from "../components/Footer";
 import Franchisehero from "../components/franchiseHero";
 import FranchiseInvestment from "../components/franchiseInvestment";
 import FranchiseProcess from "../components/franchiseapplication";
+import FranchiseOurstory from "../components/FranchiseOurstory";
+import FranchiseSuccess from "../components/FranchiseSuccess";
+import FranchiseSupport from "../components/FranchiseSupport";
 
 
 
@@ -12,8 +15,11 @@ const FranchisePage = () => {
       <div>
         <Header />
         <Franchisehero />
+        <FranchiseOurstory />
         <FranchiseInvestment />
+        <FranchiseSupport />
         <FranchiseProcess />
+        <FranchiseSuccess />
         <Footer />
       </div>
     );

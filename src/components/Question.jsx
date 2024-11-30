@@ -10,13 +10,13 @@ import bgImage6 from "../Assets/about-img/quesmem6.png";
 
 const QuestionSection = () => {
   return (
-    <div className="question-section">
-      <img src={questionbg} alt="Question background" className="question-bg" />
+    <div className="abt-question-section">
+      <img src={questionbg} alt="Question background" className="abt-question-bg" />
 
-      <div className="content">
-        <div className="bg-overlay">
-          <h3 className="heading">Do you still have any questions?</h3>
-          <p className="subheading">
+      <div className="abt-content">
+        <div className="abt-bg-overlay">
+          <h3 className="abt-heading">Do you still have any questions?</h3>
+          <p className="abt-subheading">
             Don't hesitate to leave us your phone number. We will <br/>contact you to
             discuss any questions you may have.
           </p>
@@ -31,13 +31,13 @@ const QuestionSection = () => {
         </div>
 
         {/* Decorative Images */}
-        <div className="decorative-images">
-          <img src={bgImage} alt="Decorative 1" className="decorative-image" />
-          <img src={bgImage2} alt="Decorative 2" className="decorative-image" />
-          <img src={bgImage3} alt="Decorative 3" className="decorative-image" />
-          <img src={bgImage4} alt="Decorative 4" className="decorative-image" />
-          <img src={bgImage5} alt="Decorative 5" className="decorative-image" />
-          <img src={bgImage6} alt="Decorative 6" className="decorative-image" />
+        <div className="abt-decorative-images">
+          <img src={bgImage} alt="Decorative 1" className="abt-decorative-image" />
+          <img src={bgImage2} alt="Decorative 2" className="abt-decorative-image" />
+          <img src={bgImage3} alt="Decorative 3" className="abt-decorative-image" />
+          <img src={bgImage4} alt="Decorative 4" className="abt-decorative-image" />
+          <img src={bgImage5} alt="Decorative 5" className="abt-decorative-image" />
+          <img src={bgImage6} alt="Decorative 6" className="abt-decorative-image" />
         </div>
       </div>
     </div>

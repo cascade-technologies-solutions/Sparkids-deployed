@@ -15,10 +15,11 @@ const Opportunity = () => {
           Our franchise model empowers <br/>passionate educators to start and <br/>grow
           their own successful businesses.
         </p>
-        <p><b>
+        <span><br/>
           At Brave Sparkids Academy, we <br/>believe in the power of hands <br/>on
-          learning.</b>
-        </p>
+          learning.</span>
+          <br/>
+        
         <a href="#!" className="opportunity-cta-button">
           Know More
         </a>
