@@ -12,17 +12,23 @@ function Header() {
       <nav className="nav">
         <ul>
           <li>
-            <NavLink to="/" activeClassName="active">Home</NavLink>
+            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about" activeClassName="active">About Us</NavLink>
+            <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>About Us</NavLink>
           </li>
           <li>
-            <NavLink to="/courses" activeClassName="active">Courses</NavLink>
+            <NavLink to="/courses" className={({ isActive }) => (isActive ? "active" : "")}>Courses</NavLink>
           </li>
-          <li><NavLink to="/franchise" activeClassName="active">Franchise</NavLink></li>
-          <li><NavLink to="/careers" activeClassName="active">Careers</NavLink></li>
-          <li><NavLink to="/insight" activeClassName="active">Insights</NavLink></li>
+          <li>
+            <NavLink to="/franchise" className={({ isActive }) => (isActive ? "active" : "")}>Franchise</NavLink>
+          </li>
+          <li>
+            <NavLink to="/careers" className={({ isActive }) => (isActive ? "active" : "")}>Careers</NavLink>
+          </li>
+          <li>
+            <NavLink to="/insight" className={({ isActive }) => (isActive ? "active" : "")}>Insights</NavLink>
+          </li>
           <li>
             <button className="contact-us">Contact Us</button>
           </li>

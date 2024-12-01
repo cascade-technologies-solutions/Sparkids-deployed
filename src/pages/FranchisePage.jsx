@@ -7,7 +7,8 @@ import FranchiseProcess from "../components/franchiseapplication";
 import FranchiseOurstory from "../components/FranchiseOurstory";
 import FranchiseSuccess from "../components/FranchiseSuccess";
 import FranchiseSupport from "../components/FranchiseSupport";
-
+import FAQ from "../components/FranchiseFAQ";
+import QuestionSection from "../components/Question";
 
 
 const FranchisePage = () => {
@@ -19,7 +20,9 @@ const FranchisePage = () => {
         <FranchiseInvestment />
         <FranchiseSupport />
         <FranchiseProcess />
+        <FAQ />
         <FranchiseSuccess />
+        <QuestionSection />
         <Footer />
       </div>
     );
