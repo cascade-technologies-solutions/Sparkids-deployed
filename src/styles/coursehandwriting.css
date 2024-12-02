@@ -99,4 +99,9 @@
     width: 541px;
     height: 595px;
     border-radius: 10px;
+    transition: transform 0.3s ease;
 }
+
+.handwriting-image img:hover {
+    transform: translateY(-10px);
+    }

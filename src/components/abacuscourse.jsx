@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import "../styles/abacuscourse.css";
 import point from "../Assets/courses-img/checkpoint.png";
 import abacusImage from "../Assets/courses-img/abacuscourse.png";
@@ -26,9 +28,9 @@ const AbacusCourse = () => {
             <span>Visualization & Concentration</span>
           </li>
         </ul>
-        <a href="#know-more" className="abacus-button">
+        <Link to="/abacus" className="abacus-button">
           Know more &gt;
-        </a>
+        </Link>
       </div>
 
       {/* Right Image Section */}

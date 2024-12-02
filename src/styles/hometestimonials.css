@@ -80,7 +80,14 @@ border-radius: 22px;
 position: relative;
 text-align: center;
 border: 0.1px solid hsl(0deg 12.48% 95.32%);
+transition: transform 0.3s ease;
 }
+
+.testimonialcard:hover {
+transform: translateY(-10px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .testimonialcard-content {
   display: flex;
   flex-direction: column;

@@ -70,11 +70,19 @@
   }
   
   .about-us-image img {
-    /* max-width: 100%; */
     border-radius: 68px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     height: 529px;
-    width:455px;
+    width: 455px;
     margin-left: 110px;
+    
+    /* Add transition for smooth effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .about-us-image img:hover {
+    /* Floating effect */
+    transform: translateY(-10px); /* Slight upward lift */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
   }
   

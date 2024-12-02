@@ -48,7 +48,12 @@
     background-color: #fff;
     position: relative;
     z-index: 2;
-  }
+  transition: transform 0.3s ease;
+}
+
+.step-box:hover {
+transform: translatey(-10px);
+}
   
   .step-number-line {
     display: flex;

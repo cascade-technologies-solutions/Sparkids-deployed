@@ -90,4 +90,9 @@ box-shadow: 0 0 10px rgba(255, 124, 46, 0.6);
     width: 876.44px; /* Updated width */
     height: 639.28px; /* Updated height */
     margin-right: -100px;
+    transition: transform 0.3s ease;
+}
+
+.reading-image img:hover{
+    transform: translateY(-10px);
 }

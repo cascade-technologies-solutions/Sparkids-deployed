@@ -91,4 +91,9 @@
     width: 558px;
     height: 626px;
     border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.cube-image img:hover {
+transform: translateY(-10px);
 }

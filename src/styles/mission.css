@@ -93,7 +93,13 @@
   z-index: 2; 
   width: 656px; 
   height: 786px;
+  transition: transform 0.3s ease;
 }
+
+.image-section img:hover {
+transform: translateY(-10px);
+}
+
 
 .main-image {
   width: 625px;

@@ -5,6 +5,7 @@ export const CareersPage = () => {
     return (
       <div>
         <Header />
+      
         <h1>Careers Page</h1>
         <Footer />
       </div>

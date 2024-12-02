@@ -91,4 +91,9 @@
     max-width: 699px;
     height: 606px;
     border-radius: 10px;
+    transition: transform 0.3s ease;
   }
+
+  .abacus-image img:hover {
+    transform: translateY(-10px);
+    }

@@ -259,4 +259,9 @@
 .support-sub-image img {
   width: 427px;
   height: 697px;
+transition: transform 0.3s ease;
+}
+
+.support-sub-image img:hover {
+transform: translateY(-10px);
 }

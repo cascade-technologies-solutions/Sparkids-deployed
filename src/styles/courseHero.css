@@ -80,5 +80,9 @@
     height: 662px;
     width:702px;
     margin-right: 30px;
+    transition: transform 0.3s ease
   }
   
+  .coursehero-image img:hover {
+    transform: translateY(-10px);
+    }

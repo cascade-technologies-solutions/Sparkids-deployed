@@ -23,6 +23,12 @@
   .our-culture-image img{
   width: 558px; 
   height: 559px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .our-culture-image img:hover {
+    /* Floating effect on hover */
+    transform: translateY(-10px); /* Move image upward */
+   
   }
   
   /* .culture-image {

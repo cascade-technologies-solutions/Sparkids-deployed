@@ -93,11 +93,16 @@
 .vedic-image {
   flex: 1;
   display: flex;
-  justify-content: flex-start; /* Align image to the left */
+  justify-content: flex-start; 
 }
 
 .vedic-image img {
   width: 489px;
   height: 647px;
+  transition: transform 0.3s ease;
   border-radius: 10px;
 }
+
+.vedic-image img:hover{
+  transform: translateY(-10px);
+  }

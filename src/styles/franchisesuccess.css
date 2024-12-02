@@ -45,9 +45,14 @@
   height: 100%; 
   width :480px;
   height: 480%;
-
   object-fit: cover; 
+  transition: transform 0.3s ease;
 }
+
+.image-container img:hover {
+transform: translateY(-10px);
+}
+
 
 
 .content-container {
