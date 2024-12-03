@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/readingcourse.css";
 import pointIcon from "../Assets/courses-img/checkpoint.png";
 import readingImage from "../Assets/courses-img/readingcourse.png";
@@ -26,9 +27,9 @@ const ReadingCourse = () => {
             <span>Encourages independent reading habits</span>
           </li>
         </ul>
-        <a href="#know-more" className="reading-button">
+        <Link to="/reading" className="reading-button">
           Know more &gt;
-        </a>
+        </Link>
       </div>
 
       {/* Right Image Section */}

@@ -1,16 +1,16 @@
 import React from 'react';
 import Header from '../components/Header';
-import AbacusHero from '../components/AbacusHero';
+import RubicHero from '../components/RubicHero';
 import AbacusOverview from '../components/AbacusOverview';
 import Footer from '../components/Footer';
 import HomeTestimonials from '../components/hometestimonial';
 import Course from '../components/home-course';
 
-export const AbacusPage = () => {
+export const RubicPage = () => {
     return (
       <div>
         <Header />
-        <AbacusHero />
+        <RubicHero />
         <AbacusOverview />
         <HomeTestimonials />
         <Course />
@@ -19,4 +19,4 @@ export const AbacusPage = () => {
     );
   };
   
-  export default AbacusPage;
+  export default RubicPage;

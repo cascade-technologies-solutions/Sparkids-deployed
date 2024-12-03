@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/courseVedic.css";
 import point from "../Assets/courses-img/checkpoint.png";
 import vedicImage from "../Assets/courses-img/coursevedic.png";
@@ -26,9 +27,9 @@ const vedicCourse = () => {
             <img src={point} alt="point" />
           </li>
         </ul>
-        <a href="#know-more" className="vedic-button">
+        <Link to="/vedic" className="vedic-button">
           Know more &gt;
-        </a>
+        </Link>
       </div>
 
       {/* Right Image Section */}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/coursehandwriting.css";
 import point from "../Assets/courses-img/checkpoint.png";
 import handwritingImage from "../Assets/courses-img/coursehandwriting.png";
@@ -30,9 +31,9 @@ const AbacusCourse = () => {
             <img src={point} alt="point" />
           </li>
         </ul>
-        <a href="#know-more" className="handwriting-button">
+        <Link to="/handwriting" className="handwriting-button">
           Know more &gt;
-        </a>
+        </Link>
       </div>
 
       {/* Right Image Section */}

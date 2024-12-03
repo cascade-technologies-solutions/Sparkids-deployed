@@ -1,6 +1,7 @@
 /* Page Container */
 .page-container {
   margin: 12rem 12rem;
+  margin-bottom: 20px;
 }
 
 /* Tab Navigation (no box, above the content) */
@@ -9,7 +10,7 @@
       background: none;
       border-bottom: 2px solid #eee;
       margin-left: -15rem;
-      margin-bottom: -60px;
+      margin-bottom: -70px;
       padding: 109px;
 }
 
@@ -77,6 +78,7 @@
   list-style: none;
   padding: 0;
   margin: 3rem 0;
+  line-height: 40px;
 }
 
 .benefits-list li {

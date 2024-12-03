@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
 import "../styles/abacuscourse.css";
 import point from "../Assets/courses-img/checkpoint.png";
 import abacusImage from "../Assets/courses-img/abacuscourse.png";

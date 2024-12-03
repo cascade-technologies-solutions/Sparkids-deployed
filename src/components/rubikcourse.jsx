@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/rubikcourse.css";
 import point from "../Assets/courses-img/checkpoint.png";
 import cubeImage from "../Assets/courses-img/rubikcourse.png";
@@ -26,9 +27,9 @@ const CubeCourse = () => {
                         <span>Demonstrates perseverance and practice</span>
                     </li>
                 </ul>
-                <a href="#know-more" className="cube-button">
+                <Link to="/rubic" className="cube-button">
                     Know more &gt;
-                </a>
+                </Link>
             </div>
 
             {/* Right Image Section */}
