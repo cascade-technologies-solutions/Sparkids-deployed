@@ -5,6 +5,7 @@ import AbacusOverview from '../components/AbacusOverview';
 import Footer from '../components/Footer';
 import HomeTestimonials from '../components/hometestimonial';
 import Course from '../components/home-course';
+import FAQ from '../components/FranchiseFAQ';
 
 export const RubicPage = () => {
     return (
@@ -12,6 +13,7 @@ export const RubicPage = () => {
         <Header />
         <RubicHero />
         <AbacusOverview />
+        <FAQ/>
         <HomeTestimonials />
         <Course />
         <Footer />
