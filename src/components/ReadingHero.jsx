@@ -19,7 +19,7 @@ const ReadingHero = () => {
           <p className="maincourse-points-wholelist">
             <div className="maincourse-points-list">
             <img src={courselevel} alt="point" />
-            <span>Level :</span>  2 Levels | 5-Basics and 3-Advanced
+            <span>Level :</span>  2 Levels
             </div>
           <br/>
           <div className="maincourse-points-list">

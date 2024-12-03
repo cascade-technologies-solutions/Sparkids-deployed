@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from '../components/Header';
+//import Header from '../components/Header';
 import Mission from '../components/mission';
 import QuestionSection from '../components/Question';
-import Footer from '../components/Footer';
+//import Footer from '../components/Footer';
 import OurStory from '../components/Ourstory';
 import Team from '../components/Team';
 import Culture from '../components/AboutusCulture';
@@ -12,7 +12,6 @@ import MissionVision from '../components/Aboutusvision';
 export const AboutPage = () => {
   return (
     <div>
-      <Header />
       <AboutHero/>
       <OurStory/>
       <MissionVision/>
@@ -20,7 +19,6 @@ export const AboutPage = () => {
       <Team/>
       <Culture/>
       <QuestionSection />
-      <Footer />
     </div>
   );
 };

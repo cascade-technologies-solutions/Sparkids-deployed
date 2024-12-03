@@ -1,6 +1,6 @@
 import React from "react";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+//import Header from "../components/Header";
+//import Footer from "../components/Footer";
 import Franchisehero from "../components/franchiseHero";
 import FranchiseInvestment from "../components/franchiseInvestment";
 import FranchiseProcess from "../components/franchiseapplication";
@@ -14,7 +14,6 @@ import QuestionSection from "../components/Question";
 const FranchisePage = () => {
     return (
       <div>
-        <Header />
         <Franchisehero />
         <FranchiseOurstory />
         <FranchiseInvestment />
@@ -23,7 +22,6 @@ const FranchisePage = () => {
         <FAQ />
         <FranchiseSuccess />
         <QuestionSection />
-        <Footer />
       </div>
     );
   };

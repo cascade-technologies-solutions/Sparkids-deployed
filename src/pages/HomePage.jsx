@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
+//import Header from '../components/Header';
 import Hero from '../components/Hero';
-import Footer from '../components/Footer';
+//import Footer from '../components/Footer';
 import Opportunity from '../components/opportunity';
 import Sight from '../components/sight';
 import Educator from '../components/educator';
@@ -12,7 +12,6 @@ import HomeAbout from '../components/home-abt';
 export const HomePage = () => {
   return (
     <div>
-      <Header />
       <Hero />
       <HomeAbout />
       <Course />
@@ -20,7 +19,6 @@ export const HomePage = () => {
       <Educator />
       <Sight />
       <HomeTestimonials />
-      <Footer />
     </div>
   );
 };
