@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"; // Import Link from React Router
 import logo from "../Assets/home-img/logo.png";
 import "../styles/footer.css";
 
@@ -7,12 +8,13 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         {/* Contact Us Section */}
-        <div className="footer-section 
-        address">
+        <div className="footer-section address">
           <img src={logo} alt="Brave SparkKids Logo" className="footer-logo" />
           <h3>Contact Us</h3>
-          <p>Call: +91 82170 77217 <br />
-           Email: example@mail.com</p>
+          <p>
+            Call: +91 82170 77217 <br />
+            Email: example@mail.com
+          </p>
           <p>
             Address: Indi Regional Office<br />
             Behind BSNL Tower, Near Mallikarjun Temple,<br />
@@ -30,12 +32,12 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Explore</h3>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">opportunitys</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/courses">Courses</Link></li>
+            <li><Link to="/about">About Us</Link></li>
+            <li><Link to="/opportunities">Opportunities</Link></li>
+            <li><Link to="/careers">Careers</Link></li>
+            <li><Link to="/contact">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -43,11 +45,11 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Courses</h3>
           <ul>
-            <li><a href="#">Abacus</a></li>
-            <li><a href="#">Vedic Maths</a></li>
-            <li><a href="#">Rubik’s Cube</a></li>
-            <li><a href="#">Writing</a></li>
-            <li><a href="#">Reading</a></li>
+            <li><Link to="/abacus">Abacus</Link></li>
+            <li><Link to="/vedic">Vedic Maths</Link></li>
+            <li><Link to="/rubic">Rubik’s Cube</Link></li>
+            <li><Link to="/writing">Writing</Link></li>
+            <li><Link to="/reading">Reading</Link></li>
           </ul>
         </div>
 
@@ -55,18 +57,18 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Resources</h3>
           <ul>
-            <li><a href="#">FAQ’s</a></li>
-            <li><a href="#">Testimonials</a></li>
-            <li><a href="#">Blogs</a></li>
-            <li><a href="#">Policies</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
+            <li><Link to="/faq">FAQ’s</Link></li>
+            <li><Link to="/testimonials">Testimonials</Link></li>
+            <li><Link to="/blogs">Blogs</Link></li>
+            <li><Link to="/policies">Policies</Link></li>
+            <li><Link to="/terms">Terms & Conditions</Link></li>
           </ul>
         </div>
 
         {/* Newsletter Section */}
         <div className="footer-section subscribe">
           <h3>Subscribe to News Letters</h3>
-          <p>Stay in the loop with the latest news and <br/> updates from SparkKids.</p>
+          <p>Stay in the loop with the latest news and <br /> updates from SparkKids.</p>
           <form>
             <input type="email" placeholder="Email here" />
             <button type="submit">Subscribe Now</button>

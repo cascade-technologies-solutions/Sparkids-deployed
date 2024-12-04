@@ -7,7 +7,9 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <img src={logo} alt="Brave Sparkids Logo" />
+        <NavLink to="/">
+          <img src={logo} alt="Brave Sparkids Logo" />
+        </NavLink>
       </div>
       <nav className="nav">
         <ul>
@@ -39,4 +41,3 @@ function Header() {
 }
 
 export default Header;
-
