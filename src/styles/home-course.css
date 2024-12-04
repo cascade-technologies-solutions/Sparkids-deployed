@@ -181,6 +181,7 @@
   font-size: 17px;
   color: rgb(255, 255, 255);
   cursor: pointer;
+  text-decoration: none;
 }
 
 .home-learn-more-icon {

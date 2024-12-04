@@ -10,7 +10,7 @@ import courselevel from "../Assets/home-img/course-level.png";
 import courserate from "../Assets/home-img/course-rate.png";
 import courseLearnMore from "../Assets/home-img/course-learnmore.png";
 import learnmorebulb from "../Assets/home-img/learnmorebulb.png";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom"; // Import Link for routing
 
 const CourseCard = ({
   title,
@@ -22,11 +22,6 @@ const CourseCard = ({
   image,
   courseId,
 }) => {
-  const navigate = useNavigate();
-
-  const handleLearnMoreClick = () => {
-    navigate(`/${courseId}`); // Navigate to the respective course page
-  };
   return (
     <div className="home-course-card">
       <img src={image} alt="Course" className="home-course-image" />
@@ -71,24 +66,19 @@ const CourseCard = ({
         alt="Learn More"
         className="home-course-learn-more"
       />
-      <div
-        className="home-learn-more-text"
-        onClick={handleLearnMoreClick}
-        style={{ cursor: "pointer" }}
-      >
+      <Link to={`/${courseId}`} className="home-learn-more-text">
         Learn more{" "}
         <img
           src={learnmorebulb}
           alt="Learn more bulb"
           className="home-learn-more-icon"
         />
-      </div>
+      </Link>
     </div>
   );
 };
 
 const CourseList = () => {
-  //const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const courseData = [
@@ -179,10 +169,6 @@ const CourseList = () => {
         </p>
       </div>
       <div className="home-course-list">
-        {/*    <div className="home-learn-more-text">
-        Learn more <img src={learnmorebulb} alt="Learn more bulb" className="home-learn-more-icon" />
-      </div> */}
-
         <h2
           className="home-course-list-heading"
           onClick={() => (window.location.href = "/courses")} // Update this link to your route
@@ -213,7 +199,6 @@ const CourseList = () => {
               ))}
           </div>
           <div className="home-course-slider-buttons">
-            {/* Left Button */}
             <button
               className="home-course-slider-button-left"
               onClick={prevSlide}
@@ -235,8 +220,6 @@ const CourseList = () => {
                 />
               </svg>
             </button>
-
-            {/* Right Button */}
             <button
               className="home-course-slider-button-right"
               onClick={nextSlide}
