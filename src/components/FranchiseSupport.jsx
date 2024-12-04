@@ -6,6 +6,7 @@ const FranchiseSupport = () => {
   return (
     <section className="support">
      < div className="support-text">
+     
          <h2>Guiding You Every Step Of the Way</h2>
          <h3>Support and Training</h3>
         <p>

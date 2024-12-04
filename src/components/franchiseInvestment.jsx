@@ -1,3 +1,4 @@
+
 import React from "react";
 import "../styles/franchiseInvestment.css";
 import checkIcon from "../Assets/courses-img/checkpoint.png";

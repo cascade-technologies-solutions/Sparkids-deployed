@@ -31,7 +31,6 @@ const AbacusCourse = () => {
           Know more &gt;
         </Link>
       </div>
-
       {/* Right Image Section */}
       <div className="abacus-image">
         <img src={abacusImage} alt="Abacus Course" />

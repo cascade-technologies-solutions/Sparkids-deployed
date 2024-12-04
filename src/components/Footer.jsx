@@ -7,7 +7,8 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         {/* Contact Us Section */}
-        <div className="footer-section address">
+        <div className="footer-section 
+        address">
           <img src={logo} alt="Brave SparkKids Logo" className="footer-logo" />
           <h3>Contact Us</h3>
           <p>Call: +91 82170 77217 <br />

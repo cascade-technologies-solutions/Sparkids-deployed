@@ -1,139 +1,247 @@
-/* General Container */
-.course-container {
+.home-card-info{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
-  background-color: #fef6f1;
+}
+.home-card-info-text{
+  margin-bottom: -20px;
+  margin-top: 50px;
+}
+.home-card-info-text h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: #f58634;
+  margin-bottom: 10px;
+  font-family: geologica;
+  }
+  
+  .home-card-info-text h3 {
+    margin-top: -19px;
+    text-align: center;
+    font-size: 50px;
+    color: #455a64;
+    font-weight: 800;
+    margin-bottom: -19px;
+    font-family: lilita one;
+  }
+  
+  .home-card-info-text p {
+    font-size: 22px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-family: geologica;
+   color: #455a64;
+  }
+
+.home-course-list {
+  text-align: right;
+  padding: 40px;
+}
+
+.home-course-list-heading {
+  font-family: Geologica;
+  font-weight: bold;
+  font-size: 19px;
+  color: #f58634;
+  margin-bottom: -54px;
+  margin-top: 0px;
+  margin-right: 100px;
+}
+
+.home-course-card-slider-container {
+  width: 1180px; 
+  height: 519px;
+  margin-left:30px;
+  position: relative;
+  overflow: hidden; 
+  padding: 58px;
+}
+
+.home-course-slider {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+ height: 117%;
+ position: relative;
+  margin: auto;
+  overflow: hidden;
   
 }
 
-/* Card Styles */
-.course-card {
-  display: flex;
-  flex-direction: column;
-  width: 320px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  background: #fff;
+.home-course-card {
+  position: relative;
+  width: 334px;
+  height: 502px;
+  margin: 0 27px;
+  background-color: #fff;
+  border-radius: 40px 40px 10px 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Course Image */
-.course-image {
+.home-course-image {
   width: 100%;
-  height: 180px;
+  height: 337px;
   object-fit: cover;
-}
-
-/* Course Content */
-.course-content {
-  padding: 15px;
-}
-
-.course-title {
-  font-size: 1.4rem;
-  color: #333;
-  margin: 0;
-  font-weight: bold;
-}
-
-.course-rating {
-  font-size: 1rem;
-  color: #f58634;
-  margin: 5px 0;
-}
-
-.course-description {
-  font-size: 0.9rem;
-  color: #555;
-  margin: 10px 0;
-}
-
-.course-details {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 10px 0;
-}
-
-.detail-item {
-  display: flex;
-  align-items: center;
-  font-size: 0.9rem;
-  color: #777;
-  gap: 5px;
-}
-
-/* Button */
-.learn-more-btn {
-  display: inline-block;
-  background-color: #f58634;
-  color: #fff;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  text-align: center;
-}
-
-.learn-more-btn:hover {
-  background-color: #d4722c;
-}
-.courses {
-  text-align: center;
-  padding: 2rem;
-}
-
-.subtitle {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 2rem;
-}
-
-.course-grid {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.course-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 300px;
-  text-align: center;
-  padding: 1rem;
-  transition: transform 0.3s;
-}
-
-.course-card:hover {
-  transform: scale(1.05);
-}
-
-.course-image {
-  width: 100%;
   border-radius: 10px 10px 0 0;
 }
 
-.course-info {
-  margin: 1rem 0;
+.home-course-content {
+  padding: 0 10px;
+}
+
+.home-course-title-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -13px;
+}
+
+.home-course-title {
+  font-size: 18px;
+  font-weight: bold;
   color: #333;
 }
 
-.learn-more {
-  background: #f57c00;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
+.home-course-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 18.66px;
+  color: #555;
+}
+
+.home-course-description {
+  font-size: 18.66px;
+  color: #555;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.home-course-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-course-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-course-info-row {
+  display: flex;
+  gap: 8px;
+}
+
+.home-course-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.home-course-learn-more {
+  position: absolute;
+  bottom: -25px;
+  right: -105px;
+  transform: translateX(-50%);
+  width: 161px;
+  height: 71px;
+}
+
+.home-learn-more-text {
+  position: absolute;
+  bottom: -2px;
+  right: -60px;
+  transform: translateX(-50%);
+  font-family: KoHo;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 
-.learn-more:hover {
-  background: #e64a19;
+.home-learn-more-icon {
+  width: 22px;
+  height: 21px;
+  object-fit: contain;
+}
+ .home-course-slider-buttons {
+  position: absolute;
+  bottom: 10px; 
+  
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10; 
+  right: 45px;
+}
+
+.home-course-slider-button-left{
+  width: 50px;
+  height: 50px;
+  background-color: #f37a1f; 
+  color: white;
+  border: none;
+  border-radius: 10px; 
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+.home-course-slider-button-right {
+  width: 50px;
+  height: 50px;
+  background-color: #f37a1f; 
+  color: white;
+  border: none;
+  border-radius: 10px; 
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+}
+
+.home-course-slider-button-left:hover{
+  transform: scale(1.1); 
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+.home-course-slider-button-right:hover {
+  transform: scale(1.1); 
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.home-course-slider-button-left:active{
+  transform: scale(0.95); 
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+.home-course-slider-button-right:active {
+  transform: scale(0.95); 
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.home-course-slider-button-left:disabled{
+  background-color: #ddd; 
+  color: #aaa; 
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.home-course-slider-button-right:disabled {
+  background-color: #ddd; 
+  color: #aaa; 
+  cursor: not-allowed;
+  box-shadow: none;
+}
+.home-course-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  color: #f58634;
+  font-family: Geologica, sans-serif;
+  font-size: 16px;
+  cursor:pointer ;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-course-explore-btn:hover {
+  background-color: #e5722a;
+  transform: scale(1.05);
+}
+
+.home-course-explore-btn:active {
+  transform: scale(0.95);
 }

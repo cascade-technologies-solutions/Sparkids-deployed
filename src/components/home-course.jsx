@@ -1,5 +1,9 @@
-import React from "react";
+import React, { useState } from 'react';
+import '../styles/home-course.css'; // Import the CSS file
+
 import courseimg1 from "../Assets/home-img/courseimg1.png";
+import courseimg2 from "../Assets/home-img/courseimg2.png";
+import courseimg3 from "../Assets/home-img/courseimg3.png";
 import courseage from "../Assets/home-img/course-age.png";
 import coursetime from "../Assets/home-img/course-time.png";
 import courselevel from "../Assets/home-img/course-level.png";
@@ -7,228 +11,164 @@ import courserate from "../Assets/home-img/course-rate.png";
 import courseLearnMore from "../Assets/home-img/course-learnmore.png";
 import learnmorebulb from "../Assets/home-img/learnmorebulb.png";
 
+import { useNavigate } from "react-router-dom";
+
 const CourseCard = ({ title, description, age, duration, levels, rating, image }) => {
-  const cardStyle = {
-    position: "relative",
-    width: "334px",
-    height: "502px",
-    overflow: "visible",
-    fontFamily: "'Arial', sans-serif",
-    margin: "20px",
-    borderRadius: "40px 40px 10px 10px ",
-    boxShadow: "0 5px 20px rgba(0, 0, 0, 0.6)",
-  };
-  
-
-  const imageStyle = {
-    width: "334px", // Ensure image spans the full width of the card
-    height: "337px",
-    objectFit: "cover", // Maintain aspect ratio and cover the space
-    borderRadius: "10px 10px 0 0", // Rounded corners for the top of the image
-  };
-
-  const contentStyle = {
-    padding: "0 20px",
-    width: "313px",
-    height: "165px",
-    margintTop: "10px",
-    borderRadius: "0 0 10px 10px", // Glow at the bottom
-  };
-
-  const titleRowStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    width:'300px',
-    marginBottom: "10px",
-  };
-
-  const titleStyle = {
-    fontSize: "23.33px",
-    fontWeight: "bold",
-    color: "#0d0d0d",
-    fontFamily: "KoHo",
-  };
-
-  const ratingStyle = {
-    display: "flex",
-    alignItems: "center",
-    gap: "5px",
-    fontSize: "18.66px",
-    color: "#555",
-    marginBottom: "5px",
-  };
-
-  const descriptionStyle = {
-    fontSize: "18.66px",
-    color: "#323030",
-    marginBottom: "5px",
-    fontFamily: "KoHo",
-  };
-
-  const infoContainerStyle = {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "flex-start",
-    fontSize: "18.66px",
-    marginBottom: "10px",
-    color:'#555',
-  };
-
-  const columnStyle = {
-    display: "flex",
-    flexDirection: "column",
-    gap: "8px",
-  };
-
-  const infoRowStyle = {
-    display: "flex",
-    marginRight: "80px",
-    gap: "8px",
-    width:"120px",
-  };
-
-  const iconStyle = {
-    width: "20px",
-    height: "20px",
-    objectFit: "contain",
-  };
-
-  const learnMoreStyle = {
-    position: "absolute",
-    bottom: "-25px",
-    right: "-105px",
-    transform: "translateX(-50%)",
-    width: "170px",
-    height: "80px",
-    zIndex: 10,
-  };
-
-  const learnMoretext = {
-    position: "absolute",
-    bottom: "-42px",
-    right: "-134px",
-    transform: "translateX(-50%)",
-    width: "161px",
-    height: "71px",
-    zIndex: 10,
-    fontFamily: 'KoHo',
-    fontSize: "17px",
-    cursor: "pointer",
-    color:"white"
-  };
-
   return (
-    <div style={cardStyle}>
-      {/* Main Image */}
-      <img src={image} alt="Course" style={imageStyle} />
-
-      <div style={contentStyle}>
-        {/* Title and Rating */}
-        <div style={titleRowStyle}>
-          <span style={titleStyle}>{title}</span>
-          <div style={ratingStyle}>
-            <img src={courserate} alt="Rating" style={iconStyle} />
+    <div className="home-course-card">
+      <img src={image} alt="Course" className="home-course-image" />
+      <div className="home-course-content">
+        <div className="home-course-title-row">
+          <span className="home-course-title">{title}</span>
+          <div className="home-course-rating">
+            <img src={courserate} alt="Rating" className="home-course-icon" />
             {rating}
           </div>
         </div>
-
-        {/* Description */}
-        <p style={descriptionStyle}>{description}</p>
-
-        {/* Information Section */}
-        <div style={infoContainerStyle}>
-          {/* Column 1 */}
-          <div style={columnStyle}>
-            <div style={infoRowStyle}>
-              <img src={courseage} alt="Age" style={iconStyle} />
+        <p className="home-course-description">{description}</p>
+        <div className="home-course-info-container">
+          <div className="home-course-column">
+            <div className="home-course-info-row">
+              <img src={courseage} alt="Age" className="home-course-icon" />
               Age {age}
             </div>
-            <div style={infoRowStyle}>
-              <img src={coursetime} alt="Duration" style={iconStyle} />
-               {duration}
+            <div className="home-course-info-row">
+              <img src={coursetime} alt="Duration" className="home-course-icon" />
+              {duration}
             </div>
           </div>
-
-          {/* Column 2 */}
-          <div style={columnStyle}>
-            <div style={infoRowStyle}>
-              <img src={courselevel} alt="Levels" style={iconStyle} />
-            {levels} Levels
+          <div className="home-course-column">
+            <div className="home-course-info-row">
+              <img src={courselevel} alt="Levels" className="home-course-icon" />
+              {levels} Levels
             </div>
           </div>
         </div>
       </div>
-
-      {/* Learn More Button */}
-      <img src={courseLearnMore} alt="Learn More" style={learnMoreStyle} />
-      <div style ={learnMoretext}> 
-        Learnmore <img src={learnmorebulb} alt="Learnmore bulb" style={{width:"22px",height:"21px",objectFit:"contain"}} />
-
+      <img src={courseLearnMore} alt="Learn More" className="home-course-learn-more" />
+      <div className="home-learn-more-text">
+        Learn more <img src={learnmorebulb} alt="Learn more bulb" className="home-learn-more-icon" />
       </div>
     </div>
   );
 };
 
 const CourseList = () => {
+  const navigate = useNavigate();
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   const courseData = [
-    {
-      title: "Abacus",
-      description: (<>Improve calculation speed and <br/>mental math skills.</>),
-      age: "4+",
-      duration: "12 months",
-      levels: "8",
-      rating: "4.9",
-      image: courseimg1,
-    },
-    {
-      title: "Vedic Maths",
-      description: (<>Learn faster and efficient ways <br/> of solving complex problems.</>),
-      age: "12+",
-      duration: "6 months",
-      levels: "2",
-      rating: "4.9",
-      image: courseimg1,
-    },
-    {
-      title: "Rubik's Cube",
-      description: (<>Enhance problem-solving and <br/> critical thinking skills.</>),
-      age: "7+",
-      duration: "4 months",
-      levels: "2",
-      rating: "4.9",
-      image: courseimg1,
-    },
+    { title: "Abacus", description: "Improve calculation speed and mental math skills.", age: "4+", duration: "12 months", levels: "8", rating: "4.9", image: courseimg1 },
+    { title: "Vedic Maths", description: "Learn faster and efficient ways of solving complex problems.", age: "12+", duration: "6 months", levels: "2", rating: "4.9", image: courseimg2 },
+    { title: "Rubik's Cube", description: "Enhance problem-solving and critical thinking skills.", age: "7+", duration: "4 months", levels: "2", rating: "4.9", image: courseimg3 },
+    { title: "Handwriting", description: "Boost strategic thinking and mental agility.", age: "10+", duration: "6 months", levels: "3", rating: "4.8", image: courseimg1 },
+    { title: "Reading", description: "Learn the basics of programming with Python.", age: "12+", duration: "3 months", levels: "5", rating: "4.7", image: courseimg2 },
+    { title: "Drawing", description: "Discover the world of robotics and automation.", age: "15+", duration: "8 months", levels: "4", rating: "4.9", image: courseimg3 },
   ];
 
-  const containerStyle = {
-    display: "flex",
-    justifyContent: "center",
-    flexWrap: "wrap",
-    gap: "20px",
-    padding: "40px",
+  const nextSlide = () => {
+    if (currentIndex < courseData.length - 3) {
+      setCurrentIndex(currentIndex + 1);
+    }
   };
 
-  const headingStyle = {
-    textAlign: "center",
-    marginBottom: "20px",
-    marginTop:"45px",
-    fontFamily:"geologica",
-    fontSize: "24px",
-    color: "#f58634",
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
   };
 
   return (
-    <div>
-      <h3 style={headingStyle}>Our Courses</h3>
-      <h2 style={{textAlign:"center",color:"#455a64",fontWeight:"400",fontSize:"50px",marginTop:"-14px",fontFamily:"lilita one"}}>Whole-Brain Development</h2>
-      <p style={{textAlign:"center",color:"#455a64",fontSize:"22px",marginTop:"-30px",fontFamily:"geologica"}}>At Brave Sparkids Academy, we believe in nurturing the full potential of <br/>each child through holistic approach to education</p>
-      <div style={containerStyle}>
-        {courseData.map((course, index) => (
-          <CourseCard key={index} {...course} />
-        ))}
+    <section className="home-card-info">
+    < div className="home-card-info-text">
+        <h2>Our Courses</h2>
+        <h3>Whole-Brain Development</h3>
+       <p>
+       At Brave Sparkids Academy, we believe in nurturing the full potential of <br/>each child through holistic approach to education.
+         </p>
+        </div>
+    <div className="home-course-list">
+    <h2 className="home-course-list-heading">
+          <button
+            className="explore-btn"
+            onClick={() => navigate("/courses")}
+            aria-label="Explore all courses"
+          >
+            Explore all{" "}
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.94869 16.2172L15.3837 2.78222M15.3837 2.78222L13.9695 14.0959M15.3837 2.78222L4.07001 4.19643"
+                stroke="#F58634"
+                strokeWidth="3.14286"
+                strokeLinecap="round"
+              />
+            </svg>
+          </button>
+        </h2>
+      <div className="home-course-card-slider-container">
+        <div className="home-course-slider">
+          {courseData.slice(currentIndex, currentIndex + 3).map((course, index) => (
+            <CourseCard key={index} {...course} />
+          ))}
+        </div>
+        <div className="home-course-slider-buttons">
+  {/* Left Button */}
+  <button
+    className="home-course-slider-button-left"
+    onClick={prevSlide}
+    disabled={currentIndex === 0}
+  >
+    <svg
+      width="15"
+      height="25"
+      viewBox="0 0 15 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M12.9023 1.44043L1.8125 12.5302L12.9023 23.62"
+        stroke="#FFFFFF"
+        strokeWidth="2.21796"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+
+  {/* Right Button */}
+  <button
+    className="home-course-slider-button-right"
+    onClick={nextSlide}
+    disabled={currentIndex >= courseData.length - 3}
+    
+  >
+    <svg
+      width="15"
+      height="25"
+      viewBox="0 0 15 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.8125 1.44043L12.9023 12.5302L1.8125 23.62"
+        stroke="#FFFFFF"
+        strokeWidth="2.21796"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  </button>
+</div>
+
       </div>
     </div>
+    </section>
   );
 };
 

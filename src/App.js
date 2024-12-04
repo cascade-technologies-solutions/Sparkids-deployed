@@ -13,11 +13,13 @@ import VedicPage from "./pages/VedicPage";
 import RubicPage from "./pages/RubicPage";
 import HandwritingPage from "./pages/HandwritingPage";
 import ReadingPage from "./pages/ReadingPage";
+import Scrolltotop from './components/Scrolltotop';
 
 function App() {
   return (
     <Router>
-        <Header />
+        <Header /> 
+        <Scrolltotop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
