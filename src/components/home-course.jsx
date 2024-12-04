@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import '../styles/home-course.css'; // Import the CSS file
+import React, { useState } from "react";
+import "../styles/home-course.css"; // Import the CSS file
 
 import courseimg1 from "../Assets/home-img/courseimg1.png";
 import courseimg2 from "../Assets/home-img/courseimg2.png";
@@ -10,10 +10,23 @@ import courselevel from "../Assets/home-img/course-level.png";
 import courserate from "../Assets/home-img/course-rate.png";
 import courseLearnMore from "../Assets/home-img/course-learnmore.png";
 import learnmorebulb from "../Assets/home-img/learnmorebulb.png";
-
 import { useNavigate } from "react-router-dom";
 
-const CourseCard = ({ title, description, age, duration, levels, rating, image }) => {
+const CourseCard = ({
+  title,
+  description,
+  age,
+  duration,
+  levels,
+  rating,
+  image,
+  courseId,
+}) => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate(`/${courseId}`); // Navigate to the respective course page
+  };
   return (
     <div className="home-course-card">
       <img src={image} alt="Course" className="home-course-image" />
@@ -33,37 +46,113 @@ const CourseCard = ({ title, description, age, duration, levels, rating, image }
               Age {age}
             </div>
             <div className="home-course-info-row">
-              <img src={coursetime} alt="Duration" className="home-course-icon" />
+              <img
+                src={coursetime}
+                alt="Duration"
+                className="home-course-icon"
+              />
               {duration}
             </div>
           </div>
           <div className="home-course-column">
             <div className="home-course-info-row">
-              <img src={courselevel} alt="Levels" className="home-course-icon" />
+              <img
+                src={courselevel}
+                alt="Levels"
+                className="home-course-icon"
+              />
               {levels} Levels
             </div>
           </div>
         </div>
       </div>
-      <img src={courseLearnMore} alt="Learn More" className="home-course-learn-more" />
-      <div className="home-learn-more-text">
-        Learn more <img src={learnmorebulb} alt="Learn more bulb" className="home-learn-more-icon" />
+      <img
+        src={courseLearnMore}
+        alt="Learn More"
+        className="home-course-learn-more"
+      />
+      <div
+        className="home-learn-more-text"
+        onClick={handleLearnMoreClick}
+        style={{ cursor: "pointer" }}
+      >
+        Learn more{" "}
+        <img
+          src={learnmorebulb}
+          alt="Learn more bulb"
+          className="home-learn-more-icon"
+        />
       </div>
     </div>
   );
 };
 
 const CourseList = () => {
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const courseData = [
-    { title: "Abacus", description: "Improve calculation speed and mental math skills.", age: "4+", duration: "12 months", levels: "8", rating: "4.9", image: courseimg1 },
-    { title: "Vedic Maths", description: "Learn faster and efficient ways of solving complex problems.", age: "12+", duration: "6 months", levels: "2", rating: "4.9", image: courseimg2 },
-    { title: "Rubik's Cube", description: "Enhance problem-solving and critical thinking skills.", age: "7+", duration: "4 months", levels: "2", rating: "4.9", image: courseimg3 },
-    { title: "Handwriting", description: "Boost strategic thinking and mental agility.", age: "10+", duration: "6 months", levels: "3", rating: "4.8", image: courseimg1 },
-    { title: "Reading", description: "Learn the basics of programming with Python.", age: "12+", duration: "3 months", levels: "5", rating: "4.7", image: courseimg2 },
-    { title: "Drawing", description: "Discover the world of robotics and automation.", age: "15+", duration: "8 months", levels: "4", rating: "4.9", image: courseimg3 },
+    {
+      title: "Abacus",
+      description: "Improve calculation speed and mental math skills.",
+      age: "4+",
+      duration: "12 months",
+      levels: "8",
+      rating: "4.9",
+      image: courseimg1,
+      courseId: "abacus",
+    },
+    {
+      title: "Vedic Maths",
+      description:
+        "Learn faster and efficient ways of solving complex problems.",
+      age: "12+",
+      duration: "6 months",
+      levels: "2",
+      rating: "4.9",
+      image: courseimg2,
+      courseId: "vedic",
+    },
+    {
+      title: "Rubik's Cube",
+      description: "Enhance problem-solving and critical thinking skills.",
+      age: "7+",
+      duration: "4 months",
+      levels: "2",
+      rating: "4.9",
+      image: courseimg3,
+      courseId: "rubic",
+    },
+    {
+      title: "Handwriting",
+      description: "Boost strategic thinking and mental agility.",
+      age: "10+",
+      duration: "6 months",
+      levels: "3",
+      rating: "4.8",
+      image: courseimg1,
+      courseId: "handwriting",
+    },
+    {
+      title: "Reading",
+      description: "Learn the basics of programming with Python.",
+      age: "12+",
+      duration: "3 months",
+      levels: "5",
+      rating: "4.7",
+      image: courseimg2,
+      courseId: "reading",
+    },
+    {
+      title: "Drawing",
+      description: "Discover the world of robotics and automation.",
+      age: "15+",
+      duration: "8 months",
+      levels: "4",
+      rating: "4.9",
+      image: courseimg3,
+      courseId: "drawing",
+    },
   ];
 
   const nextSlide = () => {
@@ -80,94 +169,98 @@ const CourseList = () => {
 
   return (
     <section className="home-card-info">
-    < div className="home-card-info-text">
+      <div className="home-card-info-text">
         <h2>Our Courses</h2>
         <h3>Whole-Brain Development</h3>
-       <p>
-       At Brave Sparkids Academy, we believe in nurturing the full potential of <br/>each child through holistic approach to education.
-         </p>
-        </div>
-    <div className="home-course-list">
-    <h2 className="home-course-list-heading">
-          <button
-            className="explore-btn"
-            onClick={() => navigate("/courses")}
-            aria-label="Explore all courses"
-          >
-            Explore all{" "}
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1.94869 16.2172L15.3837 2.78222M15.3837 2.78222L13.9695 14.0959M15.3837 2.78222L4.07001 4.19643"
-                stroke="#F58634"
-                strokeWidth="3.14286"
-                strokeLinecap="round"
-              />
-            </svg>
-          </button>
-        </h2>
-      <div className="home-course-card-slider-container">
-        <div className="home-course-slider">
-          {courseData.slice(currentIndex, currentIndex + 3).map((course, index) => (
-            <CourseCard key={index} {...course} />
-          ))}
-        </div>
-        <div className="home-course-slider-buttons">
-  {/* Left Button */}
-  <button
-    className="home-course-slider-button-left"
-    onClick={prevSlide}
-    disabled={currentIndex === 0}
-  >
-    <svg
-      width="15"
-      height="25"
-      viewBox="0 0 15 25"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M12.9023 1.44043L1.8125 12.5302L12.9023 23.62"
-        stroke="#FFFFFF"
-        strokeWidth="2.21796"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  </button>
-
-  {/* Right Button */}
-  <button
-    className="home-course-slider-button-right"
-    onClick={nextSlide}
-    disabled={currentIndex >= courseData.length - 3}
-    
-  >
-    <svg
-      width="15"
-      height="25"
-      viewBox="0 0 15 25"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M1.8125 1.44043L12.9023 12.5302L1.8125 23.62"
-        stroke="#FFFFFF"
-        strokeWidth="2.21796"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  </button>
-</div>
-
+        <p>
+          At Brave Sparkids Academy, we believe in nurturing the full potential
+          of <br />
+          each child through holistic approach to education.
+        </p>
       </div>
-    </div>
+      <div className="home-course-list">
+        {/*    <div className="home-learn-more-text">
+        Learn more <img src={learnmorebulb} alt="Learn more bulb" className="home-learn-more-icon" />
+      </div> */}
+
+        <h2
+          className="home-course-list-heading"
+          onClick={() => (window.location.href = "/courses")} // Update this link to your route
+        >
+          Explore all
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.94869 16.2172L15.3837 2.78222M15.3837 2.78222L13.9695 14.0959M15.3837 2.78222L4.07001 4.19643"
+              stroke="#F58634"
+              strokeWidth="3.14286"
+              strokeLinecap="round"
+            />
+          </svg>
+        </h2>
+
+        <div className="home-course-card-slider-container">
+          <div className="home-course-slider">
+            {courseData
+              .slice(currentIndex, currentIndex + 3)
+              .map((course, index) => (
+                <CourseCard key={index} {...course} />
+              ))}
+          </div>
+          <div className="home-course-slider-buttons">
+            {/* Left Button */}
+            <button
+              className="home-course-slider-button-left"
+              onClick={prevSlide}
+              disabled={currentIndex === 0}
+            >
+              <svg
+                width="15"
+                height="25"
+                viewBox="0 0 15 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.9023 1.44043L1.8125 12.5302L12.9023 23.62"
+                  stroke="#FFFFFF"
+                  strokeWidth="2.21796"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            {/* Right Button */}
+            <button
+              className="home-course-slider-button-right"
+              onClick={nextSlide}
+              disabled={currentIndex >= courseData.length - 3}
+            >
+              <svg
+                width="15"
+                height="25"
+                viewBox="0 0 15 25"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.8125 1.44043L12.9023 12.5302L1.8125 23.62"
+                  stroke="#FFFFFF"
+                  strokeWidth="2.21796"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

@@ -40,6 +40,8 @@
   padding: 40px;
 }
 
+
+/*
 .home-course-list-heading {
   font-family: Geologica;
   font-weight: bold;
@@ -48,6 +50,27 @@
   margin-bottom: -54px;
   margin-top: 0px;
   margin-right: 100px;
+  cursor: pointer;
+  position: absolute;
+  transform: translateX(-50%);
+  font-family: KoHo;
+  cursor: pointer;
+}
+*/
+
+/* "Explore all" Styling */
+/* "Explore all" Styling */
+.home-course-list-heading {
+  font-family: Geologica, sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: #f58634;
+  margin: 20px 100px -20px auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-left: 1100px;
 }
 
 .home-course-card-slider-container {

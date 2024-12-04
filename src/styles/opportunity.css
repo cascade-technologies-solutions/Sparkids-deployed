@@ -150,11 +150,10 @@
   transition: transform 0.2s ease; /* Smooth scaling effect */
 }
 
-/* Hover Effect for Images */
-.opportunity-image-container img:hover {
-  transform: scale(1.03); /* Slightly enlarge */
-}
 
+.opportunity-image-container img:not(.no-hover):hover {
+  transform: scale(1.03); /* Slightly enlarge */
+}
 /* Hover Effect for Info Card */
 .opportunity-info-card:hover {
   transform: scale(1.03); /* Slightly enlarge */
