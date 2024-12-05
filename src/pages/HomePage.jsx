@@ -5,7 +5,7 @@ import Hero from '../components/Hero';
 import Opportunity from '../components/opportunity';
 import Sight from '../components/sight';
 import Educator from '../components/educator';
-import CourseCard from '../components/home-course';
+import Course from '../components/home-course';
 import HomeTestimonials from '../components/hometestimonial';
 import HomeAbout from '../components/home-abt';
 
@@ -14,7 +14,7 @@ export const HomePage = () => {
     <div>
       <Hero />
       <HomeAbout />
-      <CourseCard />
+      <Course />
       <Opportunity />
       <Educator />
       <Sight />

@@ -79,7 +79,7 @@
 .opportunity-btn {
   background-color: #f58634;
   color: #fff;
-  width: 189px;
+  width: 235px;
   height: 56px;
   border: 2px solid #f58634;
   transition: all 0.3s ease;
@@ -96,35 +96,68 @@
 .hero-stats {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  margin-top: -50px;
+}
+.hero-stats .stats-images {
+  position: relative;
+  width:50px;
+  height: 50px; /* This makes the parent container a reference point */
 }
 
+.hero-stats img {
+  position: absolute;  /* Position images absolutely within the parent */
+  width: 50px;  
+  height:50px;
+}
+
+.hero-stats img:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.hero-stats img:nth-child(2) {
+  left: 30px;
+}
+
+.hero-stats img:nth-child(3) {
+    left: 60px;
+}
+.hero-stats img:nth-child(4) {
+  left: 90px;
+}
+.hero-stats img:nth-child(5) {
+  left: 120px;
+}
+
+
 .stats-images img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 44.5px;
+  height: 44.5px;
   margin-right: 5px;
-  border: 2px solid #fff;
 }
 
 .stats-text {
-  font-size: 1rem;
+  font-size: 30px;
   color: #343434;
   font-family: lilita one;
+  line-height: 30px;
+  margin-left: 170px;
+
 }
 
 .highlight {
   color: #f58634;
   font-weight: 400;
+  font-size: 24px;
   font-family: geologica;
 }
 
-.opportunity-note {
-  font-size: 30px;
+.opportunity-note{
+  font-size: 20px;
   font-family: lilita one;
   font-weight: 400;
   color: #343434;
-  margin-top: -40px;
+  margin-top: -60px;
 }
 
 .note-highlight {
@@ -145,7 +178,7 @@
   position: relative;
   width: 600px;
   height: 600px;
-  top: -110px;
+  top: -50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,9 +223,9 @@
 }
 
 /* Position-specific icons */
-.puzzle1 {
-  width: 81.16px;
-  height: 88.55px;
+.bulb {
+  width: 83.4px;
+  height: 105.83px;  
   top: 245px;
   left: 48px;
   animation: slideInLeft 1.2s ease forwards;
@@ -206,11 +239,11 @@
   animation: slideInLeft 1.4s ease forwards;
 }
 
-.bulb {
+.puzzle1 {
+  width: 81.16px;
+  height: 88.55px;
   top: 225px;
   right: 32px;
-  width: 83.4px;
-  height: 105.83px;
   animation: slideInRight 1.2s ease forwards;
 }
 
@@ -294,4 +327,18 @@
 .symbol:hover {
   animation: wiggle 0.5s ease-in-out;
   animation-iteration-count: infinite;
+}
+
+/* Image Section Styles */
+.image-partner {
+  margin-top: 20px; /* Adjust based on layout */
+  display: flex;
+  justify-content: flex-start;
+}
+
+.partner-image {
+  width: 704px; /* Adjust the size of the image */
+  height: 46px;
+  margin-left: -64px; 
+  margin-top:-76px;/* Adjust space between text */
 }

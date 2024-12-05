@@ -1,7 +1,7 @@
 
 
 import React from 'react';
-import person from '../Assets/home-img/person1.jpg';
+import person from '../Assets/home-img/person.png';
 import brainleft from '../Assets/home-img/brain-img/brainleft.png';
 import brainright from '../Assets/home-img/brain-img/brainright.png';
 import bulb from '../Assets/home-img/brain-img/bulb.png';
@@ -11,6 +11,7 @@ import puzzle2 from '../Assets/home-img/brain-img/puzzle2.png';
 import symbol from '../Assets/home-img/brain-img/symbol.png';
 import gear from '../Assets/home-img/brain-img/gear.png';
 import '../styles/hero.css';
+import watermark from '../Assets/home-img/watermark.png';
 
 const Hero = () => {
   return (
@@ -33,17 +34,20 @@ const Hero = () => {
             <img src={person} alt="Student 1" />
             <img src={person} alt="Student 2" />
             <img src={person} alt="Student 3" />
+            <img src={person} alt="Student 4" />
+            <img src={person} alt="Student 5" />
           </div>
           <p className="stats-text">
             <h1>9000+ Students <br /><span className="highlight"> have started their studies </span> </h1>
           </p>
         </div>
-        <p className="opportunity-note">
-          <h1>
-            More than <span className="note-highlight">50+</span> opportunities <br /> partner with us
-          </h1>
-        </p>
-      </div>
+        <div className="opportunity-note">
+      <h1>
+        More than <span className="note-highlight">50+</span> opportunities <br /> partner with us
+      </h1>
+    </div>
+
+  </div>
       <div className="hero-image">
   {/* Brain Image and Icons */}
   <div className="brain-layout">
@@ -57,6 +61,10 @@ const Hero = () => {
     <img src={brainleft} alt="Left Brain" className="brain-left" />
     <img src={brainright} alt="Right Brain" className="brain-right" />
   </div>
+      {/* Image Section */}
+      <div className="image-partner">
+      <img src={watermark} alt="Partner Image" className="partner-image" />
+    </div>
 </div>
 
     </section>
