@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../Assets/home-img/logo.png";
 import "../styles/header.css";
 
 function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => setIsNavOpen(!isNavOpen);
+  const closeNav = () => setIsNavOpen(false);
+
   return (
     <header className="header">
       <div className="logo">
@@ -11,31 +16,37 @@ function Header() {
           <img src={logo} alt="Brave Sparkids Logo" />
         </NavLink>
       </div>
-      <nav className="nav">
+      <div className="hamburger" onClick={toggleNav}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav className={`nav ${isNavOpen ? "active" : ""}`}>
         <ul>
           <li>
-            <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
+            <NavLink to="/" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>About Us</NavLink>
+            <NavLink to="/about" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>About Us</NavLink>
           </li>
           <li>
-            <NavLink to="/courses" className={({ isActive }) => (isActive ? "active" : "")}>Courses</NavLink>
+            <NavLink to="/courses" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Courses</NavLink>
           </li>
           <li>
-            <NavLink to="/franchise" className={({ isActive }) => (isActive ? "active" : "")}>Franchise</NavLink>
+            <NavLink to="/franchise" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Franchise</NavLink>
           </li>
           <li>
-            <NavLink to="/careers" className={({ isActive }) => (isActive ? "active" : "")}>Careers</NavLink>
+            <NavLink to="/careers" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Careers</NavLink>
           </li>
           <li>
-            <NavLink to="/insight" className={({ isActive }) => (isActive ? "active" : "")}>Insights</NavLink>
+            <NavLink to="/insight" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Insights</NavLink>
           </li>
           <li>
-            <button className="contact-us">Contact Us</button>
+            <button className="contact-us" onClick={closeNav}>Contact Us</button>
           </li>
         </ul>
       </nav>
+      <div className={`overlay ${isNavOpen ? "active" : ""}`} onClick={closeNav}></div>
     </header>
   );
 }
