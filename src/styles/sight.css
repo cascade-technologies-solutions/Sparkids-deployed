@@ -160,3 +160,145 @@
     width: 128px;
     height: 165px;
   }
+
+  
+  /* Responsive for width 768px */
+  @media (max-width: 768px) {
+    .insights-section {
+      flex-direction: row;
+      padding: 3rem 1.5rem;
+      gap: 1.5rem;
+    }
+  
+    .insights-content {
+      text-align: left;
+      width:50%;
+    }
+  
+    .insights-title {
+      font-size: 28px;
+    }
+  
+    .insights-description {
+      font-size: 14px;
+    }
+  
+    .insights-list li {
+      font-size: 14px;
+    }
+  
+    .insights-button {
+      font-size: 14px;
+    }
+
+    .images-grid {
+      width: 45%;
+      height: auto;
+    }
+    .images-grid img:nth-child(1) {
+      top:-127px;
+      left: 5px;
+      width: 80px;
+      height: 110px;
+    }
+    
+    .images-grid img:nth-child(2) {
+      bottom: 68px;
+      left: 86px;
+      width: 88px;
+      height: 172px;
+    }
+    
+    .images-grid img:nth-child(3) {
+      bottom: 102px;
+      left: 176px;
+      width: 88px;
+      height: 125px;
+    }
+    
+    .images-grid img:nth-child(4) {
+      top: -177px;
+      left: 265px;
+      width: 102px;
+      height: 173px;
+    }
+    
+    .images-grid img:nth-child(5) {
+      top: -70px;
+      left: 87px;
+      width: 87px;
+      height: 145px;
+    }
+    
+    .images-grid img:nth-child(6) {
+      top: -106px;
+      left: 175px;
+      width: 88px;
+      height: 132px;
+    }
+    
+    .images-grid img:nth-child(7) {
+      top: -15px;
+      left: -25px;
+      width: 110px;
+      height: 162px;
+    }
+    
+    .images-grid img:nth-child(8) {
+      top: 73px;
+      left: 87px;
+      width: 88px;
+      height: 120px;
+    }
+    
+    .images-grid img:nth-child(9) {
+      top: 23px;
+      left: 175px;
+      width: 88px;
+      height: 152px;
+    }
+    
+    .images-grid img:nth-child(10) {
+      top: -5px;
+      left: 266px;
+      width: 88px;
+      height: 125px;
+    }
+  }
+  @media (max-width: 480px) {
+    .insights-section {
+      flex-direction: column;
+      padding: 3rem 1.5rem;
+      gap: 1.5rem;
+      height: 790px;
+    }
+  
+    .insights-content {
+      text-align: left;
+      order:1;
+      width:340px;
+    }
+  
+    .insights-title {
+      font-size: 30px;
+    }
+  
+    .insights-description {
+      font-size: 14px;
+    }
+  
+    .insights-list li {
+      font-size: 14px;
+    }
+  
+    .insights-button {
+      font-size: 14px;
+    }
+
+    .images-grid {
+      order:2;
+      height: auto;
+      width: 325px;
+      margin-bottom: 100px;
+    }
+ }
