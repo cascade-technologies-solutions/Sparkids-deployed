@@ -143,8 +143,6 @@
   border: black;
 }
 
-
-/* Smooth transition for images and info card */
 .opportunity-image-container img,
 .opportunity-info-card {
   transition: transform 0.2s ease; /* Smooth scaling effect */
@@ -157,15 +155,6 @@
 /* Hover Effect for Info Card */
 .opportunity-info-card:hover {
   transform: scale(1.03); /* Slightly enlarge */
-}
-
-
-/* General Styling for Larger Screens */
-.opportunity-section {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 90px 20px;
 }
 
 /* For Screens up to 768px */
