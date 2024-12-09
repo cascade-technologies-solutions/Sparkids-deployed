@@ -1,4 +1,3 @@
-/* Overall Section */
 .abacus-section {
     display: flex;
     justify-content: space-between;
@@ -97,3 +96,68 @@
   .abacus-image img:hover {
     transform: translateY(-10px);
     }
+
+/* Responsive design for screens with a width of 375px */
+@media (max-width: 374px) {
+
+  .abacus-content {
+    flex: 1;
+    width: 65%;
+  }
+  .abacus-section {
+    padding: 0rem 1rem;
+  }
+
+  .abacus-heading {
+    font-size: 30px;
+    margin-bottom: 0rem;
+  }
+  
+  .abacus-description {
+    font-size: 12px;
+    margin-bottom: 0rem;
+    line-height: 1.3;
+  }
+  
+  /* Points List */
+  .abacus-points {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .abacus-points li {
+    display: flex;
+    margin-bottom: 1rem;
+    font-size: 4px;
+  }
+  
+  .abacus-points li img {
+    margin-right: 0.2rem;
+    height: 10px;
+    width: 12px;
+  }
+  
+  .abacus-points li span {
+    line-height: 1.4;
+    font-size: 12px;
+  }
+  
+
+  .abacus-button {
+    font-size: 10.19px;
+    width: 222px;
+    height: 25px;
+  }
+
+  .abacus-image img {
+    width: 165px;
+    height: 200px;
+    border-radius: 10px;
+    margin-left: -60px;
+  }
+  .abacus-image{
+    display: flex;
+    margin-right: 25px;
+  }
+}
