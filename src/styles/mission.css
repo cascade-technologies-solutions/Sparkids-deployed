@@ -157,7 +157,7 @@
 @media (max-width: 768px) {
   .mission-wrapper {
     height: auto;
-    margin-top: -240px;
+    margin-top: 50px;
     flex-direction: column;
   }
 
@@ -269,18 +269,18 @@
 
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 375px) {
  
 
 
   .content-section h1 {
-    font-size: 24px;
+    font-size: 16px;
     margin-top: -24px;
   }
 
   .content-section p {
-    font-size: 10px;
-    margin-top:-17px;
+    font-size: 7px;
+    margin-top:-13px;
   }
 
   .sub-section .icon {
@@ -292,20 +292,23 @@
   }
 
   .sub-section img {
-    width: 30px;
-    height: 30px;
-    margin-top: -40px;
+    width: 15px;
+    height: 15px;
+    margin-top: -38px;
   }
 
   .sub-section .text h3 {
-    font-size: 10px;
-    margin-top: -27px;
-    margin-bottom:-30px;
+    font-size: 8px;
+    margin-top: -29px;
+    margin-bottom:-28px;
+    margin-left: -18px;
   }
 
   .sub-section .text p {
-    font-size: 8px;
-    margin-top: 28px;
+    font-size: 7px;
+    margin-top: 29px;
+    line-height: 8px;
+    margin-left: -18px;
   }
 
   .image-section {
@@ -316,52 +319,54 @@
   }
 
   .main-image {
-    width: 198px;
-    height: 247px;
-    margin-top: 204px;
-    margin-left:73px;
+    width: 136px;
+    height: 182px;
+    margin-top: 268px;
+    margin-left:56px;
   }
 
   .icon1 {
-    width: 20px;
-    height: 20px;
-    top: 90%;
+    width: 15px;
+    height: 15px;
+    top: 95%;
     left: 99%;
   }
 
   .icon2 {
-    width: 20px;
-    height: 20px;
-    top: 97%;
-    right: 55%;
+    width: 15px;
+    height: 15px;
+    top: 104%;
+    right: 59%;
   }
 
   .icon3 {
-    width: 20px;
-    height: 20px;
-    bottom:25%;
+    width: 15px;
+    height: 15px;
+    bottom:14%;
     left: 90%;
   }
 
   .icon4 {
-    width: 23px;
-    height: 18px;
-    top: 85%;
-    right: 61%;
+    width: 19px;
+    height: 15px;
+    top: 88%;
+    right: 65%;
   }
 
   .icon5 {
-    width: 20px;
-    height: 20px;
-    top: 73%;
-    left: 48%;
+    width: 15px;
+    height: 15px;
+    top: 84%;
+    left: 45%;
   }
 
   .icon6 {
-    width: 20px;
-    height: 20px;
-    top: 107%;
+    width: 15px;
+    height: 15px;
+    top: 108%;
     right: -4%;
   }
-
+.content-section{
+  left: -2%;
+}
 }

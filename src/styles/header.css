@@ -11,13 +11,13 @@
   top: 0;
   z-index: 1000;
   font-family: 'Arial', sans-serif;
-  height: 80px;
+  height: 102px;
 }
 
 /* Logo */
 .logo img {
-  width: 80px;
-  height: auto;
+  width: 86px;
+  height: 102px;
 }
 
 .nav {
@@ -27,8 +27,8 @@
 .nav ul {
   list-style: none;
   display: flex;
-  gap: 65px;
-  margin: 0;
+  gap: 48px;
+  margin-left: 263px;
   padding: 0;
   align-items: center;
 }
@@ -51,12 +51,14 @@
 
 /* Contact Us Button */
 .contact-us {
-  padding: 0.5rem 1.2rem;
+  padding: 20px 16px;
   border: 2px solid #ff6600;
   background: none;
   border-radius: 8px;
   color: #ff6600;
-  font-size: 1rem;
+  font-size: 16px;
+  width: 140px;
+  height: 56px;
   font-weight: bold;
   transition: all 0.3s ease;
 }

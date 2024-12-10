@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/courseVedic.css";
 import point from "../Assets/courses-img/checkpoint.png";
-import vedicImage from "../Assets/courses-img/coursevedic.png";
+import vedicImage from "../Assets/courses-img/abacuscourse.png";
 
 const vedicCourse = () => {
   return (
