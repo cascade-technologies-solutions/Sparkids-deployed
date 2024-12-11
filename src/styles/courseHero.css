@@ -86,3 +86,45 @@
   .coursehero-image img:hover {
     transform: translateY(-10px);
     }
+
+    @media (max-width: 768px) {
+      .coursehero-container {
+        flex-direction: row;
+        padding: 20px;
+        gap: 20px;
+      }
+    
+      .coursehero-content,
+      .coursehero-image {
+        flex: 0 0 50%;
+        max-width: 100%;
+        margin: 0;
+      }
+    
+      .coursehero-pagename {
+        position: static;
+        top: 0;
+        margin-bottom: 50px;
+        font-size: 20px;
+      }
+    
+      .coursehero-headline1{
+        font-size: 35px;
+      }
+      .coursehero-headline2,
+      .coursehero-headline2 span {
+        font-size: 45px;
+        margin-top: 95px;
+      }
+    
+      .coursehero-subheadline,
+      .coursehero-description {
+        font-size: 18px;
+      }
+    
+      .coursehero-image img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+      }
+    }
