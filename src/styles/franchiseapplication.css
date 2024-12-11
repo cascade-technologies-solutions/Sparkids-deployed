@@ -109,4 +109,164 @@ transform: translatey(-10px);
     top:150px; 
     transform: translateY(-50%) scaleX(-1); /* Flip the arrow */
   }
+@media (max-width: 768px) {
   
+  .steps-container{
+    gap:15px;
+  }
+  .step-content span{
+    font-size: 20px;
+  }
+    .step-box {
+      width: 590px;
+      height: 73px;
+    }
+    
+    .step-wrapper {
+      width: 85%;
+    }
+    .arrow-image {
+      width: 35px;
+      height: 90px;
+      top: 50%;
+    }
+    
+    .arrow-left {
+      left: -40px; 
+      top:110px;
+    }
+    
+    .arrow-right {
+      right: -55px;
+      top:110px;
+    }
+}
+@media (max-width: 426px) {
+  .heading{
+    font-size: 45px;
+  }
+  .subheading{
+    font-size: 28px;
+  }
+  .steps-container {
+    gap: 10px;
+  }
+  .step-wrapper{
+    width: 95%;
+  }
+
+  .step-box {
+    width: 310px;
+    height: 50px;
+  }
+
+  .step-number {
+    font-size: 20px;
+  }
+  .step-content{
+    font-size: 18px;
+  }
+
+  .step-content span {
+    font-size: 14px;
+  }
+
+  .arrow-image {
+    width: 30px;
+    height: 70px;
+  }
+
+  .arrow-left {
+    left: -30px;
+    top: 80px;
+  }
+
+  .arrow-right {
+    right: -19px;
+    top: 90px;
+  }
+}
+
+@media (max-width: 376px) {
+  .heading {
+    font-size: 39px;
+  }
+  .subheading {
+    font-size: 22px;
+  }
+  .steps-container {
+    gap: 8px;
+  }
+  .step-wrapper {
+    width: 93%;
+  }
+
+  .step-box {
+    width: 280px;
+    height: 45px;
+  }
+
+  .step-number {
+    font-size: 18px;
+  }
+  .step-content {
+    font-size: 16px;
+  }
+
+  .step-content span {
+    font-size: 12px;
+  }
+
+  .arrow-image {
+    width: 22px;
+    height: 70px;
+  }
+
+  .arrow-left {
+    left: -25px;
+    top: 90px;
+  }
+
+  .arrow-right {
+    right: -35px;
+    top: 90px;
+  }
+}
+@media (max-width: 321px) {
+  .heading {
+    font-size: 33px;
+  }
+  .subheading {
+    font-size: 20px;
+  }
+  .step-box {
+    width: 220px;
+    height: 45px;
+  }
+
+  .step-number {
+    font-size: 18px;
+  }
+  .step-content {
+    font-size: 14px;
+  }
+
+  .step-content span {
+    font-size: 10px;
+  }
+
+  .arrow-image {
+    width: 21px;
+    height: 67px;
+  }
+
+  .arrow-left {
+    left: -25px;
+    top: 90px;
+  }
+
+  .arrow-right {
+    right: -24px;
+    top: 90px;
+  }
+}
