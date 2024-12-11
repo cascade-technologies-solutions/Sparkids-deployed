@@ -133,6 +133,7 @@
       text-align: center;
       display: flex;
       gap: 40px;
+      margin-top: -30px;
     }
   
     .footer-section h3 {
@@ -159,7 +160,7 @@
   
     .subscribe input,
     .subscribe button {
-      width: 100%;
+      width: 80%;
     }
   
     .social-icons {
