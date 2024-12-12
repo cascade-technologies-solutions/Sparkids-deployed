@@ -379,12 +379,10 @@
 
   .hero-heading {
     font-size: 80px;
-    line-height: 1;
   }
 
   .hero-heading span {
     font-size: 80px;
-    color: #f58634;
   }
 
   .hero-subtitle {
@@ -431,7 +429,7 @@
 }
 
 .opportunity-note{
-  font-size: 30px;
+  font-size: 20px;
 }
     /* Brain Layout Container */
     .brain-layout {
@@ -525,33 +523,17 @@
     }
   }
 
-/* mobile view */
-
-@media (max-width: 480px) {
+@media (max-width: 426px) {
 
   .brain-layout {
     width: 100%;
     height: 350px;
   }
-
-  /* Hero Section */
-  .hero-section {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    padding: 20px;
-  }
- 
-  /* Hero Image at the Top */
   .hero-image {
     order: 1;
-    width: 100%;
-    max-width: 400px;
+    width: 87%;
     height: 350px;
-    margin-bottom: 20px;
   }
-
-  /* Hero Content Below the Image */
   .hero-content {
     order: 2; 
     text-align: center; 
@@ -559,112 +541,88 @@
   }
 
   .hero-heading {
-    font-size: 30px;
-    line-height: 1.2;
+    font-size: 50px;
   }
 
   .hero-heading span {
-    font-size: 28px;
-    color: #f58634;
+    font-size: 45px;
   }
 
   .hero-subtitle {
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 22px;
   }
 
   .hero-description {
-    font-size: 16px;
-    margin-top: 10px;
-    line-height: 1.2;
+    font-size: 13px;
   }
 
   .hero-buttons {
     margin-top: 20px;
-    flex-direction: column;
     gap: 15px; 
   }
 
   .explore-btn,
   .opportunity-btn {
-    width: 200px; 
+    width: 140px; 
     height: 50px;
+    font-size: 15px;
   }
   
   .hero-stats {
     margin-top: -20px;
-    flex-direction: row;
   }
   .hero-stats .stats-text h1{
-    margin-left: 180px;
-    font-size: 20px;
+    margin-left: -20px;
+    font-size: 18px;
 }
 
 .hero-stats .stats-text .highlight{
-  margin-left: 0;
+  margin-left: -66px;
   font-size: 16px;
 }
-    /* Brain Layout Container */
-    .brain-layout {
-      position: relative;
-      width: 100%; 
-      height: 350px;
-      top: -20px; 
-      display: flex;
-      flex-wrap: wrap; 
-      justify-content: center; 
-      align-items: center;
-      padding: 20px 0; 
-    }
-  
+.stats-images img {
+  width: 40px;
+  height: 40px;
+  margin-left: 0px;
+  margin-top: -10px;
+}
+.opportunity-note{
+  font-size: 18px;
+}
     .brain-left,
     .brain-right {
-      width: 100px; 
+      width: 80px; 
       height: auto; 
       top: 0; 
     }
   
     .brain-left {
-      left: 97px; 
-      top:70px;
+      left: 84px; 
+      top:80px;
     }
   
     .brain-right {
-      right: 90px;
-      top:70px; 
+      right: 85px;
+      top:80px; 
     }
-  
-    /* Adjust Hover Effect */
-    .brain-left:hover,
-    .brain-right:hover {
-      transform: translateY(-3%) scale(1.05); 
-    }
-  
-    /* Brain Icons */
     .brain-icon {
-      width: 35px; 
-      height: auto; 
-      opacity: 1; 
+      width: 35px;
     }
-  
-   
+
     .bulb {
-      width: 50px;
-      height: auto;
-      top: 150px;
+      width: 40px;
+      top: 140px;
       left: 30px; 
     }
   
     .symbol {
-      width: 40px;
-      height: auto;
-      bottom: 90px;
-      left: 50px;
+      width: 35px;
+      top: 240px;
+      left: 55px;
     }
   
     .puzzle1 {
       width: 50px;
-      height: auto;
       top: 150px;
       right: 35px;
     }
@@ -673,61 +631,69 @@
       top: 55px;
       left: 100px;
       width: 60px;
-      height: auto;
     }
   
     .pencil {
-      bottom: 85px;
-      right: 60px;
-      width: 80px;
-      height: auto;
+      top: 220px;
+      right: 73px;
+      width: 50px;
     }
   
     .gear {
-      width: 350px; 
-      height: 350px; 
+      width: 320px; 
+      height: 320px; 
     }
-
-    @keyframes slideInLeft {
-      0% {
-        transform: translateX(-100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-
     .partner-image {
-      width: 260px;
+      width: 280px;
       height: 20px;
-      margin-left: 60px;
-      margin-top: -55px;
+      margin-left: 26px;
+      margin-top: -60px;
     }
-  
-    @keyframes slideInRight {
-      0% {
-        transform: translateX(100%);
-        opacity: 0;
-      }
-      100% {
-        transform: translateX(0);
-        opacity: 1;
-      }
-    }
-  
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  
-  
+}
 
-
-  
+@media (max-width: 376px) {
+  .brain-layout {
+    width: 100%;
+    height: 350px;
+  }
+  .hero-image {
+    order: 1;
+    width: 100%;
+    height: 350px;
+  }
+}
+@media (max-width: 320px) {
+  .hero-content{
+    margin-top: 8px;
+  }
+  .brain-layout {
+    width: 100%;
+    height: 350px;
+  }
+  .hero-image {
+    order: 1;
+    width: 120%;
+    height: 350px;
+  }
+  .explore-btn, .opportunity-btn {
+    width: 114px;
+    height: 35px;
+    font-size: 12px;
+}
+.stats-text{
+  line-height: 20px;
+  margin-left: 140px;
+}
+.hero-stats .stats-text .highlight{
+  margin-left: -66px;
+  font-size: 14px;
+}
+.hero-stats .stats-text h1{
+  margin-left: -25px;
+  font-size: 13px;
+}
+  .opportunity-note{
+    font-size: 15px;
+    margin-top: -45px;
+  }
 }
