@@ -1,0 +1,88 @@
+.coursehero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    gap: 10px;
+
+  }
+  
+  .coursehero-content {
+    flex: 1;
+    max-width: 50%;
+    margin-left: 80px;
+  }
+  
+  /* Move pagename to the top with reduced margin */
+  .coursehero-pagename {
+    font-size: 24px;
+    color: #455a64;
+    margin-top: 0;
+    font-family: geologica;
+    margin-bottom: 8px; 
+    position: relative;
+    top: -84px; 
+  }
+  
+  .coursehero-pagename span {
+    color: #f58634;
+  }
+  
+  .coursehero-headline1{
+    font-size: 50px;
+    font-weight: 400;
+    color: #455a64;
+    font-family: Lilita One;
+    margin: 0 0 -155px 0; /* Reduced margin-bottom for closer spacing */
+  }
+  
+  .coursehero-headline2 span {
+    color: #f58634;
+    font-size: 80px;
+    font-family: lilita one;
+    margin-bottom: 30px;
+  }
+  
+  .coursehero-headline2  {
+    color: #455a64;
+    font-size: 80px;
+    font-family: lilita one;
+    font-weight: 400;
+  }
+  
+  .coursehero-subheadline {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: "geologica";
+    color: #343434;
+    margin: 2px 0; 
+  }
+  
+  .coursehero-description {
+    font-size: 22px;
+    color: #455a64;
+    font-style: Geologica;
+    font-weight: 100;
+    line-height: 1.4; 
+    margin-top: 8px; 
+  }
+  
+  .coursehero-image {
+    flex: 1;
+    max-width: 45%;
+    display: flex;
+   
+    align-items: center;
+    margin-right: 120px;
+  }
+  
+  .coursehero-image img {
+    height: 662px;
+    width:702px;
+    margin-right: 30px;
+    transition: transform 0.3s ease
+  }
+  
+  .coursehero-image img:hover {
+    transform: translateY(-10px);
+    }

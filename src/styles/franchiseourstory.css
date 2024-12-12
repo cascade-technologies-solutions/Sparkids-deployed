@@ -1,0 +1,101 @@
+
+.franchise-ourstory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    
+    background: linear-gradient(to left, #fff, #fff6eb);  
+  } 
+  .franchise-ourstory-container{
+    padding: 10px;
+    background-color: linear-gradient(to right, #fff, #ffe6cc);
+  }
+  .franchise-ourstory-text {
+    text-align: center;
+    margin-bottom: 20px; 
+    margin-top: 10px;
+  }
+  
+  .franchise-ourstory-text h2 {
+    font-size: 24px;
+    font-weight: regular;
+    color: #f58634;
+    margin-bottom: -17;
+    font-family:Geologica;
+  }
+  
+  .franchise-ourstory-text h3 {
+    font-size: 50px;
+    font-weight: regular;
+    color: #455a64;
+    margin-top: -5px;
+    font-family: Lilita One;
+  }
+  
+  .franchise-ourstory-text p {
+    font-size: 1rem;
+    max-width: 800px;
+    color: #455a64;
+    margin: 10px auto;
+    margin-top: -35px;
+    font-family: Geologica;
+  }
+ 
+
+  .franchise-timeline {
+    display: flex;
+     justify-content: center;
+    gap: 20px;  
+    flex-wrap: wrap;
+}
+
+.franchise-timeline-card { 
+    width: 263px;
+    height: 245px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    transition: transform 0.3s;
+    
+}
+.franchise-timeline-card-icon{
+  top: 10px;
+}
+.franchise-timeline-card-content{
+  padding: 10px;
+}
+
+  
+  .franchise-timeline-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .franchise-timeline-icon {
+    width: 51.77px;
+    height: 46.04px;
+    object-fit: contain;
+    margin-bottom: -18px;
+    margin-top: 18px;
+  }
+  
+  .franchise-timeline-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: -18px;
+    font-family:Geologica;
+    font-weight: 400;
+
+  }
+  
+  .franchise-timeline-card p {
+    font-size: 14.82px;
+    font-family: Geologica;
+    font-weight: 200;
+    color: #777;
+    margin-bottom: -10px;
+  }
+  

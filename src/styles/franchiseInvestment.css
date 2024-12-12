@@ -1,0 +1,84 @@
+.investment-requirements {
+    padding: 2rem;
+    font-family: Geologica;
+    color: #333;
+    text-align: center;
+    display: grid;
+    grid-template-rows: auto auto; /* Two rows for heading + content */
+    grid-template-columns: 1fr; /* Single column by default */
+    justify-items: center;
+    align-items: center;
+    min-height: 100vh; /* Full screen height */
+    box-sizing: border-box;
+  }
+  
+  .investment-heading {
+    color: #f58634;
+    font-size: 24px;
+    margin-bottom: -1rem;
+    font-family: Geologica;
+  }
+  
+  .investment-subheading {
+    font-size: 50px;
+    margin-bottom: 1rem;
+    margin-top: -2rem;
+    font-family: Lilita One;
+    color: #455A64;
+  }
+  
+  .investment-description {
+    font-size: 24px;
+    margin-bottom: 4rem;
+    margin-top: -4rem;
+    color: #555;
+    line-height: 1.5;
+    font-family: Geologica;
+  }
+  
+  .investment-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for the rows */
+    gap: 12rem;
+    width: 1000px;
+    margin-top: -5rem;
+  }
+  
+  .investment-column {
+    text-align: left; /* Center text in columns */
+    width: 600px;
+    margin-left: -80px; /* Ensure columns don't shrink too much */
+  }
+  
+  .investment-column h4 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #333;
+    font-family: Geologica;
+  }
+  
+  .investment-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .investment-column li {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+  
+  .investment-column li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.8rem;
+  }
+  
+  .investment-column li span {
+    font-size: 24px;
+    color: #555;
+    line-height: 1.5;
+  }
+  

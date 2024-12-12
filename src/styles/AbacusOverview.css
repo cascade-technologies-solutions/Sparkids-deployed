@@ -1,0 +1,213 @@
+/* Page Container */
+.page-container {
+  margin: 12rem 12rem;
+  margin-bottom: 20px;
+}
+
+/* Tab Navigation (no box, above the content) */
+.tab-header {
+  gap: 40px;
+      background: none;
+      border-bottom: 2px solid #eee;
+      margin-left: -15rem;
+      margin-bottom: -70px;
+      padding: 109px;
+}
+
+.tab-button {
+  font-size: 24px;
+  font-weight: 400;
+  color: #455a64;  
+  font-family: geologica;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.tab-button.active {
+  color: #f58634;
+  border-bottom: 3px solid #f58634;
+}
+
+.tab-button:hover {
+  color: #f58634;
+}
+
+/* Box with Shadow for Content */
+.content-card {
+  padding: 3rem 5rem;
+  width: 1250px;
+  height: 922px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    margin-left:-150px;
+
+}
+
+/* Titles and Text */
+.main-title {
+  font-size: 30px;
+  font-weight: 400;
+  color: #f58634;
+  font-family: lilita one;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: lilita one;
+  margin-bottom: 1rem;
+  color: #f58634;
+}
+
+.description {
+  font-size: 22px;
+  color: #343434;
+  line-height: 1.6;
+  font-family: geologica;
+  margin-bottom: 1rem;
+}
+
+/* List of Benefits */
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0;
+  line-height: 40px;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: geologica;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #343434;
+}
+
+.benefits-list img {
+  width: 28px;
+  height: 28px;
+}
+
+
+@media (max-width: 1024px) {
+  .page-container {
+    margin: 6rem 2rem;
+  }
+
+  .tab-header {
+    margin-left: 0;
+    padding: 80px 20px;
+    gap: 20px;
+  }
+
+  .content-card {
+    width: auto;
+    margin-left: 0;
+    padding: 2rem;
+  }
+
+  .tab-button {
+    font-size: 18px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .main-title,
+  .sub-title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .benefits-list li {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    margin: 3rem 1rem;
+  }
+
+  .tab-header {
+    margin-left: 0;
+    padding: 60px 10px;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 250px;
+  }
+
+  .content-card {
+    width: 100%;
+    margin-left: 0;
+    padding: 1.5rem;
+    margin-top: 20px;
+  }
+
+  .tab-button {
+    font-size: 16px;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .main-title,
+  .sub-title {
+    font-size: 20px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .benefits-list li {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-container {
+    margin: 1.8rem 0.5rem;
+  }
+
+  .tab-header {
+    padding: 50px 5px;
+    gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content-card {
+    padding: 1.5rem;
+  }
+
+  .tab-button {
+    font-size: 14px;
+    padding: 0.2rem 0.5rem;
+  }
+
+  .main-title,
+  .sub-title {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .benefits-list li {
+    font-size: 16px;
+  }
+
+  .benefits-list img {
+    width: 24px;
+    height: 24px;
+  }
+}

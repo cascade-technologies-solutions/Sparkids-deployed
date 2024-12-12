@@ -1,0 +1,101 @@
+.franchisehero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  gap: 10px;
+}
+
+.franchisehero-content {
+  flex: 1;
+  max-width: 50%;
+  margin-left: 135px;
+}
+
+
+.franchisehero-pagename {
+  font-size: 24px;
+  color: #455A64;
+  font-weight: 400;
+  font-family: Geologica;
+  margin-top: 0;
+  margin-bottom: 45px;
+  position: relative;
+  top: -5px;
+}
+
+.franchisehero-pagename span {
+  color: #f58634;
+}
+
+.franchisehero-headline1{
+  font-size: 30px;
+  color: #455A64;
+  font-family: Lilita One;
+  margin: 0 0 -140px 0; 
+}
+
+.franchisehero-headline2 span {
+  color: #f58634;
+  font-size: 80px;
+  margin-bottom: 10px;
+  font-family: Lilita One;
+}
+
+.franchisehero-headline2  {
+  color: #455A64;
+  font-size: 80px;
+  font-family: Lilita One;
+}
+
+.franchisehero-subheadline {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: Geologica;
+  color: #343434;
+  margin: 8px 0;
+  margin-top: -25px;
+}
+
+.franchisehero-image {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+  margin-left:100px;
+}
+
+.franchisehero-image img {
+  height: 486.53px;
+  width:496px;
+  margin-right: 50px;
+  margin-top: 65px;
+  transition: transform 0.3s ease;
+}
+
+.franchisehero-image img:hover {
+transform: translateY(-10px);
+}
+
+.franchisehero-button {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px 16px; 
+  background-color: #f58634;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19.19px;
+  width: 368px;
+  height: 56px;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+
+}
+
+.franchisehero-button:hover {
+  background-color: #f58634;
+  box-shadow: 0 0 20px rgba(255, 124, 46, 0.8);
+}
