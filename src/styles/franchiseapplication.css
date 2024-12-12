@@ -187,7 +187,7 @@ transform: translatey(-10px);
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 377px) {
   .heading {
     font-size: 39px;
   }
@@ -214,7 +214,7 @@ transform: translatey(-10px);
   }
 
   .step-content span {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .arrow-image {
