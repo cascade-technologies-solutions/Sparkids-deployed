@@ -92,6 +92,8 @@
   transform: scale(1.1);
 }
 
+/* Ensure that on smaller screens it still displays two per row */
+/* Media Queries */
 @media (max-width: 1024px) {
   .team-grid {
     grid-template-columns: repeat(2, 1fr); /* Still 2 cards per row */
@@ -143,14 +145,14 @@
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 426px) {
   .team-grid {
     grid-template-columns: repeat(1, 1fr); /* 1 card per row */
     gap: 20px;
     width: 100%;
   }
   .team-card {
-    width: 90%;
+    width: 100%;
   }
 
   .team-title {
