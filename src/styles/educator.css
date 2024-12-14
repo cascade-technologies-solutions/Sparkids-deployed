@@ -197,3 +197,148 @@ transform: translateY(-10px);
       font-size: 14px;
     }
   }
+/* For screens up to 425px */
+@media (max-width: 426px) {
+  .educator-section {
+    padding: 1rem 0.5rem;
+  }
+
+  .educator-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .educator-image {
+    width: 380px;
+    height: auto;
+    margin-top: 15px;
+  }
+
+  .educator-shape-container {
+    margin-top: 15px;
+    padding-right: 0;
+  }
+
+  .educator-shape {
+    width: 156px;
+    height: auto;
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  .educator-text-container {
+    width: 192px;
+    text-align: right;
+  }
+  .educator-label{
+    font-size: 20px;
+  }
+
+  .educator-heading,
+  .highlight-text {
+    font-size: 30px;
+    margin-left: -90px;
+  }
+
+  .educator-description {
+    font-size: 12px;
+    margin: 0;
+    line-height: 1.4;
+  }
+
+  .educator-button {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+}
+
+/* For screens up to 375px */
+@media (max-width: 376px) {
+  .educator-section {
+    padding: 0.8rem 0.5rem;
+  }
+
+  .educator-image {
+    width: 325px;
+  }
+  .educator-shape-container{
+    width: 85%;
+  }
+
+  .educator-shape {
+    width: 100px;
+    height: 180px;
+    margin-left: 3px;
+    margin-top: 5px;
+  }
+
+  .educator-text-container {
+    width: 166px;
+    text-align: right;
+  }
+  .educator-label{
+    font-size: 17px;
+  }
+
+  .educator-heading,
+  .highlight-text {
+    font-size: 29px;
+    margin-left: -31px;
+  }
+
+  .educator-description {
+    font-size: 12px;
+  }
+
+  .educator-button {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+}
+@media (max-width: 321px) {
+  .educator-section {
+    padding: 0.5rem 0.2rem;
+  }
+
+  .educator-image {
+    width: 260px;
+    height: auto;
+    margin-top: 8px;
+  }
+
+  .educator-shape {
+    width: 90px;
+    height: 160px;
+    margin-left: 2px;
+    margin-top: 4px;
+  }
+  .educator-label{
+    font-size: 14px;
+  }
+
+  .educator-text-container {
+    width: 185px;
+    text-align: center;
+  }
+
+  .educator-heading,
+  .highlight-text {
+    font-size: 20px;
+    margin-left: -56px;
+    margin-top: 30px;
+    margin-bottom: -7px;
+  }
+
+  .educator-description {
+    font-size: 10px;
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .educator-button {
+    font-size: 9px;
+    width: 53%;
+    margin-top: 0px;
+  }
+}
