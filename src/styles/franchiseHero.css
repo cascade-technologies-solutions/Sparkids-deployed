@@ -218,6 +218,7 @@ transform: translateY(-10px);
   .franchisehero-content {
     max-width: 100%;
     text-align: center;
+    margin-top: 50px;
   }
 
   .franchisehero-image {
@@ -286,7 +287,7 @@ transform: translateY(-10px);
     margin-left: -76px;
   }
   .franchisehero-content{
-    margin-top: 37px;
+    margin-top: 37px !important;
   }
   .franchisehero-headline1,
   .franchisehero-headline2,
