@@ -21,8 +21,8 @@
 
 .career-culture-subheading {
     font-size: 50px;
-    margin-bottom: 1rem; /* Add more space below the subheading */
-    margin-top: 0; /* Remove negative margin */
+    margin-bottom: 1rem; 
+    margin-top: 0; 
     font-family: Lilita One;
     color: #455A64;
 }
@@ -34,13 +34,12 @@
     color: #555;
     line-height: 1.5;
     font-family: Geologica;
-    width: 1010px;
 }
 
 .career-culture-content {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 12rem;
+    gap: 10rem;
     width: 1000px;
     margin-top: 2rem;
 }
@@ -101,7 +100,7 @@
     .career-culture-description {
         font-size: 16px;
         margin-top: 7px;
-        margin-bottom: 115px;
+        margin-bottom: 0px;
     }
 
     .career-culture-content {
