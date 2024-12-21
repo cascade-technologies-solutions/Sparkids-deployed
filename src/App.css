@@ -1,3 +1,14 @@
+/* Default cursor for the page */
+body {
+  cursor: url('/public/Assets/flame.png'), auto;
+}
+
+/* Cursor when hovering over links or specific elements */
+a, button, .custom-element {
+  cursor: url('/public/Assets/hover.png'), auto;
+}
+
+
 /* course pg */
 @media (max-width: 768px) {
   .abacus-section,
