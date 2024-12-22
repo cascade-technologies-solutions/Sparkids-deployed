@@ -189,17 +189,17 @@ margin-left: 31px;
 }
 
 .left-arrow {
-  left: -110px;
+  left: -50px;
 }
 
 .right-arrow {
-  right: -110px;
+  right: -50px;
 }
 
 .dots {
   display: flex;
   gap: 8px;
-  margin-top: 16px;
+  margin-top: -65px;
 }
 
 .dot {

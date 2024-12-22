@@ -9,7 +9,6 @@
   /* Top Section: Filters */
   .job-filter {
     padding: 20px;
-    background-color: #f9f9f9;
     border-bottom: 1px solid #ddd;
     text-align: center;
   }
@@ -55,7 +54,6 @@
   /* Left Section: Job Listings */
   .job-listings {
     flex: 1;
-    background-color: #f9f9f9;
     padding: 0 20px;
     border-right: 1px solid #ddd;
     overflow-y: auto;
