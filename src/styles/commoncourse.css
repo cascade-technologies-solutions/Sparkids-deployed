@@ -154,3 +154,139 @@
     transform: rotate(0deg);
   }
 }
+
+@media (max-width: 768px) {
+  .maincourse-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .maincourse-section {
+    flex-direction: row;
+    width: 120%;
+    height: auto;
+    padding: 18px 20px;
+    margin: 0px;
+  }
+
+  .maincourse-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .maincourse-heading {
+    font-size: 36px;
+  }
+
+  .maincourse-button {
+    width: auto;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .maincourse-image img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 426px) {
+  .pagename {
+    font-size: 20px;
+    padding: 1.5rem;
+  }
+  .maincourse-container{
+    height: auto;
+  }
+  .maincourse-section {
+    flex-direction: column;
+    width: 30%;
+    padding: 20px;
+  }
+  .maincourse-content{
+    order: 2;
+  }
+  .maincourse-image{
+    max-width: 95%;
+  }
+  .maincourse-heading {
+    font-size: 30px;
+  }
+
+  .maincourse-points-list,
+  .maincourse-subcontent li {
+    font-size: 15px;
+  }
+  .maincourse-points-list span,
+  .maincourse-subcontent li span{
+    font-size: 15px;
+  }
+
+  .maincourse-button {
+    font-size: 14px;
+    padding: 2px;
+  }
+  .maincourse-image img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 376px) {
+  .pagename {
+    font-size: 18px;
+    padding: 1.2rem;
+  }
+  .maincourse-container {
+    height: auto;
+  }
+  .maincourse-section {
+    flex-direction: column;
+    width: 26%;
+    padding: 15px;
+  }
+  .maincourse-content {
+    order: 2;
+  }
+  .maincourse-image {
+    max-width: 120%;
+  }
+  
+  .maincourse-heading {
+    font-size: 26px;
+  }
+
+  .maincourse-points-list,
+  .maincourse-subcontent li {
+    font-size: 14px;
+  }
+  .maincourse-points-list span,
+  .maincourse-subcontent li span {
+    font-size: 14px;
+    width: 17%;
+  }
+
+  .maincourse-button {
+    font-size: 12px;
+    padding: 4px;
+    width: 98%;
+  }
+}
+
+@media (max-width: 320px) {
+  .pagename {
+    font-size: 18px;
+    padding: 1.2rem;
+  }
+  .maincourse-section {
+    width: 21%;
+  }
+  .maincourse-image {
+    max-width: 90%;
+  }
+  
+  .maincourse-points-list span,
+  .maincourse-subcontent li span {
+    width: 26%;
+  }
+} 
