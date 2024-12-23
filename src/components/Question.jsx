@@ -20,7 +20,6 @@ const QuestionSection = () => {
         headers: {
           "Content-Type": "application/json", 
         },
-        // body: JSON.stringify({ phoneNumber }), 
       });
 
       if (response.ok) {
