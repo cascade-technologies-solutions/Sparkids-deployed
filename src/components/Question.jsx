@@ -41,7 +41,7 @@ const QuestionSection = () => {
 
       <div className="abt-content">
         <div className="abt-bg-overlay">
-          <h3 className="abt-heading">Do you still have any questions?a</h3>
+          <h3 className="abt-heading">Do you still have any questions?</h3>
           <p className="abt-subheading">
             Don't hesitate to leave us your phone number. We will <br /> contact you to
             discuss any questions you may have.

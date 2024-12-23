@@ -46,6 +46,7 @@ public class UserController {
             return "redirect:/contactform";  
         }	
     }
+    
     @PostMapping("/api/contact")
     public ResponseEntity<String> savePhoneNumber(@RequestBody Map<String, String> request) {
         String phoneNumber = request.get("phoneNumber");
