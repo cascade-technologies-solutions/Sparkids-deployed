@@ -12,7 +12,7 @@ import { API_BASE_URL } from "../api";
 const QuestionSection = () => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [responseMessage, setResponseMessage] = useState("");
-
+  
   const handleContactClick = async () => {
     try {
       const response = await fetch(`${API_BASE_URL}/api/contact`, {
