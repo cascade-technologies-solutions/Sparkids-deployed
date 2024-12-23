@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/question.css";
 import questionbg from "../Assets/about-img/questionbg.png";
 import bgImage from "../Assets/about-img/quesmem.png";
@@ -7,8 +7,35 @@ import bgImage3 from "../Assets/about-img/quesmem3.png";
 import bgImage4 from "../Assets/about-img/quesmem4.png";
 import bgImage5 from "../Assets/about-img/quesmem5.png";
 import bgImage6 from "../Assets/about-img/quesmem6.png";
+import { API_BASE_URL } from "../api";
 
 const QuestionSection = () => {
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [responseMessage, setResponseMessage] = useState("");
+
+  const handleContactClick = async () => {
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json", 
+        },
+        // body: JSON.stringify({ phoneNumber }), 
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setResponseMessage("We will contact you shortly!");
+      } else {
+        const errorData = await response.json();
+        setResponseMessage(errorData.message || "Failed to submit. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error contacting API:", error);
+      setResponseMessage("An error occurred. Please try again.");
+    }
+  };
+
   return (
     <div className="abt-question-section">
       <img src={questionbg} alt="Question background" className="abt-question-bg" />
@@ -17,7 +44,7 @@ const QuestionSection = () => {
         <div className="abt-bg-overlay">
           <h3 className="abt-heading">Do you still have any questions?</h3>
           <p className="abt-subheading">
-            Don't hesitate to leave us your phone number. We will <br/>contact you to
+            Don't hesitate to leave us your phone number. We will <br /> contact you to
             discuss any questions you may have.
           </p>
           <div className="contact-form">
@@ -25,9 +52,14 @@ const QuestionSection = () => {
               type="text"
               className="phone-input"
               placeholder="Enter your phone number"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
             />
-            <button className="contact-button">Contact</button>
+            <button className="contact-button" onClick={handleContactClick}>
+              Contact
+            </button>
           </div>
+          {responseMessage && <p className="response-message">{responseMessage}</p>}
         </div>
 
         {/* Decorative Images */}
