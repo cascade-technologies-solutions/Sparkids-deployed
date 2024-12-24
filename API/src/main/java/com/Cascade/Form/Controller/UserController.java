@@ -25,7 +25,7 @@ public class UserController {
     private ContactRepository contactRepository;
 
     @GetMapping("/contactform")
-    public String showForm(Model model) {
+    public String showForm(Model model) { 
     	model.addAttribute("user", new User());
         return "form";  
     }
