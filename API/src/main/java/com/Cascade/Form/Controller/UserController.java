@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.ui.Model;
 
-@Controller
+@RestController
 @CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 
