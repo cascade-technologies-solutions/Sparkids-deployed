@@ -91,13 +91,13 @@ top: -14px;
 }
 
 .info-main-image {
-  width: 549px;
-  height: 347px;
+  width: 469px;
+  height: 309px;
   border-radius: 1px;
   position: absolute;
   z-index: 3;
-  left: -28px;
-  top: 1px;
+  left: 20px;
+  top: 3px;
 } 
 .info-main-image img{
   width: 469px;
@@ -266,15 +266,15 @@ max-width: 728px;
 
 
 .info-main-image {
-  width: 127%;
-  height: 184px;
+  width: 126%;
+  height: 170px;
   border-radius: 5px;
   border: none;
   box-shadow: none;
   position: absolute;
   z-index: 2;
-  left: 7px;
-  top: 34px;
+  left: 11px;
+  top: 37px;
  
 }
 .info-dots-image {
@@ -445,25 +445,25 @@ padding-right: 7px;
   top: 60px;
 }
 .info-main-image {
-width: 309px;
-height: 195px;
+width: 279px;
+height: 182px;
 border-radius: 5px;
 box-shadow: none;
 position: absolute;
 z-index: 2;
 
-left: 234px;
-top: 34px;
+left: 249px;
+top: 37px;
 }
 .info-cards {
 gap: 0px;
 top: 176px;
 left: 182px;
-width: 232%;
+width: 239%;
 }
   .info-card {
     margin: 0px auto;
-    width: 109px;
+    width: 112px;
     height: 93px;
     background: #ffffffbf;
 }
@@ -542,10 +542,10 @@ padding-right: 0px;
       gap: 0px;
       top: 176px;
       left: 194px;
-      width: 256%;
+      width: 264%;
     }
     .info-card {
-      width: 100px;
+      width: 108px;
     }
 }
 @media (max-width: 320px) {
@@ -553,8 +553,8 @@ padding-right: 0px;
     width: 100%;
   }
   .info-main-image {
-      width: 269px;
-      height: 180px;
+      width: 234px;
+      height: 158px;
   }
   .info-bg-image {
     width: 145px;

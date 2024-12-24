@@ -1,15 +1,13 @@
 import React from 'react';
 //import Header from '../components/Header';
 //import Footer from '../components/Footer';
-
-import Sight from '../components/sight';
-export const Insight = () => {
+import ContactForm from '../components/ContactForm';
+export const Contact = () => {
     return (
       <div>
-        <h1>Insight Page</h1>
-        <Sight />
+        <ContactForm />
       </div>
     );
   };
   
-  export default Insight;
+  export default Contact;

@@ -63,7 +63,7 @@
   color: #f58634;
 }
 
-.description {
+.overview-description {
   font-size: 22px;
   color: #343434;
   line-height: 1.6;
@@ -208,6 +208,7 @@
 @media (max-width: 768px) {
   .page-container {
     margin: 4rem 2rem;
+    margin-top: -150px;
   }
 
   .tab-header {
@@ -311,7 +312,7 @@
   .page-container {
     margin: 1rem 0.5rem;
   }
-  .description {
+  .overview-description {
     font-size: 14px;
     width: 100%;
 }

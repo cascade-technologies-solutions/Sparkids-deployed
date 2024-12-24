@@ -10,8 +10,8 @@ const Culture = () => {
       <div className="our-culture-content">
         <h2 className="culture-title">Our Culture</h2>
         <p className="culture-description">
-   We are driven by the joy of seeing children <br/> grow and thrive , Our team is made up of <br/>
-   experienced educators, passionate trainers, <br/> and dedicated support staff.
+   We are driven by the joy of seeing children  grow and thrive , Our team is made up of 
+   experienced educators, passionate trainers,  and dedicated support staff.
         </p>
         <div  className="culture-sub-div">
             <div className="culture-subdiv-image" >
@@ -24,13 +24,13 @@ const Culture = () => {
             <img src={point} alt="culture" />
             </div>
             <div className="culture-subdiv-point">
-                <p> Interactive, child-centered teaching <br/> methods.</p>
+                <p> Interactive, child-centered teaching methods.</p>
             </div>
             <div className="culture-subdiv-image" >
             <img src={point} alt="culture" />
             </div>
             <div className="culture-subdiv-point">
-                <p> Building trust with our student,<br/> families, and partners.</p>
+                <p> Building trust with our student, families, and partners.</p>
             </div>
         </div>
         

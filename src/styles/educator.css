@@ -253,7 +253,6 @@ transform: translateY(-10px);
   }
 }
 
-/* For screens up to 375px */
 @media (max-width: 376px) {
   .educator-section {
     padding: 0.8rem 0.5rem;
@@ -294,6 +293,11 @@ transform: translateY(-10px);
   .educator-button {
     font-size: 14px;
     margin-top: 8px;
+  }
+}
+@media (max-width:361px){
+  .educator-shape-container {
+    width: 90%;
   }
 }
 @media (max-width: 321px) {

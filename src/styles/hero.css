@@ -651,6 +651,37 @@
     }
 }
 
+@media (max-width: 415px) and (min-width: 412px){
+  .hero-content{
+    margin-top: 8px;
+  }
+  .brain-layout {
+    width: 100%;
+    height: 350px;
+  }
+  .hero-image {
+    order: 1;
+    width: 100%;
+    height: 350px;
+  }
+  .explore-btn, .opportunity-btn {
+    width: 114px;
+    height: 35px;
+    font-size: 12px;
+  }
+  .brain-left,
+    .brain-right {
+      width: 100px;
+    }
+}
+
+@media (max-width:394px) {
+  .brain-layout {
+    width: 109%;
+    height: 350px;
+    margin-left: -10px;
+  }
+}
 @media (max-width: 376px) {
   .brain-layout {
     width: 100%;
@@ -662,6 +693,27 @@
     height: 350px;
   }
 }
+@media (max-width:361px) {
+  .hero-content{
+    margin-top: 8px;
+  }
+  .brain-layout {
+    width: 88%;
+    height: 350px;
+    margin-left:20px;
+  }
+  .hero-image {
+    order: 1;
+    width: 120%;
+    height: 350px;
+  }
+  .explore-btn, .opportunity-btn {
+    width: 114px;
+    height: 35px;
+    font-size: 12px;
+  }
+}
+
 @media (max-width: 320px) {
   .hero-content{
     margin-top: 8px;

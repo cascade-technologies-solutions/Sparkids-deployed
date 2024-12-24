@@ -163,27 +163,56 @@
 
   .maincourse-section {
     flex-direction: row;
-    width: 120%;
-    height: auto;
+    width: 60%;
+    height: 48%;
     padding: 18px 20px;
-    margin: 0px;
+    margin: -34px 1px -17px;
   }
 
   .maincourse-content {
     max-width: 100%;
     text-align: center;
   }
-
+  .maincourse-subcontent li {
+    font-size: 17px;
+    line-height: 59px;
+    margin-top: -9%;
+}
+.maincourse-subcontent span {
+  font-size: 15px;
+}
+ .pagename{
+  font-size: 15px;
+  top: -35px;
+  left: -491px;
+ }
   .maincourse-heading {
-    font-size: 36px;
+      font-size: 31px;
+      margin-bottom: 19px;
+      margin-top: 5px;
   }
-
-  .maincourse-button {
-    width: auto;
-    font-size: 16px;
-    padding: 15px;
+  .maincourse-points-wholelist{
+    line-height: 26%;
   }
+  .maincourse-points p img {
+    width: 22px;
+    height: 21px;
+    margin-top: -11px;
+    margin-bottom: 15px;
+}
+  .maincourse-points-list,
+ .maincourse-points-list span {
+    font-size: 17px;
+    text-wrap: nowrap;
+ }
 
+ .maincourse-button {
+  width: 83%;
+  height: 2%;
+  font-size: 16px;
+  padding: 15px;
+  margin-top: -3%;
+}
   .maincourse-image img {
     width: 100%;
     height: auto;
@@ -194,6 +223,7 @@
   .pagename {
     font-size: 20px;
     padding: 1.5rem;
+    left:-505px;
   }
   .maincourse-container{
     height: auto;
@@ -225,6 +255,7 @@
   .maincourse-button {
     font-size: 14px;
     padding: 2px;
+    width:100%;
   }
   .maincourse-image img{
     width: 100%;
@@ -289,4 +320,4 @@
   .maincourse-subcontent li span {
     width: 26%;
   }
-} 
+}

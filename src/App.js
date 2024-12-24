@@ -8,6 +8,7 @@ import CoursePage from "./pages/CoursePage";
 import FranchisePage from "./pages/FranchisePage";
 import CareersPage from "./pages/CareersPage";
 import Insight from "./pages/InsightPage";
+import Contact from "./pages/ContactPage";
 import AbacusPage from "./pages/AbacusPage";
 import VedicPage from "./pages/VedicPage";
 import RubicPage from "./pages/RubicPage";
@@ -32,6 +33,7 @@ function App() {
         <Route path="/franchise" element={<FranchisePage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/insight" element={<Insight />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>

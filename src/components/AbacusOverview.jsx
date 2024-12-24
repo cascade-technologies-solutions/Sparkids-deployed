@@ -36,7 +36,7 @@ const Overview = () => {
         {activeTab === "overview" && (
           <div className="overview-content">
             <h2 className="main-title">What is Abacus ?</h2>
-            <p className="description">
+            <p className="overview-description">
               Abacus is a Latin word that has its origins in the Greek words
               <i> abax</i> or <i>abakion</i> (meaning "table" or "tablet"),
               which in turn, possibly originated from the Semitic word{" "}
@@ -46,11 +46,11 @@ const Overview = () => {
             <h3 className="sub-title">
               Unlock Your Child's Brain Potential with Abacus Learning!
             </h3>
-            <p className="description">
+            <p className="overview-description">
               Unleash the limitless potential of your child’s mind with our
               Abacus program! Specially designed for children aged 4 to 15.
             </p>
-            <p className="description">
+            <p className="overview-description">
               This course isn’t just about calculations; it’s a journey of
               holistic brain development. The Abacus program stimulates both
               sides of the brain, helping children improve cognitive abilities
@@ -400,7 +400,7 @@ const Overview = () => {
         {activeTab === "details" && (
   <div className="details-content">
     <h2 className="main-title">The Science Behind Abacus Training</h2>
-    <p className="description">
+    <p className="overview-description">
       The Abacus program is not just about numbers—it's a scientifically backed
       method designed to enhance cognitive abilities and brain functions. The act
       of bead manipulation stimulates both the left and right hemispheres of the
@@ -420,7 +420,7 @@ const Overview = () => {
         and holistic thinking, activated by imagining bead movements mentally.
       </li>
     </ul>
-    <p className="description">
+    <p className="overview-description">
       The combination of these two functions during Abacus training leads to
       balanced and heightened cognitive abilities.
     </p>

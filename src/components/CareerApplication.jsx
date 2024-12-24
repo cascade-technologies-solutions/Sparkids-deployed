@@ -5,33 +5,39 @@ import arrowImage from "../Assets/franchise-img/franchisearrow.png";
 const steps = [
   {
     number: "01",
-    title: "Application Submission",
-    description: "Submit your resume and cover letter via our website.",
+    title: "Explore Opportunities",
+    description:
+      "Discover roles that align with your skills and passion through our Career's page.",
   },
   {
     number: "02",
-    title: "Initial Screening",
-    description: "Our HR team will review your application and shortlist candidates.",
+    title: "Submit Your Application",
+    description:
+      "Send us your resume and cover letter, showcasing your unique talents and achievements.",
   },
   {
     number: "03",
-    title: "Interview Process",
-    description: "Attend interviews with our hiring team to assess your skills and fit.",
+    title: "Initial Screening",
+    description:
+      "Our team carefully evaluates your application to ensure it matches the role requirements.",
   },
   {
     number: "04",
-    title: "Offer & Negotiation",
-    description: "Receive an offer and discuss details like salary and joining date.",
+    title: "Personal Interaction",
+    description:
+      "Meet with our team in an engaging interview to discuss your vision, expertise, and enthusiasm for teaching.",
   },
   {
     number: "05",
-    title: "Onboarding",
-    description: "Complete onboarding formalities and start your journey with us.",
+    title: "Showcase Your Skills",
+    description:
+      "Participate in a short demo session or task to highlight your ability to connect with students effectively.",
   },
   {
     number: "06",
-    title: "Begin Your Career",
-    description: "Join your team and contribute to our mission.",
+    title: "Welcome Onboard!",
+    description:
+      "Once selected, receive training and join the Sparkids family to inspire young learners and grow with us.",
   },
 ];
 
