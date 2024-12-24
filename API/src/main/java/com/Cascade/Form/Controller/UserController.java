@@ -47,18 +47,5 @@ public class UserController {
         }	
     }
     
-    @PostMapping("/api/contact")
-    public ResponseEntity<String> savePhoneNumber(@RequestBody Map<String, String> request) {
-        String phoneNumber = request.get("phoneNumber");
-        if (phoneNumber == null || phoneNumber.isEmpty()) {
-            return ResponseEntity.badRequest().body("Phone number is required");
-        }
-
-        User contact = new User();
-        contact.setContact(phoneNumber);
-
-        contactRepository.save(contact);
-
-        return ResponseEntity.ok("Phone number saved successfully");
-    }
+   
 }

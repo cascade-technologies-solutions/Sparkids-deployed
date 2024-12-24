@@ -10,7 +10,7 @@ import bgImage6 from "../Assets/about-img/quesmem6.png";
 import { API_BASE_URL } from "../api";
 
 const QuestionSection = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [contact, setcontact] = useState("");
   const [responseMessage, setResponseMessage] = useState("");
 
   const handleContactClick = async () => {
@@ -51,8 +51,8 @@ const QuestionSection = () => {
               type="text"
               className="phone-input"
               placeholder="Enter your phone number"
-              value={phoneNumber}
-              onChange={(e) => setPhoneNumber(e.target.value)}
+              value={contact}
+              onChange={(e) => setcontact(e.target.value)}
             />
             <button className="contact-button" onClick={handleContactClick}>
               Contact
