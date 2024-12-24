@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/CareerHero.css"; 
 import heroImage from "../Assets/career-img/careerhero.png";
 import heroImage1 from "../Assets/career-img/careerhero1.png";
@@ -9,11 +10,8 @@ import heroImage4 from "../Assets/career-img/careerhero4.png";
 const CareerHero = () => {
   return (
     <div className="careerhero-container">
-      {/* Page breadcrumb */}
       <div>
-        <p className="careerhero-pagename">
-          Home | <span>Careers</span>
-        </p>
+      <p className="careerhero-pagename"><a href="/">Home</a> | <span> <Link to="/careers">Careers</Link></span> </p> 
       </div>
       <div className="careerhero-sub-container">
         <div className="careerhero-content">

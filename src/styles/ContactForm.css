@@ -1,22 +1,17 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 .contact-container {
     padding: 80px 20px;
     max-width: 1200px;
     margin: auto;
 }
-.contact-pagename p {
+.contact-pagename {
     text-align: left;
     font-size: 24px;
     font-family: 'Geologica';
     color: #455a64;
+    margin-bottom: 30px;
+    margin-top: -43px;
 }
-.contact-pagename p span{
+.contact-pagename span a{
     color: #f58634;
 }
 
@@ -132,4 +127,112 @@ input[type='file'] {
 
 .contact-form-btn:hover {
     background-color: #F58634;
+}
+@media (max-width: 768px) {
+    .contact-title h1 {
+        font-size: 28px;
+    }
+
+    .contact-title p {
+        font-size: 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .contact-forms {
+        gap: 20px;
+    }
+
+    .job-application .form-job-form {
+        flex-direction: column;
+    }
+
+    .job-left,
+    .job-right {
+        flex: 1;
+        width: 100%;
+    }
+
+    .contact-form-btn {
+        width: 100%;
+    }
+}
+@media (max-width: 425px) {
+    .contact-container {
+        padding: 60px 15px;
+    }
+
+    .contact-pagename {
+        font-size: 20px;
+        margin-bottom: 50px;
+    }
+
+    .contact-title h1 {
+        font-size: 28px;
+    }
+
+    .contact-title p {
+        font-size: 16px;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .contact-form-btn {
+        padding: 14px;
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 375px) {
+    .contact-container {
+        padding: 50px 10px;
+    }
+
+    .contact-title h1 {
+        font-size: 24px;
+    }
+
+    .contact-title p {
+        font-size: 14px;
+    }
+
+    input,
+    textarea {
+        font-size: 14px;
+    }
+
+    .contact-pagename {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 320px) {
+    .contact-container {
+        padding: 40px 10px;
+    }
+
+    .contact-title h1 {
+        font-size: 20px;
+    }
+
+    .contact-title p {
+        font-size: 12px;
+    }
+
+    input,
+    textarea {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .contact-form-btn {
+        padding: 12px;
+        font-size: 12px;
+        width: 100%;
+    }
 }

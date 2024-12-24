@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/courseHero.css"; 
 import image from "../Assets/courses-img/coursehero.png"; 
 
@@ -6,7 +7,7 @@ const coursehero = () => {
   return (
     <div className="coursehero-container">
       <div> 
-      <p className="coursehero-pagename">Home |<span> Courses</span> </p>
+      <p className="coursehero-pagename"><a href="/">Home</a> | <span> <Link to="/courses">Courses</Link></span> </p> 
       </div>
       <div className="coursehero-sub-container">
       <div className="coursehero-content">

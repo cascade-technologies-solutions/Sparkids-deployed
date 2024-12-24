@@ -11,7 +11,6 @@
 .aboutus-sub-container{
   display: flex;
   flex-direction: row;
-  margin-top: -179px;
 }  
 .about-us-content {
   flex: 1;
@@ -20,20 +19,22 @@
   margin-top: 150px;
 }
 
-/* Move pagename to the top with reduced margin */
-.pagename {
+.about-us-pagename {
   font-size: 24px;
   color: #455a64;
-  margin-top: 0; /* Remove any unnecessary space above */
-  margin-bottom: 8px; /* Slight gap to the next element */
   position: relative;
-  top: -31px;
-  left: -540px;
-  font-family: geologica;/* Adjust the vertical positioning */
+  top: 0px;
+  left: -500px;
+  font-family: geologica;
+}
+.about-us-pagename  span a{
+  color: #f58634;
 }
 
-.pagename span {
-  color: #f58634;
+.about-us-pagename  a {
+  text-decoration: none;
+  color:  #455a64;
+  margin: 0 5px;
 }
 
 .headline {

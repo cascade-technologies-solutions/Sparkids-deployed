@@ -96,14 +96,18 @@ const jobData = [
   const filters = ["All positions", "Academic", "Administrative", "Operational"];
   
   function CareerJob() {
-    const [selectedJob, setSelectedJob] = useState(null);
+    const [selectedJob, setSelectedJob] = useState(jobData[0]);
     const [selectedFilter, setSelectedFilter] = useState("All positions");
+    const [showApplicationForm, setShowApplicationForm] = useState(false);
   
     const filteredJobs =
       selectedFilter === "All positions"
         ? jobData
         : jobData.filter((job) => job.category === selectedFilter);
-  
+    const handleApplyNow = () => {
+    setShowApplicationForm(true);
+  };
+
     return (
       <div className="job-container">
         {/* Top Filter Section */}
@@ -153,43 +157,90 @@ const jobData = [
   
           {/* Right Section: Job Details */}
           <div className="job-details">
-            {selectedJob ? (
-              <>
-                <h2>{selectedJob.type}</h2>
-                <div className="job-description">
-                  <h3>Primary Responsibility:</h3>
-                  <p>{selectedJob.details.primaryResponsibility}</p>
-  
-                  <h3>Job Specification:</h3>
-                  <ul>
-                    {selectedJob.details.jobSpecification.map((spec, index) => (
-                      <li key={index}>{spec}</li>
-                    ))}
-                  </ul>
-  
-                  <h3>Employment Type:</h3>
-                  <p>{selectedJob.details.employmentType}</p>
-  
-                  <h3>Work Place Type:</h3>
-                  <p>{selectedJob.details.workPlaceType}</p>
-  
-                  <h3>Salary:</h3>
-                  <p>{selectedJob.details.salary}</p>
-  
-                  <h3>Experience Required:</h3>
-                  <p>{selectedJob.details.experienceRequired}</p>
-  
-                  <h3>Job Location:</h3>
-                  <p>{selectedJob.details.location}</p>
-  
-                  <button className="apply-btn">Apply Now</button>
+          {showApplicationForm ? (
+            <div className="job-application-form">
+              <h3>Job Application</h3>
+              <p>Tell us more about you so we can get back to you with more info.</p>
+              <form>
+                <div>
+                  <label>Full Name</label>
+                  <input type="text"  />
                 </div>
-              </>
-            ) : (
-              <p>Select a job to view details</p>
-            )}
-          </div>
+                <div>
+                  <label>Email</label>
+                  <input type="email"/>
+                </div>
+                <div>
+                  <label>Phone Number</label>
+                  <input type="text" />
+                </div>
+                <div>
+                  <label>Current CTC</label>
+                  <input type="text"  />
+                </div>
+                <div>
+                  <label>Expected CTC</label>
+                  <input type="text"  />
+                </div>
+                <div>
+                  <label>Notice Period</label>
+                  <input type="text"  />
+                </div>
+                <div>
+                  <label>Upload your resume</label>
+                  <input type="file" />
+                </div>
+                <div>
+                  <label>Submit your portfolio link</label>
+                  <input type="text" />
+                </div>
+                <button type="submit" className="apply-btn">
+                  Apply Now
+                </button>
+              </form>
+            </div>
+          ) : selectedJob ? (
+            <>
+              <h2>{selectedJob.type}</h2>
+              <div className="job-description">
+                <h3>Primary Responsibility:</h3>
+                <p>{selectedJob.details.primaryResponsibility}</p>
+
+                <h3>Job Specification:</h3>
+                <ul>
+                  {selectedJob.details.jobSpecification.map((spec, index) => (
+                    <li key={index}>{spec}</li>
+                  ))}
+                </ul>
+
+                <h3>Employment Type:</h3>
+                <p>{selectedJob.details.employmentType}</p>
+
+                <h3>Work Place Type:</h3>
+                <p>{selectedJob.details.workPlaceType}</p>
+
+                <h3>Salary:</h3>
+                <p>{selectedJob.details.salary}</p>
+
+                <h3>Experience Required:</h3>
+                <p>{selectedJob.details.experienceRequired}</p>
+
+                <h3>Job Location:</h3>
+                <p>{selectedJob.details.location}</p>
+
+                <button
+                  className="apply-btn"
+                  onClick={handleApplyNow}
+                >
+                  Apply Now
+                </button>
+              </div>
+            </>
+          ) : (
+            <p>Select a job to view details</p>
+          )}
         </div>
+      </div>
       </div>
     );
   }

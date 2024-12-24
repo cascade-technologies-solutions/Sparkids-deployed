@@ -164,6 +164,62 @@
     background-color: #F58634;
     box-shadow: 0 0 20px #f58634;
   }
+  .job-application-form {
+    padding: 0 20px;
+    max-width: 540px;
+    margin: auto;
+  } 
+  
+  .job-application-form h3 {
+    color: #F58634;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-family: 'Geologica';
+  }
+  
+  .job-application-form p {
+    font-size: 14.82px;
+    color: #4f5665;
+    margin-bottom: 20px;
+  }
+  
+  .job-application-form label {
+    display: block;
+    /* font-weight: bold; */
+    margin-bottom: 10px;
+    color: #343434;
+    font-size: 22px;
+    font-family: 'Geologica';
+  }
+  
+  .job-application-form input[type="text"],
+  .job-application-form input[type="email"],
+  .job-application-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #F58634;
+    border-radius: 6px;
+  }
+  
+  .job-application-form .apply-btn {
+    display: block;
+    width: 100%;
+    padding: 20px 16px;
+    background-color: #f58634;
+    border-radius: 8px;
+    font-size: 19.19px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .job-application-form .apply-btn:hover {
+    background-color: #f58634;
+  }
+  
 
 /* Responsive Styles */
 

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/aboutushero.css"; 
 import image from "../Assets/about-img/aboutushero.png"; 
 
@@ -7,7 +8,7 @@ const AboutHero = () => {
     <div className="about-us-container">
       {/* <div className="about-us-content"> */}
         <div>
-        <p className="pagename">Home |<span> About us</span> </p>
+        <p className="about-us-pagename"><a href="/">Home</a> |<span> <Link to="/aboutus">About us</Link></span> </p>
         </div>
         <div className="aboutus-sub-container">
         <div className="about-us-content">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/franchiseHero.css";
 import image from "../Assets/franchise-img/franchisehero.png";
 
@@ -6,8 +7,8 @@ const franchisehero = () => {
   return (
     <div className="franchisehero-container">
       <div>
-        <p className="franchisehero-pagename">Home |<span>Franchise</span> </p>
-        </div>
+      <p className="franchisehero-pagename"><a href="/">Home</a> | <span> <Link to="/franchise">Franchise</Link></span> </p> 
+      </div>
       {/* <div className="franchisehero-content"> */}
         
         <div className="franchisehero-sub-container">

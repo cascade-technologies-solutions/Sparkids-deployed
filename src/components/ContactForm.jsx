@@ -1,12 +1,14 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import '../styles/ContactForm.css';
 
 const ContactForm = () => {
   return (
     <div className="contact-container">
-      <div className="contact-pagename">
-       <p><a href="/">Home</a> | <span> <a href="/contact">Contact us</a></span> </p> 
+      <div>
+       <p className="contact-pagename"><a href="/">Home</a> | <span> <Link to="/contact">Contact us</Link></span> </p> 
       </div>
+
 
       <div className="contact-title">
         <h1>Put Life Into Your Ideas With Us</h1>

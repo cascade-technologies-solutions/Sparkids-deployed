@@ -15,11 +15,13 @@ import RubicPage from "./pages/RubicPage";
 import HandwritingPage from "./pages/HandwritingPage";
 import ReadingPage from "./pages/ReadingPage";
 import Scrolltotop from './components/Scrolltotop';
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
     <Router>
         <Header /> 
+        <CustomCursor />
         <Scrolltotop />
       <Routes>
         <Route path="/" element={<HomePage />} />

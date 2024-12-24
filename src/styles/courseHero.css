@@ -21,16 +21,21 @@
 .coursehero-pagename {
   font-size: 24px;
   color: #455a64;
-  margin-top: 0;
   font-family: geologica;
   margin-bottom: 8px; 
   position: relative;
   top: 1px;
-  margin-right: 1122px; 
+  margin-right: 1089px; 
 }
 
-.coursehero-pagename span {
+.coursehero-pagename span a{
   color: #f58634;
+}
+
+.coursehero-pagename a {
+  text-decoration: none;
+  color:  #455a64;
+  margin: 0 5px;
 }
 
 .coursehero-headline1{

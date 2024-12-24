@@ -20,20 +20,26 @@
 }
 
 .franchisehero-pagename {
+  
+  text-align: left;
   font-size: 24px;
-  color: #455A64;
-  font-weight: 400;
-  font-family: Geologica;
-  margin-top: 0;
-  margin-bottom: 45px; 
+  font-family: 'Geologica';
+  color: #455a64;
+  margin-bottom: 30px;
   position: relative;
   top: -5px;
-  margin-left: -426px;
+  margin-left: -313px;
   margin-right: 666px;
 }
 
-.franchisehero-pagename span {
+.franchisehero-pagename span a{
   color: #f58634;
+}
+
+.franchisehero-pagename a {
+  text-decoration: none;
+  color:  #455a64;
+  margin: 0 5px;
 }
 
 .franchisehero-headline1{
