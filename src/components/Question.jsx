@@ -32,6 +32,7 @@ const QuestionSection = () => {
       if (response.ok) {
         const data = await response.text();
         setResponseMessage("We will contact you shortly!");
+        setTimeout(() => setResponseMessage(""), 3000);
       } else {
         const errorText = await response.text();
         setResponseMessage(errorText || "Failed to submit. Please try again.");

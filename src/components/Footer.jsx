@@ -21,6 +21,7 @@ const Footer = () => {
         if (response.ok) {
             const data = await response.text();
             setResponseMessage("We will get back to you!");
+            setTimeout(() => setResponseMessage(""), 3000);
         } else {
             const errorData = await response.text();
             setResponseMessage(errorData || "Failed to submit. Please try again.");
