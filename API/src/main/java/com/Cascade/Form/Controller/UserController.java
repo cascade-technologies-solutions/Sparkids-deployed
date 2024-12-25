@@ -25,11 +25,6 @@ public class UserController {
     @Autowired
     private ContactRepository contactRepository;
 
-    @GetMapping("/contactform")
-    public String showForm(Model model) {
-    	model.addAttribute("user", new User());
-        return "form";  
-    }
 
     @PostMapping("/submitForm")
     public String submitForm(@ModelAttribute User user, Model model) {
