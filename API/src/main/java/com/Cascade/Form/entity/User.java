@@ -14,6 +14,9 @@ public class User {
     private String address;
     private String courses;  
     private String email;
+    private String currentctc;
+    private String expectedctc;
+    private String link;
 
     // Getters and setters
     public String getId() {
@@ -61,4 +64,26 @@ public class User {
     public void setEmail(String email) {
     	this.email=email;
     }
+    //
+    public String getCtc() {
+        return currentctc;
+    }
+
+    public void setCtc(String currentctc) {
+        this.currentctc = currentctc;
+    }
+    public String getEctc() {
+    	return expectedctc;
+    }
+    public void setEctc(String expectedctc) {
+    	this.expectedctc=expectedctc;
+    }
+    public String getLink() {
+    	return link;
+    }
+    public void setLink(String link) {
+    	this.link=link;
+    }
+    
+    
 }
