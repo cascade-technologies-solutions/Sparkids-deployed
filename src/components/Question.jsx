@@ -14,8 +14,8 @@ const QuestionSection = () => {
   const [responseMessage, setResponseMessage] = useState("");
 
   const handleContactClick = async () => {
-    const phoneRegex = /^[0-9]+$/; 
-    if (!phoneRegex.test(contact)) {
+    const phonex = /^[0-9]+$/; 
+    if (!phonex.test(contact)) {
       setResponseMessage("Please enter a valid phone number.");
       return;
     }

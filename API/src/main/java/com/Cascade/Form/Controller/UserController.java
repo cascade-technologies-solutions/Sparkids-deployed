@@ -1,7 +1,7 @@
 package com.Cascade.Form.Controller;
 
 import com.Cascade.Form.Repository.ContactRepository;
-import com.Cascade.Form.entity.User;  // Make sure to import your User entity
+import com.Cascade.Form.entity.User;  
 
 import java.util.Map;
 import java.util.Optional;
