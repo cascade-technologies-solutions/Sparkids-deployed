@@ -8,6 +8,7 @@ import QuestionSection from '../components/Question';
 import Coursehandwriting from '../components/coursehandwriting';
 import CourseHero from '../components/courseHero';
 import CourseVedic from '../components/courseVedic';
+import '../App.css'
 
 const CoursePage = () => {
   return (

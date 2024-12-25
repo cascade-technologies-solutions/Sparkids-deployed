@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/commoncourse.css";
 import coursehandwriting from "../Assets/courses-img/coursehandwriting.png";
-import coursetime from "../Assets/home-img/course-time.png";
 import courseage from "../Assets/home-img/course-age.png";
+import coursetime from "../Assets/home-img/course-time.png";
 import courselevel from "../Assets/home-img/course-level.png";
 
 const HandwritingHero = () => {

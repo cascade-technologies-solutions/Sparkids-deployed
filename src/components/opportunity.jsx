@@ -6,11 +6,16 @@ import "../styles/opportunity.css";
 
 const Opportunity = () => {
   return (
-    <section className="opportunity-section">
+    
+    <section className="opportunity-head">
+      <h3>Franchise Opportunities</h3>
+      <h1>Franchise With Brave</h1>
+      <div className="opportunity-section">
       {/* Text Content */}
+      
       <div className="opportunity-text-container">
-        <h3>Franchise Opportunities</h3>
-        <h1>Franchise With Brave</h1>
+        {/* <h3>Franchise Opportunities</h3>
+        <h1>Franchise With Brave</h1> */}
         <p>
           Our franchise model empowers <br/>passionate educators to start and <br/>grow
           their own successful businesses.
@@ -49,6 +54,7 @@ const Opportunity = () => {
         <div className="opportunity-bottom-image">
           <img src={opport3} alt="Hands-on learning" />
         </div>
+      </div>
       </div>
     </section>
   );

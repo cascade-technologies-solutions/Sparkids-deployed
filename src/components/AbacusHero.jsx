@@ -9,7 +9,7 @@ const AbacusHero = () => {
   return (
     <div className="maincourse-container">
       <div className="maincourse-content">
-        <p className="pagename">Home | Course |<span> Abacus </span> </p>
+        <p className="pagename">Home | Course |<span> Abacus</span> </p>
         <div className="maincourse-section">
       {/* Left Content Section */}
       <div className="maincourse-content">

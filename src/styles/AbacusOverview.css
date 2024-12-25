@@ -1,10 +1,8 @@
-/* Page Container */
 .page-container {
   margin: 12rem 12rem;
   margin-bottom: 20px;
 }
 
-/* Tab Navigation (no box, above the content) */
 .tab-header {
   gap: 40px;
       background: none;
@@ -39,7 +37,7 @@
 .content-card {
   padding: 3rem 5rem;
   width: 1250px;
-  height: 922px;
+  height: auto;
     border: 2px solid #ddd;
     border-radius: 20px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -65,7 +63,7 @@
   color: #f58634;
 }
 
-.description {
+.overview-description {
   font-size: 22px;
   color: #343434;
   line-height: 1.6;
@@ -88,126 +86,265 @@
   font-family: geologica;
   margin-bottom: 10px;
   font-size: 24px;
-  color: #343434;
+  color: #455a64;
 }
 
 .benefits-list img {
   width: 28px;
   height: 28px;
 }
+.dropdown-item {
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
 
+.dropdown-header {
+  display: flex  ;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px;
+      background: rgb(245 134 52 / 13%);
+      cursor: pointer;
+      border-radius: 20px;
+}
 
-@media (max-width: 1024px) {
+.dropdown-header h3 {
+  margin: 0;
+  font-size: 24px;
+  font-family: 'Geologica';
+  font-weight: bold;
+}
+
+.dropdown-header span {
+  font-size: 1.5rem;
+  color: #f58634;
+}
+
+.dropdown-content {
+  padding: 1rem;
+  background: #fff;
+  font-size: 24px;
+  font-family: 'Geologica';
+  color: #455a64;
+}
+.dropdown-content p span{
+  font-family: 'Geologica';
+  color: #f58634;
+}
+.dropdown-subtitle {
+  color: #f58634;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 22px;
+}
+.dropdown-course-info{
+  margin-bottom: 1rem;
+  color: #455a64;
+  font-size: 22px;
+  font-family: geologica;
+}
+  .dropdown-course-info span {
+    
+  color: #f58634;
+  }
+
+.details-content {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+.level-detail span {
+  font-size: 24px;
+  font-weight: bold;
+  color: #f58634;
+}
+.level-detail {
+  color: #455a64;
+}
+.level-detail li {
+  line-height: 30px;
+}
+
+.main-title {
+  font-size: 30px;
+  font-family: lilita one;
+  color: #f58634;
+  margin-bottom: 1rem;
+}
+
+.sub-title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #455a64;
+  font-family: lilita one;
+}
+
+.brain-activation-list,
+.key-skills-list{
+  list-style: none;
+  padding: 0;
+  font-size: 22px;
+  font-family: geologica;
+  margin: 1rem 0;
+}
+
+.brain-activation-list li,
+.key-skills-list li {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.key-skills-list span {
+  color: #f58634;
+}
+.opportunity-list{
+  list-style: none;
+  padding: 0;
+  font-size: 22px;
+  font-family: geologica;
+  margin: 1rem 0;
+}
+@media (max-width: 768px) {
   .page-container {
-    margin: 6rem 2rem;
+    margin: 4rem 2rem;
+    margin-top: -150px;
   }
 
   .tab-header {
+    padding: 20px;
     margin-left: 0;
-    padding: 80px 20px;
+    margin-bottom: -30px;
     gap: 20px;
+  }
+
+  .tab-button {
+    font-size: 18px;
+    padding: 0.5rem;
   }
 
   .content-card {
     width: auto;
-    margin-left: 0;
     padding: 2rem;
-  }
-
-  .tab-button {
-    font-size: 18px;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .main-title,
-  .sub-title {
-    font-size: 24px;
-  }
-
-  .description {
-    font-size: 18px;
-  }
-
-  .benefits-list li {
-    font-size: 20px;
+    margin-left: 0;
   }
 }
 
-@media (max-width: 768px) {
+/* For screens up to 425px */
+@media (max-width: 425px) {
   .page-container {
-    margin: 3rem 1rem;
+    margin: 2rem 1rem;
   }
 
   .tab-header {
-    margin-left: 0;
-    padding: 60px 10px;
+    padding: 15px;
     gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 250px;
-  }
-
-  .content-card {
-    width: 100%;
-    margin-left: 0;
-    padding: 1.5rem;
-    margin-top: 20px;
   }
 
   .tab-button {
     font-size: 16px;
-    padding: 0.3rem 0.6rem;
+    padding: 0.4rem;
   }
 
-  .main-title,
-  .sub-title {
-    font-size: 20px;
-  }
-
-  .description {
-    font-size: 16px;
+  .content-card {
+    padding: 1.5rem;
+    margin-left: 0;
   }
 
   .benefits-list li {
+    font-size: 20px;
+    gap: 8px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 20px;
+  }
+
+  .dropdown-content {
+    font-size: 20px;
+  }
+
+  .level-detail span {
+    font-size: 20px;
+  }
+}
+
+/* For screens up to 375px */
+@media (max-width: 375px) {
+  .page-container {
+    margin: 1.5rem 0.5rem;
+  }
+
+  .tab-header {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .tab-button {
+    font-size: 14px;
+    padding: 0.3rem;
+  }
+
+  .content-card {
+    padding: 1rem;
+  }
+
+  .benefits-list li {
+    font-size: 18px;
+    gap: 6px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 18px;
+  }
+
+  .dropdown-content {
+    font-size: 18px;
+  }
+
+  .level-detail span {
     font-size: 18px;
   }
 }
 
-@media (max-width: 480px) {
+/* For screens up to 320px */
+@media (max-width: 320px) {
   .page-container {
-    margin: 1.8rem 0.5rem;
+    margin: 1rem 0.5rem;
   }
+  .overview-description {
+    font-size: 14px;
+    width: 100%;
+}
 
   .tab-header {
-    padding: 50px 5px;
-    gap: 10px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .content-card {
-    padding: 1.5rem;
+    padding: 8px;
+    gap: 8px;
   }
 
   .tab-button {
-    font-size: 14px;
-    padding: 0.2rem 0.5rem;
+    font-size: 12px;
+    padding: 0.2rem;
   }
 
-  .main-title,
-  .sub-title {
-    font-size: 18px;
-  }
-
-  .description {
-    font-size: 14px;
+  .content-card {
+    padding: 0.8rem;
   }
 
   .benefits-list li {
     font-size: 16px;
+    gap: 5px;
   }
 
-  .benefits-list img {
-    width: 24px;
-    height: 24px;
+  .dropdown-header h3 {
+    font-size: 16px;
+  }
+
+  .dropdown-content {
+    font-size: 16px;
+  }
+
+  .level-detail span {
+    font-size: 16px;
   }
 }

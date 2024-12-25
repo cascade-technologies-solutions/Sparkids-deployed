@@ -7,12 +7,12 @@
   top: 0px;
   padding: 2rem;
 }
-
 .maincourse-container {
   display: flex;
   padding: 40px;
   width: 1152px;
   height: 567px;
+  
 }
 
 .maincourse-section {
@@ -27,31 +27,30 @@
   margin-left: 57px;
 }
 
+
 .maincourse-content {
   flex: 1;
   max-width: 50%;
+ 
 }
 
 .maincourse-heading {
-  font-size: 50px;
+  font-size: 50px; 
   font-weight: 400;
-  color: #f58634;
+  color: #f58634; 
   margin-bottom: 1rem;
   font-family: 'Lilita One';
 }
-
-.maincourse-points-wholelist {
+.maincourse-points-wholelist{
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-
 .maincourse-points {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .maincourse-points-list {
   display: flex;
   flex-direction: row;
@@ -60,24 +59,24 @@
   font-family: Geologica;
   gap: 10px;
 }
-
-.maincourse-subcontent li {
+.maincourse-subcontent li{
   font-size: 24px;
   font-family: Geologica;
   color: #455a64;
   line-height: 50px;
-}
 
-.maincourse-subcontent li span {
+}
+.maincourse-subcontent li span{
   font-weight: 400;
+  
 }
 
 .maincourse-points p {
   display: flex;
   font-size: 18px;
-  color: #455a64;
+  color: #455a64; 
   font-family: Geologica;
-  margin: 8px 0;
+  margin: 8px 0; 
 }
 
 .maincourse-points p img {
@@ -91,7 +90,6 @@
   font-family: geologica;
   color: #455a64;
 }
-
 .maincourse-subcontent span {
   font-size: 24px;
   font-family: geologica;
@@ -124,7 +122,7 @@
 
 .maincourse-image {
   flex: 1;
-  max-width: 50%;
+  max-width: 50%; 
   display: flex;
   justify-content: flex-end;
 }
@@ -156,114 +154,170 @@
     transform: rotate(0deg);
   }
 }
-@media (max-width: 1024px) {
-  .maincourse-container, .maincourse-section {
-    display: flex;
-    flex-wrap: wrap; 
-    width: 900px;
-    height: auto;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: 85px;
-    margin-bottom: -60px;
-
-  }
-
-  .maincourse-heading {
-    font-size: 40px; 
-  }
-
-  .maincourse-points-list {
-    font-size: 20px;
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .maincourse-subcontent li {
-    font-size: 22px;
-    line-height: 45px;
-  }
-
-  .maincourse-button {
-    width: 80%;
-    max-width: 300px;
-    font-size: 22px;
-  }
-
-  .maincourse-image img {
-    max-width: 80%;
-  }
-}
 
 @media (max-width: 768px) {
-  .maincourse-container, .maincourse-section {
-    display: flex;
-    flex-wrap: wrap; 
-    align-items: center;
-    width: 600px;
-    height: auto; 
+  .maincourse-container {
+    flex-direction: column;
     padding: 20px;
-    margin-left: 0px; 
-    margin-bottom: -130px;
   }
 
-  .maincourse-heading {
-    font-size: 32px; 
+  .maincourse-section {
+    flex-direction: row;
+    width: 60%;
+    height: 48%;
+    padding: 18px 20px;
+    margin: -34px 1px -17px;
   }
 
-  .maincourse-points-list {
-    flex-direction: column; 
-    font-size: 18px; 
+  .maincourse-content {
+    max-width: 100%;
+    text-align: center;
   }
-
   .maincourse-subcontent li {
-    font-size: 20px; 
-    line-height: 40px; 
+    font-size: 17px;
+    line-height: 59px;
+    margin-top: -9%;
+}
+.maincourse-subcontent span {
+  font-size: 15px;
+}
+ .pagename{
+  font-size: 15px;
+  top: -35px;
+  left: -491px;
+ }
+  .maincourse-heading {
+      font-size: 31px;
+      margin-bottom: 19px;
+      margin-top: 5px;
   }
-
-  .maincourse-button {
-    width: 100%; 
-    max-width: 250px; 
-    font-size: 20px; 
+  .maincourse-points-wholelist{
+    line-height: 26%;
   }
+  .maincourse-points p img {
+    width: 22px;
+    height: 21px;
+    margin-top: -11px;
+    margin-bottom: 15px;
+}
+  .maincourse-points-list,
+ .maincourse-points-list span {
+    font-size: 17px;
+    text-wrap: nowrap;
+ }
 
+ .maincourse-button {
+  width: 83%;
+  height: 2%;
+  font-size: 16px;
+  padding: 15px;
+  margin-top: -3%;
+}
   .maincourse-image img {
-    max-width: 100%; 
+    width: 100%;
+    height: auto;
   }
 }
 
-@media (max-width: 480px) {
-  .maincourse-container, .maincourse-section {
-    display: flex;
-    flex-wrap: wrap; 
-    padding: 10px;
-    width: 95%;
+@media (max-width: 426px) {
+  .pagename {
+    font-size: 20px;
+    padding: 1.5rem;
+    left:-505px;
   }
-
+  .maincourse-container{
+    height: auto;
+  }
+  .maincourse-section {
+    flex-direction: column;
+    width: 30%;
+    padding: 20px;
+  }
+  .maincourse-content{
+    order: 2;
+  }
+  .maincourse-image{
+    max-width: 95%;
+  }
   .maincourse-heading {
-    font-size: 24px; 
+    font-size: 30px;
   }
 
-  .maincourse-points-list {
-    font-size: 14px; 
-  }
-
+  .maincourse-points-list,
   .maincourse-subcontent li {
-    font-size: 16px; 
-    line-height: 30px; 
+    font-size: 15px;
+  }
+  .maincourse-points-list span,
+  .maincourse-subcontent li span{
+    font-size: 15px;
   }
 
   .maincourse-button {
+    font-size: 14px;
+    padding: 2px;
+    width:100%;
+  }
+  .maincourse-image img{
     width: 100%;
-    max-width: 200px;
-    font-size: 16px; 
+    height: auto;
+  }
+}
+
+@media (max-width: 376px) {
+  .pagename {
+    font-size: 18px;
+    padding: 1.2rem;
+  }
+  .maincourse-container {
+    height: auto;
+  }
+  .maincourse-section {
+    flex-direction: column;
+    width: 26%;
+    padding: 15px;
+  }
+  .maincourse-content {
+    order: 2;
+  }
+  .maincourse-image {
+    max-width: 120%;
+  }
+  
+  .maincourse-heading {
+    font-size: 26px;
   }
 
-  .maincourse-image img {
-    max-width: 200px; 
+  .maincourse-points-list,
+  .maincourse-subcontent li {
+    font-size: 14px;
+  }
+  .maincourse-points-list span,
+  .maincourse-subcontent li span {
+    font-size: 14px;
+    width: 17%;
   }
 
-  .maincourse-section{
-    width: 350px;
+  .maincourse-button {
+    font-size: 12px;
+    padding: 4px;
+    width: 98%;
+  }
+}
+
+@media (max-width: 320px) {
+  .pagename {
+    font-size: 18px;
+    padding: 1.2rem;
+  }
+  .maincourse-section {
+    width: 21%;
+  }
+  .maincourse-image {
+    max-width: 90%;
+  }
+  
+  .maincourse-points-list span,
+  .maincourse-subcontent li span {
+    width: 26%;
   }
 }

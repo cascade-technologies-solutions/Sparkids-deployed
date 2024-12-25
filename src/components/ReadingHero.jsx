@@ -47,7 +47,7 @@ const ReadingHero = () => {
         </a>
       </div>
 
-      {/* Right Img Section */}
+      {/* Right Image Section */}
       <div className="maincourse-image">
         <img src={coursereading} alt="Abacus Course" />
       </div>

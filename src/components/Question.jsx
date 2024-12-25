@@ -14,26 +14,34 @@ const QuestionSection = () => {
   const [responseMessage, setResponseMessage] = useState("");
 
   const handleContactClick = async () => {
+    const phoneRegex = /^[0-9]+$/; 
+    if (!phoneRegex.test(contact)) {
+      setResponseMessage("Please enter a valid phone number.");
+      return;
+    }
+
     try {
+      const formData = new FormData();
+      formData.append("phoneNumber", contact);
+
       const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json", 
-        },
+        body: formData,
       });
 
       if (response.ok) {
-        const data = await response.json();
+        const data = await response.text();
         setResponseMessage("We will contact you shortly!");
       } else {
-        const errorData = await response.json();
-        setResponseMessage(errorData.message || "Failed to submit. Please try again.");
+        const errorText = await response.text();
+        setResponseMessage(errorText || "Failed to submit. Please try again.");
       }
     } catch (error) {
       console.error("Error contacting API:", error);
       setResponseMessage("An error occurred. Please try again.");
     }
   };
+  
 
   return (
     <div className="abt-question-section">

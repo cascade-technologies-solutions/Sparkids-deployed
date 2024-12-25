@@ -40,7 +40,7 @@ const OurStory = () => {
         Founded in 2015, Brave SparKids Academy started with a vision to bring 
         quality education to young learners<br/> across Karnataka. Over the years,
         we’ve grown into a network of over 50 franchise locations, impacting
-        more <br/>
+        more
         than 9,000 students with our carefully crafted educational
         programs.
       </p>

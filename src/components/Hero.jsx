@@ -1,5 +1,5 @@
 
-
+import { Link } from "react-router-dom";
 import React from 'react';
 import person from '../Assets/home-img/person.png';
 import brainleft from '../Assets/home-img/brain-img/brainleft.png';
@@ -26,8 +26,8 @@ const Hero = () => {
           sharpen skills, foster creativity, and <br /> nurture lifelong success.
         </p>
         <div className="hero-buttons">
-          <button className="explore-btn">Explore Courses</button>
-          <button className="opportunity-btn glow">Get Franchise</button>
+        <Link to="/courses" className="explore-btn">Explore Courses</Link>
+        <Link to="/franchise"  className="opportunity-btn glow">Get Franchise</Link>
         </div>
         <div className="hero-stats">
           <div className="stats-images">
