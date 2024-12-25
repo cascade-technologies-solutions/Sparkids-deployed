@@ -13,6 +13,7 @@ public class User {
     private String contact;
     private String address;
     private String courses;  
+    private String email;
 
     // Getters and setters
     public String getId() {
@@ -53,5 +54,11 @@ public class User {
 
     public void setCourses(String courses) {
         this.courses = courses;
+    }
+    public String getEmail() {
+    	return email;
+    }
+    public void setEmail(String email) {
+    	this.email=email;
     }
 }

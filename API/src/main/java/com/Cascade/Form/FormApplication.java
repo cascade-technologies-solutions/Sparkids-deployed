@@ -37,7 +37,7 @@ public class FormApplication implements CommandLineRunner {
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1 -> createUser(scanner);
