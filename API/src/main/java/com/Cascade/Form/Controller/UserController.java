@@ -47,15 +47,12 @@ public class UserController {
             return ResponseEntity.badRequest().body("Email is required");
         }
 
-        // Check if the email is already in the database
         if (contactRepository.existsByEmail(email)) {
             return ResponseEntity.status(409).body("Email already exists in the database");
         }
-        // Create a new user entity and set the email
         User user = new User();
         
         user.setEmail(email);
-        // Save the user to the database
         contactRepository.save(user);
 
         return ResponseEntity.ok("Email saved successfully");
