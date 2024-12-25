@@ -10,7 +10,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -24,7 +23,7 @@ public class UserController {
 
     @Autowired
     private ContactRepository contactRepository;
-    
+
     @PostMapping("/api/contact")
     public ResponseEntity<String> savePhoneNumber(@RequestParam("phoneNumber") String phoneNumber) {
         if (phoneNumber == null || phoneNumber.isEmpty()) {
