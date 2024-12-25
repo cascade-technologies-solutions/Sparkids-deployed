@@ -24,24 +24,7 @@ public class UserController {
 
     @Autowired
     private ContactRepository contactRepository;
-
-
-    @PostMapping("/submitForm")
-    public String submitForm(@ModelAttribute User user, Model model) {
-
-       
-        Optional<User> existingContact = contactRepository.findByNameAndContactAndAddress(user.getName(), user.getContact(), user.getAddress());
-
-        if (existingContact.isPresent()) {
-        	model.addAttribute("errorMessage", "This contact already exists in the database.");
-            model.addAttribute("user", user);  
-            return "form";
-        } else {
-            
-            contactRepository.save(user);  
-            return "redirect:/contactform";  
-        }	
-    }
+    
     @PostMapping("/api/contact")
     public ResponseEntity<String> savePhoneNumber(@RequestParam("phoneNumber") String phoneNumber) {
         if (phoneNumber == null || phoneNumber.isEmpty()) {
