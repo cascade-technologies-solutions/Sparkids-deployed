@@ -37,7 +37,7 @@
 
 .home-course-list {
   text-align: right;
-  padding: 40px;
+  padding: 0px;
 }
 
 
@@ -65,7 +65,7 @@
   font-weight: bold;
   font-size: 20px;
   color: #f58634;
-  margin: 20px 100px -20px auto;
+  margin: 20px 100px -40px auto;
   display: flex;
   align-items: center;
   gap: 8px;

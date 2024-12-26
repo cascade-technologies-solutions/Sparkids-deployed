@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import '../styles/educator.css';
 import Educators from '../Assets/home-img/educators.png';
 import Shape from '../Assets/home-img/edushape.png';
@@ -28,7 +29,7 @@ const Educator = () => {
           <p className="educator-description">
             <h3>Education to transform lives <br/>and create a brighter future.</h3>
           </p>
-          <button className="educator-button">Know more</button>
+          <Link to='/careers' className="educator-button">Know more</Link>
         </div>
         </div>
       </div>

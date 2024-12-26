@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="footer-container">
         {/* Contact Us Section */}
         <div className="footer-section address">
-          <img src={logo} alt="Brave SparkKids Logo" className="footer-logo" />
+          <Link to ='/'><img src={logo} alt="Brave SparkKids Logo" className="footer-logo" /></Link>
           <h3>Contact Us</h3>
           <p>
             Call: +91 82170 77217 <br />

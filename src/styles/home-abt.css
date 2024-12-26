@@ -43,7 +43,7 @@ margin-bottom: 10px;
 .about-us-info-text p {
   font-size: 22px;
   margin-top: 20px;
-  font-family: grologica;
+  font-family: geologica;
   font-weight: 100;
    max-width: 920px; 
    text-align: center;
@@ -67,7 +67,7 @@ width: 350px;
 height: 250px;
 margin: 0 auto; 
 top: -64px;
-left:30px
+left:70px
 }
 
 .info-bg-image {
@@ -161,10 +161,10 @@ padding: 4px;
 
 /* Content Section */
 .info-content {
-width: 50%; 
+width: 39%; 
 text-align: left;
 padding: 10px;
-margin-right:-106px;
+margin-right:39px;
 }
 
 .info-content h2 {
@@ -198,16 +198,17 @@ padding-right: 120px;
 .info-know-more {
 padding: 10px 16px;
 background-color: #f9fbfd;
-color: #f58634;
-border: #f58634 solid;
+color: #ff6600;
+border: 2px solid #ff6600;
 border-radius: 8px;
 cursor: pointer;
 height: 57px;
+font-size: 16px;
 width: 155px;
 }
 
 .info-know-more:hover {
-background-color: #f58634;
+background-color: #ff6600;
 color: #f5f5f5;
 }
 

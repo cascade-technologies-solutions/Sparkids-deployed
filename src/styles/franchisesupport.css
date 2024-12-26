@@ -42,6 +42,7 @@
 .support-sub {
   display: flex;
   flex-direction: row;
+  margin-top: -4%ist sa;
   gap: 2rem; /* Spacing between the image and content */
 }
 
@@ -56,9 +57,9 @@
 .support-sub-content {
   flex: 1;
   text-align: left;
-  margin-left: 2rem; /* Shift the content to the right */
-  margin-top: 119px; /* Move the content downward */
-  /* Added margin-left and margin-top for proper positioning */
+  margin-left: 2rem; 
+  margin-top: 119px; 
+  width :605px;
 }
 
 .support-sub-heading {
@@ -125,7 +126,7 @@
 
 .support-sub-image img {
   width: 427px;
-  height: 697px;
+  height: 600px;
 transition: transform 0.3s ease;
 }
 

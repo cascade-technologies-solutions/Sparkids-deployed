@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/home-course.css"; // Import the CSS file
+import "../styles/home-course.css";
 
 import courseimg1 from "../Assets/home-img/courseimg1.png";
 import courseimg2 from "../Assets/home-img/courseimg2.png";
@@ -10,7 +10,7 @@ import courselevel from "../Assets/home-img/course-level.png";
 import courserate from "../Assets/home-img/course-rate.png";
 import courseLearnMore from "../Assets/home-img/course-learnmore.png";
 import learnmorebulb from "../Assets/home-img/learnmorebulb.png";
-import { Link } from "react-router-dom"; // Import Link for routing
+import { Link } from "react-router-dom";
 
 const CourseCard = ({
   title,

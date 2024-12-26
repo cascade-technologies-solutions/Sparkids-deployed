@@ -11,20 +11,21 @@
 .aboutus-sub-container{
   display: flex;
   flex-direction: row;
+  margin-top: -8%;
 }  
 .about-us-content {
   flex: 1;
   max-width: 50%;
-  margin-left: 80px;
-  margin-top: 150px;
+  margin-left: 69px;
+  margin-top: 160px;
 }
 
 .about-us-pagename {
   font-size: 24px;
   color: #455a64;
   position: relative;
-  top: 0px;
-  left: -500px;
+  top: -20px;
+  left: -545px;
   font-family: geologica;
 }
 .about-us-pagename  span a{
@@ -81,8 +82,8 @@
 .about-us-image img {
   border-radius: 68px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  height: 529px;
-  width: 455px;
+  height: 481px;
+  width: 419px;
   margin-left: 110px;
   margin-top: 31px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
