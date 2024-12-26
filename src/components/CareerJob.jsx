@@ -53,21 +53,6 @@ const jobData = [
         category: "Academic",
         locations: ["Mid-Level", "Chennai", "Madurai"],
         responsibilities:"Designing and implementing user interfaces using HTML, CSS, and JavaScript frameworks like React or Angular. Building and maintaining server-side application logic, databases....",
-         /*} "Teach students techniques of Vedic Mathematics to improve speed and accuracy in calculations.",
-        requirements: "SExpertise in Vedic Math concepts, teaching experience preferred.",
-        details: {
-          primaryResponsibility:
-            "Teaching advanced mathematical concepts and improving...",
-          jobSpecification: [
-            "Strong command over Vedic Mathematics techniques",
-            "Proven teaching experience",
-          ],
-          employmentType: "Full-time",
-          workPlaceType: "On-site",
-          salary: "Competitive",
-          experienceRequired: "Minimum 2 Years",
-          location: "Chennai, Madurai",
-        }, */
     },
     {
         id: 4,
@@ -75,38 +60,64 @@ const jobData = [
         category: "Academic",
         locations: ["Mid-Level", "Chennai", "Madurai"],
         responsibilities:"Designing and implementing user interfaces using HTML, CSS, and JavaScript frameworks like React or Angular. Building and maintaining server-side application logic, databases....",
-         /*} "Teach students techniques of Vedic Mathematics to improve speed and accuracy in calculations.",
-        requirements: "SExpertise in Vedic Math concepts, teaching experience preferred.",
-        details: {
-          primaryResponsibility:
-            "Teaching advanced mathematical concepts and improving...",
-          jobSpecification: [
-            "Strong command over Vedic Mathematics techniques",
-            "Proven teaching experience",
-          ],
-          employmentType: "Full-time",
-          workPlaceType: "On-site",
-          salary: "Competitive",
-          experienceRequired: "Minimum 2 Years",
-          location: "Chennai, Madurai",
-        }, */
     },
   ];
   
   const filters = ["All positions", "Academic", "Administrative", "Operational"];
+
+  function JobApplicationForm() {
+    const [formData, setFormData] = useState({
+      fullName: "",
+      email: "",
+      phone: "",
+      currentCtc: "",
+      expectedCtc: "",
+      noticePeriod: "",
+      portfolioLink: "",
+    });
   
-  function CareerJob() {
-    const [selectedJob, setSelectedJob] = useState(jobData[0]);
-    const [selectedFilter, setSelectedFilter] = useState("All positions");
-    const [showApplicationForm, setShowApplicationForm] = useState(false);
+    const [resume, setResume] = useState(null);
+    const [responseMessage, setResponseMessage] = useState("");
   
-    const filteredJobs =
-      selectedFilter === "All positions"
-        ? jobData
-        : jobData.filter((job) => job.category === selectedFilter);
-    const handleApplyNow = () => {
-    setShowApplicationForm(true);
-  };
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData({ ...formData, [name]: value });
+    };
+  
+    const handleFileChange = (e) => {
+      setResume(e.target.files[0]);
+    };
+  
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+  
+      const form = new FormData();
+      form.append("fullName", formData.fullName);
+      form.append("email", formData.email);
+      form.append("phone", formData.phone);
+      form.append("currentCtc", formData.currentCtc);
+      form.append("expectedCtc", formData.expectedCtc);
+      form.append("noticePeriod", formData.noticePeriod);
+      form.append("portfolioLink", formData.portfolioLink);
+      if (resume) form.append("resume", resume);
+  
+      try {
+        const response = await fetch("http://localhost:8080/job-application", {
+          method: "POST",
+          body: form,
+        });
+  
+        if (response.ok) {
+          setResponseMessage("Application submitted successfully!");
+        } else {
+          setResponseMessage("Failed to submit application. Please try again.");
+        }
+      } catch (error) {
+        console.error("Error submitting application:", error);
+        setResponseMessage("An error occurred while submitting your application.");
+      }
+    };
+  
 
     return (
       <div className="job-container">
@@ -158,46 +169,89 @@ const jobData = [
           {/* Right Section: Job Details */}
           <div className="job-details">
           {showApplicationForm ? (
-            <div className="job-application-form">
+              <div className="job-application-form">
               <h3>Job Application</h3>
               <p>Tell us more about you so we can get back to you with more info.</p>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div>
                   <label>Full Name</label>
-                  <input type="text"  />
+                  <input
+                    type="text"
+                    name="fullName"
+                    value={formData.fullName}
+                    onChange={handleInputChange}
+                    required
+                  />
                 </div>
                 <div>
                   <label>Email</label>
-                  <input type="email"/>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                  />
                 </div>
                 <div>
                   <label>Phone Number</label>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    required
+                  />
                 </div>
                 <div>
                   <label>Current CTC</label>
-                  <input type="text"  />
+                  <input
+                    type="text"
+                    name="currentCtc"
+                    value={formData.currentCtc}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
                   <label>Expected CTC</label>
-                  <input type="text"  />
+                  <input
+                    type="text"
+                    name="expectedCtc"
+                    value={formData.expectedCtc}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
                   <label>Notice Period</label>
-                  <input type="text"  />
+                  <input
+                    type="text"
+                    name="noticePeriod"
+                    value={formData.noticePeriod}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <div>
                   <label>Upload your resume</label>
-                  <input type="file" />
+                  <input
+                    type="file"
+                    name="resume"
+                    onChange={handleFileChange}
+                  />
                 </div>
                 <div>
                   <label>Submit your portfolio link</label>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    name="portfolioLink"
+                    value={formData.portfolioLink}
+                    onChange={handleInputChange}
+                  />
                 </div>
                 <button type="submit" className="apply-btn">
                   Apply Now
                 </button>
               </form>
+              {responseMessage && <p className="response-message">{responseMessage}</p>}
             </div>
           ) : selectedJob ? (
             <>
