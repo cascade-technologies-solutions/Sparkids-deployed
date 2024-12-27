@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/CareerJob.css";
-import { API_BASE_URL } from "../api";
+// import { API_BASE_URL } from "../api";
 
 const jobData = [
     {
