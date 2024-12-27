@@ -9,7 +9,7 @@ const vedicCourse = () => {
     <div className="vedic-section">
       {/* Left Content Section */}
       <div className="vedic-content">
-        <h2 className="vedic-heading">Vedic</h2>
+        <h2 className="vedic-heading">Vedic Maths</h2>
         <p className="vedic-description">
           Unlock the full potential of your child's <br/>Mathematical abilities with our <br/>comprehensive Abacus Course.
         </p>

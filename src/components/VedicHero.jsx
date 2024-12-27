@@ -49,8 +49,8 @@ const VedicHero = () => {
 
       {/* Right Image Section */}
       <div className="maincourse-image" >
-        <img src={coursevedic} alt="Abacus Course" style={{ width: "421px",
-         height: "584px" , marginTop:'5px',borderRadius: '20px' }} />
+        <img src={coursevedic} alt="cedic Course" style={{ width: "233px",
+         height: "282px" , marginTop:'-4px',borderRadius: '20px' }} />
       </div>
     </div>
     </div>

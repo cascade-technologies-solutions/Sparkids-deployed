@@ -49,7 +49,7 @@ const HandwritingHero = () => {
 
       {/* Right Image Section */}
       <div className="maincourse-image">
-        <img src={coursehandwriting} alt="Abacus Course" />
+        <img src={coursehandwriting} alt="handwriting Course" />
       </div>
     </div>
     </div>

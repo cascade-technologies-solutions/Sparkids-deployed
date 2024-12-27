@@ -171,7 +171,7 @@ const CourseList = () => {
       <div className="home-course-list">
         <h2
           className="home-course-list-heading"
-          onClick={() => (window.location.href = "/courses")} // Update this link to your route
+          onClick={() => (window.location.href = "/courses")}
         >
           Explore all
           <svg

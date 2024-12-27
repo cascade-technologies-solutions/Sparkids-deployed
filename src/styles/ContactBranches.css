@@ -134,4 +134,194 @@
     color: #455A64;
     text-align: center;
   }
+  @media (max-width: 768px) {
+    .branches-container {
+      padding: 0 50px;
+    }
   
+    .branches-heading {
+      font-size: 20px;
+    }
+  
+    .branches-row {
+      gap: 15px;
+    }
+  
+    .branch-card {
+      max-width: 45%;
+    }
+  
+    .branch-card h3 {
+      font-size: 20px;
+    }
+  
+    .branch-card p {
+      font-size: 18px;
+    }
+  
+    .contact-social-section-heading {
+      font-size: 20px;
+    }
+    .media-section-heading{
+      margin-bottom: -10px;
+      font-size: 18px;
+    }
+  
+    .media-gallery {
+      flex-direction: row;
+      gap: 20px;
+    }
+  
+    .media-gallery img {
+      width: 23%;
+      height: auto;
+      border-radius: 0px;
+    }
+  
+    .media-section-redirect a {
+      margin-left: 0;
+      font-size: 12px;
+    }
+  
+    .contact-footer-text {
+      font-size: 20px;
+    }
+  }
+  
+  /* For screens smaller than 425px */
+  @media (max-width: 426px) {
+    .branches-container {
+      padding: 0 30px;
+    }
+  
+    .branches-heading {
+      font-size: 18px;
+    }
+  
+    .branches-row {
+      gap: 10px;
+    }
+  
+    .branch-card {
+      max-width: 100%;
+    }
+  
+    .branch-card h3 {
+      font-size: 18px;
+    }
+  
+    .branch-card p {
+      font-size: 16px;
+    }
+  
+    .contact-social-section-heading {
+      font-size: 18px;
+    }
+  
+    .media-gallery img {
+      width: 21%;
+    }
+  
+    .contact-footer-text {
+      font-size: 18px;
+    }
+    .icon-container {
+      width: 30px;
+      height:30px;
+    }
+    .social-link span {
+      font-size: 16px;
+    }
+  }
+  
+  /* For screens smaller than 375px */
+  @media (max-width: 376px) {
+    .branches-container {
+      padding: 0 20px;
+    }
+  
+    .branches-heading {
+      font-size: 16px;
+    }
+  
+    .branches-row {
+      gap: 10px;
+    }
+  
+    .branch-card {
+      max-width: 100%;
+    }
+  
+    .branch-card h3 {
+      font-size: 16px;
+    }
+  
+    .branch-card p {
+      font-size: 14px;
+    }
+  
+    .contact-social-section-heading {
+      font-size: 16px;
+    }
+  
+    .media-gallery img {
+      width: 22%;
+    }
+  
+    .contact-footer-text {
+      font-size: 16px;
+    }
+    .icon-container {
+      width: 18px;
+      height:30px;
+    }
+    .social-link span {
+      font-size: 16px;
+    }
+  }
+  
+  /* For screens smaller than 320px */
+  @media (max-width: 321px) {
+    .branches-container {
+      padding: 0 15px;
+    }
+  
+    .branches-heading {
+      font-size: 14px;
+    }
+  
+    .branches-row {
+      gap: 5px;
+    }
+  
+    .branch-card {
+      max-width: 100%;
+    }
+  
+    .branch-card h3 {
+      font-size: 14px;
+    }
+  
+    .branch-card p {
+      font-size: 12px;
+    }
+  
+    .contact-social-section-heading {
+      font-size: 14px;
+    }
+  
+    .media-gallery img {
+      width: 20%;
+    }
+  
+    .contact-footer-text {
+      font-size: 14px;
+    }
+    .icon-container {
+      width: 20px;
+      height:30px;
+    }
+    .social-link span {
+      font-size: 10px;
+    }
+  }

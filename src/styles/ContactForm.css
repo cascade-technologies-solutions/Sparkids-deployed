@@ -205,8 +205,94 @@
         align-items: center;
     }
 
-    .contact-form-section,
+    .contact-form-section{
+        max-width: 100%;
+    }
     .contact-info-section {
         max-width: 100%;
+    }
+
+    .contact-form-section h2,
+    .contact-info-section h2 {
+        font-size: 22px;
+    }
+    .contact-info-section p {
+        margin: 10px;
+        font-size: 18px;
+        font-family: geologica;
+        color: #455a64;
+    }
+    .map iframe {
+        height: 250px;
+        width: 85%;
+      }
+}
+
+/* For screen widths 425px and below */
+@media (max-width: 425px) {
+    .contact-container {
+        padding: 10px;
+    }
+
+    .contact-form-section h2,
+    .contact-info-section h2 {
+        font-size: 20px;
+    }
+
+    .contact-form-section form input,
+    .contact-form-section form textarea {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .contact-footer p,
+    .contact-footer h2 {
+        font-size: 18px;
+    }
+}
+
+/* For screen widths 375px and below */
+@media (max-width: 375px) {
+    .contact-container {
+        padding: 10px;
+    }
+
+    .contact-form-section h2,
+    .contact-info-section h2 {
+        font-size: 18px;
+    }
+
+    .contact-form-section form input,
+    .contact-form-section form textarea {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    .contact-footer p,
+    .contact-footer h2 {
+        font-size: 16px;
+    }
+}
+
+/* For screen widths 320px and below */
+@media (max-width: 320px) {
+    .contact-container {
+        padding: 5px;
+    }
+
+    .contact-form-section h2,
+    .contact-info-section h2 {
+        font-size: 16px;
+    }
+
+    .contact-form-section form input,
+    .contact-form-section form textarea {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .contact-footer p,
+    .contact-footer h2 {
+        font-size: 14px;
     }
 }
