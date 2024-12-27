@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/CareerJob.css";
+import { API_BASE_URL } from "../api";
 
 const jobData = [
     {
@@ -159,46 +160,70 @@ const jobData = [
           <div className="job-details">
           {showApplicationForm ? (
             <div className="job-application-form">
-              <h3>Job Application</h3>
-              <p>Tell us more about you so we can get back to you with more info.</p>
-              <form>
-                <div>
-                  <label>Full Name</label>
-                  <input type="text"  />
-                </div>
-                <div>
-                  <label>Email</label>
-                  <input type="email"/>
-                </div>
-                <div>
-                  <label>Phone Number</label>
-                  <input type="text" />
-                </div>
-                <div>
-                  <label>Current CTC</label>
-                  <input type="text"  />
-                </div>
-                <div>
-                  <label>Expected CTC</label>
-                  <input type="text"  />
-                </div>
-                <div>
-                  <label>Notice Period</label>
-                  <input type="text"  />
-                </div>
-                <div>
-                  <label>Upload your resume</label>
-                  <input type="file" />
-                </div>
-                <div>
-                  <label>Submit your portfolio link</label>
-                  <input type="text" />
-                </div>
-                <button type="submit" className="apply-btn">
-                  Apply Now
-                </button>
-              </form>
-            </div>
+            <h3>Job Application</h3>
+            <p>Tell us more about you so we can get back to you with more info.</p>
+            <form
+              onSubmit={async (e) => {
+                e.preventDefault();
+          
+                const formData = new FormData(e.target);
+          
+                try {
+                  const response = await fetch(`${API_BASE_URL}/job-application`, {
+                    method: "POST",
+                    body: formData,
+                  });
+          
+                  if (response.ok) {
+                    const data = await response.text();
+                    alert("Application submitted successfully!");
+                  } else {
+                    const errorText = await response.text();
+                    alert(errorText || "Failed to submit. Please try again.");
+                  }
+                } catch (error) {
+                  console.error("Error submitting the application:", error);
+                  alert("An error occurred. Please try again.");
+                }
+              }}
+            >
+              <div>
+                <label>Full Name</label>
+                <input type="text" name="fullName" required />
+              </div>
+              <div>
+                <label>Email</label>
+                <input type="email" name="email" required />
+              </div>
+              <div>
+                <label>Phone Number</label>
+                <input type="text" name="phoneNumber" required />
+              </div>
+              <div>
+                <label>Current CTC</label>
+                <input type="text" name="currentCTC" required />
+              </div>
+              <div>
+                <label>Expected CTC</label>
+                <input type="text" name="expectedCTC" required />
+              </div>
+              <div>
+                <label>Notice Period</label>
+                <input type="text" name="noticePeriod" required />
+              </div>
+              <div>
+                <label>Upload your resume</label>
+                <input type="file" name="resume" required />
+              </div>
+              <div>
+                <label>Submit your portfolio link</label>
+                <input type="text" name="portfolioLink" />
+              </div>
+              <button type="submit" className="apply-btn">
+                Apply Now
+              </button>
+            </form>
+          </div>
           ) : selectedJob ? (
             <>
               <h2>{selectedJob.type}</h2>
