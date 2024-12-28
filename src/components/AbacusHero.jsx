@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/commoncourse.css"; 
+import "../styles/commoncourse.css";
 import courseabacus from "../Assets/courses-img/abacuscourse.png";
 import courseage from "../Assets/home-img/course-age.png";
 import coursetime from "../Assets/home-img/course-time.png";

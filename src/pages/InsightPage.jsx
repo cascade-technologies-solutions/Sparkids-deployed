@@ -6,6 +6,7 @@ import Insighthero from '../components/InsightHero';
 import Gallery from '../components/InsightGallery';
 import Achievement from '../components/InsightAchievement';
 import Carousel from '../components/InsightJourney';
+import StudentsAchievements from '../components/Insightstudent';
 export const Insight = () => {
     return (
       <div>
@@ -13,6 +14,7 @@ export const Insight = () => {
         <Gallery/>
         <Achievement />
         <Carousel />
+        <StudentsAchievements />
       </div>
     );
   };

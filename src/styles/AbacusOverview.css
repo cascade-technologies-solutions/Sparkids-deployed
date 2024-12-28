@@ -242,7 +242,7 @@
 }
 
 /* For screens up to 425px */
-@media (max-width: 425px) {
+@media (max-width: 426px) {
   .page-container {
     margin: 2rem 1rem;
   }
@@ -281,7 +281,7 @@
 }
 
 /* For screens up to 375px */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .page-container {
     margin: 1.5rem 0.5rem;
   }
@@ -319,7 +319,7 @@
 }
 
 /* For screens up to 320px */
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .page-container {
     margin: 1rem 0.5rem;
   }

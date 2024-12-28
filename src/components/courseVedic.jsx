@@ -11,19 +11,19 @@ const vedicCourse = () => {
       <div className="vedic-content">
         <h2 className="vedic-heading">Vedic Maths</h2>
         <p className="vedic-description">
-          Unlock the full potential of your child's <br/>Mathematical abilities with our <br/>comprehensive Abacus Course.
+        Vedic Mathematics, rooted in ancient Indian sutras, offers an efficient approach to complex arithmetic and algebra.
         </p>
         <ul className="vedic-points">
           <li>
-            <span>Designed to enhance focus</span>
+            <span>Enhances calculation speed and <br/>accuracy</span>
             <img src={point} alt="point" />
           </li>
           <li>
-            <span>Faster problem-solving skills and <br/>mental agility</span>
+            <span>Useful for competitive exams</span>
             <img src={point} alt="point" />
           </li>
           <li>
-            <span>Visualization & Concentration</span>
+            <span>Solve complex calculations mentally</span>
             <img src={point} alt="point" />
           </li>
         </ul>
