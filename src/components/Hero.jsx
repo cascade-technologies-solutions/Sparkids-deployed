@@ -2,6 +2,10 @@
 import { Link } from "react-router-dom";
 import React from 'react';
 import person from '../Assets/home-img/person.png';
+import person1 from '../Assets/home-img/person1.png';
+import person2 from '../Assets/home-img/person2.png';
+import person3 from '../Assets/home-img/person3.png';
+import person4 from '../Assets/home-img/person4.png';
 import brainleft from '../Assets/home-img/brain-img/brainleft.png';
 import brainright from '../Assets/home-img/brain-img/brainright.png';
 import bulb from '../Assets/home-img/brain-img/bulb.png';
@@ -32,10 +36,10 @@ const Hero = () => {
         <div className="hero-stats">
           <div className="stats-images">
             <img src={person} alt="Student 1" />
-            <img src={person} alt="Student 2" />
-            <img src={person} alt="Student 3" />
-            <img src={person} alt="Student 4" />
-            <img src={person} alt="Student 5" />
+            <img src={person1} alt="Student 2" />
+            <img src={person2} alt="Student 3" />
+            <img src={person3} alt="Student 4" />
+            <img src={person4} alt="Student 5" />
           </div>
           <p className="stats-text">
             <h1>9000+ Students <br /><span className="highlight"> have started their studies </span> </h1>

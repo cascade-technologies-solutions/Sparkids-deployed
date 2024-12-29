@@ -4,7 +4,7 @@ import AboutUs from '../components/ReadingHero';
 import ReadingOverview from '../components/ReadingOverview';
 //import Footer from '../components/Footer';
 import HomeTestimonials from '../components/hometestimonial';
-import Course from '../components/home-course';
+import Course from '../components/newcardtest';
 import FAQ from '../components/FranchiseFAQ';
 
 export const ReadingPage = () => {

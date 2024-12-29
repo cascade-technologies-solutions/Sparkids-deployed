@@ -1,9 +1,7 @@
-/* Achievements Container */
 .achievements-container {
     padding: 110px;
 }
 
-/* Heading Styles */
 .achievements-container h2 {
     font-size: 30px;
     font-family: 'Lilita One';
@@ -18,13 +16,11 @@
     margin-bottom: -4px;
 }
 
-/* Grid Layout */
 .achievements-grid {
     display: grid;
-    gap: 20px; /* Consistent spacing between grid items */
+    gap: 20px;
 }
 
-/* Top Row: 2 Columns */
 .achievements-grid.top-row {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 88px;
@@ -33,13 +29,11 @@
     margin-left: 500px;
 }
 
-/* Bottom Row: 4 Columns */
 .achievements-grid.bottom-row {
-    grid-template-columns: repeat(4, 1fr); /* Four equal columns for the bottom row */
-    gap: 30px; /* Increased spacing for better alignment */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
-/* Individual Achievement Item */
 .achievement-item h3 {
     font-size: 50px;
     font-weight: bold;
@@ -47,17 +41,20 @@
     margin: 0;
     font-family: 'Lilita One';
 }
-
-.achievement-item p {
-    font-size: 24px; /* Moderate size for descriptions */
-    color: #455A64;
-    margin: 0;
-    line-height: 1.5; /* Slightly increased line height for better text spacing */
+.achievement-item h3:hover {
+    transform: scale(1.1);
 }
 
-/* Responsive Styles */
+.achievement-item p {
+    font-size: 24px; 
+    color: #455A64;
+    margin: 0;
+    line-height: 1.5; 
+}
+.achievement-item p:hover {
+    transform: scale(1.1);
+}
 
-/* For screen widths 768px and below */
 @media (max-width: 768px) {
     .achievements-container {
         padding: 60px;
@@ -84,7 +81,6 @@
     }
 }
 
-/* For screen widths 425px and below */
 @media (max-width: 425px) {
     .achievements-container {
         padding: 40px;
@@ -105,7 +101,6 @@
     }
 }
 
-/* For screen widths 375px and below */
  @media (max-width: 376px) {
     .achievements-container {
         padding: 30px;
@@ -118,7 +113,6 @@
 
 } 
 
-/* For screen widths 320px and below */
 @media (max-width: 320px) {
     .achievements-container {
         padding: 20px;

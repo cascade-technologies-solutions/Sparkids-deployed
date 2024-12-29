@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/home-abt.css"; 
+import "../styles/home-abt.css";
+import { Link } from "react-router-dom";
 import Image from "../Assets/home-img/img.png";
 import dots from "../Assets/home-img/dots.png";
 import card1 from "../Assets/home-img/card1.png";
@@ -54,7 +55,7 @@ const AboutUs = () => {
             <p>
             Through Abacus, Vedic Maths, and more, we equip children with skills for a balanced, well-rounded brain development that lasts a lifetime.
             </p>
-            <button className="info-know-more">Know More</button>
+            <Link to="/about" className="info-know-more">Know More</Link>
           </div>
         </div>
       </div>

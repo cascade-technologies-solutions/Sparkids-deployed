@@ -21,9 +21,9 @@ const franchisehero = () => {
           Be part of a proven, profitable, and impactful franchise model.
         </p>
         <br/>
-        <a href="#know-more" className="franchisehero-button">
+        <Link to="/contact" className="franchisehero-button">
            Contact Us
-        </a>
+        </Link>
       </div>
       <div className="franchisehero-image">
         <img src={image} alt="franchiseimg" />

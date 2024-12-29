@@ -30,7 +30,7 @@ margin-bottom: 10px;
 }
 
 .about-us-info-text h3 {
-  color: #f37751;
+  color: #f58634;
   margin-top: -19px;
   text-align: center;
   font-size: 50px;
@@ -196,20 +196,20 @@ padding-right: 120px;
 }
 
 .info-know-more {
-padding: 10px 16px;
-background-color: #f9fbfd;
-color: #ff6600;
-border: 2px solid #ff6600;
-border-radius: 8px;
-cursor: pointer;
-height: 57px;
-font-size: 16px;
-width: 155px;
+  display: inline-block;
+  padding: 10px 26px;
+  color: #F58634;
+  border: 2px solid #F58634;
+  border-radius: 8px;
+  text-decoration: none;
+  font-family: KoHo;
+  font-size: 19.19px;
+  transition: all 0.3s ease;
 }
 
 .info-know-more:hover {
-background-color: #ff6600;
-color: #f5f5f5;
+  background-color: #F58634;
+  color: #fff;
 }
 
 
@@ -363,16 +363,16 @@ margin-right: 2px;
   padding-right: 48px;
 }
 
-.info-know-more {
+/* .info-know-more {
   padding: 0px 0px;
   background-color: #f9fbfd;
   color: #f58634;
-  border: #f58634 solid;
+  border: #f58634;
   border-radius: 5px;
   cursor: pointer;
   height: 35px;
   width: 110px;
-}
+} */
 
 }
 

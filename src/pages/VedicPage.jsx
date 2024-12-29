@@ -4,7 +4,7 @@ import VedicHero from '../components/VedicHero';
 import AbacusOverview from '../components/VedicOverview';
 //import Footer from '../components/Footer';
 import HomeTestimonials from '../components/hometestimonial';
-import Course from '../components/home-course';
+import Course from '../components/newcardtest';
 import FAQ from '../components/FranchiseFAQ';
 
 export const VedicPage = () => {

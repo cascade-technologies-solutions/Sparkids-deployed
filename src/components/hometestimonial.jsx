@@ -8,7 +8,7 @@ const cardsData = [
     content:
     (
       <p>
-        "Brave Sparkids Academy has <br /> been a game-changer for my <br/>child". With completing Rubik's Cube <br/> 4 months programs.
+        "Brave Sparkids Academy has  been a game-changer for my child". With completing Rubik's Cube  4 months programs.
         
       </p>
     ),
@@ -20,10 +20,10 @@ const cardsData = [
   {
     id: 2,
     content:(<p>
-      "Enrolling my child at Brave <br/>SparkKids Academy was one of the,<br/> best decisions I've ever made."
+      "Enrolling my child at Brave SparkKids Academy was one of the,best decisions I've ever made."
    </p>
        ) ,
-    author: "Dannette P. Cervantes",
+    author: "Dannette P.C",
     rating: 5,
     image:  testimonial1,
     topImage:  testimonialcomma, 
@@ -31,7 +31,7 @@ const cardsData = [
   {
     id: 3,
     content:(<p>
-      "Brave SparkKids Academy has <br/> been a game-changer for my <br/>child", With completing Rubik's Cube <br/> 4 months program.
+      "Brave SparkKids Academy has  been a game-changer for my child", With completing Rubik's Cube  4 months program.
     </p> 
     ),
       author: "Clara R. Altman",
@@ -42,7 +42,7 @@ const cardsData = [
   {
     id: 4,
     content:(<p>
-      Amazing experience at Brave<br/> SparkKids Academy! My child has <br/>gained so much confidence.
+      Amazing experience at Brave SparkKids Academy! My child has gained so much confidence.
     </p>
     ),
       author: "James  Carter",
@@ -54,7 +54,7 @@ const cardsData = [
     id: 5,
     content:(<p>
 
-      Brave SparkKids Academy<br/> offers amazing learning programs, <br/>and the teachers are fantastic.
+      Brave SparkKids Academy offers amazing learning programs, and the teachers are fantastic.
     </p>  
     ),
       author: "Emily R.  Brooks",
@@ -67,7 +67,7 @@ const cardsData = [
     content:
     (<p>
 
-      Brave SparkKids Academy<br/> offers amazing learning programs, <br/>and the teachers are fantastic.
+      Brave SparkKids Academy offers amazing learning programs, and the teachers are fantastic.
     </p>  
     ),
     author: "Lucas  Young",

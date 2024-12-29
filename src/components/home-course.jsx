@@ -66,14 +66,14 @@ const CourseCard = ({
         alt="Learn More"
         className="home-course-learn-more"
       />
-      <Link to={`/${courseId}`} className="home-learn-more-text">
+      {/* <Link to={`/${courseId}`} className="home-learn-more-text">
         Learn more{" "}
         <img
           src={learnmorebulb}
           alt="Learn more bulb"
           className="home-learn-more-icon"
         />
-      </Link>
+      </Link> */}
     </div>
   );
 };
