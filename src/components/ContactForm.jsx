@@ -108,7 +108,7 @@ const ContactForm = () => {
           </form>
           {responseMessage && <p className="response-message">{responseMessage}</p>}
         </div>
-        {/* Right side - Contact Info */}
+        {/* Right side - Contact Info
         <div className="contact-info-section">
           <h2>Contact us directly</h2>
           <p><span>Call:</span> <br /> +91 82170 77217</p>
@@ -133,8 +133,8 @@ const ContactForm = () => {
               loading="lazy"
               title="Google Map"
             ></iframe>
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         {/* Right side - Contact Info */}
         <div className="contact-info-section">
