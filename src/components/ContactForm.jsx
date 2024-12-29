@@ -29,18 +29,15 @@ const ContactForm = () => {
       dataToSend.append("reason", formData.reason);
       dataToSend.append("message", formData.message);
 
-      // Replace API_BASE_URL with the actual URL of your API endpoint
       const response = await fetch(`${API_BASE_URL}/contact`, {
         method: "POST",
         body: dataToSend,
       });
 
       if (response.ok) {
-        // Set a success message that disappears after 3 seconds
         setResponseMessage("We will get back to you!");
         setTimeout(() => setResponseMessage(""), 3000);
       } else {
-        // Handle errors from the API
         const errorData = await response.text();
         setResponseMessage(errorData || "Failed to submit. Please try again.");
       }
