@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/commoncourse.css"; 
 import coursereading from "../Assets/courses-img/readingcourse.png";
 import courseage from "../Assets/home-img/course-age.png";
@@ -9,7 +10,7 @@ const ReadingHero = () => {
   return (
     <div className="maincourse-container">
       <div className="maincourse-content">
-        <p className="pagename">Home | Course |<span> Reading</span> </p>
+        <p className="pagename"><a href="/">Home</a> | <Link to="/courses"> Course </Link>|<span><Link to="/reading"> Reading</Link></span> </p>
         <div className="maincourse-section">
       {/* Left Content Section */}
       <div className="maincourse-content">
@@ -49,7 +50,7 @@ const ReadingHero = () => {
 
       {/* Right Image Section */}
       <div className="maincourse-image">
-        <img src={coursereading} alt="Abacus Course" />
+        <img src={coursereading} alt="reading Course" />
       </div>
     </div>
     </div>

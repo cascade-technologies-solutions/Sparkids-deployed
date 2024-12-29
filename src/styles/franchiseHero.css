@@ -9,13 +9,13 @@
 .franchisehero-sub-container{
   display: flex;
   flex-direction: row;
-  margin-top: -16px;
+  margin-top: -60px;
 } 
 .franchisehero-content {
   flex: 1;
   max-width: 50%;
-  margin-left: 83px;
-  margin-top: 47px;
+  margin-left: 73px;
+  margin-top: 37px;
 
 }
 
@@ -27,8 +27,8 @@
   color: #455a64;
   margin-bottom: 30px;
   position: relative;
-  top: -5px;
-  margin-left: -313px;
+  top: -35px;
+  margin-left: -410px;
   margin-right: 666px;
 }
 
@@ -81,10 +81,10 @@
 }
 
 .franchisehero-image img {
-  height: 486.53px;
-  width:496px;
+  height: 456.53px;
+  width:466px;
   margin-right: 50px;
-  margin-top: 65px;
+  margin-top: 40px;
   transition: transform 0.3s ease;
 }
 

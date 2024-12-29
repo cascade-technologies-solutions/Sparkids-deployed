@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/commoncourse.css"; 
+import { Link } from "react-router-dom";
+import "../styles/commoncourse.css";
 import courseabacus from "../Assets/courses-img/abacuscourse.png";
 import courseage from "../Assets/home-img/course-age.png";
 import coursetime from "../Assets/home-img/course-time.png";
@@ -9,7 +10,7 @@ const AbacusHero = () => {
   return (
     <div className="maincourse-container">
       <div className="maincourse-content">
-        <p className="pagename">Home | Course |<span> Abacus</span> </p>
+        <p className="pagename"><a href="/">Home</a> | <Link to="/courses"> Course </Link>|<span><Link to="/abacus"> Abacus</Link></span> </p>
         <div className="maincourse-section">
       {/* Left Content Section */}
       <div className="maincourse-content">

@@ -7,6 +7,13 @@
   top: 0px;
   padding: 2rem;
 }
+.pagename a {
+  color: #455a64;
+  text-decoration: none;
+}
+.pagename span a{
+  color: #f58634;
+}
 .maincourse-container {
   display: flex;
   padding: 40px;
@@ -308,6 +315,8 @@
   .pagename {
     font-size: 18px;
     padding: 1.2rem;
+    text-align: left;
+    margin-left: 97px;
   }
   .maincourse-section {
     width: 21%;

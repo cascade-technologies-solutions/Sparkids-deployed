@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
+  padding: 10px;
   background: linear-gradient(to bottom, #fff, #fdf4f2);
 }
 
@@ -45,7 +45,7 @@
 }
 
 .hero-buttons {
-  margin: 20px 0;
+  margin: 40px 0;
 }
 
 .explore-btn,
@@ -100,7 +100,7 @@
 .hero-stats {
   display: flex;
   align-items: center;
-  margin-top: -50px;
+  margin-top: -70px;
 }
 .hero-stats .stats-images {
   position: relative;
@@ -343,7 +343,7 @@
   width: 704px; 
   height: 46px;
   margin-left: -64px; 
-  margin-top:-76px;
+  margin-top:-96px;
 }
 
 

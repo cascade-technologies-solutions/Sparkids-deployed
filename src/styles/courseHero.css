@@ -10,7 +10,7 @@
 .coursehero-sub-container{
   display: flex;
   flex-direction: row;
-  margin-top: -16px;
+  margin-top: -80px;
 } 
 .coursehero-content {
   flex: 1;
@@ -24,7 +24,7 @@
   font-family: geologica;
   margin-bottom: 8px; 
   position: relative;
-  top: 1px;
+  top: -18px;
   margin-right: 1089px; 
 }
 
@@ -87,8 +87,8 @@
 }
 
 .coursehero-image img {
-  height: 662px;
-  width:702px;
+  height: 596px;
+  width: 644px;
   margin-right: 30px;
   transition: transform 0.3s ease
 }

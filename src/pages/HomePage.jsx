@@ -8,6 +8,7 @@ import Educator from '../components/educator';
 import Course from '../components/home-course';
 import HomeTestimonials from '../components/hometestimonial';
 import HomeAbout from '../components/home-abt';
+import VedicMathsCard from '../components/newcardtest';
 
 export const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ export const HomePage = () => {
       <Hero />
       <HomeAbout />
       <Course />
+      <VedicMathsCard />
       <Opportunity />
       <Educator />
       <Sight />

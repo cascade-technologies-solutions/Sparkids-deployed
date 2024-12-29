@@ -163,7 +163,7 @@
   
     .phone-input {
       width: 215px;
-      height: 12px;
+      height: 30px;
       font-size: 12px;
       border-radius: 5px 0 0 5px;
     }
@@ -314,7 +314,7 @@
     
     .phone-input {
       width: 110px;
-      height: 7px;
+      height: 25px;
       font-size: 8px;
       border-radius: 5px 0 0 5px;
     }
@@ -393,7 +393,7 @@
     }
     
     .phone-input {
-      height: 12px;
+      height: 25px;
   }
     
     .abt-heading {

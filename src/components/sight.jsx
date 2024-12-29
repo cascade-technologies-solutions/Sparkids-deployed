@@ -1,7 +1,6 @@
 import React from 'react';
 import '../styles/sight.css';
-
-// Import the images
+import { Link } from "react-router-dom";
 import sight1 from '../Assets/home-img/image1.png';
 import sight2 from '../Assets/home-img/image2.png';
 import sight3 from '../Assets/home-img/image3.png';
@@ -28,7 +27,7 @@ const sights = () => {
           <li>Certified trainers with years of experience.</li>
           <li>Supportive and nurturing environment.</li>
         </ul>
-        <a href="#gallery" className="insights-button">Explore Gallery</a>
+        <Link to ="/insight" className="insights-button">Explore Gallery</Link>
       </div>
 
       {/* Right Images Section */}

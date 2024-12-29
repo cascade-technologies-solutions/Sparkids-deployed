@@ -62,23 +62,23 @@ cursor: pointer;
 width: 558px; 
 height: 559px; 
 border-radius: 15px;
-margin-left:40px
+margin-left:-70px
 }
 
 
 .f-our-vision-content {
 flex: 1;
 margin-left: 20px;
-padding: 55px;
+padding: 155px;
 width:50%
 }
 
 .f-vision-title {
 font-size: 50px;
 font-weight: 400; 
-color: #ff6600;
+color: #F58634;
 margin: 0 0 10px 0; 
-font-family: "Lilita One", sans-serif;
+font-family: Lilita One;
 }
 
 .f-vision-description {
@@ -87,6 +87,7 @@ font-weight: 400;
 color: #555;
 line-height: 1.4; 
 margin-bottom: 10px; 
+font-family: geologica;
 }
 
 .f-vision-subtext {
@@ -94,6 +95,7 @@ font-size: 22px;
 color: #666;
 line-height: 1.3; 
 margin-top: 10px; 
+font-family: geologica;
 }
 /* Responsive adjustments for 1024px */
 @media (max-width: 1024px) {

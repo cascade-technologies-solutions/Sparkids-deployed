@@ -1,5 +1,6 @@
 import React from "react";
-import "../styles/commoncourse.css"; 
+import "../styles/commoncourse.css";
+import { Link } from "react-router-dom";
 import courserubic from "../Assets/courses-img/rubikcourse.png";
 import courseage from "../Assets/home-img/course-age.png";
 import coursetime from "../Assets/home-img/course-time.png";
@@ -9,7 +10,7 @@ const RubicHero = () => {
   return (
     <div className="maincourse-container">
       <div className="maincourse-content">
-        <p className="pagename">Home | Course |<span> Rubik</span> </p>
+        <p className="pagename"><a href="/">Home</a> | <Link to="/courses"> Course </Link>|<span><Link to="/rubic"> Rubik</Link></span> </p>
         <div className="maincourse-section">
       {/* Left Content Section */}
       <div className="maincourse-content">
