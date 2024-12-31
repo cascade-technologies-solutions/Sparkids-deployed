@@ -15,8 +15,14 @@ public interface ContactRepository extends MongoRepository<User, String> {
     List<User> findByName(String name);
 
     Optional<User> findByNameAndContactAndAddress(String name, String contact, String address);
-
+    
     void deleteByName(String name);
 
     boolean existsByName(String name);
+    List<User> findByReason(String reason);
+
+
+    List<User> findAllByEmailIsNotNull();
+
+    List<User> findAllByContactIsNotNull();
 }

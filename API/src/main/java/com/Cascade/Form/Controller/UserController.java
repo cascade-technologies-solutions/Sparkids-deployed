@@ -2,10 +2,12 @@ package com.Cascade.Form.Controller;
 
 import com.Cascade.Form.Repository.ContactRepository;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 
 import com.Cascade.Form.entity.User;  
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 
@@ -69,6 +71,12 @@ public class UserController {
         return ResponseEntity.ok("Email saved successfully");
     }
     
+    @GetMapping("/email")
+    public ResponseEntity<List<User>> getAllEmails() {
+        List<User> users = contactRepository.findAllByEmailIsNotNull();
+        return ResponseEntity.ok(users);
+    }
+    
     @PostMapping("/api/contact")
     public ResponseEntity<String> savePhoneNumber(@RequestParam("phoneNumber") String phoneNumber) {
         if (phoneNumber == null || phoneNumber.isEmpty()) {
@@ -86,6 +94,12 @@ public class UserController {
 
         return ResponseEntity.ok("Phone number saved successfully");
     }
+    @GetMapping("/api/contact")
+    public ResponseEntity<List<User>> getAllPhoneNumbers() {
+        List<User> users = contactRepository.findAllByContactIsNotNull();
+        return ResponseEntity.ok(users);
+    }
+
     
     @PostMapping("/contact")
     public ResponseEntity<String> saveContactForm(
@@ -109,7 +123,32 @@ public class UserController {
 
         return ResponseEntity.ok("Contact form submitted successfully");
     }
-   
+    @GetMapping("/contact")
+    public ResponseEntity<String> getAllContactForms() {
+        List<User> users = contactRepository.findAll();
+        
+        StringBuilder response = new StringBuilder();
+        
+        for (User user : users) {
+            response.append("fullName=").append(user.getName()).append("\n");
+            response.append("phone=").append(user.getContact()).append("\n");
+            response.append("email=").append(user.getEmail()).append("\n");
+            response.append("reason=").append(user.getReason()).append("\n");
+            response.append("message=").append(user.getMessage()).append("\n");
+            response.append("-----------------------------\n"); 
+        }
+        
+        return ResponseEntity.ok()
+                .contentType(MediaType.TEXT_PLAIN)
+                .body(response.toString());
+    }
+//    @GetMapping("/contact")
+//    public ResponseEntity<List<ContactForm>> getAllContactForms() {
+//        List<ContactForm> contactForms = contactFormRepository.findAll();
+//        return ResponseEntity.ok(contactForms);
+//    }
+
+    
     @PostMapping("/job-application")
     public ResponseEntity<String> saveJobApplication(
             @RequestParam("fullName") String fullName,
@@ -131,7 +170,6 @@ public class UserController {
 
         byte[] resumeBytes = null;
         try {
-            // Convert resume to byte array for storage
             resumeBytes = resume.getBytes();
         } catch (IOException e) {
             return ResponseEntity.status(500).body("Failed to process the resume file. Please try again.");
@@ -147,7 +185,6 @@ public class UserController {
         jobApplication.setResume(resumeBytes);
         jobApplication.setPortfolioLink(portfolioLink);
 
-        // Save to database
         contactRepository.save(jobApplication);
 
         return ResponseEntity.ok("Job application submitted successfully");

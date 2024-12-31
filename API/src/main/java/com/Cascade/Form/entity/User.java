@@ -4,11 +4,11 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "users")  // Use @Document annotation for MongoDB
+@Document(collection = "users")  
 public class User {
 
     @Id
-    private ObjectId id;  // Use ObjectId for the ID
+    private ObjectId id;  
 
     private String name;
     private String email;
@@ -34,7 +34,6 @@ public class User {
         this.message = message;
     }
 
-    // Getters and setters
     public ObjectId getId() {
         return id;
     }
