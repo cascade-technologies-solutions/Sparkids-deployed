@@ -160,7 +160,7 @@
   }
   
   .insightstudent-card {
-    width: 90%; /* Reduces card width further */
+    width: 72%; /* Reduces card width further */
     margin-bottom: 20px; /* Adds spacing between stacked cards */
   }
 

@@ -531,12 +531,13 @@
 @media (max-width: 426px) {
 
   .brain-layout {
-    width: 100%;
+    width: 151%;
     height: 350px;
+    margin-left: -58px;
   }
   .hero-image {
     order: 1;
-    width: 87%;
+    width: 58%;
     height: 350px;
   }
   .hero-content {
@@ -570,7 +571,7 @@
   .opportunity-btn {
     width: 140px; 
     height: 50px;
-    font-size: 12px;
+    font-size: 11px;
   }
   
   .hero-stats {
@@ -651,7 +652,7 @@
     .partner-image {
       width: 280px;
       height: 20px;
-      margin-left: 26px;
+      margin-left: -31px;
       margin-top: -60px;
     }
 }
@@ -661,12 +662,13 @@
     margin-top: 8px;
   }
   .brain-layout {
-    width: 100%;
+    width: 202%;
     height: 350px;
+    margin-left: -100px;
   }
   .hero-image {
     order: 1;
-    width: 100%;
+    width: 50%;
     height: 350px;
   }
   .explore-btn, .opportunity-btn {
@@ -681,9 +683,9 @@
 
 @media (max-width:394px) {
   .brain-layout {
-    width: 109%;
+    width: 164%;
     height: 350px;
-    margin-left: -10px;
+    margin-left: -66px;
   }
   .explore-btn,
   .opportunity-btn {
@@ -692,8 +694,9 @@
 }
 @media (max-width: 376px) {
   .brain-layout {
-    width: 100%;
+    width: 170%;
     height: 350px;
+    margin-left: -70px;
   }
   .explore-btn,
   .opportunity-btn {
@@ -701,7 +704,7 @@
   }
   .hero-image {
     order: 1;
-    width: 100%;
+    width: 60%;
     height: 350px;
   }
 }
@@ -710,34 +713,44 @@
     margin-top: 8px;
   }
   .brain-layout {
-    width: 88%;
+    width: 210%;
     height: 350px;
-    margin-left:20px;
+    margin-left:-85px;
   }
   .hero-image {
     order: 1;
-    width: 120%;
+    width: 50%;
     height: 350px;
   }
   .explore-btn, .opportunity-btn {
     padding: 10px 18px;
     font-size: 12px;
   }
+  .partner-image{
+    margin-left: -62px;
+  }
+  .hero-stats .stats-text h1 {
+    margin-left: -37px;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .hero-content{
     margin-top: 8px;
   }
   .brain-layout {
-    width: 100%;
+    width: 106%;
     height: 350px;
+    margin-left: -15px;
   }
   .hero-image {
     order: 1;
-    width: 120%;
+    width: 112%;
     height: 350px;
+    margin: 0px;
+    padding: 0px;
   }
+  
   .explore-btn, .opportunity-btn {
     padding: 12px 17px;
     font-size: 12px;
@@ -758,4 +771,7 @@
     font-size: 15px;
     margin-top: -45px;
   }
+  .partner-image {
+    margin-left: 24px;
+}
 }

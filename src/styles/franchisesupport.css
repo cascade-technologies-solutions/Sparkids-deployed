@@ -172,6 +172,10 @@ transform: translateY(-10px);
   .support-text p {
     font-size: 18px;
   }
+  .support-sub{
+    width: 100%;
+
+  }
   .support-sub-heading {
     font-size: 20px;
   }

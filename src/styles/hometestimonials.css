@@ -41,6 +41,7 @@
   width: 80%;
   margin: auto;
   display: flex;
+  margin-bottom: -82px;
   flex-direction: column;
   align-items: center;
 }
@@ -190,7 +191,7 @@ margin-left: 31px;
 .dots {
   display: flex;
   gap: 8px;
-  margin-top: -65px;
+  margin-top: 26px;
 }
 
 .dot {
@@ -230,6 +231,7 @@ margin-left: 31px;
   }
   .carousal-container{
     width:80%;
+    margin-bottom: -95px;
   }
   .carousel {
     flex-wrap: nowrap;
@@ -259,6 +261,7 @@ margin-left: 31px;
     margin-right: 6px;
     margin-left: -11px;
     width: 100%;
+    margin-top:12px;
 }
 .author-image{
   width:30px;
@@ -284,7 +287,7 @@ margin-left: 31px;
     right: -46px;
   }
   .dots {
-    margin-top: 107px;
+    margin-top: -12px;
   }
 
   .dot {
@@ -292,25 +295,27 @@ margin-left: 31px;
     height: 10px;
   }
 }
-@media (max-width: 430px) {
+@media (max-width:432px) {
   .testimonial {
     padding: 1px 15px;
     margin-top:78px;
   }
 
-  .carousal-container{
+  .carousel-container{
     width:80%;
+    margin-bottom:22px;
   }
   .carousel {
     flex-wrap: nowrap;
     width: 78%;
     margin-right: 0;
     gap: 15px;
+    margin-bottom: 90px;
   }
 
   .testimonialcard {
     width: 270px;
-    height: 159px;
+    height: 174px;
   }
  .top-image img{
     margin-top: 10px;
@@ -349,13 +354,19 @@ margin-left: 31px;
   .dot {
     width: 10px;
     height: 10px;
-    margin-top:-224px;
+    margin-top:117px;
+  }
+  .dots{
+    margin-top:-307px;
   }
 }
 @media (max-width: 394px) {
   .testimonialcard-content {
   
     width: 187px;
+}
+.carousal-container{
+  margin-bottom: 18px;;
 }
 .rating{
   font-size: 9px;
@@ -369,6 +380,7 @@ margin-left: 31px;
  
   .carousel-container {
     width: 88%;
+    margin-bottom: 32px;
   }
   .carousel {
     width: 82%;
@@ -388,12 +400,16 @@ margin-left: 31px;
   .right-arrow {
     right: -20px;
   }
+  .dots{
+    margin-top: -227px;
+  }
 }
 
 @media (max-width: 320px) {
  
   .carousel-container {
     width: 88%;
+    margin-bottom:25px;
   }
   .carousel {
     width: 92%;
@@ -411,5 +427,8 @@ margin-left: 31px;
   }
   .right-arrow {
     right: -25px;
+  }
+  .dots{
+    margin-top: -223px;
   }
 }

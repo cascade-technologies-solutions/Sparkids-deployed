@@ -316,7 +316,7 @@
   }
 
   .main-image {
-    width: 172px;
+    width: 151px;
     height: 216px;
     margin-top: 119px;
     margin-left: 100px;
@@ -417,7 +417,7 @@
     width: 140px;
     height: 190px;
     margin-top: 120px;
-    margin-left: 80px;
+    margin-left: 92px;
   }
 
   .icon1,
@@ -464,7 +464,11 @@
     left: -1%;
   }
 }
-
+@media(max-width:360px){
+  .main-image{
+    margin-left: 77px;
+  }
+}
 @media (max-width: 321px) {
  
   .content-section h1 {

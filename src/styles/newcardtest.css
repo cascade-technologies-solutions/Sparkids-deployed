@@ -189,11 +189,13 @@ span{
 }
 
 .info-item1{
-    gap: 15px;
-    font-size: 16.96px;
-    color: #455a64;
-    margin-top: -121px;
-    margin-left: 151px;
+    info-item1 {
+        gap: 15px;
+        font-size: 16.96px;
+        color: #455a64;
+        margin-top: -115px;
+        margin-left: 106px;
+    }
 }
 
 .info-item1 img{
@@ -262,6 +264,13 @@ span{
         bottom: 59px;
         right: 90px;
     }
+    .home-card-info-text p{
+        font-size: 18px;
+    }
+    .home-card-info-text h3{
+        font-size: 40px;
+        margin-top: -8px;
+    }
 }
 @media (max-width: 376px) {
     
@@ -277,7 +286,7 @@ span{
         right: 47px;
     }
 }
-@media (max-width: 320px) {
+@media (max-width: 321px) {
     
     .react-multi-carousel-track{
         margin-left: -17px;
@@ -306,5 +315,11 @@ span{
     object-fit: cover;
     margin-bottom: -31px;
 } */
-
+info-item1 {
+    gap: 15px;
+    font-size: 16.96px;
+    color: #455a64;
+    margin-top: -115px;
+    margin-left: 106px;
+}
 }
