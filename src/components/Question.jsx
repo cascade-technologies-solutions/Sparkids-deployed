@@ -7,7 +7,7 @@ import bgImage3 from "../Assets/about-img/quesmem3.png";
 import bgImage4 from "../Assets/about-img/quesmem4.png";
 import bgImage5 from "../Assets/about-img/quesmem5.png";
 import bgImage6 from "../Assets/about-img/quesmem6.png";
-import { API_BASE_URL } from "../api";
+// import { API_BASE_URL } from "../api";
 
 const QuestionSection = () => {
   const [contact, setcontact] = useState("");
