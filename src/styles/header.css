@@ -20,6 +20,7 @@
   height: 102px;
 }
 
+
 .nav {
   display: flex;
 }
@@ -118,6 +119,12 @@
   .logo img {
     width: 35%;
     height: auto;
+  }
+  #myrect {
+    height: 380px;
+  }
+  #mySvg{
+    margin-top: 10px;
   }
 
   .contact-us {
