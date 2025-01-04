@@ -16,18 +16,17 @@ const VedicHero = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Determine styles based on screen width
   const getImageStyles = () => {
-    if (screenWidth === 768) {
-      return { width: "211px", height: "277px" };
-    } else if (screenWidth === 425) {
+    if (screenWidth >= 768) {
+      return { width: "419px", height: "542px" };
+    } else if (screenWidth >= 426 && screenWidth < 768) {
       return { width: "313px", height: "387px" };
-    } else if (screenWidth === 375) {
-      return { width: "325px", height: "453px" };
-    } else if (screenWidth === 320) {
-      return { width: "299px", height: "392px" };
+    } else if (screenWidth >= 375 && screenWidth <= 425) {
+      return { width: "303px", height: "355px" };
+    } else if (screenWidth >= 321 && screenWidth <= 375) {
+      return { width: "293px", height: "345px" };
     } else {
-      return { width: "400px", height: "526px" }; // Default styles
+      return { width: "150px", height: "200px" };
     }
   };
 

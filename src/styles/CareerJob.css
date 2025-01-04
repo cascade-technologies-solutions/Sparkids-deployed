@@ -223,11 +223,10 @@
 
 /* Responsive Styles */
 
-/* For screen width <= 768px */
 @media (max-width: 768px) {
     .job-container {
       padding: 10px 20px;
-      height: auto; /* Allow height to adjust based on content */
+      height: auto;
     }
   
     .job-filter h1 {
@@ -236,7 +235,7 @@
   
     .filter-buttons {
       flex-wrap: wrap;
-      justify-content: center; /* Center align buttons */
+      justify-content: center;
       gap: 8px;
     }
   
@@ -246,7 +245,7 @@
     }
   
     .job-content-section {
-      flex-direction: column; /* Stack sections vertically */
+      flex-direction: column;
       margin-top: 20px;
     }
   
@@ -310,7 +309,6 @@
     }
   }
   
-  /* For screen width <= 375px */
   @media (max-width: 375px) {
     .job-filter h1 {
       font-size: 30px;
@@ -341,9 +339,14 @@
       padding: 8px;
       font-size: 14px;
     }
+    .job-description h3{
+      font-size: 20px;
+    }
+    .job-description p,.job-description ul{
+      font-size: 16px;
+    }
   }
   
-  /* For screen width <= 320px */
   @media (max-width: 320px) {
     .job-filter h1 {
       font-size: 28px;
