@@ -4,7 +4,10 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
+
 @Document(collection = "users")  
+@Tag(name = "User API's")
 public class User {
 
     @Id

@@ -4,10 +4,13 @@ import com.Cascade.Form.Repository.ContactRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-import com.Cascade.Form.entity.User;  
+import com.Cascade.Form.entity.User;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +29,7 @@ import org.springframework.ui.Model;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
+@Tag(name = "User APIs", description = "Add, Read, Update & Delete")
 public class UserController {
 
     @Autowired
