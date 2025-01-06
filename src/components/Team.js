@@ -8,12 +8,12 @@ import facebook from "../Assets/about-img/facebook.png";
 import twitter from "../Assets/about-img/twitter.png";
 import instagram from "../Assets/about-img/instagram.png";
 import linkedin from "../Assets/about-img/linkedIN.png";
-// Example team data with icon images
+
 const teamMembers = [
   {
     name: "Brian Clark",
     position: "CEO & Founder",
-    image: team1, // Replace with actual team member image path
+    image: team1,
     socialLinks: [
       { platform: "facebook", icon: facebook, url: "#" },
       { platform: "twitter", icon: twitter, url: "#" },

@@ -26,7 +26,7 @@ const Footer = () => {
           <h3>Contact Us</h3>
           <p>
             Call: +91 82170 77217 <br />
-            Email: example@mail.com
+            Email: sparkids@mail.com
           </p>
           <p>
             Address: Indi Regional Office<br />
