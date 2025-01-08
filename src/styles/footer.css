@@ -115,7 +115,7 @@
   }
   
   /* Responsive Footer for 768px Width */
-  @media (max-width: 768px) {
+  @media (min-width:768px) and (max-width: 1024px) {
  
 .footer-container {
   gap: 20px;
@@ -166,8 +166,8 @@
   font-size: 14px;
 }
   }
-
-  @media (max-width: 426px) {
+  
+  @media (max-width: 450px) {
     .footer-container {
         grid-template-columns: 1fr;
         gap: 10px;
@@ -207,7 +207,6 @@
     }
 }
 
-/* Responsive for 375px Width */
 @media (max-width: 376px) {
     .footer-container {
         grid-template-columns: 1fr;

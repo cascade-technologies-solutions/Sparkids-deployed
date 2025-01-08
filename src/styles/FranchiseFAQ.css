@@ -84,9 +84,8 @@ gap: 10px;
   font-size: 20px;
 }
 }
-
-/* For screens 768px and smaller */
-@media (max-width: 768px) {
+@media (min-width:768px) and (max-width: 1024px) {
+/* @media (max-width: 768px) { */
 .faq-heading {
   font-size: 26px;
   margin-left: 5px;

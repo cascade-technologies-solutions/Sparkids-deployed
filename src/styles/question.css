@@ -127,7 +127,7 @@
     left: -46px;
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1024px){
     .abt-question-section {
       height: 200px;
       width: 100%;
@@ -210,8 +210,8 @@
       left: -48px;
     }
   }
-   
-  @media (max-width: 426px) {
+  @media (min-width:425px ) and (max-width: 450px) {
+  /* @media (max-width: 426px) { */
     .abt-question-section {
       height: 185px;
       width: 100%px;
@@ -281,7 +281,8 @@
       left: -30px;
     }
   }
-  @media (max-width: 376px) {
+  @media (min-width:320px ) and (max-width: 426px) {
+  /* @media (max-width: 376px) { */
     .abt-question-section {
       height: 280px;
       width: 375px;

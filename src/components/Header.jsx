@@ -36,7 +36,7 @@ function Header() {
             <NavLink to="/" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>About Us</NavLink>
+            <NavLink to="/about" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>AboutUs</NavLink>
           </li>
           <li>
             <NavLink to="/courses" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Courses</NavLink>

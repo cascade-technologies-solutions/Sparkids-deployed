@@ -147,10 +147,10 @@ font-weight: 800;
 }
 
 .info-card p { 
-margin-top: -10px;
+margin-top: -15px;
 font-size: 12px;
 color: #555;
-font-family: "koho";
+font-family: koho;
 font-weight: 200;
 text-align: left;
 margin-left: 8px;
@@ -469,7 +469,7 @@ width: 239%;
     background: #ffffffbf;
 }
 .info-card:hover {
-  width: 150px;
+  width: 152px;
   height: 108px;
   padding: 4px;
   font-size: 8px;
@@ -548,6 +548,15 @@ padding-right: 0px;
     .info-card {
       width: 108px;
     }
+}
+@media (max-width: 360px){
+  .info-cards {
+    gap: 4px;
+    top: 176px;
+    left: 194px;
+    width: 273%;
+}
+
 }
 @media (max-width: 320px) {
   .info-content {

@@ -133,36 +133,9 @@ transition: transform 0.3s ease;
 .support-sub-image img:hover {
 transform: translateY(-10px);
 }
-/* Responsive Styles */
 
-/* For screens 1024px and smaller */
-@media (max-width: 1024px) {
-  .support-text h2 {
-    font-size: 22px;
-  }
-  .support-text h3 {
-    font-size: 45px;
-  }
-  .support-text p {
-    font-size: 20px;
-  }
-  .support-sub-heading {
-    font-size: 22px;
-  }
-  .support-sub-description {
-    font-size: 22px;
-  }
-  .support-sub-points {
-    font-size: 16px;
-  }
-  .support-sub-image img {
-    width: 380px;
-    height: 620px;
-  }
-}
-
-/* For screens 768px and smaller */
-@media (max-width: 768px) {
+ @media (min-width:768px) and (max-width: 1024px) {
+/* @media (max-width: 768px) { */
   .support-text h2 {
     font-size: 20px;
   }
@@ -191,8 +164,8 @@ transform: translateY(-10px);
   }
 }
 
-/* For screens 426px and smaller */
-@media (max-width: 426px) {
+
+@media (max-width: 450px) {
   .support {
     padding: 30px 10px;
   }

@@ -38,16 +38,16 @@
   
   .investment-details {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for the rows */
+    grid-template-columns: 1fr 1fr;
     gap: 12rem;
     width: 1000px;
     margin-top: -5rem;
   }
   
   .investment-column {
-    text-align: left; /* Center text in columns */
+    text-align: left;
     width: 600px;
-    margin-left: -80px; /* Ensure columns don't shrink too much */
+    margin-left: -80px;
   }
   
   .investment-column h4 {
@@ -81,7 +81,52 @@
     color: #555;
     line-height: 1.5;
   }
+  @media (max-width: 1024px) {
+    .investment-requirements{
+      min-height: 45vh;
+    }
 
+  .investment-heading {
+    font-size: 16px;
+  }
+  
+  .investment-subheading {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  
+  .investment-description {
+    font-size: 16px;
+    margin-top: 7px;
+    margin-bottom: 115px;
+  }
+  
+  .investment-details {
+    gap: 5px;
+    width: 100%;
+    margin-bottom: 110px;
+  }
+  
+  .investment-column {
+    width: 128%;
+    }
+  
+  .investment-column h4 {
+    font-size: 16px;
+    margin-left: 83px;
+  }
+  .investment-column li img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .investment-column li span {
+    font-size: 16px;
+  }
+  .investment-column li{
+    margin-left: 5rem;
+  }
+}
   @media (max-width: 768px){
     .investment-requirements{
       min-height: 45vh;
@@ -128,7 +173,7 @@
     margin-left: 5rem;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 450px) {
   .investment-requirements {
     padding: 2rem;
     grid-template-columns: 1fr; /* Single column layout */

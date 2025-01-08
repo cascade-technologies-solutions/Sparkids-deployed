@@ -139,7 +139,7 @@
     }
   }
   
-  @media (max-width: 426px) {
+  @media (max-width: 450px) {
     .heading {
       font-size: 45px;
     }
