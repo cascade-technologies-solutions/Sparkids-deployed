@@ -161,7 +161,11 @@
     height: 165px;
   }
 
-  
+  @media (max-width:1024px){
+    .insights-section{
+      padding: 0rem 1rem;
+    }
+  }
   /* Responsive for width 768px */
   @media (max-width: 768px) {
     .insights-section {

@@ -48,7 +48,7 @@ const Footer = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/courses">Courses</Link></li>
             <li><Link to="/about">About Us</Link></li>
-            <li><Link to="/opportunities">Opportunities</Link></li>
+            <li><Link to="/franchise">Franchises</Link></li>
             <li><Link to="/careers">Careers</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>
@@ -70,7 +70,8 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Resources</h3>
           <ul>
-            <li><Link to="/faq">FAQ’s</Link></li>
+            {/* <li><Link to="/faq">FAQ’s</Link></li> */}
+            <li><a href="#faq">FAQ’s</a></li>
             <li><Link to="/testimonials">Testimonials</Link></li>
             <li><Link to="/blogs">Blogs</Link></li>
             <li><Link to="/policies">Policies</Link></li>

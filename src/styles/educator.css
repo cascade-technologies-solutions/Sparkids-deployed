@@ -96,7 +96,22 @@ transform: translateY(-10px);
   background-color: #ff7c2e;
   color: #fff;
 }
-
+ 
+@media(max-width:1024px){
+  .educator-image{
+    width: 457px;
+    height: 319px;
+  }
+  .educator-shape{
+    width: 182px;
+    height: 345.5px;
+    border-radius: 0px;
+    margin-left: 22px;
+  }
+  .educator-shape-container{
+    padding-right: 0;
+  }
+}
 @media (max-width: 768px) {
   
   .educator-content {

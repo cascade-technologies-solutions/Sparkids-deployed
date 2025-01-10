@@ -55,7 +55,7 @@
     transform: scale(1.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 884px) {
     .achievements-container {
         padding: 60px;
     }
@@ -81,7 +81,7 @@
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 428px) {
     .achievements-container {
         padding: 40px;
     }

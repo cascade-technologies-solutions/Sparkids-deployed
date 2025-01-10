@@ -115,7 +115,7 @@ transform: translateY(-10px);
 }
 
 /* Responsive styles for .franchisehero */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .franchisehero-container {
     padding: 30px;
     gap: 20px;
@@ -161,9 +161,9 @@ transform: translateY(-10px);
     height: 400px;
     width: auto;
   }
-}
+} */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .franchisehero-container {
     flex-direction: column;
     align-items: flex-start;
@@ -213,7 +213,7 @@ transform: translateY(-10px);
   }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 450px) {
   .franchisehero-container {
     flex-direction: column;
     align-items: center;

@@ -115,9 +115,9 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 428px) {
   .insightstudent {
-      width: 90%;
+      width: 100%;
   }
   .insightstudent-container {
     flex-direction: column; /* Stacks the cards vertically */
@@ -160,7 +160,7 @@
   }
   
   .insightstudent-card {
-    width: 72%; /* Reduces card width further */
+    width: 90%; /* Reduces card width further */
     margin-bottom: 20px; /* Adds spacing between stacked cards */
   }
 
