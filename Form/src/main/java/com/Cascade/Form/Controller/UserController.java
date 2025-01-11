@@ -35,11 +35,6 @@ public class UserController {
     @Autowired
     private ContactRepository contactRepository;
 
-    @GetMapping("/contactform")
-    public String showForm(Model model) {
-    	model.addAttribute("user", new User());
-        return "form";  
-    }
 
     @PostMapping("/submitForm")
     public String submitForm(@ModelAttribute User user, Model model) {
@@ -74,7 +69,7 @@ public class UserController {
         return ResponseEntity.ok("Email saved successfully");
     }
     
-    @GetMapping("/email")
+    @GetMapping("/admin/email")
     public ResponseEntity<List<User>> getAllEmails() {
         List<User> users = contactRepository.findAllByEmailIsNotNull();
         return ResponseEntity.ok(users);
@@ -97,7 +92,7 @@ public class UserController {
 
         return ResponseEntity.ok("Phone number saved successfully");
     }
-    @GetMapping("/api/contact")
+    @GetMapping("/admin/phone")
     public ResponseEntity<List<User>> getAllPhoneNumbers() {
         List<User> users = contactRepository.findAllByContactIsNotNull();
         return ResponseEntity.ok(users);
@@ -126,7 +121,7 @@ public class UserController {
 
         return ResponseEntity.ok("Contact form submitted successfully");
     }
-    @GetMapping("/contact")
+    @GetMapping("/admin/contact")
     public ResponseEntity<String> getAllContactForms() {
         List<User> users = contactRepository.findAll();
         
@@ -192,9 +187,37 @@ public class UserController {
 
         return ResponseEntity.ok("Job application submitted successfully");
     }
-    @GetMapping("/job-application/resume/{id}")
-    public ResponseEntity<byte[]> getResume(@PathVariable("id") String userId) {
-        Optional<User> userOptional = contactRepository.findById(userId);
+    @GetMapping("/admin/job-application")
+    public ResponseEntity<String> getAllJobApplications() {
+        List<User> users = contactRepository.findAll();
+
+        if (users.isEmpty()) {
+            return ResponseEntity.status(404).body("No job applications found.");
+        }
+
+        StringBuilder response = new StringBuilder();
+
+        for (User user : users) {
+            response.append("fullName=").append(user.getName()).append("\n");
+            response.append("email=").append(user.getEmail()).append("\n");
+            response.append("phoneNumber=").append(user.getContact()).append("\n");
+            response.append("currentCTC=").append(user.getCurrentCTC()).append("\n");
+            response.append("expectedCTC=").append(user.getExpectedCTC()).append("\n");
+            response.append("noticePeriod=").append(user.getNoticePeriod()).append("\n");
+            response.append("portfolioLink=").append(user.getPortfolioLink() != null ? user.getPortfolioLink() : "N/A").append("\n");
+            response.append("-----------------------------\n");
+        }
+
+        return ResponseEntity.ok()
+                .contentType(MediaType.TEXT_PLAIN)
+                .body(response.toString());
+    }
+
+
+    
+    @GetMapping("admin/job-application/resume/{email}")
+    public ResponseEntity<byte[]> getResumeByEmail(@PathVariable("email") String email) {
+        Optional<User> userOptional = contactRepository.findByEmail(email);
 
         if (userOptional.isPresent()) {
             User user = userOptional.get();
@@ -205,11 +228,12 @@ public class UserController {
                         .header("Content-Disposition", "attachment; filename=resume.pdf")
                         .body(resumeData);
             } else {
-                return ResponseEntity.status(404).body(null);
+                return ResponseEntity.status(404).body(null); // No resume data found
             }
         } else {
-            return ResponseEntity.status(404).body(null);
+            return ResponseEntity.status(404).body(null); // User with the given email not found
         }
     }
+
 
 }
