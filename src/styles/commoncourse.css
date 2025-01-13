@@ -224,6 +224,7 @@
     width: 100%;
     height: auto;
   }
+  
 }
 
 @media (max-width: 426px) {
@@ -269,6 +270,9 @@
   .maincourse-image img{
     width: 100%;
     height: auto;
+  }
+  .maincourse-image img:hover {
+    animation: none;
   }
 }
 

@@ -81,10 +81,22 @@
   color: #343434;
   font-family: geologica;
 }
+@media (max-width: 885px) {
+  .insightstudent-description{
+    font-size: 17px;
+  }
+  .insightstudent-image {
+    width: 225px;
+    height: 244.02px;
+}
+.insightstudent-card {
+  width: 211px;
+}
+}
 @media (max-width: 768px) {
   .insightstudent-container {
-    flex-wrap: nowrap; /* Ensures all cards stay in one line */
-    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    flex-wrap: nowrap;
+    overflow-x: auto;
     margin-left:-20px;
     gap: 15px; /* Adjusts spacing between cards */
   }
@@ -110,8 +122,8 @@
   font-size: 14px;
   }
   .insightstudent-card {
-    flex: 0 0 auto; /* Keeps the cards' size consistent */
-    width: 189px; /* Adjust card width for smaller screens */
+    flex: 0 0 auto;
+    width: 189px;
   }
 }
 
@@ -120,10 +132,10 @@
       width: 100%;
   }
   .insightstudent-container {
-    flex-direction: column; /* Stacks the cards vertically */
+    flex-direction: column;
     margin-left: 23px;
       gap:0px;
-    align-items: center; /* Centers the cards */
+    align-items: center;
   }
   .insightstudent-image {
       width: 248px;
@@ -149,62 +161,62 @@
   font-size: 17px;
   }
   .insightstudent-card {
-    width: 100%; /* Makes the card width responsive */
-    max-width: 300px; /* Sets a max width for better display */
+    width: 100%;
+    max-width: 300px;
   }
 }
 
 @media (max-width: 394px) {
   .insightstudent-title {
-    font-size: 36px; /* Adjusts the title font size */
+    font-size: 36px; 
   }
   
   .insightstudent-card {
-    width: 90%; /* Reduces card width further */
-    margin-bottom: 20px; /* Adds spacing between stacked cards */
+    width: 90%; 
+    margin-bottom: 20px;
   }
 
   .insightstudent-description {
-    font-size: 18px; /* Adjusts font size for better readability */
+    font-size: 18px; 
   }
 }
 
 @media (max-width: 376px) {
   .insightstudent-card {
-    width: 85%; /* Ensures a comfortable fit for small screens */
-    margin-bottom: 15px; /* Slightly reduces margin */
+    width: 85%;
+    margin-bottom: 15px;
   }
   .insightstudent-name {
       font-size: 18px;
   }
   .insightstudent-title {
-    font-size: 30px; /* Scales down the title */
+    font-size: 30px;
   }
 
   .insightstudent-description {
-    font-size: 16px; /* Adjusts font for readability */
+    font-size: 16px;
   }
 }
 
 @media (max-width: 320px) {
   .insightstudent-container {
-    padding: 10px; /* Reduces padding for smaller devices */
+    padding: 10px;
   }
   .insightstudent-image {
       width: 223px;
       height: 251.02px;
   }
   .insightstudent-card {
-    width: 80%; /* Fully utilizes the screen width */
+    width: 80%;
    border:1px solid white;
-    margin-bottom: 10px; /* Adjusts margin for compact stacking */
+    margin-bottom: 10px;
   }
 
   .insightstudent-title {
-    font-size: 24px; /* Further reduces title font size */
+    font-size: 24px;
   }
 
   .insightstudent-description {
-    font-size: 14px; /* Scales down text size */
+    font-size: 14px;
   }
 }

@@ -687,6 +687,14 @@
       margin-left: -31px;
       margin-top: -60px;
     }
+
+    .puzzle1:hover,
+.puzzle2:hover,
+.pencil:hover ,.bulb:hover,
+.symbol:hover {
+  animation: none;
+  animation-iteration-count: none;
+}
 }
 
 @media (max-width: 415px) and (min-width: 412px){
