@@ -88,7 +88,7 @@ const Overview = () => {
         {activeTab === "levels" && (
   <div className="levels-content">
     {/* Little Star Abacus */}
-    <div className="dropdown-item">
+    <div className="course-dropdown-item">
       <div
         className="dropdown-header"
         onClick={() => toggleSection("littleStar")}
@@ -152,7 +152,7 @@ const Overview = () => {
 
     {/* The Brain Charger */}
 
-<div className="dropdown-item">
+<div className="course-dropdown-item">
   <div
     className="dropdown-header"
     onClick={() => toggleSection("brainCharger")}
@@ -245,7 +245,7 @@ const Overview = () => {
     {activeTab === "levels" && (
           <div className="levels-content">
             {/* Advanced Level */}
-            <div className="dropdown-item">
+            <div className="course-dropdown-item">
               <div
                 className="dropdown-header"
                 onClick={() => toggleSection("advancedLevel")}
@@ -316,7 +316,7 @@ const Overview = () => {
         )}
 
     {/* Grand Level */}
-    <div className="dropdown-item">
+    <div className="course-dropdown-item">
       <div
         className="dropdown-header"
         onClick={() => toggleSection("grandLevel")}

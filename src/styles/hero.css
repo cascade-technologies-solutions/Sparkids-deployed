@@ -400,7 +400,7 @@
     order: 1;
     max-width: 450px;
     height: 450px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
   }
 
   /* Hero Content Below the Image */
@@ -408,7 +408,7 @@
     order: 2; 
     text-align: center; 
     width: 100%;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     margin-top:50px;
   }
 

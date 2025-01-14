@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../Assets/home-img/logo.png";
 import "../styles/header.css";
+import Dropdown from "react-bootstrap/Dropdown";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -38,8 +39,37 @@ function Header() {
           <li>
             <NavLink to="/about" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>AboutUs</NavLink>
           </li>
-          <li>
-            <NavLink to="/courses" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Courses</NavLink>
+          <li className="dropdown">
+            <Dropdown>
+            <Dropdown.Toggle className="dropdown-toggle" id="dropdown-basic">
+              <span className="dropdown-label">
+              Courses
+              <svg
+                className="dropdown-arrow"
+                width="14"
+                height="11"
+                viewBox="0 0 14 11"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1 1L7 9L13 1"
+                  stroke="#F58634"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                />
+              </svg>
+              </span>
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Item as={NavLink} to="/abacus" onClick={closeNav}>Abacus</Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/vedic" onClick={closeNav}>Vedic Maths</Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/rubic" onClick={closeNav}>Rubik</Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/handwriting" onClick={closeNav}>Handwriting</Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/reading" onClick={closeNav}>Reading</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </li>
           <li>
             <NavLink to="/franchise" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Franchise</NavLink>
@@ -51,8 +81,8 @@ function Header() {
             <NavLink to="/insight" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>Insights</NavLink>
           </li>
           <li>
-          <NavLink to="/contact" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>
-            <button className="contact-us" onClick={closeNav}>Contact Us</button>
+            <NavLink to="/contact" onClick={closeNav} className={({ isActive }) => (isActive ? "active" : "")}>
+              <button className="contact-us">Contact Us</button>
             </NavLink>
           </li>
         </ul>

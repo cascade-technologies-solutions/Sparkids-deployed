@@ -71,8 +71,8 @@ const Footer = () => {
           <h3>Resources</h3>
           <ul>
             {/* <li><Link to="/faq">FAQ’s</Link></li> */}
-            <li><a href="#faq">FAQ’s</a></li>
-            <li><Link to="/testimonials">Testimonials</Link></li>
+            <li><Link to="/franchise#faq">FAQ’s</Link></li>
+            <li><Link to="/#testimonials">Testimonials</Link></li>
             <li><Link to="/blogs">Blogs</Link></li>
             <li><Link to="/policies">Policies</Link></li>
             <li><Link to="/terms">Terms & Conditions</Link></li>
@@ -85,8 +85,11 @@ const Footer = () => {
           <p>Stay in the loop with the latest news and <br /> updates from SparkKids.</p>
           <form>
             <input type="email" placeholder="Email here" />
-            <button type="submit">Subscribe Now</button>
+            <div className="subscribe-btn" role="button" onClick={() => alert("Subscribed!")}>
+              Subscribe Now
+            </div>
           </form>
+
         </div>
       </div>
 

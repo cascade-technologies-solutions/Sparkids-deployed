@@ -92,19 +92,23 @@
     margin-bottom: 10px;
   }
   
-  .subscribe button {
-    background-color: #ff6600;
+  .subscribe-btn {
+    display: inline-block;
+    background-color: #f58634;
     width: 150px;
     color: white;
-    border: none;
+    text-align: center;
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    transition: background-color 0.3s ease;
   }
   
-  .subscribe button:hover {
-    background-color: #e65c00;
+  .subscribe-btn:hover {
+    background-color: #f77d25;;
   }
+  
   
   /* Footer Bottom */
   .footer-bottom {

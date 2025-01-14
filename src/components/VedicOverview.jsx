@@ -81,7 +81,7 @@ const VedicOverview = () => {
         {activeTab === "levels" && (
   <div className="levels-content">
     {/* Little Star Abacus */}
-    <div className="dropdown-item">
+    <div className="course-dropdown-item">
       <div
         className="dropdown-header"
         onClick={() => toggleSection("littleStar")}
@@ -141,7 +141,7 @@ const VedicOverview = () => {
 
     {/* The Brain Charger */}
 
-<div className="dropdown-item">
+<div className="course-dropdown-item">
   <div
     className="dropdown-header"
     onClick={() => toggleSection("brainCharger")}

@@ -91,7 +91,7 @@ const Carousel = () => {
   };
 
   return (
-<section className="testimonial">
+<section className="testimonial" id="testimonials">
       < div className="testimonial-text">
     <h2>Testimonials</h2>
     <h3>What Parents say</h3>
