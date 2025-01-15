@@ -198,7 +198,7 @@
   }
 
     .coursehero-content {
-      margin-left: 283px;
+      margin-left: 164px;
       margin-top: 45px;
   }
   .coursehero-headline1 {
@@ -217,8 +217,11 @@
     font-size: 18px;
   }
   .coursehero-image img {
-    height: 400px;
-    width: 400px;
+    height: 338px;
+    width: 338px;
+  }
+  .coursehero-image{
+    margin-right: 0px;
   }
   .coursehero-pagename {
     margin-right: 133px;
@@ -227,7 +230,7 @@
    
   }
      /* For tablets (768px) */
-     @media (max-width: 428px)  {
+     @media (max-width: 450px)  {
       .coursehero-container {
         padding: 40px;
         gap: 15px;

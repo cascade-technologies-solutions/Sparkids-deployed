@@ -68,6 +68,7 @@ function Header() {
                 <Dropdown.Item as={NavLink} to="/rubic" onClick={closeNav}>Rubik</Dropdown.Item>
                 <Dropdown.Item as={NavLink} to="/handwriting" onClick={closeNav}>Handwriting</Dropdown.Item>
                 <Dropdown.Item as={NavLink} to="/reading" onClick={closeNav}>Reading</Dropdown.Item>
+                <Dropdown.Item as={NavLink} to="/courses" onClick={closeNav}>All Courses</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
           </li>
