@@ -21,14 +21,15 @@ const Hero = () => {
   return (
     <section className="hero-section">
       <div className="hero-content">
-        <h1 className="hero-heading">Empower your <br />
-          <span>Child's Mind</span>
-        </h1>
-        <p className="hero-subtitle">With Brave Sparkids Academy</p>
+      <p className="hero-subtitle">With Brave Sparkids Academy</p>
         <p className="hero-description">
           Unlock your child’s potential with programs designed <br /> to
           sharpen skills, foster creativity, and <br /> nurture lifelong success.
         </p>
+        <h1 className="hero-heading">Empower your <br />
+          <span>Child's Mind</span>
+        </h1>
+        
         <div className="hero-buttons">
         <Link to="/courses" className="explore-btn">Explore Courses</Link>
         <Link to="/franchise"  className="opportunity-btn glow">Get Franchise</Link>

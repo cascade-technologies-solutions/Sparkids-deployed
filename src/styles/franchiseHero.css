@@ -24,7 +24,7 @@
   text-align: left;
   font-size: 24px;
   font-family: 'Geologica';
-  color: #455a64;
+  color: var(--primary-grey);
   margin-bottom: 30px;
   position: relative;
   top: -35px;
@@ -33,31 +33,31 @@
 }
 
 .franchisehero-pagename span a{
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .franchisehero-pagename a {
   text-decoration: none;
-  color:  #455a64;
+  color:  var(--primary-grey);
   margin: 0 5px;
 }
 
 .franchisehero-headline1{
   font-size: 30px;
-  color: #455A64;
+  color: var(--primary-grey);
   font-family: Lilita One;
   margin: 0 0 -140px 0; 
 }
 
 .franchisehero-headline2 span {
-  color: #f58634;
+  color: var(--primary-orange);
   font-size: 80px;
   margin-bottom: 10px;
   font-family: Lilita One;
 }
 
 .franchisehero-headline2  {
-  color: #455A64;
+  color: var(--primary-grey);
   font-size: 80px;
   font-family: Lilita One;
   line-height: 85px;
@@ -67,7 +67,7 @@
   font-size: 24px;
   font-weight: 400;
   font-family: Geologica;
-  color: #343434;
+  color: var(--highlight-color);
   margin: 8px 13px;
   margin-top: -25px;
 }
@@ -97,7 +97,7 @@ transform: translateY(-10px);
   justify-content: center; 
   align-items: center; 
   padding: 20px 16px; 
-  background-color: #f58634;
+  background-color: var(--primary-orange);
   color: white;
   border-radius: 8px;
   text-decoration: none;
@@ -110,7 +110,7 @@ transform: translateY(-10px);
 }
 
 .franchisehero-button:hover {
-  background-color: #f58634;
+  background-color: var(--primary-orange);
   box-shadow: 0 0 20px rgba(255, 124, 46, 0.8);
 }
 

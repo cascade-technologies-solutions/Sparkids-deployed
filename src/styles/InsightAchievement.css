@@ -6,12 +6,12 @@
     font-size: 30px;
     font-family: 'Lilita One';
     margin-bottom: 10px;
-    color: #455A64;
+    color: var(--primary-grey);
 }
 
 .achievements-container p.key-stats {
     font-size: 24px;
-    color: #F58634;
+    color: var(--primary-orange);
     font-family: 'Geologica';
     margin-bottom: -4px;
 }
@@ -37,7 +37,7 @@
 .achievement-item h3 {
     font-size: 50px;
     font-weight: bold;
-    color: #F58634;
+    color: var(--primary-orange);
     margin: 0;
     font-family: 'Lilita One';
 }
@@ -47,7 +47,7 @@
 
 .achievement-item p {
     font-size: 24px; 
-    color: #455A64;
+    color: var(--primary-grey);
     margin: 0;
     line-height: 1.5; 
 }

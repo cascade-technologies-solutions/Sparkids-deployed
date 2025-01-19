@@ -1,6 +1,5 @@
-import React from "react";
-//import Header from "../components/Header";
-//import Footer from "../components/Footer";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Franchisehero from "../components/franchiseHero";
 import FranchiseInvestment from "../components/franchiseInvestment";
 import FranchiseProcess from "../components/franchiseapplication";
@@ -10,20 +9,33 @@ import FranchiseSupport from "../components/FranchiseSupport";
 import FAQ from "../components/FranchiseFAQ";
 import QuestionSection from "../components/Question";
 
-
 const FranchisePage = () => {
-    return (
-      <div>
-        <Franchisehero />
-        <FranchiseOurstory />
-        <FranchiseInvestment />
-        <FranchiseSupport />
-        <FranchiseProcess />
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const sectionId = location.hash.substring(1); // Remove the "#" from the hash
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    }
+  }, [location]);
+
+  return (
+    <div>
+      <Franchisehero />
+      <FranchiseOurstory />
+      <FranchiseInvestment />
+      <FranchiseSupport />
+      <FranchiseProcess />
+      <div id="faq">
         <FAQ />
-        <FranchiseSuccess />
-        <QuestionSection />
       </div>
-    );
-  };
-  
-  export default FranchisePage;
+      <FranchiseSuccess />
+      <QuestionSection />
+    </div>
+  );
+};
+
+export default FranchisePage;

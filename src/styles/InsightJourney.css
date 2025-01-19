@@ -21,16 +21,16 @@
 .insightjourney-header h2 {
   font-size: 30px;
   font-weight: bold;
-  color: #455A64;
+  color: var(--primary-grey);
   font-family:lilita one ;
 }
 
 .insightjourney-header-span {
-color :#f58634;
+color :var(--primary-orange);
 }
 .insightjourney-more-articles {
   font-size: 16px;
-  color: #f58634;
+  color: var(--primary-orange);
   background: none;
   border: none;
   cursor: pointer;
@@ -66,7 +66,7 @@ color :#f58634;
   flex: 0 0 320px;
   height: 444px;
   margin: 0 10px;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -109,7 +109,7 @@ color :#f58634;
   font-family: geologica;
   font-size: 14px;
   font-weight: 200;
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 
@@ -117,7 +117,7 @@ color :#f58634;
   font-family: geologica;
   font-size: 20px;
   font-weight: 100;
-  color: #333333;
+  color:var(--topic-color);
   text-align: left;
   flex-grow: 1; 
   margin-bottom: 20px; 
@@ -132,15 +132,15 @@ color :#f58634;
 
 .insightjourney-read-article-link {
   font-size: 14px;
-  color: #f58634;
+  color: var(--primary-orange);
   text-decoration: none;
   font-weight: bold;
   
 }
 
 .insightjourney-arrow-button {
-  background-color: #f58634;
-  color: #ffffff;
+  background-color: var(--primary-orange);
+  color: var(--bg-color);
   border: none;
   width: 40px;
   height: 40px;

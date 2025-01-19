@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(to bottom, #fff, #fdf4f2);
+  background:var(--bg-gradient);
 }
 
 .hero-content {
@@ -16,14 +16,14 @@
 .hero-heading {
   font-size: 50px;
   font-weight: 400;
-  color: #455a64;
+  color: var(--primary-grey);
   margin: 0;
   font-family: lilita one;
 }
 
 .hero-heading span {
   font-size: 80px;
-  color: #f58634;
+  color: var(--primary-orange);
   font-family: lilita one;
   font-weight: 400;
 }
@@ -31,14 +31,14 @@
 .hero-subtitle {
   font-size: 24px;
   font-weight: 400;
-  color: #343434;
+  color: var(--highlight-color);
   margin: 10px 0;
   font-family: Geologica;
 }
 
 .hero-description {
   font-size: 22px;
-  color: #455a64;
+  color: var(--primary-grey);
   line-height: 1.6;
   font-family: Geologica;
   font-weight: 100;
@@ -60,9 +60,9 @@
 }
 
 .explore-btn {
-  background-color: #fff;
-  border: 2px solid #f58634;
-  color: #f58634;
+  background-color: var(--bg-color);
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
   transition: all 0.3s ease;
   font-family: geologica;
     padding: 15px 38px;
@@ -74,16 +74,16 @@
 }
 
 .explore-btn:hover {
-  background-color: #f58634;
-  color: #fff;
+  background-color: var(--primary-orange);
+  color: #f5f5f5;
 }
 
 .opportunity-btn {
-  background-color: #f58634;
-  color: #fff;
-  width: 235px;
-  height: 56px;
-  border: 2px solid #f58634;
+  background-color: var(--primary-orange);
+  color: #f5f5f5;
+  /* width: 235px;
+  height: 56px; */
+  border: 2px solid var(--primary-orange);
   transition: all 0.3s ease;
   font-family: geologica;
     padding: 15px 50px;
@@ -93,7 +93,7 @@
 }
 
 .opportunity-btn.glow {
-  box-shadow: 0 0 10px #f58634;
+  box-shadow: 0 0 10px var(--primary-orange);
   animation: glowing 1.5s infinite alternate;
 }
 
@@ -142,7 +142,7 @@
 
 .stats-text {
   font-size: 30px;
-  color: #343434;
+  color: var(--highlight-color);
   font-family: lilita one;
   line-height: 30px;
   margin-left: 170px;
@@ -150,7 +150,7 @@
 }
 
 .highlight {
-  color: #f58634;
+  color: var(--primary-orange);
   font-weight: 400;
   font-size: 24px;
   font-family: geologica;
@@ -160,12 +160,12 @@
   font-size: 20px;
   font-family: lilita one;
   font-weight: 400;
-  color: #343434;
+  color: var(--highlight-color);
   margin-top: -60px;
 }
 
 .note-highlight {
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 /* Hero Image Layout */
@@ -437,11 +437,11 @@
     gap: 15px; 
   }
 
-  .explore-btn,
+  /* .explore-btn,
   .opportunity-btn {
     width: 250px; 
     height: 70px;
-  }
+  } */
   
   .stats-images img {
     width: 70px;
@@ -596,14 +596,13 @@
 
   .hero-buttons {
     margin-top: 20px;
-    gap: 15px; 
+    gap: 15px;
+    display: flex;
   }
 
   .explore-btn,
   .opportunity-btn {
-    width: 140px; 
-    height: 50px;
-    font-size: 11px;
+    font-size: 16px;
   }
   
   .hero-stats {

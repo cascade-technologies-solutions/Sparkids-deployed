@@ -14,7 +14,7 @@
 .testimonial-text h2 {
   font-size: 24px;
   font-weight: 400;
-  color: #f58634;
+  color: var(--primary-orange);
   margin-bottom: 10px;
   font-family: geologica;
 }
@@ -22,7 +22,7 @@
 .testimonial-text h3 {
   font-size: 50px;
   font-weight: regular;
-  color: #455a64;
+  color: var(--primary-grey);
   margin-top: -5px;
   font-family: Lilita One;;
 }
@@ -30,7 +30,7 @@
 .testimonial-text p {
   font-size: 22px;
   max-width: 800px;
-  color: #455a64;
+  color: var(--primary-grey);
   margin: 10px auto;
   margin-top: -35px;
   font-family: geologica;
@@ -63,10 +63,11 @@
 .testimonialcard {
 width: 339px;
 height: 207px;
-background: #fff;
-
+/* background: var(--item-color); */
+background: #f5f5f5;
+color: #1a1a1a;
 border-radius: 22px;
-
+margin-top: 10px;
 position: relative;
 text-align: center;
 border: 0.1px solid hsl(0deg 12.48% 95.32%);

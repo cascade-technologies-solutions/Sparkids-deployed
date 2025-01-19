@@ -12,7 +12,7 @@
   }
   
   .insights-heading {
-    color: #F58634;
+    color: var(--primary-orange);
     font-size: 24px;
     font-family: Geologica;
     margin-bottom: 1rem;
@@ -21,13 +21,13 @@
   .insights-title {
     font-size: 30px;
     font-family: Lilita One;
-    color: #343434;
+    color: var(--highlight-color);
     margin-bottom: 1.5rem;
   }
   
   .insights-description {
     font-size: 24px;
-    color: #455a64;
+    color: var(--primary-grey);
     font-family: Geologica;
     margin-bottom: 1.5rem;
     line-height: 1.6;
@@ -41,7 +41,7 @@
   
   .insights-list li {
     font-size: 22px;
-    color: #343434;
+    color: var(--highlight-color);
     margin-bottom: 1rem;
     font-family: Geologica;
     display: flex;
@@ -58,8 +58,8 @@
   .insights-button {
     display: inline-block;
     padding: 10px 26px;
-    color: #F58634;
-    border: 2px solid #F58634;
+    color: var(--primary-orange);
+    border: 2px solid var(--primary-orange);
     border-radius: 8px;
     text-decoration: none;
     font-family: KoHo;
@@ -68,8 +68,8 @@
   }
   
   .insights-button:hover {
-    background-color: #F58634;
-    color: #fff;
+    background-color: var(--primary-orange);
+    color: #f5f5f5;
   }
   
   .images-grid {

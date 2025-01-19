@@ -50,7 +50,7 @@ transform: translateY(-10px);
 }
 
 .educator-label {
-  color: #f58634;
+  color: var(--primary-orange);
   font-weight: bold;
   margin-bottom: 1rem;
   font-size:24px;
@@ -59,14 +59,14 @@ transform: translateY(-10px);
 
 .educator-heading {
   font-size: 50px;
-  color: #455a64;
+  color: var(--primary-grey);
   margin-bottom: 1rem;
   margin-left: -300px ;
   font-family:lilita one;
 }
 
 .highlight-text {
-  color: #f58634; 
+  color: var(--primary-orange); 
   margin-left: -300px ;
   font-size: 50px;
   font-family:lilita one;
@@ -74,7 +74,7 @@ transform: translateY(-10px);
 
 .educator-description {
   font-size: 20px;
-  color: #455a64;
+  color: var(--primary-grey);
   margin-bottom: 1rem;
   line-height: 1.5;
   font-family:geologica;
@@ -83,8 +83,8 @@ transform: translateY(-10px);
 .educator-button {
   display: inline-block;
   padding: 10px 20px;
-  color: #f58634;
-  border: 2px solid #f58634;
+  color: var(--primary-orange);
+  border: 2px solid var(--primary-orange);
   border-radius: 8px;
   text-decoration: none;
   font-size: 19.19px;

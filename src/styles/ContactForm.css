@@ -24,7 +24,7 @@
     margin-bottom: 20px;
     font-size: 24px;
     font-family: 'Geologica';
-    color: #455a64;
+    color: var(--primary-grey);
     text-align: center;
 }
 
@@ -51,7 +51,7 @@
     border: 1px solid #333;
     border-radius: 16px;
     outline: none;
-    background-color: white;
+    background-color: #ffffff;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -60,7 +60,7 @@
 }
 
 .contact-form-section form select:focus {
-    border-color: #f58634;
+    border-color: var(--primary-orange);
     outline: none;
 }
 
@@ -85,7 +85,7 @@
     border-radius: 5px;
     font-size: 16px;
     color: #333;
-    background-color: #fff;
+    background-color: var(--bg-color);
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -101,7 +101,7 @@
   }
   
 .submit-button {
-    background-color: #f58634;
+    background-color: var(--primary-orange);
     color: white;
     padding: 16px 20px;
     font-size: 19.19px;
@@ -125,7 +125,7 @@
 .contact-info-section h2 {
     font-size: 24px;
     margin-bottom: 15px;
-    color: #455a64;
+    color: var(--primary-grey);
     font-family: 'Geologica';
 }
 
@@ -133,19 +133,19 @@
     margin: 10px 0;
     font-size: 24px;
     font-family: geologica;
-    color: #455a64;
+    color: var(--primary-grey);
 }
 
 .contact-info-section p span {
-    color: #f58634;
+    color: var(--primary-orange);
 }
 
 .navigate-link {
     margin: 10px 0;
     font-size: 24px;
     font-family: geologica;
-    color: #455a64;
-    color: #f58634;
+    color: var(--primary-grey);
+    color: var(--primary-orange);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -171,13 +171,13 @@
 .contact-footer p {
     margin: 10px 0;
     font-size: 24px;
-    color: #F58634;
+    color: var(--primary-orange);
     font-family: 'Geologica';
 }
 .contact-footer h2 {
     margin: 10px 0;
     font-size: 24px;
-    color: #455a64;
+    color: var(--primary-grey);
     font-family: 'Geologica';
 }
 
@@ -220,7 +220,7 @@
         margin: 10px;
         font-size: 18px;
         font-family: geologica;
-        color: #455a64;
+        color: var(--primary-grey);
     }
     .map iframe {
         height: 250px;

@@ -13,7 +13,7 @@
   }
   
   .investment-heading {
-    color: #f58634;
+    color: var(--primary-orange);
     font-size: 24px;
     margin-bottom: -1rem;
     font-family: Geologica;
@@ -24,14 +24,14 @@
     margin-bottom: 1rem;
     margin-top: -2rem;
     font-family: Lilita One;
-    color: #455A64;
+    color: var(--primary-grey);
   }
   
   .investment-description {
     font-size: 24px;
     margin-bottom: 4rem;
     margin-top: -4rem;
-    color: #555;
+    color: var(--text-color);
     line-height: 1.5;
     font-family: Geologica;
   }
@@ -54,7 +54,7 @@
     font-size: 24px;
     margin-bottom: 1rem;
     font-weight: bold;
-    color: #333;
+    color:var(--topic-color);
     font-family: Geologica;
   }
   
@@ -78,7 +78,7 @@
   
   .investment-column li span {
     font-size: 24px;
-    color: #555;
+    color: var(--text-color);
     line-height: 1.5;
   }
   @media (max-width: 1024px) {

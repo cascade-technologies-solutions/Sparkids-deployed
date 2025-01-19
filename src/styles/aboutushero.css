@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 10px;
 
-  background: linear-gradient(to right, #fff, #fff6eb); 
+  background:var(--bg-gradient);
 }
 .aboutus-sub-container{
   display: flex;
@@ -22,32 +22,32 @@
 
 .about-us-pagename {
   font-size: 24px;
-  color: #455a64;
+  color: var(--primary-grey);
   position: relative;
   top: -20px;
   left: -545px;
   font-family: geologica;
 }
 .about-us-pagename  span a{
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .about-us-pagename  a {
   text-decoration: none;
-  color:  #455a64;
+  color:  var(--primary-grey);
   margin: 0 5px;
 }
 
 .headline {
   font-size: 50px;
   font-weight: 400;
-  color: #455a64;
+  color: var(--primary-grey);
   font-family: Lilita One;
   margin: 0 0 8px 0; /* Reduced margin-bottom for closer spacing */
 }
 
 .headline span {
-  color: #f58634;
+  color: var(--primary-orange);
   font-size: 80px;
   font-weight: 400px;
   font-family: lilita one;
@@ -57,14 +57,14 @@
   font-size: 24px;
   font-weight: 400;
   font-family: geologica;
-  color: #343434;
+  color: var(--highlight-color);
   margin: 3px 2px; 
   padding-right: 34px;
 }
 
 .description {
   font-size: 22px;
-  color: #455a64;
+  color: var(--primary-grey);
   font-style: geologica;
   font-weight: 100;
   line-height: 1.4; 

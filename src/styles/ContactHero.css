@@ -22,24 +22,24 @@
 .contactus-highlight {
 
 
-color: #f58634;
+color: var(--primary-orange);
 
 }
 .contactus-pagename {
   font-size: 22px;
-  color: #455a64;
+  color: var(--primary-grey);
   position: relative;
   top: -291px;
   left: 110px;
   font-family: geologica;
 }
 .contactus-pagename  span a{
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .contactus-pagename  a {
   text-decoration: none;
-  color:  #455a64;
+  color:  var(--primary-grey);
   margin: 0 5px;
 }
 
@@ -65,7 +65,7 @@ color: #f58634;
   font-family: geologica;
   font-weight: 200;
   line-height: 1.5;
-  color: #666;
+  color: #333;
 }
 
 

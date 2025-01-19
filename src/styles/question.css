@@ -36,7 +36,7 @@
     font-size: 30px;
     font-family: lilita one;
     font-weight: 400;
-    color: #f58634;
+    color: var(--primary-orange);
   }
   
   .abt-subheading {
@@ -62,7 +62,7 @@
   }
   
   .contact-button {
-    background-color: #f58634;
+    background-color: var(--primary-orange);
     color: white;
     width: 142px;
     height: 60px;

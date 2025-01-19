@@ -25,7 +25,7 @@
   text-align: left;
   font-size: 24px;
   font-family: 'Geologica';
-  color: #455a64;
+  color: var(--primary-grey);
   margin-bottom: 30px;
   position: relative;
   top: -35px;
@@ -34,26 +34,26 @@
 }
 
 .insighthero-pagename span a{
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .insighthero-pagename a {
   text-decoration: none;
-  color:  #455a64;
+  color:  var(--primary-grey);
   margin: 0 5px;
 }
 
 
 
 .insighthero-headline2 span {
-  color: #f58634;
+  color: var(--primary-orange);
   font-size: 70px;
   margin-bottom: 10px;
   font-family: Lilita One;
 }
 
 .insighthero-headline2  {
-  color: #455A64;
+  color: var(--primary-grey);
   font-size: 70px;
   font-family: Lilita One;
   line-height: 60px;
@@ -63,7 +63,7 @@
   font-size: 25px;
   font-weight: 200;
   font-family: Geologica;
-  color: #343434;
+  color: var(--highlight-color);
   margin: 8px 13px;
   margin-top: -25px;
 }

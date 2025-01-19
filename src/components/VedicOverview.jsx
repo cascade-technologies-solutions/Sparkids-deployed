@@ -86,7 +86,7 @@ const VedicOverview = () => {
         className="dropdown-header"
         onClick={() => toggleSection("littleStar")}
         style={{
-          color: expandedSection === "littleStar" ? "#455a64" : "#f58634",
+          color: expandedSection === "littleStar" ? "var(--primary-grey)" : "var(--primary-orange)",
           fontWeight: "bold",
         }}
       >
@@ -146,7 +146,7 @@ const VedicOverview = () => {
     className="dropdown-header"
     onClick={() => toggleSection("brainCharger")}
     style={{
-      color: expandedSection === "brainCharger" ? "#455a64" : "#f58634",
+      color: expandedSection === "brainCharger" ? "var(--primary-grey)" : "var(--primary-orange)",
       fontWeight: "bold",
     }}
   >

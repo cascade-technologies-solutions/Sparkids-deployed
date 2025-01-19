@@ -5,7 +5,7 @@
   justify-content: space-between;
   padding: 40px;
   gap: 20px;
-  background-color: #f9f9f9; /* Light background */
+  background-color: f5f5f5; /* Light background */
 }
 
 .careerhero-sub-container {
@@ -31,7 +31,7 @@
 
 .careerhero-pagename {
   font-size: 24px;
-  color: #455A64;
+  color: var(--primary-grey);
   font-weight: 400;
   font-family: Geologica;
   margin-bottom: 45px; 
@@ -42,18 +42,18 @@
 }
 
 .careerhero-pagename  span a{
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .careerhero-pagename  a {
   text-decoration: none;
-  color:  #455a64;
+  color:  var(--primary-grey);
   margin: 0 5px;
 }
 
 .careerhero-subheadline {
   font-size: 30px;
-  color: #455A64;
+  color: var(--primary-grey);
   font-family: lilita one;
   font-weight: 400;
   margin-bottom: -60px;
@@ -61,19 +61,19 @@
 
 .careerhero-headline {
   font-size: 80px;
-  color: #455a64;
+  color: var(--primary-grey);
   font-family:Lilita One;
   line-height: 1.2;
   text-wrap:nowrap;
 }
 
 .careerhero-headline span {
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .careerhero-description {
   font-size: 24px;
-  color: #343434;
+  color: var(--highlight-color);
   font-family: Geologica;
   line-height: 1.5;
   margin-top: -60px;
@@ -84,7 +84,7 @@
   justify-content: center; 
   align-items: center; 
   padding: 20px 16px; 
-  background-color: #f58634;
+  background-color: var(--primary-orange);
   color: white;
   border-radius: 8px;
   text-decoration: none;

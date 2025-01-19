@@ -183,7 +183,7 @@ const CourseList = () => {
           >
             <path
               d="M1.94869 16.2172L15.3837 2.78222M15.3837 2.78222L13.9695 14.0959M15.3837 2.78222L4.07001 4.19643"
-              stroke="#F58634"
+              stroke="var(--primary-orange)"
               strokeWidth="3.14286"
               strokeLinecap="round"
             />
@@ -213,7 +213,7 @@ const CourseList = () => {
               >
                 <path
                   d="M12.9023 1.44043L1.8125 12.5302L12.9023 23.62"
-                  stroke="#FFFFFF"
+                  stroke="var(--bg-color)"
                   strokeWidth="2.21796"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -234,7 +234,7 @@ const CourseList = () => {
               >
                 <path
                   d="M1.8125 1.44043L12.9023 12.5302L1.8125 23.62"
-                  stroke="#FFFFFF"
+                  stroke="var(--bg-color)"
                   strokeWidth="2.21796"
                   strokeLinecap="round"
                   strokeLinejoin="round"

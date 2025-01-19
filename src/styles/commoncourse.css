@@ -1,6 +1,6 @@
 .pagename {
   font-size: 24px;
-  color: #455a64;
+  color: var(--primary-grey);
   margin-bottom: 30px;
   position: relative;
   font-family: geologica;
@@ -8,11 +8,11 @@
   padding: 2rem;
 }
 .pagename a {
-  color: #455a64;
+  color: var(--primary-grey);
   text-decoration: none;
 }
 .pagename span a{
-  color: #f58634;
+  color: var(--primary-orange);
 }
 .maincourse-container {
   display: flex;
@@ -29,7 +29,7 @@
   border: 2px solid #ddd;
   border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  background: #fff;
+  background: var(--item-color);
   padding: 36px 96px;
   margin-left: 57px;
 }
@@ -44,7 +44,7 @@
 .maincourse-heading {
   font-size: 50px; 
   font-weight: 400;
-  color: #f58634; 
+  color: var(--primary-orange); 
   margin-bottom: 1rem;
   font-family: 'Lilita One';
 }
@@ -62,14 +62,14 @@
   display: flex;
   flex-direction: row;
   font-size: 22px;
-  color: #455a64;
+  color: var(--primary-grey);
   font-family: Geologica;
   gap: 10px;
 }
 .maincourse-subcontent li{
   font-size: 24px;
   font-family: Geologica;
-  color: #455a64;
+  color: var(--primary-grey);
   line-height: 50px;
 
 }
@@ -81,7 +81,7 @@
 .maincourse-points p {
   display: flex;
   font-size: 18px;
-  color: #455a64; 
+  color: var(--primary-grey); 
   font-family: Geologica;
   margin: 8px 0; 
 }
@@ -95,12 +95,12 @@
   font-weight: 400;
   font-size: 24px;
   font-family: geologica;
-  color: #455a64;
+  color: var(--primary-grey);
 }
 .maincourse-subcontent span {
   font-size: 24px;
   font-family: geologica;
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .maincourse-button {
@@ -110,8 +110,8 @@
   margin-top: 1.5rem;
   width: 389px;
   height: 56px;
-  background-color: #f58634;
-  color: #ffffff;
+  background-color: var(--primary-orange);
+  color: var(--bg-color);
   font-size: 24px;
   font-weight: semibold;
   font-family: geologica;

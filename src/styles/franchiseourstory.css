@@ -4,11 +4,11 @@
   align-items: center;
   padding: 60px 20px;
   
-  background: linear-gradient(to left, #fff, #fff6eb);  
+  background: var(--bg-gradient);
 } 
 .franchise-ourstory-container{
   padding: 10px;
-  background-color: linear-gradient(to right, #fff, #ffe6cc);
+  background: var(--bg-gradient);
 }
 .franchise-ourstory-text {
   text-align: center;
@@ -49,17 +49,16 @@
   flex-wrap: wrap;
 }
 
-.franchise-timeline-card { 
+.franchise-timeline-card {
   width: 263px;
   height: 245px;
-  background-color: #fff;
+  background-color:#f5f5f5;
   padding: 10px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: left;
   position: relative;
   transition: transform 0.3s;
-  
 }
 .franchise-timeline-card-icon{
 top: 10px;

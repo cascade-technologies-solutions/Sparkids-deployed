@@ -1,5 +1,5 @@
 .gallery-container {
-  background-color: #f9f9f9;
+  background-color: var(--bg-color);
   padding: 20px;
   text-align: center;
 }
@@ -12,14 +12,14 @@
 }
 
 .gallery-header .subheading {
-  color: #F58634;
+  color: var(--primary-orange);
   margin: 0;
   font-family: 'Geologica';    
   font-size: 24px;
 }
 
 .gallery-header .heading {
-  color: #455A64;
+  color: var(--primary-grey);
   margin: 5px 0;
   font-family: 'Geologica';    
   font-size: 24px;
@@ -37,9 +37,9 @@
 .gallery-buttons button {
   padding: 8px 16px;
   width: 168px;
-  border: 2px solid #455A64;
+  border: 2px solid var(--primary-grey);
   border-radius: 24px;
-  color: #455A64;
+  color: var(--primary-grey);
   cursor: pointer;
   font-size: 16px;
   font-family: geologica;
@@ -48,8 +48,8 @@
 
 .gallery-buttons button.active,
 .gallery-buttons button:hover {
-  color: #F58634;
-  border: 1px solid #F58634;
+  color: var(--primary-orange);
+  border: 1px solid var(--primary-orange);
 }
 
 /* Flexbox Grids */

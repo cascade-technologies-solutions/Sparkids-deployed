@@ -136,7 +136,7 @@ const CardsContainer = () => {
           >
             <path
               d="M1.94869 16.2172L15.3837 2.78222M15.3837 2.78222L13.9695 14.0959M15.3837 2.78222L4.07001 4.19643"
-              stroke="#F58634"
+              stroke="var(--primary-orange)"
               strokeWidth="3.14286"
               strokeLinecap="round"
             />

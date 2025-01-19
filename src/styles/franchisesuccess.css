@@ -56,7 +56,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #ffffff;
+  background: var(--bg-color);
   box-sizing: border-box;
   margin-top: 61px;
 }
@@ -74,14 +74,14 @@
   font-size: 30px;
   font-family: Lilita One;
   font-weight: 400;
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .franchisesuccess-text-content p {
   font-size: 24px;
   font-family: "Geologica";
   font-weight: 400;
-  color: #343434;
+  color: var(--highlight-color);
 }
 
 .franchisesuccess-text-content p span {
@@ -89,7 +89,7 @@
   font-size: 24px;
   font-family: "Geologica";
   font-weight: 400;
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 /* Custom styles for slick buttons */
