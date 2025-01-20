@@ -29,8 +29,8 @@ export const HomePage = () => {
   
   return (
     <div>
-      <NewHeader />
-      <NewHero />
+      {/* <NewHeader />
+      <NewHero /> */}
       <Hero />
       <HomeAbout />
       {/* <Course /> */}
