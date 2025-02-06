@@ -4,7 +4,7 @@ import "../styles/AbacusOverview.css";
 
 const Overview = () => {
   const [activeTab, setActiveTab] = useState("overview");
-  const [expandedSection, setExpandedSection] = useState(null); // For dropdown in Levels tab
+  const [expandedSection, setExpandedSection] = useState(null); 
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
