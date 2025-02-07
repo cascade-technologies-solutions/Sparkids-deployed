@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background: linear-gradient(to bottom, #fff, #fdf4f2);
+  background:var(--bg-gradient);
 }
 
 .hero-content {
@@ -16,14 +16,14 @@
 .hero-heading {
   font-size: 50px;
   font-weight: 400;
-  color: #455a64;
+  color: var(--primary-grey);
   margin: 0;
   font-family: lilita one;
 }
 
 .hero-heading span {
   font-size: 80px;
-  color: #f58634;
+  color: var(--primary-orange);
   font-family: lilita one;
   font-weight: 400;
 }
@@ -31,14 +31,14 @@
 .hero-subtitle {
   font-size: 24px;
   font-weight: 400;
-  color: #343434;
+  color: var(--highlight-color);
   margin: 10px 0;
   font-family: Geologica;
 }
 
 .hero-description {
   font-size: 22px;
-  color: #455a64;
+  color: var(--primary-grey);
   line-height: 1.6;
   font-family: Geologica;
   font-weight: 100;
@@ -60,9 +60,9 @@
 }
 
 .explore-btn {
-  background-color: #fff;
-  border: 2px solid #f58634;
-  color: #f58634;
+  background-color: var(--bg-color);
+  border: 2px solid var(--primary-orange);
+  color: var(--primary-orange);
   transition: all 0.3s ease;
   font-family: geologica;
     padding: 15px 38px;
@@ -74,16 +74,16 @@
 }
 
 .explore-btn:hover {
-  background-color: #f58634;
-  color: #fff;
+  background-color: var(--primary-orange);
+  color: #f5f5f5;
 }
 
 .opportunity-btn {
-  background-color: #f58634;
-  color: #fff;
-  width: 235px;
-  height: 56px;
-  border: 2px solid #f58634;
+  background-color: var(--primary-orange);
+  color: #f5f5f5;
+  /* width: 235px;
+  height: 56px; */
+  border: 2px solid var(--primary-orange);
   transition: all 0.3s ease;
   font-family: geologica;
     padding: 15px 50px;
@@ -93,7 +93,7 @@
 }
 
 .opportunity-btn.glow {
-  box-shadow: 0 0 10px #f58634;
+  box-shadow: 0 0 10px var(--primary-orange);
   animation: glowing 1.5s infinite alternate;
 }
 
@@ -142,7 +142,7 @@
 
 .stats-text {
   font-size: 30px;
-  color: #343434;
+  color: var(--highlight-color);
   font-family: lilita one;
   line-height: 30px;
   margin-left: 170px;
@@ -150,7 +150,7 @@
 }
 
 .highlight {
-  color: #f58634;
+  color: var(--primary-orange);
   font-weight: 400;
   font-size: 24px;
   font-family: geologica;
@@ -160,12 +160,12 @@
   font-size: 20px;
   font-family: lilita one;
   font-weight: 400;
-  color: #343434;
+  color: var(--highlight-color);
   margin-top: -60px;
 }
 
 .note-highlight {
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 /* Hero Image Layout */
@@ -345,13 +345,43 @@
   margin-left: -64px; 
   margin-top:-96px;
 }
+ @media(max-width:1280px){
+  .opportunity-btn, .explore-btn{
+    padding: 15px 35px;
+  }
+  .stats-text{
+    font-size: 20px;
+    margin-top: 38px;
+  }
+ }
 
+ @media (max-width:1115px){
+  .hero-image{
+    margin-left: 0px;
+    padding-right: 0px;
+  }
+  .hero-content{
+    padding-left: 20px;
+  }
+  .partner-image{
+      width: 600px;
+      height: 46px;
+      margin-left: -10px;
+      margin-top: -96px;
+  }
+ }
 
+@media(max-width:1024px){
+  .opportunity-btn, .explore-btn{
+    padding: 15px 17px;
+  }
+  .hero-heading span{
+    font-size: 65px;
+  }
+}
+/* @media (min-width: 426px) and (max-width: 768px){ */
+@media (max-width: 840px) {
 
-/* Media Query for Tablet (max-width: 768px) */
-@media (max-width: 768px) {
-  
-  
   .brain-layout {
     width: 100%;
     height: 350px;
@@ -360,17 +390,17 @@
   /* Hero Section */
   .hero-section {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
     padding: 20px;
   }
- 
+
   /* Hero Image at the Top */
   .hero-image {
     order: 1;
     max-width: 450px;
     height: 450px;
-    margin-left: 100px;
+    /* margin-left: 100px; */
   }
 
   /* Hero Content Below the Image */
@@ -378,7 +408,7 @@
     order: 2; 
     text-align: center; 
     width: 100%;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     margin-top:50px;
   }
 
@@ -407,11 +437,11 @@
     gap: 15px; 
   }
 
-  .explore-btn,
+  /* .explore-btn,
   .opportunity-btn {
     width: 250px; 
     height: 70px;
-  }
+  } */
   
   .stats-images img {
     width: 70px;
@@ -528,21 +558,24 @@
     }
   }
 
-@media (max-width: 426px) {
+@media (max-width: 450px) {
 
   .brain-layout {
-    width: 100%;
+    width: 151%;
     height: 350px;
+    margin-left: -58px;
   }
   .hero-image {
     order: 1;
-    width: 87%;
+    width: 58%;
     height: 350px;
+    margin-left: 0px;
   }
   .hero-content {
     order: 2; 
     text-align: center; 
     width: 100%;
+    margin-right: 0px;
   }
 
   .hero-heading {
@@ -563,14 +596,13 @@
 
   .hero-buttons {
     margin-top: 20px;
-    gap: 15px; 
+    gap: 15px;
+    display: flex;
   }
 
   .explore-btn,
   .opportunity-btn {
-    width: 140px; 
-    height: 50px;
-    font-size: 12px;
+    font-size: 16px;
   }
   
   .hero-stats {
@@ -651,9 +683,17 @@
     .partner-image {
       width: 280px;
       height: 20px;
-      margin-left: 26px;
+      margin-left: -31px;
       margin-top: -60px;
     }
+
+    .puzzle1:hover,
+.puzzle2:hover,
+.pencil:hover ,.bulb:hover,
+.symbol:hover {
+  animation: none;
+  animation-iteration-count: none;
+}
 }
 
 @media (max-width: 415px) and (min-width: 412px){
@@ -661,12 +701,13 @@
     margin-top: 8px;
   }
   .brain-layout {
-    width: 100%;
+    width: 202%;
     height: 350px;
+    margin-left: -100px;
   }
   .hero-image {
     order: 1;
-    width: 100%;
+    width: 50%;
     height: 350px;
   }
   .explore-btn, .opportunity-btn {
@@ -681,9 +722,9 @@
 
 @media (max-width:394px) {
   .brain-layout {
-    width: 109%;
+    width: 164%;
     height: 350px;
-    margin-left: -10px;
+    margin-left: -66px;
   }
   .explore-btn,
   .opportunity-btn {
@@ -692,8 +733,9 @@
 }
 @media (max-width: 376px) {
   .brain-layout {
-    width: 100%;
+    width: 170%;
     height: 350px;
+    margin-left: -70px;
   }
   .explore-btn,
   .opportunity-btn {
@@ -701,7 +743,7 @@
   }
   .hero-image {
     order: 1;
-    width: 100%;
+    width: 60%;
     height: 350px;
   }
 }
@@ -710,34 +752,44 @@
     margin-top: 8px;
   }
   .brain-layout {
-    width: 88%;
+    width: 210%;
     height: 350px;
-    margin-left:20px;
+    margin-left:-85px;
   }
   .hero-image {
     order: 1;
-    width: 120%;
+    width: 50%;
     height: 350px;
   }
   .explore-btn, .opportunity-btn {
     padding: 10px 18px;
     font-size: 12px;
   }
+  .partner-image{
+    margin-left: -62px;
+  }
+  .hero-stats .stats-text h1 {
+    margin-left: -37px;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 321px) {
   .hero-content{
     margin-top: 8px;
   }
   .brain-layout {
-    width: 100%;
+    width: 106%;
     height: 350px;
+    margin-left: -15px;
   }
   .hero-image {
     order: 1;
-    width: 120%;
+    width: 112%;
     height: 350px;
+    margin: 0px;
+    padding: 0px;
   }
+  
   .explore-btn, .opportunity-btn {
     padding: 12px 17px;
     font-size: 12px;
@@ -758,4 +810,7 @@
     font-size: 15px;
     margin-top: -45px;
   }
+  .partner-image {
+    margin-left: 24px;
+}
 }

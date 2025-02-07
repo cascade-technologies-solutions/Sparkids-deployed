@@ -1,6 +1,6 @@
 
 /* course pg */
-@media (max-width: 768px) {
+@media (min-width:768px ) and (max-width: 1024px) {
   .abacus-section,
   .reading-section,
   .cube-section,
@@ -73,7 +73,8 @@
     margin-right: -10px;
   }
 }
-@media (max-width: 426px) {
+@media (min-width:425px ) and (max-width: 450px) {
+/* @media (max-width: 426px) { */
   .abacus-content,
   .vedic-content,
   .handwriting-content,
@@ -185,8 +186,8 @@
     margin: 0 auto;
   }
 }
-
-@media (max-width: 376px) {
+@media (min-width:320px ) and (max-width: 424px) {
+/* @media (max-width: 376px) { */
   .abacus-content,
   .vedic-content,
   .handwriting-content,
@@ -297,7 +298,8 @@
     margin-right: 25px;
   }
 }
-@media (max-width: 321px) {
+/* @media (min-width:321px ) and (max-width: 375px) { */
+/* @media (max-width: 321px) {
   .abacus-content,
   .vedic-content,
   .handwriting-content,
@@ -334,4 +336,4 @@
     height: 25px;
     margin-left: 43px;
   }
-}
+} */

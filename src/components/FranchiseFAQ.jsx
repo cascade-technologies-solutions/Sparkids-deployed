@@ -33,7 +33,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="faq-container">
+    <div className="faq-container" id="faq">
       {/* Heading */}
       <h2 className="faq-heading">Frequently Asked Questions</h2>
 

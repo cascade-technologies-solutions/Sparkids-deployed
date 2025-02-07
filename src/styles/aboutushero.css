@@ -6,7 +6,7 @@
   flex-direction: column;
   gap: 10px;
 
-  background: linear-gradient(to right, #fff, #fff6eb); 
+  background:var(--bg-gradient);
 }
 .aboutus-sub-container{
   display: flex;
@@ -22,32 +22,32 @@
 
 .about-us-pagename {
   font-size: 24px;
-  color: #455a64;
+  color: var(--primary-grey);
   position: relative;
   top: -20px;
   left: -545px;
   font-family: geologica;
 }
 .about-us-pagename  span a{
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .about-us-pagename  a {
   text-decoration: none;
-  color:  #455a64;
+  color:  var(--primary-grey);
   margin: 0 5px;
 }
 
 .headline {
   font-size: 50px;
   font-weight: 400;
-  color: #455a64;
+  color: var(--primary-grey);
   font-family: Lilita One;
   margin: 0 0 8px 0; /* Reduced margin-bottom for closer spacing */
 }
 
 .headline span {
-  color: #f58634;
+  color: var(--primary-orange);
   font-size: 80px;
   font-weight: 400px;
   font-family: lilita one;
@@ -57,14 +57,14 @@
   font-size: 24px;
   font-weight: 400;
   font-family: geologica;
-  color: #343434;
+  color: var(--highlight-color);
   margin: 3px 2px; 
   padding-right: 34px;
 }
 
 .description {
   font-size: 22px;
-  color: #455a64;
+  color: var(--primary-grey);
   font-style: geologica;
   font-weight: 100;
   line-height: 1.4; 
@@ -136,11 +136,10 @@
 margin-right: -41px;
 margin-top: 67px;
 }
-.pagename{
-top: -31px;
-left: -266px;
-font-size: 16px;
-
+.about-us-pagename {
+  top: -14px;
+  left: -287px;
+  font-size: 14px;
 }
   .headline {
       font-size: 28px;
@@ -170,9 +169,9 @@ font-size: 16px;
 .aboutus-sub-container {
   display: flex;
   flex-direction: column-reverse;
-  margin-top: -124px;
+  margin-top: -72px;
   width: 90%;
-  margin-left: -10px;
+  margin-left: 9px;
   margin-bottom: -40px;
 }
 .about-us-container {
@@ -191,10 +190,10 @@ margin-left: -2px;
 text-align: center;
 margin-top: 22px;
 }
-.pagename {
-  font-size: 12px !important; 
-     top: -31px;
-  left: -132px;
+.about-us-pagename {
+  font-size: 14px;
+  top: -11px;
+  left: -124px;
 }
 .headline {
       font-size: 24px;
@@ -220,14 +219,14 @@ margin-top: 22px;
 margin-left: 31px;
 }
 }
-
-@media (max-width: 375px) {
+/* 
+@media (max-width: 376px) {
 
 .aboutus-sub-container {
   flex-direction: column-reverse;
-  margin-top: -143px;
+  margin-top: -87px;
   width: 91%;
-  margin-left: 30px;
+  margin-left: px;
 }
 
 .about-us-content {
@@ -235,17 +234,17 @@ margin-left: 31px;
   margin-left: -2px;
   text-align: center;
   margin-top: 22px;
-}
-
-
 } 
+
+
+} */
 
 @media (max-width: 376px) {
 .aboutus-sub-container {
   flex-direction: column-reverse;
-  margin-top: -119px;
+  margin-top: -72px;
   width: 91%;
-  margin-left: 20px;
+  margin-left: 31px;
 }
 
 
@@ -260,10 +259,10 @@ margin-left: 31px;
   text-align: center;
   margin-top: 22px;
 }
-.pagename {
+.about-us-pagename {
   font-size: 12px;
-  top: -31px;
-  left: -132px;
+  top: -13px;
+  left: -115px;
 }
 
 .headline {

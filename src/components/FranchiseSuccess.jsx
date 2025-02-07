@@ -1,138 +1,98 @@
-
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "../styles/franchisesuccess.css";
 import franchisesuccess1 from "../Assets/franchise-img/franchisesuccess1.png";
+import AOS from "aos"; // Import AOS for animations
+import "aos/dist/aos.css"; // Import AOS styles
+import Slider from "react-slick";
 
-const Slider = () => {
+const FranchiseSlider = () => {
+  // Declare the slides array first
+  const baseContent = (
+    <p>
+      “ Id urna, nisl, ut quam. Diam suspendisse fringilla quam arcu
+      mattis est velit in. Nibh in purus sit convallis phasellus ut.
+      At vel erat ultricies commodo. Neque suspendisse a{" "}
+      habitasse commodo. ”
+      <br />
+      <span>
+        Marie Poirot, <br />
+        Bigapp
+      </span>
+    </p>
+  );
+
   const slides = [
     {
       image: franchisesuccess1,
-      content: (
-        <p>
-            “ Id urna, nisl, ut quam. Diam suspendisse <br/>fringilla quam 
-            arcu mattis est velit in. Nibh in<br/> purus sit convallis
-             phasellus ut. At vel erat<br/> ultricies commodo. Neque
-              suspendisse a <br/>habitasse commodo. ”
-              <br/><br/>
-              <span>
-              Marie Poirot, <br/>
-              Bigapp</span>
-        </p>
-      ),
+      content: baseContent,
     },
     {
       image: franchisesuccess1,
-      content: (
-        <p>
-            “ Id urna, nisl, ut quam. Diam suspendisse <br/>fringilla quam 
-            arcu mattis est velit in. Nibh in<br/> purus sit convallis
-             phasellus ut. At vel erat<br/> ultricies commodo. Neque
-              suspendisse a <br/>habitasse commodo. ”
-              <br/><br/>
-              <span>
-              Marie Poirot, <br/>
-              Bigapp</span>
-        </p>
-      ),
+      content: baseContent,
     },
     {
       image: franchisesuccess1,
-      content: (
-        <p>
-            “ Id urna, nisl, ut quam. Diam suspendisse <br/>fringilla quam 
-            arcu mattis est velit in. Nibh in<br/> purus sit convallis
-             phasellus ut. At vel erat<br/> ultricies commodo. Neque
-              suspendisse a <br/>habitasse commodo. ”
-              <br/><br/>
-              <span>
-              Marie Poirot, <br/>
-              Bigapp</span>
-        </p>
-      ),
+      content: baseContent,
     },
     {
       image: franchisesuccess1,
-      content: (
-        <p>
-            “ Id urna, nisl, ut quam. Diam suspendisse <br/>fringilla quam 
-            arcu mattis est velit in. Nibh in<br/> purus sit convallis
-             phasellus ut. At vel erat<br/> ultricies commodo. Neque
-              suspendisse a <br/>habitasse commodo. ”
-              <br/><br/>
-              <span>
-              Marie Poirot, <br/>
-              Bigapp</span>
-        </p>
-      ),
+      content: baseContent,
     },
   ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    if (currentIndex < slides.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
- 
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
+  // Start AOS on component mount
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
 
   return (
-    <div className="slider-container">
-      <div className="slider">
-        <div
-          className="slider-wrapper"
-          style={{
-            transform: `translateX(-${currentIndex * 1280}px)`, 
-          }}
-        >
-          {slides.map((slide, index) => (
-            <div className="slider-item" key={index}>
-              <div className="image-container">
-                <img src={slide.image} alt={`Slide ${index + 1}`} />
-              </div>
-              <div className="content-container">
-                <div className="text-content">
-                
-                  <h2> Success Stories</h2>
-                  <p>{slide.content}</p>
-                </div>
-                <div className="dots-container">
-                  {slides.map((_, dotIndex) => (
-                    <div
-                      key={dotIndex}
-                      className={`dot ${dotIndex === currentIndex ? "active" : ""}`}
-                      onClick={() => setCurrentIndex(dotIndex)}
-                    ></div>
-                  ))}
-                </div>
+    <section className="franchisesuccess-slider-container">
+      <Slider {...settings} className="franchisesuccess-slider">
+        {slides.map((slide, index) => (
+          <div
+            key={index}
+            className="franchisesuccess-slider-item"
+            data-aos="fade-up" // AOS animation
+            data-aos-delay={index * 100} // Corrected template literal usage
+          >
+            <div className="franchisesuccess-image-container">
+              <img
+                src={slide.image}
+                alt={`Slide ${index + 1}`} // Corrected alt attribute
+                className="franchisesuccess-slider-image"
+              />
+            </div>
+            <div className="franchisesuccess-content-container">
+              <div className="franchisesuccess-text-content">
+                <h2> Success Stories</h2>
+                {slide.content}
               </div>
             </div>
-          ))}
-        </div>
-      </div>
-
-      <button
-        className="slider-button prev"
-        onClick={handlePrev}
-        disabled={currentIndex === 0}
-      >
-        ◀
-      </button>
-      <button
-        className="slider-button next"
-        onClick={handleNext}
-        disabled={currentIndex === slides.length - 1}
-      >
-        ▶
-      </button>
-    </div>
+          </div>
+        ))}
+      </Slider>
+    </section>
   );
 };
 
-export default Slider;
+export default FranchiseSlider;

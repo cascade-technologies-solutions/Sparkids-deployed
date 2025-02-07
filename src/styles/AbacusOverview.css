@@ -15,7 +15,7 @@
 .tab-button {
   font-size: 24px;
   font-weight: 400;
-  color: #455a64;  
+  color: var(--primary-grey);  
   font-family: geologica;
   border: none;
   background: none;
@@ -25,12 +25,12 @@
 }
 
 .tab-button.active {
-  color: #f58634;
-  border-bottom: 3px solid #f58634;
+  color: var(--primary-orange);
+  border-bottom: 3px solid var(--primary-orange);
 }
 
 .tab-button:hover {
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 /* Box with Shadow for Content */
@@ -41,7 +41,7 @@
     border: 2px solid #ddd;
     border-radius: 20px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    background: #fff;
+    background: var(--item-color);
     margin-left:-150px;
 
 }
@@ -50,7 +50,7 @@
 .main-title {
   font-size: 30px;
   font-weight: 400;
-  color: #f58634;
+  color: var(--primary-orange);
   font-family: lilita one;
   margin-bottom: 1rem;
 }
@@ -60,12 +60,12 @@
   font-weight: 400;
   font-family: lilita one;
   margin-bottom: 1rem;
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .overview-description {
   font-size: 22px;
-  color: #343434;
+  color: var(--highlight-color);
   line-height: 1.6;
   font-family: geologica;
   margin-bottom: 1rem;
@@ -86,14 +86,14 @@
   font-family: geologica;
   margin-bottom: 10px;
   font-size: 24px;
-  color: #455a64;
+  color: var(--primary-grey);
 }
 
 .benefits-list img {
   width: 28px;
   height: 28px;
 }
-.dropdown-item {
+.course-dropdown-item {
   margin-bottom: 1rem;
   border-radius: 5px;
 }
@@ -117,35 +117,35 @@
 
 .dropdown-header span {
   font-size: 1.5rem;
-  color: #f58634;
+  color: var(--primary-orange);
 }
 
 .dropdown-content {
   padding: 1rem;
-  background: #fff;
+  background: var(--item-color);
   font-size: 24px;
   font-family: 'Geologica';
-  color: #455a64;
+  color: var(--primary-grey);
 }
 .dropdown-content p span{
   font-family: 'Geologica';
-  color: #f58634;
+  color: var(--primary-orange);
 }
 .dropdown-subtitle {
-  color: #f58634;
+  color: var(--primary-orange);
   font-weight: bold;
   margin-bottom: 1rem;
   font-size: 22px;
 }
 .dropdown-course-info{
   margin-bottom: 1rem;
-  color: #455a64;
+  color: var(--primary-grey);
   font-size: 22px;
   font-family: geologica;
 }
   .dropdown-course-info span {
     
-  color: #f58634;
+  color: var(--primary-orange);
   }
 
 .details-content {
@@ -155,10 +155,10 @@
 .level-detail span {
   font-size: 24px;
   font-weight: bold;
-  color: #f58634;
+  color: var(--primary-orange);
 }
 .level-detail {
-  color: #455a64;
+  color: var(--primary-grey);
 }
 .level-detail li {
   line-height: 30px;
@@ -167,7 +167,7 @@
 .main-title {
   font-size: 30px;
   font-family: lilita one;
-  color: #f58634;
+  color: var(--primary-orange);
   margin-bottom: 1rem;
 }
 
@@ -176,7 +176,7 @@
   font-weight: bold;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #455a64;
+  color: var(--primary-grey);
   font-family: lilita one;
 }
 
@@ -196,7 +196,7 @@
 }
 
 .key-skills-list span {
-  color: #f58634;
+  color: var(--primary-orange);
 }
 .opportunity-list{
   list-style: none;
@@ -214,7 +214,7 @@
   .tab-header {
     padding: 20px;
     margin-left: 0;
-    margin-bottom: -30px;
+    margin-bottom: 0px;
     gap: 20px;
   }
 
