@@ -11,8 +11,8 @@ import HomeTestimonials from '../components/hometestimonial';
 import HomeAbout from '../components/home-abt';
 // import VedicMathsCard from '../components/newcardtest';
 import Coursecard from '../components/newcardtest(1)';
-import NewHeader from "../components/Header1";
-import NewHero from "../components/Hero1";
+// import NewHeader from "../components/Header1";
+// import NewHero from "../components/Hero1";
 
 export const HomePage = () => {
     const location = useLocation();
