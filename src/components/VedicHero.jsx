@@ -10,10 +10,26 @@ const VedicHero = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    const handleResize = () => setScreenWidth(window.innerWidth);
+    let timeoutId = null;
+    const handleResize = () => {
+      // Clear existing timeout
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+      // Throttle resize events
+      timeoutId = setTimeout(() => {
+        setScreenWidth(window.innerWidth);
+      }, 150);
+    };
+    
     window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    };
   }, []);
 
   const getImageStyles = () => {
@@ -44,17 +60,17 @@ const VedicHero = () => {
             <ul className="maincourse-points">
               <p className="maincourse-points-wholelist">
                 <div className="maincourse-points-list">
-                  <img src={courselevel} alt="point" />
+                  <img src={courselevel} alt="point" loading="lazy" />
                   <span>Level :</span> 2 Levels
                 </div>
                 <br />
                 <div className="maincourse-points-list">
-                  <img src={courseage} alt="point" />
+                  <img src={courseage} alt="point" loading="lazy" />
                   <span> Age : </span> 12 years +
                 </div>
                 <br />
                 <div className="maincourse-points-list">
-                  <img src={coursetime} alt="point" />
+                  <img src={coursetime} alt="point" loading="lazy" />
                   <span>Duration</span> 6 Months
                 </div>
                 <br /><br />
@@ -75,6 +91,7 @@ const VedicHero = () => {
             <img
               src={coursevedic}
               alt="vedic Course"
+              loading="lazy"
               style={{
                 ...getImageStyles(),
                 marginTop: "0px",

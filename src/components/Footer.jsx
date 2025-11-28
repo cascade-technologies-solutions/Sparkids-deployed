@@ -1,37 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "react-router-dom";
-import logo from "../Assets/home-img/logo.png";
 import "../styles/footer.css";
 import { API_BASE_URL } from "../api";
 
 const Footer = () => {
-  const [email, setemail] = useState("");
-  const [responseMessage, setResponseMessage] = useState("");
-
-  const handleEmailCLick = async () => {
-    try {
-        const formData = new FormData();
-        formData.append("Email", email); 
-
-        const response = await fetch(`${API_BASE_URL}/email`, {
-            method: "POST",
-            body: formData,
-        });
-
-        if (response.ok) {
-            const data = await response.text();
-            setResponseMessage("We will get back to you!");
-            setTimeout(() => setResponseMessage(""), 3000);
-        } else {
-            const errorData = await response.text();
-            setResponseMessage(errorData || "Failed to submit. Please try again.");
-        }
-    } catch (error) {
-        console.error("Error contacting API:", error);
-        setResponseMessage("An error occurred. Please try again later.");
-    }
-};
+  // Email subscription functionality can be added here when needed
 
 
   return (
@@ -63,10 +37,10 @@ const Footer = () => {
             Vidya Nagar, Sindagi Road, Indi - 586209
           </p>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-facebook-f"></i></a>
-            <a href="#"><i className="fab fa-dribbble"></i></a>
-            <a href="#"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
+            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" aria-label="Dribbble"><i className="fab fa-dribbble"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i className="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
 

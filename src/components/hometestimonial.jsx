@@ -113,7 +113,7 @@ const Carousel = () => {
         {cardsData.slice(currentIndex, currentIndex + 3).map((card) => (
           <div className="testimonialcard" key={card.id}>
             <div className="top-image">
-              <img src={card.topImage} alt="comma" />
+              <img src={card.topImage} alt="comma" loading="lazy" />
             </div>
             <div className="testimonialcard-content">
               <div className="quote-icon"></div>
@@ -123,6 +123,7 @@ const Carousel = () => {
                   src={card.image}
                   alt={card.author}
                   className="author-image"
+                  loading="lazy"
                 />
                 <h4>{card.author}</h4>
               </div>

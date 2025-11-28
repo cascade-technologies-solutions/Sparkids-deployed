@@ -68,7 +68,7 @@ const Hero = () => {
   </div>
       {/* Image Section */}
       <div className="image-partner">
-      <img src={watermark} alt="Partner Image" className="partner-image" />
+      <img src={watermark} alt="Partner" className="partner-image" />
     </div>
 </div>
 

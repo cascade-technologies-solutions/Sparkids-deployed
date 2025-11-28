@@ -15,15 +15,15 @@ const CubeCourse = () => {
                 </p>
                 <ul className="cube-points">
                     <li>
-                        <img src={point} alt="point" />
+                        <img src={point} alt="point" loading="lazy" />
                         <span>Enhances spatial awareness</span>
                     </li>
                     <li>
-                        <img src={point} alt="point" />
+                        <img src={point} alt="point" loading="lazy" />
                         <span>Strengthens cognitive function</span>
                     </li>
                     <li>
-                        <img src={point} alt="point" />
+                        <img src={point} alt="point" loading="lazy" />
                         <span>Demonstrates perseverance and practice</span>
                     </li>
                 </ul>
@@ -34,7 +34,7 @@ const CubeCourse = () => {
 
             {/* Right Image Section */}
             <div className="cube-image">
-                <img src={cubeImage} alt="Rubik's Cube Course" />
+                <img src={cubeImage} alt="Rubik's Cube Course" loading="lazy" />
             </div>
         </div>
     );

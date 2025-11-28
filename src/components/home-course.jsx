@@ -10,7 +10,7 @@ import courselevel from "../Assets/home-img/course-level.png";
 import courserate from "../Assets/home-img/course-rate.png";
 import courseLearnMore from "../Assets/home-img/course-learnmore.png";
 import learnmorebulb from "../Assets/home-img/learnmorebulb.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CourseCard = ({
   title,
@@ -24,12 +24,12 @@ const CourseCard = ({
 }) => {
   return (
     <div className="home-course-card">
-      <img src={image} alt="Course" className="home-course-image" />
+      <img src={image} alt="Course" className="home-course-image" loading="lazy" />
       <div className="home-course-content">
         <div className="home-course-title-row">
           <span className="home-course-title">{title}</span>
           <div className="home-course-rating">
-            <img src={courserate} alt="Rating" className="home-course-icon" />
+            <img src={courserate} alt="Rating" className="home-course-icon" loading="lazy" />
             {rating}
           </div>
         </div>
@@ -37,7 +37,7 @@ const CourseCard = ({
         <div className="home-course-info-container">
           <div className="home-course-column">
             <div className="home-course-info-row">
-              <img src={courseage} alt="Age" className="home-course-icon" />
+              <img src={courseage} alt="Age" className="home-course-icon" loading="lazy" />
               Age {age}
             </div>
             <div className="home-course-info-row">
@@ -45,6 +45,7 @@ const CourseCard = ({
                 src={coursetime}
                 alt="Duration"
                 className="home-course-icon"
+                loading="lazy"
               />
               {duration}
             </div>
@@ -55,6 +56,7 @@ const CourseCard = ({
                 src={courselevel}
                 alt="Levels"
                 className="home-course-icon"
+                loading="lazy"
               />
               {levels} Levels
             </div>
@@ -65,6 +67,7 @@ const CourseCard = ({
         src={courseLearnMore}
         alt="Learn More"
         className="home-course-learn-more"
+        loading="lazy"
       />
       {/* <Link to={`/${courseId}`} className="home-learn-more-text">
         Learn more{" "}
@@ -80,6 +83,7 @@ const CourseCard = ({
 
 const CourseList = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const courseData = [
     {
@@ -171,7 +175,7 @@ const CourseList = () => {
       <div className="home-course-list">
         <h2
           className="home-course-list-heading"
-          onClick={() => (window.location.href = "/courses")}
+          onClick={() => navigate("/courses")}
         >
           Explore all
           <svg

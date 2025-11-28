@@ -4,6 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ThemeProvider from './context/ThemeContext'; // Import the ThemeProvider
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// Initialize AOS globally
+AOS.init({
+  duration: 1000,
+  once: true,
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

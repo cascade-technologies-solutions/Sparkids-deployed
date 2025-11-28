@@ -15,15 +15,15 @@ const ReadingCourse = () => {
         </p>
         <ul className="reading-points">
           <li>
-            <img src={pointIcon} alt="point" />
+            <img src={pointIcon} alt="point" loading="lazy" />
             <span>Expands vocabulary</span>
           </li>
           <li>
-            <img src={pointIcon} alt="point" />
+            <img src={pointIcon} alt="point" loading="lazy" />
             <span>Strengthens comprehension and critical thinking</span>
           </li>
           <li>
-            <img src={pointIcon} alt="point" />
+            <img src={pointIcon} alt="point" loading="lazy" />
             <span>Encourages independent reading habits</span>
           </li>
         </ul>
@@ -34,7 +34,7 @@ const ReadingCourse = () => {
 
       {/* Right Image Section */}
       <div className="reading-image">
-        <img src={readingImage} alt="Reading Course" />
+        <img src={readingImage} alt="Reading Course" loading="lazy" />
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ import readingImage from "../Assets/home-img/courseimg5.png";
 
 const BoxLayoutCard = ({ image, title, rating, description, age, levels, time,courseId }) => (
   <div className="product-box">
-    <img src={image} alt={title} className="product-image" />
+    <img src={image} alt={title} className="product-image" loading="lazy" />
     <div className="description-box">
       <h3>
         {title} <span>{rating}</span>
@@ -23,16 +23,16 @@ const BoxLayoutCard = ({ image, title, rating, description, age, levels, time,co
       <p>{description}</p>
       <div className="course-info">
         <span className="info-item">
-          <img src={courseAge} alt="Age" className="icon" /> {age}
+          <img src={courseAge} alt="Age" className="icon" loading="lazy" /> {age}
         </span>
         <span className="info-item">
-          <img src={courseLevel} alt="Levels" className="icon" /> {levels}
+          <img src={courseLevel} alt="Levels" className="icon" loading="lazy" /> {levels}
         </span>
         <span className="info-item">
-          <img src={courseTime} alt="Time" className="icon" /> {time}
+          <img src={courseTime} alt="Time" className="icon" loading="lazy" /> {time}
         </span>
         <span className="info-item1">
-          <img className="learn-more" src={courseLearnMore} alt="Learn More" />
+          <img className="learn-more" src={courseLearnMore} alt="Learn More" loading="lazy" />
           <Link to={`/${courseId}`} className="home-learn-more-text1">Learn more{" "}</Link>
 
         </span>

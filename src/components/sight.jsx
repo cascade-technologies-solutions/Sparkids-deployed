@@ -14,17 +14,8 @@ import sight10 from '../Assets/home-img/image10.png';
 
 const Sights = () => {
   const navigate = useNavigate();
-  const [clickCount, setClickCount] = useState(0); // Single state to track total clicks
-  const maxClicks = 3; // Number of clicks required to navigate
-
   const handleImageClick = () => {
-    setClickCount(prevCount => {
-      const newCount = prevCount + 1;
-      if (newCount >= maxClicks) {
-        navigate('/insight'); // Navigate to insight page
-      }
-      return newCount;
-    });
+    navigate('/insight'); // Navigate to insight page
   };
 
   return (
@@ -52,9 +43,10 @@ const Sights = () => {
           <img
             key={index}
             src={image}
-            alt={`Gallery Image ${index + 1}`}
+            alt={`Gallery ${index + 1}`}
             onClick={handleImageClick}
             style={{ cursor: "pointer" }}
+            loading="lazy"
           />
         ))}
       </div>

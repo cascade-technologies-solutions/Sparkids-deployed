@@ -15,7 +15,7 @@ function Mission() {
   return (
     <div className="mission-wrapper">
       {/* Central Background Image */}
-      <img src={centralImage} alt="Central Background" className="central-image" />
+      <img src={centralImage} alt="Central Background" className="central-image" loading="lazy" />
 
       {/* Overlapping Text Section */}
       <div className="content-section">
@@ -30,7 +30,7 @@ function Mission() {
         {/* High-quality training section */}
         <div className="sub-section">
           <div className="icon">
-            <img src={missionicon} alt="Training Icon" />
+            <img src={missionicon} alt="Training Icon" loading="lazy" />
           </div>
           <div className="text">
             <h3>High-quality training</h3>
@@ -44,7 +44,7 @@ function Mission() {
         {/* Beneficial partnerships section */}
         <div className="sub-section">
           <div className="icon">
-            <img src={missionicon2} alt="Partnership Icon" />
+            <img src={missionicon2} alt="Partnership Icon" loading="lazy" />
           </div>
           <div className="text">
             <h3>Beneficial partnerships</h3>
@@ -58,13 +58,13 @@ function Mission() {
 
       {/* Image Section with Surrounding Icons */}
       <div className="image-section">
-        <img src={mission1} alt="Mission Icon 1" className="mission-icon icon1" />
-        <img src={mission2} alt="Mission Icon 2" className="mission-icon icon2" />
-        <img src={mission3} alt="Mission Icon 3" className="mission-icon icon3" />
-        <img src={mission4} alt="Mission Icon 4" className="mission-icon icon4" />
-        <img src={mission5} alt="Mission Icon 5" className="mission-icon icon5" />
-        <img src={mission6} alt="Mission Icon 6" className="mission-icon icon6" />
-        <img src={smallImage} alt="Small Overlapping" className="main-image" />
+        <img src={mission1} alt="Mission Icon 1" className="mission-icon icon1" loading="lazy" />
+        <img src={mission2} alt="Mission Icon 2" className="mission-icon icon2" loading="lazy" />
+        <img src={mission3} alt="Mission Icon 3" className="mission-icon icon3" loading="lazy" />
+        <img src={mission4} alt="Mission Icon 4" className="mission-icon icon4" loading="lazy" />
+        <img src={mission5} alt="Mission Icon 5" className="mission-icon icon5" loading="lazy" />
+        <img src={mission6} alt="Mission Icon 6" className="mission-icon icon6" loading="lazy" />
+        <img src={smallImage} alt="Small Overlapping" className="main-image" loading="lazy" />
       </div>
     </div>
   );

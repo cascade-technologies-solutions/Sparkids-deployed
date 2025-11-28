@@ -93,130 +93,104 @@
   width: 211px;
 }
 }
-@media (max-width: 768px) {
+/* Tablet: 601px - 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
   .insightstudent-container {
     flex-wrap: nowrap;
     overflow-x: auto;
-    margin-left:-20px;
-    gap: 15px; /* Adjusts spacing between cards */
+    margin-left: -20px;
+    gap: 15px;
   }
-  /* .insightstudent-title {
-      font-size: 50px;
-  } */
+
   .insightstudent-image {
-      width: 195px;
-      height: 219.02px;
-      border-radius: 50%;
-      margin-left: -13px;
+    width: 195px;
+    height: 219.02px;
+    border-radius: 50%;
+    margin-left: -13px;
   }
+
   .insightstudent-name {
-      font-size: 16px;
-      margin-bottom: -12px;
+    font-size: 16px;
+    margin-bottom: -12px;
   }
+
   .insightstudent-prize {
-      font-size: 12px;
-      margin-bottom: -9px;
+    font-size: 12px;
+    margin-bottom: -9px;
   }
-  .insightstudent-description{
-  line-height: 1.2;
-  font-size: 14px;
+
+  .insightstudent-description {
+    line-height: 1.2;
+    font-size: 14px;
   }
+
   .insightstudent-card {
     flex: 0 0 auto;
     width: 189px;
   }
 }
 
-@media (max-width: 428px) {
+/* Mobile: 320px - 600px */
+@media (max-width: 600px) {
   .insightstudent {
-      width: 100%;
+    width: 100%;
   }
+
   .insightstudent-container {
     flex-direction: column;
-    margin-left: 23px;
-      gap:0px;
+    margin-left: 0;
+    gap: 20px;
     align-items: center;
+    padding: 10px;
   }
+
   .insightstudent-image {
-      width: 248px;
-      height: 279.02px;
+    width: 220px;
+    height: 248px;
+    border-radius: 50%;
   }
+
   .insightstudent-title {
-      font-size: 40px;
+    font-size: 36px;
   }
- 
+
   .insightstudent-subtitle {
-      font-size: 17px;
+    font-size: 16px;
   }
+
   .insightstudent-name {
-      font-size: 18px;
-      margin-bottom: -12px;
+    font-size: 18px;
+    margin-bottom: -12px;
   }
+
   .insightstudent-prize {
-      font-size: 14px;
-      margin-bottom: -9px;
+    font-size: 14px;
+    margin-bottom: -9px;
   }
-  .insightstudent-description{
-  line-height: 1.2;
-  font-size: 17px;
+
+  .insightstudent-description {
+    line-height: 1.2;
+    font-size: 16px;
   }
+
   .insightstudent-card {
     width: 100%;
     max-width: 300px;
-  }
-}
-
-@media (max-width: 394px) {
-  .insightstudent-title {
-    font-size: 36px; 
-  }
-  
-  .insightstudent-card {
-    width: 90%; 
     margin-bottom: 20px;
   }
 
-  .insightstudent-description {
-    font-size: 18px; 
-  }
-}
+  /* Small mobile adjustments */
+  @media (max-width: 375px) {
+    .insightstudent-title {
+      font-size: 30px;
+    }
 
-@media (max-width: 376px) {
-  .insightstudent-card {
-    width: 85%;
-    margin-bottom: 15px;
-  }
-  .insightstudent-name {
-      font-size: 18px;
-  }
-  .insightstudent-title {
-    font-size: 30px;
-  }
+    .insightstudent-card {
+      width: 90%;
+    }
 
-  .insightstudent-description {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 320px) {
-  .insightstudent-container {
-    padding: 10px;
-  }
-  .insightstudent-image {
-      width: 223px;
-      height: 251.02px;
-  }
-  .insightstudent-card {
-    width: 80%;
-   border:1px solid white;
-    margin-bottom: 10px;
-  }
-
-  .insightstudent-title {
-    font-size: 24px;
-  }
-
-  .insightstudent-description {
-    font-size: 14px;
+    .insightstudent-description {
+      font-size: 15px;
+    }
   }
 }

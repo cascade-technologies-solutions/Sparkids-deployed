@@ -205,21 +205,22 @@
   font-family: geologica;
   margin: 1rem 0;
 }
-@media (max-width: 768px) {
+/* Tablet: 601px - 1024px */
+@media (min-width: 601px) and (max-width: 1024px) {
   .page-container {
-    margin: 4rem 2rem;
-    margin-top: -150px;
+    margin: 3rem 2rem;
+    margin-top: -100px;
   }
 
   .tab-header {
     padding: 20px;
     margin-left: 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     gap: 20px;
   }
 
   .tab-button {
-    font-size: 18px;
+    font-size: 16px;
     padding: 0.5rem;
   }
 
@@ -228,33 +229,40 @@
     padding: 2rem;
     margin-left: 0;
   }
+
   .overview-description {
     font-size: 18px;
     width: 100%;
   }
+
   .benefits-list li {
-    font-size: 20px;
+    font-size: 18px;
     gap: 8px;
   }
+
   .dropdown-header h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
-/* For screens up to 425px */
-@media (max-width: 426px) {
+/* Mobile: 320px - 600px */
+@media (max-width: 600px) {
   .page-container {
     margin: 2rem 1rem;
+    margin-top: -120px;
   }
 
   .tab-header {
     padding: 15px;
     gap: 15px;
+    flex-wrap: wrap;
   }
 
   .tab-button {
-    font-size: 16px;
-    padding: 0.4rem;
+    font-size: 14px;
+    padding: 0.4rem 0.6rem;
+    flex: 1;
+    min-width: 100px;
   }
 
   .content-card {
@@ -262,80 +270,67 @@
     margin-left: 0;
   }
 
-  .benefits-list li {
-    font-size: 20px;
-    gap: 8px;
-  }
-
-  .dropdown-header h3 {
-    font-size: 20px;
-  }
-
-  .dropdown-content {
-    font-size: 20px;
-  }
-
-  .level-detail span {
-    font-size: 20px;
-  }
-}
-
-/* For screens up to 375px */
-@media (max-width: 376px) {
-  .page-container {
-    margin: 1.5rem 0.5rem;
-  }
-
-  .tab-header {
-    padding: 10px;
-    gap: 10px;
-  }
-
-  .tab-button {
-    font-size: 14px;
-    padding: 0.3rem;
-  }
-
-  .content-card {
-    padding: 1rem;
+  .overview-description {
+    font-size: 16px;
+    width: 100%;
   }
 
   .benefits-list li {
-    font-size: 18px;
+    font-size: 16px;
     gap: 6px;
   }
 
   .dropdown-header h3 {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .dropdown-content {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .level-detail span {
-    font-size: 18px;
-  }
-}
-
-/* For screens up to 320px */
-@media (max-width: 321px) {
-  .page-container {
-    margin: 1rem 0.5rem;
-  }
-  .overview-description {
-    font-size: 14px;
-    width: 100%;
-}
-
-  .tab-header {
-    padding: 8px;
-    gap: 8px;
+    font-size: 16px;
   }
 
-  .tab-button {
-    font-size: 12px;
-    padding: 0.2rem;
+  /* Small mobile adjustments */
+  @media (max-width: 375px) {
+    .page-container {
+      margin: 1.5rem 0.5rem;
+    }
+
+    .tab-header {
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .tab-button {
+      font-size: 12px;
+      padding: 0.3rem 0.5rem;
+    }
+
+    .content-card {
+      padding: 1rem;
+    }
+
+    .overview-description {
+      font-size: 14px;
+    }
+
+    .benefits-list li {
+      font-size: 14px;
+    }
+
+    .dropdown-header h3 {
+      font-size: 14px;
+    }
+
+    .dropdown-content {
+      font-size: 14px;
+    }
+
+    .level-detail span {
+      font-size: 14px;
+    }
   }
 
   .content-card {

@@ -8,9 +8,21 @@ const CustomCursor = () => {
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    // Update cursor position
+    let rafId = null;
+    let lastX = 0;
+    let lastY = 0;
+
+    // Throttled cursor position update using requestAnimationFrame
     const moveCursor = (e) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      lastX = e.clientX;
+      lastY = e.clientY;
+      
+      if (rafId === null) {
+        rafId = requestAnimationFrame(() => {
+          setPosition({ x: lastX, y: lastY });
+          rafId = null;
+        });
+      }
     };
 
     // Detect hover on specific elements
@@ -36,6 +48,9 @@ const CustomCursor = () => {
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mouseover", handleMouseEnter);
       window.removeEventListener("mouseout", handleMouseLeave);
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+      }
     };
   }, []);
 
@@ -52,6 +67,7 @@ const CustomCursor = () => {
         <img
           src={isHovering ? hoverImg : flameImg}
           alt="Cursor"
+          loading="eager"
         />
       </div>
     </>

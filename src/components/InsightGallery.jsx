@@ -101,7 +101,7 @@ const Gallery = () => {
             key={index}
             className={`gallery-item ${index % 2 === 0 ? 'offset-up' : 'offset-down'}`}
           >
-            <img src={src} alt={`Gallery item ${index + 1}`} />
+            <img src={src} alt={`Gallery item ${index + 1}`} loading="lazy" />
           </div>
         ))}
       </div>

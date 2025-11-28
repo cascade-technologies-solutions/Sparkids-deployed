@@ -46,14 +46,14 @@ const Opportunity = () => {
 
         {/* Middle Images */}
         <div className="opportunity-middle-images">
-          <img src={opport2} className="no-hover" alt="Middle educational opportunity" />
+          <img src={opport2} className="no-hover" alt="Middle educational opportunity" loading="lazy" />
           <div className="opportunity-middle2">
-            <img src={opport1} alt="Another educational opportunity" />
+            <img src={opport1} alt="Another educational opportunity" loading="lazy" />
         </div></div>
 
         {/* Bottom Image */}
         <div className="opportunity-bottom-image">
-          <img src={opport3} alt="Hands-on learning" />
+          <img src={opport3} alt="Hands-on learning" loading="lazy" />
         </div>
       </div>
       </div>

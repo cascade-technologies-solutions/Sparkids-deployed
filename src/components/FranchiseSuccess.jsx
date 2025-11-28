@@ -1,8 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../styles/franchisesuccess.css";
 import franchisesuccess1 from "../Assets/franchise-img/franchisesuccess1.png";
-import AOS from "aos"; // Import AOS for animations
-import "aos/dist/aos.css"; // Import AOS styles
 import Slider from "react-slick";
 
 const FranchiseSlider = () => {
@@ -57,14 +55,6 @@ const FranchiseSlider = () => {
     ],
   };
 
-  // Start AOS on component mount
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
-
   return (
     <section className="franchisesuccess-slider-container">
       <Slider {...settings} className="franchisesuccess-slider">
@@ -80,6 +70,7 @@ const FranchiseSlider = () => {
                 src={slide.image}
                 alt={`Slide ${index + 1}`} // Corrected alt attribute
                 className="franchisesuccess-slider-image"
+                loading="lazy"
               />
             </div>
             <div className="franchisesuccess-content-container">

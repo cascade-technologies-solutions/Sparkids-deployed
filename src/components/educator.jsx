@@ -13,6 +13,7 @@ const Educator = () => {
           <img
             src={Educators} alt="Educators"
             className="educator-image"
+            loading="lazy"
           />
         </div>
 
@@ -20,7 +21,8 @@ const Educator = () => {
         <div className="educator-shape-container">
           <img
             src={Shape} alt="Educators"
-            className="educator-shape" />
+            className="educator-shape"
+            loading="lazy" />
         <div className="educator-text-container">
           <h3 className="educator-label">Careers</h3>
           <h1 className="educator-heading">

@@ -1,17 +1,56 @@
-import React, { useState, useContext } from "react";
-import { NavLink } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle"; // Custom theme toggle component
+import React, { useState, useContext, useEffect, useRef } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext";
 import "../styles/header.css";
-import Dropdown from "react-bootstrap/Dropdown";
 
 function Header() {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
-
+  const dropdownRef = useRef(null);
+  const location = useLocation();
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
-  const closeNav = () => setIsNavOpen(false);
+  const closeNav = () => {
+    setIsNavOpen(false);
+    setIsDropdownOpen(false);
+  };
+  
+  const handleDropdownToggle = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  // Close dropdown when clicking on other nav items
+  const handleNavItemClick = () => {
+    setIsDropdownOpen(false);
+    setIsNavOpen(false);
+  };
+
+  // Close dropdown when route changes
+  useEffect(() => {
+    setIsDropdownOpen(false);
+    setIsNavOpen(false);
+  }, [location.pathname]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target) && isDropdownOpen) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isDropdownOpen]);
+
   return (
     <header className="header">
       <div className="logo">
@@ -54,7 +93,7 @@ function Header() {
           </svg>
         </NavLink>
       </div>
-      <div className="hamburger" onClick={toggleNav}>
+      <div className={`hamburger ${isNavOpen ? "active" : ""}`} onClick={toggleNav}>
         <span></span>
         <span></span>
         <span></span>
@@ -76,65 +115,69 @@ function Header() {
           <li>
             <NavLink
               to="/about"
-              onClick={closeNav}
+              onClick={handleNavItemClick}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               AboutUs
             </NavLink>
           </li>
-          <li className="dropdown">
-            <Dropdown>
-              <Dropdown.Toggle className="dropdown-toggle" id="dropdown-basic">
-                <span className="dropdown-label">
-                  Courses
-                  <svg
-                    className="dropdown-arrow"
-                    width="12"
-                    height="13"
-                    viewBox="0 0 12 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M2 10.5L8 6.5L2 2.5"
-                      stroke="var(--primary-orange)"
-                      strokeWidth="3.37"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </span>
-              </Dropdown.Toggle>
+          <li className={`dropdown ${isDropdownOpen ? "open" : ""}`} ref={dropdownRef}>
+            <button 
+              className="dropdown-toggle" 
+              id="dropdown-basic"
+              onClick={handleDropdownToggle}
+            >
+              <span className="dropdown-label">
+                Courses
+                <svg
+                  className={`dropdown-arrow ${isDropdownOpen ? "rotated" : ""}`}
+                  width="12"
+                  height="13"
+                  viewBox="0 0 12 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M2 10.5L8 6.5L2 2.5"
+                    stroke="var(--primary-orange)"
+                    strokeWidth="3.37"
+                    strokeLinecap="round"
+                  />
+                </svg>
+              </span>
+            </button>
 
-              <Dropdown.Menu>
-                <Dropdown.Item as={NavLink} to="/abacus" onClick={closeNav}>
+            {isDropdownOpen && (
+              <div className="dropdown-menu-custom">
+                <NavLink to="/abacus" className="dropdown-item" onClick={handleNavItemClick}>
                   Abacus
-                </Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/vedic" onClick={closeNav}>
+                </NavLink>
+                <NavLink to="/vedic" className="dropdown-item" onClick={handleNavItemClick}>
                   Vedic Maths
-                </Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/rubic" onClick={closeNav}>
+                </NavLink>
+                <NavLink to="/rubic" className="dropdown-item" onClick={handleNavItemClick}>
                   Rubik
-                </Dropdown.Item>
-                <Dropdown.Item
-                  as={NavLink}
+                </NavLink>
+                <NavLink
                   to="/handwriting"
-                  onClick={closeNav}
+                  className="dropdown-item"
+                  onClick={handleNavItemClick}
                 >
                   Handwriting
-                </Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/reading" onClick={closeNav}>
+                </NavLink>
+                <NavLink to="/reading" className="dropdown-item" onClick={handleNavItemClick}>
                   Reading
-                </Dropdown.Item>
-                <Dropdown.Item as={NavLink} to="/courses" onClick={closeNav}>
+                </NavLink>
+                <NavLink to="/courses" className="dropdown-item" onClick={handleNavItemClick}>
                   All Courses
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
+                </NavLink>
+              </div>
+            )}
           </li>
           <li>
             <NavLink
               to="/franchise"
-              onClick={closeNav}
+              onClick={handleNavItemClick}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Franchise
@@ -143,7 +186,7 @@ function Header() {
           <li>
             <NavLink
               to="/careers"
-              onClick={closeNav}
+              onClick={handleNavItemClick}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Careers
@@ -152,7 +195,7 @@ function Header() {
           <li>
             <NavLink
               to="/insight"
-              onClick={closeNav}
+              onClick={handleNavItemClick}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               Insights
@@ -161,7 +204,7 @@ function Header() {
           <li>
             <NavLink
               to="/contact"
-              onClick={closeNav}
+              onClick={handleNavItemClick}
               className={({ isActive }) => (isActive ? "active" : "")}
             >
               <button className="contact-us">Contact Us</button>
