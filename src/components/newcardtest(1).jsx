@@ -72,6 +72,16 @@ const BoxLayoutCard1 = () => {
       duration: "6 Months",
       path: "/reading",
     },
+    {
+      image: readingImage,
+      title: "Spelling Bee",
+      rating: "4.9",
+      description: "Strengthen language and reading comprehension skills",
+      age: "3+",
+      levels: "2 Levels",
+      duration: "6 Months",
+      path: "/spellingbee",
+    },
   ];
 
   return (

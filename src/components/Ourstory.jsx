@@ -26,6 +26,11 @@ const timelineData = [
     content: "Surpassed 9,000+ students and 50+ franchise partners.",
     icon: yearIcon4,
   },
+  {
+    year: "2025",
+    content: "Surpassed 9,000+ students and 50+ franchise partners.",
+    icon: yearIcon4,
+  },
 ];
 
 const OurStory = () => {
