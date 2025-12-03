@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 import Hero from '../components/Hero';
 //import Footer from '../components/Footer';
 import Opportunity from '../components/opportunity';
-import Sight from '../components/sight';
+// import Sight from '../components/sight';
 import Educator from '../components/educator';
 // import Course from '../components/home-course';
 import HomeTestimonials from '../components/hometestimonial';
@@ -38,7 +38,7 @@ export const HomePage = () => {
       <Coursecard />
       <Opportunity />
       <Educator />
-      <Sight />
+      {/* <Sight /> */}
       <div id="testimonials">
       <HomeTestimonials />
       </div>
