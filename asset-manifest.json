@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/Sparkids-deployed/static/css/main.aa4f3d8b.css",
-    "main.js": "/Sparkids-deployed/static/js/main.7b0b3fab.js",
-    "static/css/78.30b6809c.chunk.css": "/Sparkids-deployed/static/css/78.30b6809c.chunk.css",
+    "main.js": "/Sparkids-deployed/static/js/main.0417e9a3.js",
+    "static/css/78.a6dcad70.chunk.css": "/Sparkids-deployed/static/css/78.a6dcad70.chunk.css",
     "static/js/78.d34370fb.chunk.js": "/Sparkids-deployed/static/js/78.d34370fb.chunk.js",
     "static/css/237.efe95df1.chunk.css": "/Sparkids-deployed/static/css/237.efe95df1.chunk.css",
     "static/js/237.a7d23ec8.chunk.js": "/Sparkids-deployed/static/js/237.a7d23ec8.chunk.js",
@@ -91,8 +91,8 @@
     "static/media/ourstory1.png": "/Sparkids-deployed/static/media/ourstory1.282f0b3bd8f9bd04d6d3.png",
     "index.html": "/Sparkids-deployed/index.html",
     "main.aa4f3d8b.css.map": "/Sparkids-deployed/static/css/main.aa4f3d8b.css.map",
-    "main.7b0b3fab.js.map": "/Sparkids-deployed/static/js/main.7b0b3fab.js.map",
-    "78.30b6809c.chunk.css.map": "/Sparkids-deployed/static/css/78.30b6809c.chunk.css.map",
+    "main.0417e9a3.js.map": "/Sparkids-deployed/static/js/main.0417e9a3.js.map",
+    "78.a6dcad70.chunk.css.map": "/Sparkids-deployed/static/css/78.a6dcad70.chunk.css.map",
     "78.d34370fb.chunk.js.map": "/Sparkids-deployed/static/js/78.d34370fb.chunk.js.map",
     "237.efe95df1.chunk.css.map": "/Sparkids-deployed/static/css/237.efe95df1.chunk.css.map",
     "237.a7d23ec8.chunk.js.map": "/Sparkids-deployed/static/js/237.a7d23ec8.chunk.js.map",
@@ -118,6 +118,6 @@
   },
   "entrypoints": [
     "static/css/main.aa4f3d8b.css",
-    "static/js/main.7b0b3fab.js"
+    "static/js/main.0417e9a3.js"
   ]
 }
