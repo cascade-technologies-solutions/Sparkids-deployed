@@ -192,6 +192,7 @@ function Header() {
               Careers
             </NavLink>
           </li>
+          {/* Temporarily removed Insights page
           <li>
             <NavLink
               to="/insight"
@@ -201,6 +202,7 @@ function Header() {
               Insights
             </NavLink>
           </li>
+          */}
           <li>
             <NavLink
               to="/contact"

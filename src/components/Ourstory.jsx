@@ -37,7 +37,7 @@ const OurStory = () => {
   return (
     <section>   
       <div className="aboutus-ourstory">
-     <div classname="aboutus-ourstory-conatiner"> 
+     <div className="aboutus-ourstory-conatiner"> 
     <div className="aboutus-ourstory-text">
       <h2>Our Story</h2>
       <h3>Cultivating Bright Futures</h3>

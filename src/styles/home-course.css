@@ -1,39 +1,64 @@
+section.home-card-info,
 .home-card-info{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center !important;
+  width: 100%;
+  margin: 0 auto;
 }
 .home-card-info-text{
   margin-bottom: -20px;
   margin-top: 50px;
+  text-align: center !important;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 .home-card-info-text h2 {
-  text-align: center;
+  text-align: center !important;
   font-size: 24px;
   font-weight: 400;
   color: var(--primary-orange);
   margin-bottom: 10px;
   font-family: geologica;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: block;
+}
   
-  .home-card-info-text h3 {
-    margin-top: -19px;
-    text-align: center;
-    font-size: 50px;
-    color: var(--primary-grey);
-    font-weight: 800;
-    margin-bottom: -19px;
-    font-family: lilita one;
-  }
+.home-card-info-text h3 {
+  margin-top: -19px;
+  text-align: center !important;
+  font-size: 50px;
+  color: var(--primary-grey);
+  font-weight: 800;
+  margin-bottom: -19px;
+  font-family: lilita one;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: block;
+}
   
-  .home-card-info-text p {
-    font-size: 22px;
-    margin-top: 20px;
-    text-align: center;
-    font-weight: 100;
-    font-family: geologica;
-   color: var(--primary-grey);
-  }
+.home-card-info-text p {
+  font-size: 22px;
+  margin-top: 20px;
+  text-align: center !important;
+  font-weight: 100;
+  font-family: geologica;
+  color: var(--primary-grey);
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
 
 .home-course-list {
   text-align: right;

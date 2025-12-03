@@ -12,7 +12,8 @@ const AboutPage = React.lazy(() => import("./pages/AboutPage"));
 const CoursePage = React.lazy(() => import("./pages/CoursePage"));
 const FranchisePage = React.lazy(() => import("./pages/FranchisePage"));
 const CareersPage = React.lazy(() => import("./pages/CareersPage"));
-const Insight = React.lazy(() => import("./pages/InsightPage"));
+// Temporarily removed Insights page
+// const Insight = React.lazy(() => import("./pages/InsightPage"));
 const Contact = React.lazy(() => import("./pages/ContactPage"));
 const AbacusPage = React.lazy(() => import("./pages/AbacusPage"));
 const VedicPage = React.lazy(() => import("./pages/VedicPage"));
@@ -52,7 +53,9 @@ function App() {
           <Route path="/reading" element={<ReadingPage />} />
           <Route path="/franchise" element={<FranchisePage />} />
           <Route path="/careers" element={<CareersPage />} />
+          {/* Temporarily removed Insights page
           <Route path="/insight" element={<Insight />} />
+          */}
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Suspense>
