@@ -968,6 +968,90 @@
 
   /* Animation durations are set in individual selectors above */
 
+  /* Brain layout for 426px to 600px range */
+  @media (min-width: 426px) and (max-width: 600px) {
+    .brain-layout {
+      width: 100%;
+      max-width: 320px;
+      height: 320px;
+      margin: 20px auto;
+      top: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .brain-left,
+    .brain-right {
+      width: 30%;
+      max-width: 90px;
+      height: auto;
+      z-index: 2;
+    }
+
+    .brain-left {
+      right: calc(50% + 10px);
+      top: 12%;
+    }
+
+    .brain-right {
+      left: calc(50% + 10px);
+      top: 12%;
+    }
+
+    .brain-icon {
+      max-width: 40px;
+      z-index: 1;
+    }
+
+    .bulb {
+      width: 20%;
+      max-width: 45px;
+      top: 32%;
+      left: 10%;
+    }
+
+    .symbol {
+      width: 16%;
+      max-width: 35px;
+      bottom: 20%;
+      left: 14%;
+    }
+
+    .puzzle1 {
+      width: 20%;
+      max-width: 45px;
+      top: 32%;
+      right: 10%;
+    }
+
+    .puzzle2 {
+      top: 12%;
+      left: 40%;
+      width: 22%;
+      max-width: 50px;
+    }
+
+    .pencil {
+      bottom: 18%;
+      right: 14%;
+      width: 24%;
+      max-width: 55px;
+    }
+
+    .brain-icon.gear,
+    .gear {
+      width: 90%;
+      max-width: 280px;
+      height: auto;
+      position: absolute;
+      top: 3%;
+      left: 5%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      opacity: 1 !important;
+    }
+  }
+
   /* Specific fix for 425px - Match 768px layout but scaled down */
   @media (max-width: 425px) {
     .hero-section {
