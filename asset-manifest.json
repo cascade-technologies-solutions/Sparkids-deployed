@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/Sparkids-deployed/static/css/main.aa4f3d8b.css",
-    "main.js": "/Sparkids-deployed/static/js/main.e84ea17f.js",
-    "static/css/691.fbf683a7.chunk.css": "/Sparkids-deployed/static/css/691.fbf683a7.chunk.css",
-    "static/js/691.8b7fba30.chunk.js": "/Sparkids-deployed/static/js/691.8b7fba30.chunk.js",
+    "main.js": "/Sparkids-deployed/static/js/main.7b0b3fab.js",
+    "static/css/78.30b6809c.chunk.css": "/Sparkids-deployed/static/css/78.30b6809c.chunk.css",
+    "static/js/78.d34370fb.chunk.js": "/Sparkids-deployed/static/js/78.d34370fb.chunk.js",
     "static/css/237.efe95df1.chunk.css": "/Sparkids-deployed/static/css/237.efe95df1.chunk.css",
     "static/js/237.a7d23ec8.chunk.js": "/Sparkids-deployed/static/js/237.a7d23ec8.chunk.js",
     "static/css/438.aef54f21.chunk.css": "/Sparkids-deployed/static/css/438.aef54f21.chunk.css",
@@ -54,21 +54,11 @@
     "static/media/opport3.jpg": "/Sparkids-deployed/static/media/opport3.0f09a60de878681930f1.jpg",
     "static/media/opport1.jpg": "/Sparkids-deployed/static/media/opport1.54f5ef5fc79b24ef4a8b.jpg",
     "static/media/vision1.png": "/Sparkids-deployed/static/media/vision1.48a5b045d0b17035bd54.png",
-    "static/media/image4.png": "/Sparkids-deployed/static/media/image4.93f50a7a9619b2d0a24b.png",
-    "static/media/image7.png": "/Sparkids-deployed/static/media/image7.a7638faa032638b665d1.png",
     "static/media/img.png": "/Sparkids-deployed/static/media/img.8919c2d7bdc71a119e30.png",
-    "static/media/image2.png": "/Sparkids-deployed/static/media/image2.d6b3e3dfcab32f4f7360.png",
     "static/media/team3.png": "/Sparkids-deployed/static/media/team3.ea87bcc59c4485554195.png",
-    "static/media/image1.png": "/Sparkids-deployed/static/media/image1.77f0d6cba3ce79e9e986.png",
     "static/media/team2.png": "/Sparkids-deployed/static/media/team2.37e5f42fa6c5220a90cc.png",
-    "static/media/image5.png": "/Sparkids-deployed/static/media/image5.89535dd5de664476a236.png",
-    "static/media/image9.png": "/Sparkids-deployed/static/media/image9.18689f622b54cc7eea34.png",
     "static/media/team1.png": "/Sparkids-deployed/static/media/team1.8d4ca9fdb7ab86b700e0.png",
-    "static/media/image10.png": "/Sparkids-deployed/static/media/image10.b1a1ed3584b85a7b9ec1.png",
     "static/media/team4.png": "/Sparkids-deployed/static/media/team4.f8db85bda3146322423f.png",
-    "static/media/image3.png": "/Sparkids-deployed/static/media/image3.90717075ff21caa6ef16.png",
-    "static/media/image6.png": "/Sparkids-deployed/static/media/image6.2f1f5df5ccbefcced4a0.png",
-    "static/media/image8.png": "/Sparkids-deployed/static/media/image8.164ab075e3a2db7c689f.png",
     "static/media/flame.png": "/Sparkids-deployed/static/media/flame.5ba17c16da6802c271fd.png",
     "static/media/hover.png": "/Sparkids-deployed/static/media/hover.38baa8728a92d2804b9c.png",
     "static/media/missionbg.png": "/Sparkids-deployed/static/media/missionbg.6f801c26f9f9a0ab9c19.png",
@@ -101,9 +91,9 @@
     "static/media/ourstory1.png": "/Sparkids-deployed/static/media/ourstory1.282f0b3bd8f9bd04d6d3.png",
     "index.html": "/Sparkids-deployed/index.html",
     "main.aa4f3d8b.css.map": "/Sparkids-deployed/static/css/main.aa4f3d8b.css.map",
-    "main.e84ea17f.js.map": "/Sparkids-deployed/static/js/main.e84ea17f.js.map",
-    "691.fbf683a7.chunk.css.map": "/Sparkids-deployed/static/css/691.fbf683a7.chunk.css.map",
-    "691.8b7fba30.chunk.js.map": "/Sparkids-deployed/static/js/691.8b7fba30.chunk.js.map",
+    "main.7b0b3fab.js.map": "/Sparkids-deployed/static/js/main.7b0b3fab.js.map",
+    "78.30b6809c.chunk.css.map": "/Sparkids-deployed/static/css/78.30b6809c.chunk.css.map",
+    "78.d34370fb.chunk.js.map": "/Sparkids-deployed/static/js/78.d34370fb.chunk.js.map",
     "237.efe95df1.chunk.css.map": "/Sparkids-deployed/static/css/237.efe95df1.chunk.css.map",
     "237.a7d23ec8.chunk.js.map": "/Sparkids-deployed/static/js/237.a7d23ec8.chunk.js.map",
     "438.aef54f21.chunk.css.map": "/Sparkids-deployed/static/css/438.aef54f21.chunk.css.map",
@@ -128,6 +118,6 @@
   },
   "entrypoints": [
     "static/css/main.aa4f3d8b.css",
-    "static/js/main.e84ea17f.js"
+    "static/js/main.7b0b3fab.js"
   ]
 }
