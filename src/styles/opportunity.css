@@ -12,8 +12,8 @@
   color: var(--primary-grey);
   font-family: lilita one;
   margin-bottom: 20px;
-  margin-left:160px;
-  margin-top:190px;
+  margin-left: 160px;
+  margin-top: 190px;
 
 }
 
@@ -22,8 +22,9 @@
   align-items: flex-start;
   justify-content: space-between;
   padding: 20px 20px;
- 
+
 }
+
 /* Text Container Styling */
 .opportunity-text-container {
   padding-left: 140px;
@@ -50,15 +51,16 @@
   margin-bottom: 15px;
   line-height: 1.6;
   font-family: geologica;
-  color:var(--highlight-color);
+  color: var(--highlight-color);
   font-size: 22px;
 }
-.opportunity-text-container span{
+
+.opportunity-text-container span {
   margin-bottom: 15px;
   line-height: 1.6;
   font-family: geologica;
   font-size: 24px;
-  color:var(--highlight-color);
+  color: var(--highlight-color);
 }
 
 .opportunity-cta-button {
@@ -85,7 +87,7 @@
   flex-direction: column;
   gap: 20px;
   position: relative;
-  margin-top:-100px;
+  margin-top: -100px;
 }
 
 /* Top Image Styling */
@@ -144,11 +146,11 @@
   margin-left: 100px;
 }
 
-.opportunity-middle2 img{
+.opportunity-middle2 img {
   margin-top: -100px;
   width: 405px;
-  height:361px;
-  margin-left:-230px ;
+  height: 361px;
+  margin-left: -230px;
   padding: 30px;
 }
 
@@ -157,23 +159,27 @@
   width: 235px;
   height: 299px;
   border-radius: 10px;
-  margin-top:-230px;
+  margin-top: -230px;
   margin-left: 60px;
   border: black;
 }
 
 .opportunity-image-container img,
 .opportunity-info-card {
-  transition: transform 0.2s ease; /* Smooth scaling effect */
+  transition: transform 0.2s ease;
+  /* Smooth scaling effect */
 }
 
 
 .opportunity-image-container img:not(.no-hover):hover {
-  transform: scale(1.03); /* Slightly enlarge */
+  transform: scale(1.03);
+  /* Slightly enlarge */
 }
+
 /* Hover Effect for Info Card */
 .opportunity-info-card:hover {
-  transform: scale(1.03); /* Slightly enlarge */
+  transform: scale(1.03);
+  /* Slightly enlarge */
 }
 
 /* Tablet: 601px - 1024px */
@@ -183,17 +189,20 @@
     margin-bottom: -220px;
     margin-left: 29px;
   }
-  
+
   .opportunity-head h1 {
     font-size: 35px;
     margin-bottom: -50px;
-    margin-left:30px;
-    margin-top:215px;
-  
+    margin-left: 30px;
+    margin-top: 215px;
+
   }
+
   .opportunity-section {
-    flex-direction: row; /* Stack items vertically */
-    align-items: center; /* Center-align content */
+    flex-direction: row;
+    /* Stack items vertically */
+    align-items: center;
+    /* Center-align content */
     padding: 60px 15px;
     margin-left: 16px;
   }
@@ -233,13 +242,13 @@
     margin-left: 0;
     margin-top: -20px;
   }
-  
+
   .opportunity-middle2 img {
     width: 230px;
     height: 250px;
     margin-left: -150px;
     margin-right: -60px;
-    margin-top:-60px;
+    margin-top: -60px;
   }
 
   .opportunity-bottom-image img {
@@ -247,7 +256,7 @@
     height: 200px;
     margin-left: -30px;
     margin-top: -151px;
-    margin-bottom:-100px;
+    margin-bottom: -100px;
   }
 
   .opportunity-info-card {
@@ -260,15 +269,16 @@
 
   .opportunity-info-card h4 {
     font-size: 12px;
-    margin-top:-6px;
+    margin-top: -6px;
   }
 
   .opportunity-info-card p {
     font-size: 12px;
     line-height: 1.2;
-    margin-top:-10px;
+    margin-top: -10px;
   }
-  .opportunity-bottom-image{
+
+  .opportunity-bottom-image {
     width: 300px;
     height: auto;
     margin-bottom: 30px;
@@ -303,8 +313,8 @@
   /* Adjust text container */
   .opportunity-text-container {
     padding-left: 0;
-    order:2;
-    max-width: 100%; 
+    order: 2;
+    max-width: 100%;
   }
 
   .opportunity-text-container h3 {
@@ -387,6 +397,7 @@
     margin-top: -70px;
     margin-left: 0;
   }
+
   /* Small mobile adjustments */
   @media (max-width: 375px) {
     .opportunity-head h3 {
@@ -446,27 +457,27 @@
       top: -35px;
       left: -40px;
       width: 110px;
-    height: 45px;
-    font-size: 10px;
-  }
+      height: 45px;
+      font-size: 10px;
+    }
 
-  .opportunity-info-card h4 {
-    font-size: 10px;
-    margin-top: -5px;
-  }
+    .opportunity-info-card h4 {
+      font-size: 10px;
+      margin-top: -5px;
+    }
 
-  .opportunity-info-card p {
-    font-size: 10px;
-    line-height: 1.2;
-    margin-top: -8px;
-  }
+    .opportunity-info-card p {
+      font-size: 10px;
+      line-height: 1.2;
+      margin-top: -8px;
+    }
 
-  .opportunity-bottom-image {
-    width: 250px;
-    height: auto;
-    margin-bottom: 20px;
-    margin-top: -70px;
-    margin-left: 0;
-  }
+    .opportunity-bottom-image {
+      width: 250px;
+      height: auto;
+      margin-bottom: 20px;
+      margin-top: -70px;
+      margin-left: 0;
+    }
   }
 }

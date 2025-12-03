@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import point from "../Assets/courses-img/checkpoint.png";
-import "../styles/AbacusOverview.css";
+import "../styles/AbacusOverview.css"; // Using the same CSS file
+import point from "../Assets/courses-img/checkpoint.png"; // Importing the image
 
-const HandOverview = () => {
+const HandwritingOverview = () => {
   const [activeTab, setActiveTab] = useState("overview");
   const [expandedSection, setExpandedSection] = useState(null); // For dropdown in Levels tab
 
@@ -21,9 +21,8 @@ const HandOverview = () => {
         {["Overview", "Levels", "Details", "Opportunities"].map((tab) => (
           <button
             key={tab}
-            className={`tab-button ${
-              activeTab.toLowerCase() === tab.toLowerCase() ? "active" : ""
-            }`}
+            className={`tab-button ${activeTab.toLowerCase() === tab.toLowerCase() ? "active" : ""
+              }`}
             onClick={() => handleTabClick(tab.toLowerCase())}
           >
             {tab}
@@ -35,279 +34,228 @@ const HandOverview = () => {
       <div className="content-card">
         {activeTab === "overview" && (
           <div className="overview-content">
-            <h2 className="main-title">What is Abacus ?</h2>
+            <h2 className="main-title">What is Handwriting Improvement?</h2>
             <p className="overview-description">
-              Handwriting is a Latin word that has its origins in the Greek words
-              <i> abax</i> or <i>abakion</i> (meaning "table" or "tablet"),
-              which in turn, possibly originated from the Semitic word{" "}
-              <i>abaq</i>, meaning "sand". The Handwriting is one of many types of
-              counting devices that are used to count large numbers.
+              Handwriting is more than just putting words on paper—it is a reflection of clarity, discipline, and
+              confidence. Our Handwriting Improvement Program is scientifically designed to fix poor grip,
+              irregular spacing, and illegible strokes. We focus on fine motor skills, posture, and pen control to
+              help students write effortlessly. Whether it’s print or cursive, a beautiful handwriting style boosts
+              academic performance and leaves a lasting positive impression.
             </p>
             <h3 className="sub-title">
-              Unlock Your Child's Brain Potential with Handwriting Learning!
+              Transform Your Child’s Writing & Confidence
             </h3>
             <p className="overview-description">
-              Unleash the limitless potential of your child’s mind with our
-              Handwriting program! Specially designed for children aged 4 to 15.
+              Does your child struggle with messy writing, slow speed, or hand pain?
+              Our program transforms their writing from illegible to beautiful in just a few weeks.
+              We don’t just teach them to copy letters; we retrain their muscle memory for proper grip and
+              movement.
+              Clear handwriting leads to better grades, as teachers can read answers without effort.
+              Beyond school, the discipline of writing neatly builds patience, focus, and self-esteem.
             </p>
-            <p className="overview-description">
-              This course isn’t just about calculations; it’s a journey of
-              holistic brain development. The Handwriting program stimulates both
-              sides of the brain, helping children improve cognitive abilities
-              through visualization, memory, and concentration. Each level
-              progressively builds upon skills, from simple calculations to
-              advanced memory techniques.
-            </p>
+            <h3 className="sub-title">Skills Enhanced Through Our Program</h3>
             <ul className="benefits-list">
               <li>
-                <img src={point} alt="Checkpoint" /> Designed to enhance focus
+                <img src={point} alt="Checkpoint" /> Legible and neat handwriting
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Faster problem-solving
-                skills and mental agility
+                <img src={point} alt="Checkpoint" /> Proper pen/pencil grip correction
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Visualization &
-                Concentration
+                <img src={point} alt="Checkpoint" /> Consistent letter sizing and spacing
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Memory Retention & Recall
+                <img src={point} alt="Checkpoint" /> Faster writing speed without fatigue
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Photographic Memory
+                <img src={point} alt="Checkpoint" /> Improved fine motor skills
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Speed & Accuracy
+                <img src={point} alt="Checkpoint" /> Better presentation in exams
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Listening Skills
+                <img src={point} alt="Checkpoint" /> Boosted self-confidence
               </li>
             </ul>
           </div>
         )}
         {activeTab === "levels" && (
-  <div className="levels-content">
-    {/* Little Star Abacus */}
-    <div className="course-dropdown-item">
-      <div
-        className="dropdown-header"
-        onClick={() => toggleSection("littleStar")}
-        style={{
-          color: expandedSection === "littleStar" ? "var(--primary-grey)" : "var(--primary-orange)",
-          fontWeight: "bold",
-        }}
-      >
-        <h3>1. Little Star Handwriting</h3>
-        <span>{expandedSection === "littleStar" ? "-" : "+"}</span>
-      </div>
-      {expandedSection === "littleStar" && (
-        <div className="dropdown-content">
-          <p className="dropdown-course-info">
-            <span>Eligibility:</span> LKG to 2nd Grade
-          </p>
-          <p className="dropdown-course-info">
-            <span>Duration:</span> 3 Months
-          </p>
-          <p className="dropdown-course-info">
-            <span>Focus:</span> Foundation Learning
-          </p>
-          <p className="dropdown-description">
-            The Little Star program is designed to introduce young learners
-            (ages 4\u20137) to the basics of using the Handwriting. It focuses on
-            building number sense and hand-eye coordination, laying a strong
-            foundation for mental arithmetic.
-          </p>
-          <h4 className="dropdown-subtitle">Key Skills Developed</h4>
-          <ul className="benefits-list">
-            <li>
-              <img src={point} alt="Checkpoint" /> Recognizing and representing
-              numbers from 1 to 100.
-            </li>
-            <li>
-              <img src={point} alt="Checkpoint" /> Performing basic addition
-              and subtraction using the Handwriting.
-            </li>
-            <li>
-              <img src={point} alt="Checkpoint" /> Enhancing concentration and
-              fine motor skills through bead manipulation.
-            </li>
-          </ul>
-          <h4 className="dropdown-subtitle">Learning Methodology</h4>
-          <p className="dropdown-course-info">
-              <span>Hands-On Practice :</span> Frequent
-              use of physical Handwriting tools.
-            </p>
-            <p className="dropdown-course-info">
-            <span>Interactive Techniques : </span>
-              Stories, games, and visuals to make learning fun.
-            </p>
-            <p className="dropdown-course-info">
-            <span>Parent Engagement :</span> Regular
-              updates to parents on progress and tips for practicing at home.
-            </p>
-          
-        </div>
-      )}
-    </div>
-
-    {/* The Brain Charger */}
-
-<div className="course-dropdown-item">
-  <div
-    className="dropdown-header"
-    onClick={() => toggleSection("brainCharger")}
-    style={{
-      color: expandedSection === "brainCharger" ? "var(--primary-grey)" : "var(--primary-orange)",
-      fontWeight: "bold",
-    }}
-  >
-    <h3>2. The Brain Charger</h3>
-    <span>{expandedSection === "brainCharger" ? "-" : "+"}</span>
-  </div>
-  {expandedSection === "brainCharger" && (
-    <div className="dropdown-content">
-      <p className="dropdown-course-info">
-        <span>Eligibility:</span> 3rd to 10th Grade | Completion of the Little Star Program
-      </p>
-      <p className="dropdown-course-info">
-        <span>Duration:</span> 12.5 Months (5 Levels of 2.5 Months Each)
-      </p>
-      <p className="dropdown-course-info">
-        <span>Focus:</span> Intermediate Learning
-      </p>
-      <p className="dropdown-description">
-        This program transitions students from foundational skills to advanced arithmetic calculations using the Abacus. With five progressive levels, the Brain Charger program is designed to refine cognitive abilities and enhance mental arithmetic.
-      </p>
-      <div className="levels-details">
-      <h4 className="level-detail"><span>Level 1:</span> Beginner</h4>
-      <ul>
-        <li>Learning double-digit addition and subtraction.</li>
-        <li>Introduction to basic multiplication techniques.</li>
-      </ul>
-
-      <h4 className="level-detail"><span>Level 2:</span> Intermediate</h4>
-      <ul>
-        <li>Transition from physical abacus to mental visualization of beads.</li>
-        <li>Multiplication up to two-digit numbers.</li>
-      </ul>
-
-      <h4 className="level-detail"><span>Level 3:</span> Advanced Beginner</h4>
-      <ul>
-        <li>Addition and subtraction with three-digit numbers.</li>
-        <li>Faster mental calculations with guided visualization.</li>
-      </ul>
-
-      <h4 className="level-detail"><span>Level 4:</span> Advanced Intermediate</h4>
-      <ul>
-        <li>Division concepts introduced.</li>
-        <li>Speed tests to enhance calculation accuracy.</li>
-      </ul>
-
-      <h4 className="level-detail"><span>Level 5:</span> Expert</h4>
-      <ul>
-        <li>Mastery of multi-step problem-solving.</li>
-        <li>Complex calculations involving decimals and fractions.</li>
-      </ul>
-    </div>
-
-      <h4 className="dropdown-subtitle">Key Skills Developed</h4>
-      <ul className="benefits-list">
-        <li>
-          <img src={point} alt="Checkpoint" /> Enhanced mental visualization of numbers.
-        </li>
-        <li>
-          <img src={point} alt="Checkpoint" /> Faster calculations (up to 50% improvement in speed).
-        </li>
-        <li>
-          <img src={point} alt="Checkpoint" /> Stronger analytical and logical reasoning.
-        </li>
-      </ul>
-              <h4 className="dropdown-subtitle">Learning Methodology</h4>
-        <p className="dropdown-course-info">
-          <span>Practice Sheets:</span> Weekly exercises for consistent learning.
-        </p>
-        <p className="dropdown-course-info">
-          <span>Skill Competitions:</span> Periodic challenges to build confidence and speed.
-        </p>
-        <p className="dropdown-course-info">
-          <span>Interactive Techniques:</span> Stories, games, and visuals to make learning fun.
-        </p>
-        <p className="dropdown-course-info">
-          <span>Parent Engagement:</span> Regular updates to parents on progress and tips for practicing at home.
-        </p>
-
-    </div>
-  )}
-</div>
-
-
-    {/* Advanced Level */}
-    {activeTab === "levels" && (
           <div className="levels-content">
-            {/* Advanced Level */}
+            {/* Level 1 */}
             <div className="course-dropdown-item">
               <div
                 className="dropdown-header"
-                onClick={() => toggleSection("advancedLevel")}
+                onClick={() => toggleSection("level1")}
                 style={{
-                  color: expandedSection === "advancedLevel" ? "var(--primary-grey)" : "var(--primary-orange)",
+                  color: expandedSection === "level1" ? "var(--primary-grey)" : "var(--primary-orange)",
                   fontWeight: "bold",
                 }}
               >
-                <h3>3. Advanced Level</h3>
-                <span>{expandedSection === "advancedLevel" ? "-" : "+"}</span>
+                <h3>1. Print Style (Foundation Level)</h3>
+                <span>{expandedSection === "level1" ? "-" : "+"}</span>
               </div>
-              {expandedSection === "advancedLevel" && (
+              {expandedSection === "level1" && (
                 <div className="dropdown-content">
                   <p className="dropdown-course-info">
-                    <span>Eligibility:</span> 3rd to 10th Grade | Completion of the Brain Charger Program
+                    <span>Eligibility:</span> 5 Years & Above
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Duration:</span> 4 Months (2 Levels of 2 Months Each)
+                    <span>Duration:</span> 3 Months
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Focus:</span> Advanced Learning
+                    <span>Focus:</span> Letter Formation & Clarity
                   </p>
                   <p className="dropdown-description">
-                    This level focuses on mastering Abacus techniques and pushing students to their full potential in mental arithmetic. Designed for those ready to take on advanced challenges, this program strengthens speed, accuracy, and problem-solving.
+                    This level focuses on the basics of clear, separate letter formation (Print Script). It is ideal for
+                    younger children or those who need to correct fundamental legibility issues.
                   </p>
-                  <h4 className="level-detail"><span>Level 1:</span> Advanced Level 1</h4>
-                  <ul>
-                    <li>Rapid mental calculations for large numbers.</li>
-                    <li>Techniques for solving problems without visualizing the abacus beads.</li>
-                  </ul>
-                  <h4 className="level-detail"><span>Level 2:</span> Advanced Level 1</h4>
-                  <ul>
-                    <li>Application of advanced techniques to solve real-world problems.</li>
-                    <li>Speed drills to enhance mental processing.</li>
-                  </ul>
                   <h4 className="dropdown-subtitle">Key Skills Developed</h4>
                   <ul className="benefits-list">
                     <li>
-                      <img src={point} alt="Checkpoint" /> Mental agility for solving complex arithmetic problems in seconds.
+                      <img src={point} alt="Checkpoint" /> Correct stroke direction for alphabets
                     </li>
                     <li>
-                      <img src={point} alt="Checkpoint" /> Improved focus and memory retention.
+                      <img src={point} alt="Checkpoint" /> Uniform size and shape of letters
                     </li>
                     <li>
-                      <img src={point} alt="Checkpoint" /> Preparation for competitive exams and math contests.
+                      <img src={point} alt="Checkpoint" /> Proper spacing between words
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Straight-line alignment
                     </li>
                   </ul>
                   <h4 className="dropdown-subtitle">Learning Methodology</h4>
                   <p className="dropdown-course-info">
-                    <span>Speed Drills:</span> Weekly challenges to improve speed and accuracy.
+                    <span>Pattern tracing exercises:</span>
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Performance Reports:</span> Comprehensive feedback on progress and areas to improve.
+                    <span>Grip correction techniques:</span>
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Skill Competitions:</span> Periodic challenges to build confidence and speed.
+                    <span>Four-line notebook practice:</span>
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Interactive Techniques:</span> Stories, games, and visuals to make learning fun.
+                    <span>Daily worksheets:</span> for reinforcement
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Level 2 */}
+            <div className="course-dropdown-item">
+              <div
+                className="dropdown-header"
+                onClick={() => toggleSection("level2")}
+                style={{
+                  color: expandedSection === "level2" ? "var(--primary-grey)" : "var(--primary-orange)",
+                  fontWeight: "bold",
+                }}
+              >
+                <h3>2. Cursive Style (Intermediate Level)</h3>
+                <span>{expandedSection === "level2" ? "-" : "+"}</span>
+              </div>
+              {expandedSection === "level2" && (
+                <div className="dropdown-content">
+                  <p className="dropdown-course-info">
+                    <span>Eligibility:</span> 7 Years & Above
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Parent Engagement:</span> Regular updates to parents on progress and tips for practicing at home.
+                    <span>Duration:</span> 3 Months
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Focus:</span> Flow & Connectivity
+                  </p>
+                  <p className="dropdown-description">
+                    Students learn the art of joining letters smoothly. Cursive writing improves writing speed and
+                    helps in maintaining a continuous thought process while writing.
+                  </p>
+                  <h4 className="dropdown-subtitle">Key Skills Developed</h4>
+                  <ul className="benefits-list">
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Smooth connections between letters
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Consistent slant and rhythm
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Writing without lifting the pen frequently
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Elegant and professional look
+                    </li>
+                  </ul>
+                  <h4 className="dropdown-subtitle">Learning Methodology</h4>
+                  <p className="dropdown-course-info">
+                    <span>Stroke connectivity drills:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Paragraph writing practice:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Speed control exercises:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Regular assessment:</span> of neatness
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Level 3 */}
+            <div className="course-dropdown-item">
+              <div
+                className="dropdown-header"
+                onClick={() => toggleSection("level3")}
+                style={{
+                  color: expandedSection === "level3" ? "var(--primary-grey)" : "var(--primary-orange)",
+                  fontWeight: "bold",
+                }}
+              >
+                <h3>3. Speed Writing (Advanced Level)</h3>
+                <span>{expandedSection === "level3" ? "-" : "+"}</span>
+              </div>
+              {expandedSection === "level3" && (
+                <div className="dropdown-content">
+                  <p className="dropdown-course-info">
+                    <span>Eligibility:</span> 10 Years & Above
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Duration:</span> 2 Months
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Focus:</span> Speed with Legibility
+                  </p>
+                  <p className="dropdown-description">
+                    This level is for students who have good handwriting but struggle to finish exams on time. We
+                    train them to write fast without compromising on clarity.
+                  </p>
+                  <h4 className="dropdown-subtitle">Key Skills Developed</h4>
+                  <ul className="benefits-list">
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Increasing words per minute (WPM)
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Maintaining legibility under pressure
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Reducing hand fatigue during long exams
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Efficient note-taking skills
+                    </li>
+                  </ul>
+                  <h4 className="dropdown-subtitle">Learning Methodology</h4>
+                  <p className="dropdown-course-info">
+                    <span>Timed writing challenges:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Muscle relaxation techniques:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Dictation practice:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Exam simulation drills:</span>
                   </p>
                 </div>
               )}
@@ -315,190 +263,102 @@ const HandOverview = () => {
           </div>
         )}
 
-    {/* Grand Level */}
-    <div className="course-dropdown-item">
-      <div
-        className="dropdown-header"
-        onClick={() => toggleSection("grandLevel")}
-        style={{
-          color: expandedSection === "grandLevel" ? "var(--primary-grey)" : "var(--primary-orange)",
-          fontWeight: "bold",
-        }}
-      >
-        <h3>4. Grand Level</h3>
-        <span>{expandedSection === "grandLevel" ? "-" : "+"}</span>
-      </div>
-      {expandedSection === "grandLevel" && (
-    <div className="dropdown-content">
-      <p className="dropdown-course-info">
-        <span>Eligibility:</span> 3rd to 10th Grade | Completion of the Advanced Level Program
-      </p>
-      <p className="dropdown-course-info">
-        <span>Duration:</span> 45 Days
-      </p>
-      <p className="dropdown-course-info">
-        <span>Focus:</span> Advanced Learning
-      </p>
-      <p className="dropdown-description">
-        The Grand Level is the pinnacle of the Abacus course, designed to test and showcase the mastery of mental math skills. It’s a high-intensity program where students refine their techniques to perfection and prepare for competitive platforms.
-      </p>
-      <h4 className="dropdown-subtitle">Key Highlights</h4>
-      <ul>
-        <li>
-          Advanced mental arithmetic drills at the competitive level.
-        </li>
-        <li>
-          Techniques to calculate large and complex numbers with precision.
-        </li>
-        <li>
-          Focus on time management and stress-free problem-solving.
-        </li>
-      </ul>
-      <h4 className="dropdown-subtitle">Key Skills Developed</h4>
-      <ul className="benefits-list">
-        <li>
-          <img src={point} alt="Checkpoint" /> Mental agility for solving complex arithmetic problems in seconds.
-        </li>
-        <li>
-          <img src={point} alt="Checkpoint" /> Improved focus and memory retention.
-        </li>
-        <li>
-          <img src={point} alt="Checkpoint" /> Preparation for competitive exams and math contests.
-        </li>
-      </ul>
-      <h4 className="dropdown-subtitle">Learning Methodology</h4>
-      <p className="dropdown-course-info">
-        <span>Mastery of Handwriting Techniques:</span> Perfecting mental math for real-world and competitive applications.
-      </p>
-      <p className="dropdown-course-info">
-        <span>Time Efficiency:</span> Solving problems with unparalleled speed.
-      </p>
-      <p className="dropdown-course-info">
-        <span>Confidence:</span> Gaining the ability to tackle any mathematical challenge.
-      </p>
-      <p className="dropdown-course-info">
-        <span>Interactive Techniques:</span> Stories, games, and visuals to make learning fun.
-      </p>
-      <p className="dropdown-course-info">
-        <span>Parent Engagement:</span> Regular updates to parents on progress and tips for practicing at home.
-      </p>
-      <h4 className="dropdown-subtitle">Special Additions for This Level</h4>
-      <ul>
-        <li>
-          Participation in Math Olympiads and mental arithmetic championships.
-        </li>
-        <li>
-          Certification of Completion, recognizing the student as an Abacus Master.
-        </li>
-      </ul>
-    </div>
-  )}
-    </div>
-  </div>
-)}
-
         {activeTab === "details" && (
-  <div className="details-content">
-    <h2 className="main-title">The Science Behind Handwriting Training</h2>
-    <p className="overview-description">
-      The Handwriting program is not just about numbers—it's a scientifically backed
-      method designed to enhance cognitive abilities and brain functions. The act
-      of bead manipulation stimulates both the left and right hemispheres of the
-      brain, fostering neuroplasticity and creating strong neural connections.
-      Here's how it works:
-    </p>
+          <div className="details-content">
+            <h2 className="main-title">The Science Behind Handwriting Training</h2>
+            <p className="overview-description">
+              Handwriting is a complex cognitive process that links the hand and brain:
+            </p>
+            <ul className="dropdown-course-info">
+              <li>
+                <span>Fine Motor Activation:</span> Strengthens neural pathways controlling finger movements.
+              </li>
+              <li>
+                <span>Reticular Activating System (RAS):</span> Writing by hand improves focus and information retention compared to typing.
+              </li>
+            </ul>
+            <p className="overview-description">
+              Good handwriting reduces cognitive load, allowing the brain to focus on content rather than the
+              act of writing.
+            </p>
 
-    <h3 className="sub-title">Brain Activation</h3>
-    <ul className="dropdown-course-info">
-      <li>
-        <span>Left Hemisphere:</span> Handles logical thinking, analytical
-        reasoning, and sequential problem-solving, which are essential in
-        arithmetic.
-      </li>
-      <li>
-        <span>Right Hemisphere:</span> Focuses on creativity, visualization,
-        and holistic thinking, activated by imagining bead movements mentally.
-      </li>
-    </ul>
-    <p className="overview-description">
-      The combination of these two functions during Abacus training leads to
-      balanced and heightened cognitive abilities.
-    </p>
+            <h3 className="sub-title">
+              Key Skills Enhanced Through Handwriting Training
+            </h3>
+            <ul className="key-skills-list">
+              <li>
+                <span>Focus & Discipline:</span> The practice of neat writing instills patience and attention to detail.
+                <br />
+                <span>Result:</span> Reduced careless errors in schoolwork.
+              </li>
+              <li>
+                <span>Memory Retention:</span> Studies show that writing notes by hand improves learning and recall.
+                <br />
+                <span>Result:</span> Better exam preparation and grades.
+              </li>
+              <li>
+                <span>Creativity & Expression:</span> A fluid writing style encourages free flow of thoughts.
+                <br />
+                <span>Result:</span> Improved essay and creative writing skills.
+              </li>
+              <li>
+                <span>Confidence:</span> Neat work receives praise and positive reinforcement.
+                <br />
+                <span>Result:</span> Higher self-esteem in academic settings.
+              </li>
+            </ul>
+          </div>
+        )}
 
-    <h3 className="sub-title">
-      Key Skills Enhanced Through Handwriting Training
-    </h3>
-    <ul className="key-skills-list">
-      <li>
-        <span>Visualization:</span> Students learn to visualize the abacus
-        beads in their mind, strengthening mental imagery and creative thinking.
-        <br />
-        <span>Result:</span> They can solve complex calculations without
-        physically using the Handwriting.
-      </li>
-      <li>
-        <span>Memory & Recall:</span> Repeated practice sharpens short-term
-        and long-term memory, often leading to photographic memory.
-        <br />
-        <span>Result:</span> Students excel in academic subjects and recall
-        information with ease.
-      </li>
-      <li>
-        <span>Listening Skills:</span> Group exercises and oral tests
-        improve auditory processing, helping students respond quickly and
-        accurately.
-        <br />
-        <span>Result:</span> Improved communication and better academic
-        performance in oral-based assessments.
-      </li>
-      <li>
-        <span>Speed & Accuracy:</span> The progressive levels focus on
-        improving calculation speed while maintaining precision.
-        <br />
-        <span>Result:</span> Students develop confidence and a competitive
-        edge in academics and beyond.
-      </li>
-    </ul>
-  </div>
-)}
-
-{activeTab === "opportunities" && (
+        {activeTab === "opportunities" && (
           <div className="opportunities-content">
-            <h2 className="main-title">Long-Term Benefits for Students</h2>
-            <h4 className="dropdown-subtitle">1. Academic Excellence </h4>
+            <h2 className="main-title">Opportunities</h2>
+            <h4 className="dropdown-subtitle">1. Academic Success </h4>
             <ul className="dropdown-course-info">
               <li>
-              Handwriting training enhances mathematical abilities, directly improving performance in math and science subjects.
+                Higher marks for presentation and legibility
               </li>
               <li>
-              Sharpened memory, focus, and speed give students an edge in other subjects as well, like languages and general studies.
+                Ability to complete exams on time
+              </li>
+              <li>
+                Better teacher appreciation
               </li>
             </ul>
-            <h4 className="dropdown-subtitle">2. Competitive Edge </h4>
+            <h4 className="dropdown-subtitle">2. Personal Development </h4>
             <ul className="dropdown-course-info">
               <li>
-              Prepares students for prestigious mental math competitions, such as: <br />
-              Handwriting Olympiads
-                <br/>International Mental Arithmetic Championships
+                Improved patience and focus
               </li>
               <li>
-              Participation in these contests boosts confidence, resilience, and the spirit of healthy competition.
+                Sense of pride in one’s work
+              </li>
+              <li>
+                Development of a unique personal signature style
               </li>
             </ul>
-            <h4 className="dropdown-subtitle">3. Lifelong Skills </h4>
+            <h4 className="dropdown-subtitle">3. Professional Advantages </h4>
             <ul className="dropdown-course-info">
               <li>
-              The program focuses on skills that extend beyond academics and into every aspect of life, including:
+                Clear communication in written forms
               </li>
               <li>
-              Sharpened memory, focus, and speed give students an edge in other subjects as well, like languages and general studies.
+                First impression impact in applications/forms
+              </li>
+              <li>
+                Enhanced note-taking in meetings
               </li>
             </ul>
-            <h4 className="dropdown-subtitle">4. Career Preparation </h4>
+            <h4 className="dropdown-subtitle">4. Creative Expression </h4>
             <ul className="dropdown-course-info">
               <li>
-              Students gain transferable skills that are valuable for future careers, particularly in fields requiring analytical thinking,
-               such as engineering, finance, and technology.
+                Calligraphy and artistic lettering
+              </li>
+              <li>
+                Journaling and personalized stationery
+              </li>
+              <li>
+                Handwritten letters and cards
               </li>
             </ul>
           </div>
@@ -508,4 +368,4 @@ const HandOverview = () => {
   );
 };
 
-export default HandOverview;
+export default HandwritingOverview;

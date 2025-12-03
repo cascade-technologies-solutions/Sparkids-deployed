@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import point from "../Assets/courses-img/checkpoint.png";
-import "../styles/AbacusOverview.css";
+import "../styles/AbacusOverview.css"; // Using the same CSS file
+import point from "../Assets/courses-img/checkpoint.png"; // Importing the image
 
-const ReadOverview = () => {
+const ReadingOverview = () => {
   const [activeTab, setActiveTab] = useState("overview");
   const [expandedSection, setExpandedSection] = useState(null); // For dropdown in Levels tab
 
@@ -21,9 +21,8 @@ const ReadOverview = () => {
         {["Overview", "Levels", "Details", "Opportunities"].map((tab) => (
           <button
             key={tab}
-            className={`tab-button ${
-              activeTab.toLowerCase() === tab.toLowerCase() ? "active" : ""
-            }`}
+            className={`tab-button ${activeTab.toLowerCase() === tab.toLowerCase() ? "active" : ""
+              }`}
             onClick={() => handleTabClick(tab.toLowerCase())}
           >
             {tab}
@@ -35,279 +34,229 @@ const ReadOverview = () => {
       <div className="content-card">
         {activeTab === "overview" && (
           <div className="overview-content">
-            <h2 className="main-title">What is Reading ?</h2>
+            <h2 className="main-title">What is the Reading Program?</h2>
             <p className="overview-description">
-              Reading is a Latin word that has its origins in the Greek words
-              <i> abax</i> or <i>abakion</i> (meaning "table" or "tablet"),
-              which in turn, possibly originated from the Semitic word{" "}
-              <i>abaq</i>, meaning "sand". The Reading is one of many types of
-              counting devices that are used to count large numbers.
+              Reading is the foundation of all learning. Our Reading Program is designed to help children move
+              beyond simple decoding to deep comprehension and fluency. We use a structured phonics-based
+              approach combined with interactive storytelling to make reading enjoyable. Whether your child is a
+              beginner or looking to improve vocabulary and speed, this program builds the skills needed for
+              academic success and a lifelong love for books.
             </p>
             <h3 className="sub-title">
-              Unlock Your Child's Brain Potential with Reading Learning!
+              Unlock the World of Knowledge for Your Child
             </h3>
             <p className="overview-description">
-              Unleash the limitless potential of your child’s mind with our
-              Reading program! Specially designed for children aged 4 to 15.
+              A child who reads well learns well.
+              Reading is not just about saying words aloud; it’s about understanding ideas, expanding imagination,
+              and building a rich vocabulary.
+              Our program helps children overcome reading struggles, hesitation, and lack of interest.
+              Through engaging stories and structured practice, we turn reluctant readers into confident book
+              lovers.
+              Strong reading skills open doors to better grades, clearer communication, and endless creativity.
             </p>
-            <p className="overview-description">
-              This course isn’t just about calculations; it’s a journey of
-              holistic brain development. The Reading program stimulates both
-              sides of the brain, helping children improve cognitive abilities
-              through visualization, memory, and concentration. Each level
-              progressively builds upon skills, from simple calculations to
-              advanced memory techniques.
-            </p>
+            <h3 className="sub-title">Skills Enhanced Through Our Program</h3>
             <ul className="benefits-list">
               <li>
-                <img src={point} alt="Checkpoint" /> Designed to enhance focus
+                <img src={point} alt="Checkpoint" /> Fluent and expressive reading
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Faster problem-solving
-                skills and mental agility
+                <img src={point} alt="Checkpoint" /> Strong vocabulary and grammar usage
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Visualization &
-                Concentration
+                <img src={point} alt="Checkpoint" /> Improved reading comprehension
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Memory Retention & Recall
+                <img src={point} alt="Checkpoint" /> Correct pronunciation and diction
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Photographic Memory
+                <img src={point} alt="Checkpoint" /> Enhanced focus and imagination
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Speed & Accuracy
+                <img src={point} alt="Checkpoint" /> Confidence in public speaking/reading
               </li>
               <li>
-                <img src={point} alt="Checkpoint" /> Listening Skills
+                <img src={point} alt="Checkpoint" /> Better academic performance in all subjects
               </li>
             </ul>
           </div>
         )}
         {activeTab === "levels" && (
-  <div className="levels-content">
-    {/* Little Star Abacus */}
-    <div className="course-dropdown-item">
-      <div
-        className="dropdown-header"
-        onClick={() => toggleSection("littleStar")}
-        style={{
-          color: expandedSection === "littleStar" ? "var(--primary-grey)" : "var(--primary-orange)",
-          fontWeight: "bold",
-        }}
-      >
-        <h3>1. Little Star Reading </h3>
-        <span>{expandedSection === "littleStar" ? "-" : "+"}</span>
-      </div>
-      {expandedSection === "littleStar" && (
-        <div className="dropdown-content">
-          <p className="dropdown-course-info">
-            <span>Eligibility:</span> LKG to 2nd Grade
-          </p>
-          <p className="dropdown-course-info">
-            <span>Duration:</span> 3 Months
-          </p>
-          <p className="dropdown-course-info">
-            <span>Focus:</span> Foundation Learning
-          </p>
-          <p className="dropdown-description">
-            The Little Star program is designed to introduce young learners
-            (ages 4\u20137) to the basics of using the Abacus. It focuses on
-            building number sense and hand-eye coordination, laying a strong
-            foundation for mental arithmetic.
-          </p>
-          <h4 className="dropdown-subtitle">Key Skills Developed</h4>
-          <ul className="benefits-list">
-            <li>
-              <img src={point} alt="Checkpoint" /> Recognizing and representing
-              numbers from 1 to 100.
-            </li>
-            <li>
-              <img src={point} alt="Checkpoint" /> Performing basic addition
-              and subtraction using the Reading.
-            </li>
-            <li>
-              <img src={point} alt="Checkpoint" /> Enhancing concentration and
-              fine motor skills through bead manipulation.
-            </li>
-          </ul>
-          <h4 className="dropdown-subtitle">Learning Methodology</h4>
-          <p className="dropdown-course-info">
-              <span>Hands-On Practice :</span> Frequent
-              use of physical Reading tools.
-            </p>
-            <p className="dropdown-course-info">
-            <span>Interactive Techniques : </span>
-              Stories, games, and visuals to make learning fun.
-            </p>
-            <p className="dropdown-course-info">
-            <span>Parent Engagement :</span> Regular
-              updates to parents on progress and tips for practicing at home.
-            </p>
-          
-        </div>
-      )}
-    </div>
-
-    {/* The Brain Charger */}
-
-<div className="course-dropdown-item">
-  <div
-    className="dropdown-header"
-    onClick={() => toggleSection("brainCharger")}
-    style={{
-      color: expandedSection === "brainCharger" ? "var(--primary-grey)" : "var(--primary-orange)",
-      fontWeight: "bold",
-    }}
-  >
-    <h3>2. The Brain Charger</h3>
-    <span>{expandedSection === "brainCharger" ? "-" : "+"}</span>
-  </div>
-  {expandedSection === "brainCharger" && (
-    <div className="dropdown-content">
-      <p className="dropdown-course-info">
-        <span>Eligibility:</span> 3rd to 10th Grade | Completion of the Little Star Program
-      </p>
-      <p className="dropdown-course-info">
-        <span>Duration:</span> 12.5 Months (5 Levels of 2.5 Months Each)
-      </p>
-      <p className="dropdown-course-info">
-        <span>Focus:</span> Intermediate Learning
-      </p>
-      <p className="dropdown-description">
-        This program transitions students from foundational skills to advanced arithmetic calculations using the Abacus. With five progressive levels, the Brain Charger program is designed to refine cognitive abilities and enhance mental arithmetic.
-      </p>
-      <div className="levels-details">
-      <h4 className="level-detail"><span>Level 1:</span> Beginner</h4>
-      <ul>
-        <li>Learning double-digit addition and subtraction.</li>
-        <li>Introduction to basic multiplication techniques.</li>
-      </ul>
-
-      <h4 className="level-detail"><span>Level 2:</span> Intermediate</h4>
-      <ul>
-        <li>Transition from physical abacus to mental visualization of beads.</li>
-        <li>Multiplication up to two-digit numbers.</li>
-      </ul>
-
-      <h4 className="level-detail"><span>Level 3:</span> Advanced Beginner</h4>
-      <ul>
-        <li>Addition and subtraction with three-digit numbers.</li>
-        <li>Faster mental calculations with guided visualization.</li>
-      </ul>
-
-      <h4 className="level-detail"><span>Level 4:</span> Advanced Intermediate</h4>
-      <ul>
-        <li>Division concepts introduced.</li>
-        <li>Speed tests to enhance calculation accuracy.</li>
-      </ul>
-
-      <h4 className="level-detail"><span>Level 5:</span> Expert</h4>
-      <ul>
-        <li>Mastery of multi-step problem-solving.</li>
-        <li>Complex calculations involving decimals and fractions.</li>
-      </ul>
-    </div>
-
-      <h4 className="dropdown-subtitle">Key Skills Developed</h4>
-      <ul className="benefits-list">
-        <li>
-          <img src={point} alt="Checkpoint" /> Enhanced mental visualization of numbers.
-        </li>
-        <li>
-          <img src={point} alt="Checkpoint" /> Faster calculations (up to 50% improvement in speed).
-        </li>
-        <li>
-          <img src={point} alt="Checkpoint" /> Stronger analytical and logical reasoning.
-        </li>
-      </ul>
-              <h4 className="dropdown-subtitle">Learning Methodology</h4>
-        <p className="dropdown-course-info">
-          <span>Practice Sheets:</span> Weekly exercises for consistent learning.
-        </p>
-        <p className="dropdown-course-info">
-          <span>Skill Competitions:</span> Periodic challenges to build confidence and speed.
-        </p>
-        <p className="dropdown-course-info">
-          <span>Interactive Techniques:</span> Stories, games, and visuals to make learning fun.
-        </p>
-        <p className="dropdown-course-info">
-          <span>Parent Engagement:</span> Regular updates to parents on progress and tips for practicing at home.
-        </p>
-
-    </div>
-  )}
-</div>
-
-
-    {/* Advanced Level */}
-    {activeTab === "levels" && (
           <div className="levels-content">
-            {/* Advanced Level */}
+            {/* Level 1 */}
             <div className="course-dropdown-item">
               <div
                 className="dropdown-header"
-                onClick={() => toggleSection("advancedLevel")}
+                onClick={() => toggleSection("level1")}
                 style={{
-                  color: expandedSection === "advancedLevel" ? "var(--primary-grey)" : "var(--primary-orange)",
+                  color: expandedSection === "level1" ? "var(--primary-grey)" : "var(--primary-orange)",
                   fontWeight: "bold",
                 }}
               >
-                <h3>3. Advanced Level</h3>
-                <span>{expandedSection === "advancedLevel" ? "-" : "+"}</span>
+                <h3>1. Phonics & Fluency (Foundation Level)</h3>
+                <span>{expandedSection === "level1" ? "-" : "+"}</span>
               </div>
-              {expandedSection === "advancedLevel" && (
+              {expandedSection === "level1" && (
                 <div className="dropdown-content">
                   <p className="dropdown-course-info">
-                    <span>Eligibility:</span> 3rd to 10th Grade | Completion of the Brain Charger Program
+                    <span>Eligibility:</span> 4 to 6 Years
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Duration:</span> 4 Months (2 Levels of 2 Months Each)
+                    <span>Duration:</span> 3 Months
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Focus:</span> Advanced Learning
+                    <span>Focus:</span> Sounds, Blending & Simple Words
                   </p>
                   <p className="dropdown-description">
-                    This level focuses on mastering Abacus techniques and pushing students to their full potential in mental arithmetic. Designed for those ready to take on advanced challenges, this program strengthens speed, accuracy, and problem-solving.
+                    This level introduces children to letter sounds (phonics) rather than just letter names. They learn
+                    to blend sounds to form words and read simple sentences with confidence.
                   </p>
-                  <h4 className="level-detail"><span>Level 1:</span> Advanced Level 1</h4>
-                  <ul>
-                    <li>Rapid mental calculations for large numbers.</li>
-                    <li>Techniques for solving problems without visualizing the abacus beads.</li>
-                  </ul>
-                  <h4 className="level-detail"><span>Level 2:</span> Advanced Level 1</h4>
-                  <ul>
-                    <li>Application of advanced techniques to solve real-world problems.</li>
-                    <li>Speed drills to enhance mental processing.</li>
-                  </ul>
                   <h4 className="dropdown-subtitle">Key Skills Developed</h4>
                   <ul className="benefits-list">
                     <li>
-                      <img src={point} alt="Checkpoint" /> Mental agility for solving complex arithmetic problems in seconds.
+                      <img src={point} alt="Checkpoint" /> Letter-sound recognition
                     </li>
                     <li>
-                      <img src={point} alt="Checkpoint" /> Improved focus and memory retention.
+                      <img src={point} alt="Checkpoint" /> Blending sounds to read words (CVC words)
                     </li>
                     <li>
-                      <img src={point} alt="Checkpoint" /> Preparation for competitive exams and math contests.
+                      <img src={point} alt="Checkpoint" /> Sight word recognition
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Basic sentence reading
                     </li>
                   </ul>
                   <h4 className="dropdown-subtitle">Learning Methodology</h4>
                   <p className="dropdown-course-info">
-                    <span>Speed Drills:</span> Weekly challenges to improve speed and accuracy.
+                    <span>Phonics games & songs:</span>
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Performance Reports:</span> Comprehensive feedback on progress and areas to improve.
+                    <span>Flashcards:</span> for sight words
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Skill Competitions:</span> Periodic challenges to build confidence and speed.
+                    <span>Storytelling sessions:</span>
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Interactive Techniques:</span> Stories, games, and visuals to make learning fun.
+                    <span>Reading aloud practice:</span>
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Level 2 */}
+            <div className="course-dropdown-item">
+              <div
+                className="dropdown-header"
+                onClick={() => toggleSection("level2")}
+                style={{
+                  color: expandedSection === "level2" ? "var(--primary-grey)" : "var(--primary-orange)",
+                  fontWeight: "bold",
+                }}
+              >
+                <h3>2. Comprehension & Vocabulary (Intermediate Level)</h3>
+                <span>{expandedSection === "level2" ? "-" : "+"}</span>
+              </div>
+              {expandedSection === "level2" && (
+                <div className="dropdown-content">
+                  <p className="dropdown-course-info">
+                    <span>Eligibility:</span> 7 to 9 Years
                   </p>
                   <p className="dropdown-course-info">
-                    <span>Parent Engagement:</span> Regular updates to parents on progress and tips for practicing at home.
+                    <span>Duration:</span> 3 Months
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Focus:</span> Understanding & Expression
+                  </p>
+                  <p className="dropdown-description">
+                    Students move from learning to read to reading to learn. They focus on understanding the
+                    meaning of texts, answering questions, and expanding their vocabulary.
+                  </p>
+                  <h4 className="dropdown-subtitle">Key Skills Developed</h4>
+                  <ul className="benefits-list">
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Understanding story context and details
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Learning new vocabulary and usage
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Answering comprehension questions
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Expressive reading with intonation
+                    </li>
+                  </ul>
+                  <h4 className="dropdown-subtitle">Learning Methodology</h4>
+                  <p className="dropdown-course-info">
+                    <span>Interactive story discussions:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Vocabulary building exercises:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Role-playing characters:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Worksheets:</span> on comprehension
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Level 3 */}
+            <div className="course-dropdown-item">
+              <div
+                className="dropdown-header"
+                onClick={() => toggleSection("level3")}
+                style={{
+                  color: expandedSection === "level3" ? "var(--primary-grey)" : "var(--primary-orange)",
+                  fontWeight: "bold",
+                }}
+              >
+                <h3>3. Advanced Reading & Analysis (Advanced Level)</h3>
+                <span>{expandedSection === "level3" ? "-" : "+"}</span>
+              </div>
+              {expandedSection === "level3" && (
+                <div className="dropdown-content">
+                  <p className="dropdown-course-info">
+                    <span>Eligibility:</span> 10 Years & Above
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Duration:</span> 3 Months
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Focus:</span> Critical Thinking & Speed Reading
+                  </p>
+                  <p className="dropdown-description">
+                    At this level, students engage with complex texts, articles, and novels. They learn to analyze
+                    content, summarize ideas, and read at a faster pace without losing understanding.
+                  </p>
+                  <h4 className="dropdown-subtitle">Key Skills Developed</h4>
+                  <ul className="benefits-list">
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Critical analysis of text
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Summarizing and paraphrasing skills
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Speed reading techniques
+                    </li>
+                    <li>
+                      <img src={point} alt="Checkpoint" /> Advanced vocabulary and grammar
+                    </li>
+                  </ul>
+                  <h4 className="dropdown-subtitle">Learning Methodology</h4>
+                  <p className="dropdown-course-info">
+                    <span>Book reviews and discussions:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Debates based on reading material:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Speed reading drills:</span>
+                  </p>
+                  <p className="dropdown-course-info">
+                    <span>Creative writing:</span> linked to reading
                   </p>
                 </div>
               )}
@@ -315,190 +264,105 @@ const ReadOverview = () => {
           </div>
         )}
 
-    {/* Grand Level */}
-    <div className="course-dropdown-item">
-      <div
-        className="dropdown-header"
-        onClick={() => toggleSection("grandLevel")}
-        style={{
-          color: expandedSection === "grandLevel" ? "var(--primary-grey)" : "var(--primary-orange)",
-          fontWeight: "bold",
-        }}
-      >
-        <h3>4. Grand Level</h3>
-        <span>{expandedSection === "grandLevel" ? "-" : "+"}</span>
-      </div>
-      {expandedSection === "grandLevel" && (
-    <div className="dropdown-content">
-      <p className="dropdown-course-info">
-        <span>Eligibility:</span> 3rd to 10th Grade | Completion of the Advanced Level Program
-      </p>
-      <p className="dropdown-course-info">
-        <span>Duration:</span> 45 Days
-      </p>
-      <p className="dropdown-course-info">
-        <span>Focus:</span> Advanced Learning
-      </p>
-      <p className="dropdown-description">
-        The Grand Level is the pinnacle of the Abacus course, designed to test and showcase the mastery of mental math skills. It’s a high-intensity program where students refine their techniques to perfection and prepare for competitive platforms.
-      </p>
-      <h4 className="dropdown-subtitle">Key Highlights</h4>
-      <ul>
-        <li>
-          Advanced mental arithmetic drills at the competitive level.
-        </li>
-        <li>
-          Techniques to calculate large and complex numbers with precision.
-        </li>
-        <li>
-          Focus on time management and stress-free problem-solving.
-        </li>
-      </ul>
-      <h4 className="dropdown-subtitle">Key Skills Developed</h4>
-      <ul className="benefits-list">
-        <li>
-          <img src={point} alt="Checkpoint" /> Mental agility for solving complex arithmetic problems in seconds.
-        </li>
-        <li>
-          <img src={point} alt="Checkpoint" /> Improved focus and memory retention.
-        </li>
-        <li>
-          <img src={point} alt="Checkpoint" /> Preparation for competitive exams and math contests.
-        </li>
-      </ul>
-      <h4 className="dropdown-subtitle">Learning Methodology</h4>
-      <p className="dropdown-course-info">
-        <span>Mastery of Reading Techniques:</span> Perfecting mental math for real-world and competitive applications.
-      </p>
-      <p className="dropdown-course-info">
-        <span>Time Efficiency:</span> Solving problems with unparalleled speed.
-      </p>
-      <p className="dropdown-course-info">
-        <span>Confidence:</span> Gaining the ability to tackle any mathematical challenge.
-      </p>
-      <p className="dropdown-course-info">
-        <span>Interactive Techniques:</span> Stories, games, and visuals to make learning fun.
-      </p>
-      <p className="dropdown-course-info">
-        <span>Parent Engagement:</span> Regular updates to parents on progress and tips for practicing at home.
-      </p>
-      <h4 className="dropdown-subtitle">Special Additions for This Level</h4>
-      <ul>
-        <li>
-          Participation in Math Olympiads and mental arithmetic championships.
-        </li>
-        <li>
-          Certification of Completion, recognizing the student as an Abacus Master.
-        </li>
-      </ul>
-    </div>
-  )}
-    </div>
-  </div>
-)}
-
         {activeTab === "details" && (
-  <div className="details-content">
-    <h2 className="main-title">The Science Behind Reading Training</h2>
-    <p className="overview-description">
-      The Reading program is not just about numbers—it's a scientifically backed
-      method designed to enhance cognitive abilities and brain functions. The act
-      of bead manipulation stimulates both the left and right hemispheres of the
-      brain, fostering neuroplasticity and creating strong neural connections.
-      Here's how it works:
-    </p>
+          <div className="details-content">
+            <h2 className="main-title">The Science Behind Reading Training</h2>
+            <p className="overview-description">
+              Reading is a whole-brain activity:
+            </p>
+            <ul className="dropdown-course-info">
+              <li>
+                <span>Visual Cortex:</span> Recognizes letters and words.
+              </li>
+              <li>
+                <span>Broca’s Area:</span> Processes speech sounds and articulation.
+              </li>
+              <li>
+                <span>Wernicke’s Area:</span> Decodes meaning and comprehension.
+              </li>
+            </ul>
+            <p className="overview-description">
+              Regular reading strengthens the connections between these areas, improving overall brain function
+              and intelligence.
+            </p>
 
-    <h3 className="sub-title">Brain Activation</h3>
-    <ul className="dropdown-course-info">
-      <li>
-        <span>Left Hemisphere:</span> Handles logical thinking, analytical
-        reasoning, and sequential problem-solving, which are essential in
-        arithmetic.
-      </li>
-      <li>
-        <span>Right Hemisphere:</span> Focuses on creativity, visualization,
-        and holistic thinking, activated by imagining bead movements mentally.
-      </li>
-    </ul>
-    <p className="overview-description">
-      The combination of these two functions during Abacus training leads to
-      balanced and heightened cognitive abilities.
-    </p>
+            <h3 className="sub-title">
+              Key Skills Enhanced Through Reading Training
+            </h3>
+            <ul className="key-skills-list">
+              <li>
+                <span>Cognitive Development:</span> Reading stimulates mental growth and new neural connections.
+                <br />
+                <span>Result:</span> Smarter thinking and better problem-solving.
+              </li>
+              <li>
+                <span>Focus & Concentration:</span> Getting lost in a story trains the brain to focus for long periods.
+                <br />
+                <span>Result:</span> Improved attention span in class.
+              </li>
+              <li>
+                <span>Empathy & Emotional Intelligence:</span> Reading stories helps children understand different perspectives.
+                <br />
+                <span>Result:</span> Better social skills and emotional maturity.
+              </li>
+              <li>
+                <span>Language Mastery:</span> Constant exposure to good language improves speaking and writing.
+                <br />
+                <span>Result:</span> Excellent communication skills.
+              </li>
+            </ul>
+          </div>
+        )}
 
-    <h3 className="sub-title">
-      Key Skills Enhanced Through Abacus Training
-    </h3>
-    <ul className="key-skills-list">
-      <li>
-        <span>Visualization:</span> Students learn to visualize the abacus
-        beads in their mind, strengthening mental imagery and creative thinking.
-        <br />
-        <span>Result:</span> They can solve complex calculations without
-        physically using the abacus.
-      </li>
-      <li>
-        <span>Memory & Recall:</span> Repeated practice sharpens short-term
-        and long-term memory, often leading to photographic memory.
-        <br />
-        <span>Result:</span> Students excel in academic subjects and recall
-        information with ease.
-      </li>
-      <li>
-        <span>Listening Skills:</span> Group exercises and oral tests
-        improve auditory processing, helping students respond quickly and
-        accurately.
-        <br />
-        <span>Result:</span> Improved communication and better academic
-        performance in oral-based assessments.
-      </li>
-      <li>
-        <span>Speed & Accuracy:</span> The progressive levels focus on
-        improving calculation speed while maintaining precision.
-        <br />
-        <span>Result:</span> Students develop confidence and a competitive
-        edge in academics and beyond.
-      </li>
-    </ul>
-  </div>
-)}
-
-{activeTab === "opportunities" && (
+        {activeTab === "opportunities" && (
           <div className="opportunities-content">
-            <h2 className="main-title">Long-Term Benefits for Students</h2>
+            <h2 className="main-title">Opportunities</h2>
             <h4 className="dropdown-subtitle">1. Academic Excellence </h4>
             <ul className="dropdown-course-info">
               <li>
-              Reading training enhances mathematical abilities, directly improving performance in math and science subjects.
+                Better understanding of all subjects (History, Science, etc.)
               </li>
               <li>
-              Sharpened memory, focus, and speed give students an edge in other subjects as well, like languages and general studies.
-              </li>
-            </ul>
-            <h4 className="dropdown-subtitle">2. Competitive Edge </h4>
-            <ul className="dropdown-course-info">
-              <li>
-              Prepares students for prestigious mental math competitions, such as: <br />
-              Reading Olympiads
-                <br/>International Mental Arithmetic Championships
+                Higher scores in language and literature exams
               </li>
               <li>
-              Participation in these contests boosts confidence, resilience, and the spirit of healthy competition.
+                Stronger essay writing skills
               </li>
             </ul>
-            <h4 className="dropdown-subtitle">3. Lifelong Skills </h4>
+            <h4 className="dropdown-subtitle">2. Cognitive Growth </h4>
             <ul className="dropdown-course-info">
               <li>
-              The program focuses on skills that extend beyond academics and into every aspect of life, including:
+                Enhanced memory and retention
               </li>
               <li>
-              Sharpened memory, focus, and speed give students an edge in other subjects as well, like languages and general studies.
+                Improved critical thinking
+              </li>
+              <li>
+                Faster information processing
               </li>
             </ul>
-            <h4 className="dropdown-subtitle">4. Career Preparation </h4>
+            <h4 className="dropdown-subtitle">3. Communication Skills </h4>
             <ul className="dropdown-course-info">
               <li>
-              Students gain transferable skills that are valuable for future careers, particularly in fields requiring analytical thinking,
-               such as engineering, finance, and technology.
+                Articulate speaking abilities
+              </li>
+              <li>
+                Rich vocabulary for expression
+              </li>
+              <li>
+                Confidence in social interactions
+              </li>
+            </ul>
+            <h4 className="dropdown-subtitle">4. Lifelong Learning </h4>
+            <ul className="dropdown-course-info">
+              <li>
+                A habit of self-education
+              </li>
+              <li>
+                Access to global knowledge and ideas
+              </li>
+              <li>
+                Stress relief and relaxation through books
               </li>
             </ul>
           </div>
@@ -508,4 +372,4 @@ const ReadOverview = () => {
   );
 };
 
-export default ReadOverview;
+export default ReadingOverview;

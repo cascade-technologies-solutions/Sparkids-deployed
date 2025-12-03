@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background:var(--bg-gradient);
+  background: var(--bg-gradient);
   min-height: 100vh;
   overflow-x: hidden;
   width: 100%;
@@ -116,6 +116,7 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+
 .hero-stats .stats-images {
   position: relative;
   width: 170px;
@@ -125,8 +126,8 @@
 }
 
 .hero-stats .stats-images img {
-  position: absolute;  
-  width: 44.5px;  
+  position: absolute;
+  width: 44.5px;
   height: 44.5px;
   border-radius: 50%;
   object-fit: cover;
@@ -147,10 +148,12 @@
   left: 60px;
   z-index: 3;
 }
+
 .hero-stats .stats-images img:nth-child(4) {
   left: 90px;
   z-index: 2;
 }
+
 .hero-stats .stats-images img:nth-child(5) {
   left: 120px;
   z-index: 1;
@@ -180,7 +183,7 @@
   font-family: geologica;
 }
 
-.opportunity-note{
+.opportunity-note {
   font-size: 20px;
   font-family: lilita one;
   font-weight: 400;
@@ -203,9 +206,9 @@
 /* Hero Image Layout */
 .hero-image {
   position: relative;
-  width: 600px; 
+  width: 600px;
   max-width: 100%;
-  height: 600px; 
+  height: 600px;
   margin-left: 10px;
   padding-right: 40px;
   flex-shrink: 0;
@@ -233,6 +236,7 @@
   animation: slideInRight 1s ease-in-out, moveUpDown 1.5s ease-in-out infinite 1s;
   transition: transform 0.3s ease-in-out;
   will-change: transform;
+  z-index: 2;
 }
 
 .brain-left {
@@ -244,6 +248,7 @@
   animation: slideInLeft 1s ease-in-out, moveUpDown 1.5s ease-in-out infinite 1s;
   transition: transform 0.3s ease-in-out;
   will-change: transform;
+  z-index: 2;
 }
 
 /* Hover Effect for Brain Images */
@@ -256,17 +261,19 @@
 /* Icons around the brain */
 .brain-icon {
   position: absolute;
-  width: 50px; /* Set size for icons */
+  width: 50px;
+  /* Set size for icons */
   height: auto;
   opacity: 0;
   animation: fadeIn 1.2s ease forwards;
   will-change: transform, opacity;
+  z-index: 1;
 }
 
 /* Position-specific icons */
 .bulb {
   width: 83.4px;
-  height: 105.83px;  
+  height: 105.83px;
   top: 245px;
   left: 48px;
   animation: slideInLeft 1.2s ease forwards;
@@ -304,9 +311,18 @@
   animation: slideInRight 1.4s ease forwards;
 }
 
-.gear{
-  width:518.86px;
-  height: 512.81px;
+.brain-icon.gear,
+.gear {
+  width: 86.5%;
+  max-width: 520px;
+  height: auto;
+  aspect-ratio: 518.86 / 512.81;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 1 !important;
 }
 
 /* Keyframes for Sideways Animation */
@@ -315,6 +331,7 @@
     transform: translateX(-150%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -326,6 +343,7 @@
     transform: translateX(150%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -338,6 +356,7 @@
     transform: translateX(-50%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -349,6 +368,7 @@
     transform: translateX(50%);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -360,6 +380,7 @@
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -371,15 +392,19 @@
   0% {
     transform: rotate(0deg);
   }
+
   25% {
     transform: rotate(-5deg);
   }
+
   50% {
     transform: rotate(5deg);
   }
+
   75% {
     transform: rotate(-5deg);
   }
+
   100% {
     transform: rotate(0deg);
   }
@@ -387,9 +412,12 @@
 
 /* Move Up Down Animation for Brain Images */
 @keyframes moveUpDown {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -400,9 +428,11 @@
   0% {
     box-shadow: 0 0 10px var(--primary-orange);
   }
+
   50% {
     box-shadow: 0 0 20px var(--primary-orange), 0 0 30px var(--primary-orange);
   }
+
   100% {
     box-shadow: 0 0 10px var(--primary-orange);
   }
@@ -411,7 +441,8 @@
 /* Wiggle Effect on Hover */
 .puzzle1:hover,
 .puzzle2:hover,
-.pencil:hover ,.bulb:hover,
+.pencil:hover,
+.bulb:hover,
 .symbol:hover {
   animation: wiggle 0.5s ease-in-out;
   animation-iteration-count: infinite;
@@ -419,7 +450,7 @@
 
 /* Image Section Styles */
 .image-partner {
-  margin-top: 20px; 
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -428,12 +459,13 @@
 
 .partner-image {
   width: 100%;
-  max-width: 704px; 
+  max-width: 704px;
   height: auto;
-  margin-left: 0; 
+  margin-left: 0;
   margin-top: 0;
   object-fit: contain;
 }
+
 /* Desktop: 1025px and above - ensure proper layout */
 @media (min-width: 1025px) {
   .hero-section {
@@ -609,10 +641,17 @@
     max-width: 75px;
   }
 
+  .brain-icon.gear,
   .gear {
     width: 90%;
     max-width: 400px;
     height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 1 !important;
   }
 }
 
@@ -853,15 +892,17 @@
     animation: slideInRightMobile 1.2s ease forwards;
   }
 
+  .brain-icon.gear,
   .gear {
     width: 85%;
     max-width: 300px;
     height: auto;
-    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 0;
+    opacity: 1 !important;
   }
 
   .image-partner {
@@ -1032,9 +1073,17 @@
       animation: fadeIn 0.8s ease forwards;
     }
 
+    .brain-icon.gear,
     .gear {
       width: 80%;
       max-width: 250px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      opacity: 1 !important;
     }
 
     .partner-image {
@@ -1150,8 +1199,17 @@
       width: 8%;
     }
 
+    .brain-icon.gear,
     .gear {
+      width: 75%;
       max-width: 200px;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 0;
+      opacity: 1 !important;
     }
 
     .partner-image {

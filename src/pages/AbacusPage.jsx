@@ -4,19 +4,19 @@ import AbacusHero from '../components/AbacusHero';
 import AbacusOverview from '../components/AbacusOverview';
 //import Footer from '../components/Footer';
 import HomeTestimonials from '../components/hometestimonial';
-import Course from '../components/newcardtest';
+import Coursecard from '../components/newcardtest(1)';
 import FAQ from '../components/FranchiseFAQ';
 
 export const AbacusPage = () => {
-    return (
-      <div>
-        <AbacusHero />
-        <AbacusOverview />
-        <FAQ/>
-        <HomeTestimonials />
-        <Course />
-      </div>
-    );
-  };
-  
-  export default AbacusPage;
+  return (
+    <div>
+      <AbacusHero />
+      <AbacusOverview />
+      <FAQ />
+      <HomeTestimonials />
+      <Coursecard />
+    </div>
+  );
+};
+
+export default AbacusPage;

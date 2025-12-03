@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 110px;
-  background:var(--bg-gradient);
+  background: var(--bg-gradient);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-bottom: 3px solid #f3a770;
   position: sticky;
@@ -96,11 +96,12 @@
 .hamburger.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
+
 button {
   font-size: 18px;
   font-weight: bold;
   /* color: #4a4a4a; */
-  color:var(--primary-grey);
+  color: var(--primary-grey);
   border: none;
   background: transparent;
   cursor: pointer;
@@ -160,18 +161,21 @@ button {
 .dropdown-arrow.rotated {
   transform: rotate(90deg);
 }
+
 .dropdown-label {
   display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--primary-grey);
-      border: 1px solid var(--primary-orange);
-      padding: 9px 17px;
-      border-radius: 18px;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-grey);
+  border: 1px solid var(--primary-orange);
+  padding: 9px 17px;
+  border-radius: 18px;
 }
+
 .dropdown-label:hover {
   box-shadow: 0 0 10px rgba(255, 124, 46, 0.6);
 }
+
 .dropdown-item:hover {
   background-color: #fef6f0;
   color: #ff6600;
@@ -191,7 +195,8 @@ button {
     gap: 25px;
   }
 
-  .nav li, button {
+  .nav li,
+  button {
     font-size: 15px;
   }
 
@@ -319,7 +324,8 @@ button {
     width: 100%;
   }
 
-  .nav li, button {
+  .nav li,
+  button {
     font-size: 16px;
     width: 100%;
   }

@@ -20,13 +20,14 @@ const VedicPage = React.lazy(() => import("./pages/VedicPage"));
 const RubicPage = React.lazy(() => import("./pages/RubicPage"));
 const HandwritingPage = React.lazy(() => import("./pages/HandwritingPage"));
 const ReadingPage = React.lazy(() => import("./pages/ReadingPage"));
+const SpellingBeePage = React.lazy(() => import("./pages/SpellingBeePage"));
 
 // Loading fallback component
 const LoadingFallback = () => (
-  <div style={{ 
-    display: 'flex', 
-    justifyContent: 'center', 
-    alignItems: 'center', 
+  <div style={{
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     minHeight: '50vh',
     fontSize: '18px'
   }}>
@@ -51,6 +52,7 @@ function App() {
           <Route path="/rubic" element={<RubicPage />} />
           <Route path="/handwriting" element={<HandwritingPage />} />
           <Route path="/reading" element={<ReadingPage />} />
+          <Route path="/spellingbee" element={<SpellingBeePage />} />
           <Route path="/franchise" element={<FranchisePage />} />
           <Route path="/careers" element={<CareersPage />} />
           {/* Temporarily removed Insights page
