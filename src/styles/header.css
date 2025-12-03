@@ -322,6 +322,7 @@ button {
     gap: 20px;
     margin-left: 0;
     width: 100%;
+    display: flex;
   }
 
   .nav li,
@@ -373,6 +374,69 @@ button {
   }
 }
 
+/* Specific fix for 425px - ensure nav is hidden and hamburger shows */
+@media (max-width: 425px) {
+  .header {
+    padding: 10px 15px;
+    height: 70px;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1101;
+  }
+
+  /* Hide default desktop nav */
+  .nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 280px;
+    background: var(--bg-color);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 70px 20px 20px;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+    overflow-y: auto;
+  }
+
+  .nav.active {
+    display: flex;
+    right: 0;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+    width: 100%;
+    display: flex;
+  }
+
+  .nav li,
+  button {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .contact-us {
+    padding: 10px 15px;
+    font-size: 14px;
+    width: 100%;
+    height: 45px;
+    text-align: center;
+  }
+
+  .logo img {
+    width: 70px;
+    height: 80px;
+  }
+}
+
 /* Desktop adjustments for smaller screens */
 @media (min-width: 1025px) and (max-width: 1331px) {
   .header {
@@ -393,5 +457,110 @@ button {
   .nav ul {
     margin-left: 263px;
     gap: 48px;
+  }
+}
+
+/* Full HD: 1920px */
+@media (min-width: 1920px) {
+  .header {
+    padding: 12px 150px;
+    height: 122px;
+  }
+
+  .logo img {
+    width: 103px;
+    height: 122px;
+  }
+
+  .nav ul {
+    margin-left: 350px;
+    gap: 58px;
+  }
+
+  .nav li,
+  button {
+    font-size: 22px;
+  }
+
+  .contact-us {
+    padding: 24px 19px;
+    font-size: 19px;
+    width: 168px;
+    height: 67px;
+  }
+
+  .dropdown-label {
+    padding: 11px 20px;
+    font-size: 22px;
+  }
+}
+
+/* 2K: 2560px */
+@media (min-width: 2560px) {
+  .header {
+    padding: 15px 200px;
+    height: 153px;
+  }
+
+  .logo img {
+    width: 129px;
+    height: 153px;
+  }
+
+  .nav ul {
+    margin-left: 438px;
+    gap: 73px;
+  }
+
+  .nav li,
+  button {
+    font-size: 28px;
+  }
+
+  .contact-us {
+    padding: 30px 24px;
+    font-size: 24px;
+    width: 210px;
+    height: 84px;
+  }
+
+  .dropdown-label {
+    padding: 14px 25px;
+    font-size: 28px;
+  }
+}
+
+/* 4K: 3840px */
+@media (min-width: 3840px) {
+  .header {
+    padding: 20px 300px;
+    height: 204px;
+  }
+
+  .logo img {
+    width: 172px;
+    height: 204px;
+  }
+
+  .nav ul {
+    margin-left: 584px;
+    gap: 96px;
+  }
+
+  .nav li,
+  button {
+    font-size: 37px;
+  }
+
+  .contact-us {
+    padding: 40px 32px;
+    font-size: 32px;
+    width: 280px;
+    height: 112px;
+  }
+
+  .dropdown-label {
+    padding: 18px 34px;
+    font-size: 37px;
   }
 }

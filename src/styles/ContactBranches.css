@@ -400,3 +400,180 @@ margin-left: 501px;
     font-size: 10px;
   }
 }
+
+/* Full HD: 1920px */
+@media (min-width: 1920px) {
+  .branches-container {
+    padding: 0 132px;
+  }
+
+  .branches-heading {
+    font-size: 29px;
+    margin-left: 9.6%;
+  }
+
+  .branch-card h3 {
+    font-size: 29px;
+  }
+
+  .branch-card p {
+    font-size: 26px;
+  }
+
+  .contact-social-section-heading {
+    font-size: 29px;
+  }
+
+  .icon-container {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-container i {
+    font-size: 24px;
+  }
+
+  .social-link span {
+    font-size: 26px;
+  }
+
+  .media-section-heading {
+    font-size: 29px;
+  }
+
+  .media-section-redirect a {
+    font-size: 24px;
+    margin-left: 1199px;
+  }
+
+  .media-gallery {
+    gap: 42px;
+  }
+
+  .media-gallery img {
+    width: 331px;
+    height: 308px;
+  }
+
+  .contact-footer-text {
+    font-size: 29px;
+  }
+}
+
+/* 2K: 2560px */
+@media (min-width: 2560px) {
+  .branches-container {
+    padding: 0 165px;
+  }
+
+  .branches-heading {
+    font-size: 36px;
+    margin-left: 10%;
+  }
+
+  .branch-card h3 {
+    font-size: 36px;
+  }
+
+  .branch-card p {
+    font-size: 33px;
+  }
+
+  .contact-social-section-heading {
+    font-size: 36px;
+  }
+
+  .icon-container {
+    width: 75px;
+    height: 75px;
+  }
+
+  .icon-container i {
+    font-size: 30px;
+  }
+
+  .social-link span {
+    font-size: 33px;
+  }
+
+  .media-section-heading {
+    font-size: 36px;
+  }
+
+  .media-section-redirect a {
+    font-size: 30px;
+    margin-left: 1499px;
+  }
+
+  .media-gallery {
+    gap: 53px;
+  }
+
+  .media-gallery img {
+    width: 414px;
+    height: 385px;
+  }
+
+  .contact-footer-text {
+    font-size: 36px;
+  }
+}
+
+/* 4K: 3840px */
+@media (min-width: 3840px) {
+  .branches-container {
+    padding: 0 220px;
+  }
+
+  .branches-heading {
+    font-size: 48px;
+    margin-left: 10.67%;
+  }
+
+  .branch-card h3 {
+    font-size: 48px;
+  }
+
+  .branch-card p {
+    font-size: 44px;
+  }
+
+  .contact-social-section-heading {
+    font-size: 48px;
+  }
+
+  .icon-container {
+    width: 100px;
+    height: 100px;
+  }
+
+  .icon-container i {
+    font-size: 40px;
+  }
+
+  .social-link span {
+    font-size: 44px;
+  }
+
+  .media-section-heading {
+    font-size: 48px;
+  }
+
+  .media-section-redirect a {
+    font-size: 40px;
+    margin-left: 1999px;
+  }
+
+  .media-gallery {
+    gap: 70px;
+  }
+
+  .media-gallery img {
+    width: 552px;
+    height: 514px;
+  }
+
+  .contact-footer-text {
+    font-size: 48px;
+  }
+}

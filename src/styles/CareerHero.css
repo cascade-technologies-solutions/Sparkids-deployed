@@ -448,12 +448,144 @@ height: 60px;
   font-size: 16px;
 }
 
-.careerhero-button {
-  font-size: 12px;
-  padding: 6px 10px;
-  margin-left: 27%;
-  font-size: 14px;
-  width: 190px;
-  height: 37px;
+  .careerhero-button {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-left: 27%;
+    font-size: 14px;
+    width: 190px;
+    height: 37px;
+  }
 }
+
+/* Full HD: 1920px */
+@media (min-width: 1920px) {
+  .careerhero-container {
+    padding: 48px;
+  }
+
+  .careerhero-sub-container {
+    max-width: 1440px;
+  }
+
+  .careerhero-pagename {
+    font-size: 29px;
+  }
+
+  .careerhero-subheadline {
+    font-size: 36px;
+  }
+
+  .careerhero-headline {
+    font-size: 96px;
+  }
+
+  .careerhero-description {
+    font-size: 29px;
+  }
+
+  .careerhero-button {
+    font-size: 23px;
+    width: 442px;
+    height: 67px;
+    padding: 24px 19px;
+  }
+
+  .careerhero-central-image {
+    width: 664px;
+    height: 635px;
+  }
+
+  .careerhero-circle {
+    width: 102px;
+    height: 102px;
+  }
+}
+
+/* 2K: 2560px */
+@media (min-width: 2560px) {
+  .careerhero-container {
+    padding: 60px;
+  }
+
+  .careerhero-sub-container {
+    max-width: 1800px;
+  }
+
+  .careerhero-pagename {
+    font-size: 36px;
+  }
+
+  .careerhero-subheadline {
+    font-size: 45px;
+  }
+
+  .careerhero-headline {
+    font-size: 120px;
+  }
+
+  .careerhero-description {
+    font-size: 36px;
+  }
+
+  .careerhero-button {
+    font-size: 29px;
+    width: 552px;
+    height: 84px;
+    padding: 30px 24px;
+  }
+
+  .careerhero-central-image {
+    width: 830px;
+    height: 794px;
+  }
+
+  .careerhero-circle {
+    width: 128px;
+    height: 128px;
+  }
+}
+
+/* 4K: 3840px */
+@media (min-width: 3840px) {
+  .careerhero-container {
+    padding: 80px;
+  }
+
+  .careerhero-sub-container {
+    max-width: 2400px;
+  }
+
+  .careerhero-pagename {
+    font-size: 48px;
+  }
+
+  .careerhero-subheadline {
+    font-size: 60px;
+  }
+
+  .careerhero-headline {
+    font-size: 160px;
+  }
+
+  .careerhero-description {
+    font-size: 48px;
+  }
+
+  .careerhero-button {
+    font-size: 38px;
+    width: 736px;
+    height: 112px;
+    padding: 40px 32px;
+  }
+
+  .careerhero-central-image {
+    width: 1106px;
+    height: 1059px;
+  }
+
+  .careerhero-circle {
+    width: 170px;
+    height: 170px;
+  }
 }

@@ -390,3 +390,147 @@
     font-size: 12px;
   }
 }
+
+/* Full HD: 1920px */
+@media (min-width: 1920px) {
+  .aboutus-ourstory {
+    padding: 72px 30px;
+  }
+
+  .aboutus-ourstory-conatiner {
+    max-width: 1440px;
+  }
+
+  .aboutus-ourstory-text h2 {
+    font-size: 29px;
+  }
+
+  .aboutus-ourstory-text h3 {
+    font-size: 60px;
+  }
+
+  .aboutus-ourstory-text p {
+    font-size: 26px;
+    max-width: 1104px;
+  }
+
+  .timeline {
+    max-width: 1440px;
+    gap: 24px;
+  }
+
+  .timeline-card {
+    width: 316px;
+    height: 294px;
+    padding: 24px;
+  }
+
+  .timeline-icon {
+    width: 62px;
+    height: 55px;
+  }
+
+  .timeline-card h3 {
+    font-size: 29px;
+  }
+
+  .timeline-card p {
+    font-size: 18px;
+  }
+}
+
+/* 2K: 2560px */
+@media (min-width: 2560px) {
+  .aboutus-ourstory {
+    padding: 90px 40px;
+  }
+
+  .aboutus-ourstory-conatiner {
+    max-width: 1800px;
+  }
+
+  .aboutus-ourstory-text h2 {
+    font-size: 36px;
+  }
+
+  .aboutus-ourstory-text h3 {
+    font-size: 75px;
+  }
+
+  .aboutus-ourstory-text p {
+    font-size: 33px;
+    max-width: 1380px;
+  }
+
+  .timeline {
+    max-width: 1800px;
+    gap: 30px;
+  }
+
+  .timeline-card {
+    width: 395px;
+    height: 368px;
+    padding: 30px;
+  }
+
+  .timeline-icon {
+    width: 78px;
+    height: 69px;
+  }
+
+  .timeline-card h3 {
+    font-size: 36px;
+  }
+
+  .timeline-card p {
+    font-size: 23px;
+  }
+}
+
+/* 4K: 3840px */
+@media (min-width: 3840px) {
+  .aboutus-ourstory {
+    padding: 120px 60px;
+  }
+
+  .aboutus-ourstory-conatiner {
+    max-width: 2400px;
+  }
+
+  .aboutus-ourstory-text h2 {
+    font-size: 48px;
+  }
+
+  .aboutus-ourstory-text h3 {
+    font-size: 100px;
+  }
+
+  .aboutus-ourstory-text p {
+    font-size: 44px;
+    max-width: 1840px;
+  }
+
+  .timeline {
+    max-width: 2400px;
+    gap: 40px;
+  }
+
+  .timeline-card {
+    width: 526px;
+    height: 490px;
+    padding: 40px;
+  }
+
+  .timeline-icon {
+    width: 104px;
+    height: 92px;
+  }
+
+  .timeline-card h3 {
+    font-size: 48px;
+  }
+
+  .timeline-card p {
+    font-size: 30px;
+  }
+}

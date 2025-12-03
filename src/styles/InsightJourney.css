@@ -453,3 +453,213 @@ color :var(--primary-orange);
 }
 
 }
+
+/* Full HD: 1920px */
+@media (min-width: 1920px) {
+  .insightjourney {
+    padding: 48px 30px;
+  }
+
+  .insightjourney-bg {
+    width: 1728px;
+    height: 161px;
+  }
+
+  .insightjourney-header {
+    max-width: 1440px;
+    margin-bottom: 24px;
+  }
+
+  .insightjourney-header h2 {
+    font-size: 36px;
+  }
+
+  .insightjourney-more-articles {
+    font-size: 29px;
+  }
+
+  .insightjourney-carousel-container {
+    max-width: 1440px;
+  }
+
+  .insightjourney-card {
+    flex: 0 0 384px;
+    height: 533px;
+    margin: 0 12px;
+  }
+
+  .insightjourney-image {
+    width: 384px;
+    height: 264px;
+  }
+
+  .insightjourney-card-header h3 {
+    font-size: 26px;
+  }
+
+  .insightjourney-card-header h4 {
+    font-size: 17px;
+  }
+
+  .insightjourney-card-content p {
+    font-size: 24px;
+  }
+
+  .insightjourney-read-article-link {
+    font-size: 17px;
+  }
+
+  .insightjourney-arrow-button {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+
+  .insightjourney-left-arrow {
+    left: 172px;
+  }
+
+  .insightjourney-right-arrow {
+    right: 172px;
+  }
+}
+
+/* 2K: 2560px */
+@media (min-width: 2560px) {
+  .insightjourney {
+    padding: 60px 40px;
+  }
+
+  .insightjourney-bg {
+    width: 2160px;
+    height: 201px;
+  }
+
+  .insightjourney-header {
+    max-width: 1800px;
+    margin-bottom: 30px;
+  }
+
+  .insightjourney-header h2 {
+    font-size: 45px;
+  }
+
+  .insightjourney-more-articles {
+    font-size: 36px;
+  }
+
+  .insightjourney-carousel-container {
+    max-width: 1800px;
+  }
+
+  .insightjourney-card {
+    flex: 0 0 480px;
+    height: 666px;
+    margin: 0 15px;
+  }
+
+  .insightjourney-image {
+    width: 480px;
+    height: 330px;
+  }
+
+  .insightjourney-card-header h3 {
+    font-size: 33px;
+  }
+
+  .insightjourney-card-header h4 {
+    font-size: 21px;
+  }
+
+  .insightjourney-card-content p {
+    font-size: 30px;
+  }
+
+  .insightjourney-read-article-link {
+    font-size: 21px;
+  }
+
+  .insightjourney-arrow-button {
+    width: 60px;
+    height: 60px;
+    font-size: 27px;
+  }
+
+  .insightjourney-left-arrow {
+    left: 215px;
+  }
+
+  .insightjourney-right-arrow {
+    right: 215px;
+  }
+}
+
+/* 4K: 3840px */
+@media (min-width: 3840px) {
+  .insightjourney {
+    padding: 80px 60px;
+  }
+
+  .insightjourney-bg {
+    width: 2880px;
+    height: 268px;
+  }
+
+  .insightjourney-header {
+    max-width: 2400px;
+    margin-bottom: 40px;
+  }
+
+  .insightjourney-header h2 {
+    font-size: 60px;
+  }
+
+  .insightjourney-more-articles {
+    font-size: 48px;
+  }
+
+  .insightjourney-carousel-container {
+    max-width: 2400px;
+  }
+
+  .insightjourney-card {
+    flex: 0 0 640px;
+    height: 888px;
+    margin: 0 20px;
+  }
+
+  .insightjourney-image {
+    width: 640px;
+    height: 440px;
+  }
+
+  .insightjourney-card-header h3 {
+    font-size: 44px;
+  }
+
+  .insightjourney-card-header h4 {
+    font-size: 28px;
+  }
+
+  .insightjourney-card-content p {
+    font-size: 40px;
+  }
+
+  .insightjourney-read-article-link {
+    font-size: 28px;
+  }
+
+  .insightjourney-arrow-button {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+  }
+
+  .insightjourney-left-arrow {
+    left: 287px;
+  }
+
+  .insightjourney-right-arrow {
+    right: 287px;
+  }
+}

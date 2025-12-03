@@ -6,10 +6,16 @@
 .tab-header {
   gap: 40px;
   background: none;
-  border-bottom: 2px solid #eee;
+  border-bottom: 2px solid rgba(238, 238, 238, 0.3);
   margin-left: -15rem;
   margin-bottom: -70px;
   padding: 109px;
+  transition: border-color 0.3s ease;
+}
+
+/* Dark theme tab border */
+[data-theme="dark"] .tab-header {
+  border-bottom: 2px solid rgba(245, 134, 52, 0.3);
 }
 
 .tab-button {
@@ -35,15 +41,21 @@
 
 /* Box with Shadow for Content */
 .content-card {
-  padding: 3rem 5rem;
+  padding: 4rem 5rem 3rem 5rem;
   width: 1250px;
   height: auto;
-  border: 2px solid #ddd;
+  border: 2px solid rgba(221, 221, 221, 0.3);
   border-radius: 20px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   background: var(--item-color);
   margin-left: -150px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
 
+/* Dark theme border and shadow */
+[data-theme="dark"] .content-card {
+  border: 2px solid rgba(245, 134, 52, 0.4);
+  box-shadow: 0 4px 20px rgba(245, 134, 52, 0.2), 0 0 0 1px rgba(245, 134, 52, 0.1);
 }
 
 /* Titles and Text */
@@ -69,6 +81,11 @@
   line-height: 1.6;
   font-family: geologica;
   margin-bottom: 1rem;
+}
+
+/* Dark theme text colors */
+[data-theme="dark"] .overview-description {
+  color: var(--item-text);
 }
 
 /* List of Benefits */
@@ -148,6 +165,15 @@
   font-family: geologica;
 }
 
+/* Dark theme text colors */
+[data-theme="dark"] .dropdown-course-info {
+  color: var(--item-text);
+}
+
+[data-theme="dark"] .dropdown-course-info li {
+  color: var(--item-text);
+}
+
 .dropdown-course-info span {
 
   color: var(--primary-orange);
@@ -155,7 +181,13 @@
 
 .details-content {
   font-family: Arial, sans-serif;
-  color: #333;
+  color: var(--primary-grey);
+  padding-top: 1rem;
+}
+
+/* Dark theme text colors */
+[data-theme="dark"] .details-content {
+  color: var(--item-text);
 }
 
 .level-detail span {
@@ -184,8 +216,13 @@
   font-weight: bold;
   margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: var(--primary-grey);
+  color: var(--primary-orange);
   font-family: lilita one;
+}
+
+/* Dark theme - keep orange for consistency */
+[data-theme="dark"] .sub-title {
+  color: var(--primary-orange);
 }
 
 .brain-activation-list,
@@ -201,10 +238,23 @@
 .key-skills-list li {
   margin-bottom: 1rem;
   line-height: 1.6;
+  color: var(--primary-grey);
+}
+
+/* Dark theme text colors */
+[data-theme="dark"] .brain-activation-list li,
+[data-theme="dark"] .key-skills-list li {
+  color: var(--item-text);
 }
 
 .key-skills-list span {
   color: var(--primary-orange);
+}
+
+/* Ensure Result text is visible in dark theme */
+[data-theme="dark"] .key-skills-list li span:not(:first-child) {
+  color: var(--item-text);
+  opacity: 0.9;
 }
 
 .opportunity-list {
@@ -272,9 +322,14 @@
     /* Remove scroll */
     margin-left: 0;
     margin-bottom: 20px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid rgba(238, 238, 238, 0.3);
     justify-content: space-between;
     /* Distribute space */
+  }
+
+  /* Dark theme tab border on mobile */
+  [data-theme="dark"] .tab-header {
+    border-bottom: 2px solid rgba(245, 134, 52, 0.3);
   }
 
   .tab-header::-webkit-scrollbar {
@@ -298,7 +353,7 @@
 
 
   .content-card {
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
     margin-left: 0;
     width: 100%;
     /* Ensure it fits */
@@ -345,7 +400,7 @@
     }
 
     .content-card {
-      padding: 1rem;
+      padding: 2rem 1rem 1rem 1rem;
     }
 
     .overview-description {
@@ -370,7 +425,7 @@
   }
 
   .content-card {
-    padding: 0.8rem;
+    padding: 2rem 0.8rem 0.8rem 0.8rem;
   }
 
   .benefits-list li {
@@ -388,5 +443,170 @@
 
   .level-detail span {
     font-size: 16px;
+  }
+}
+
+/* Full HD: 1920px */
+@media (min-width: 1920px) {
+  .page-container {
+    margin: 14.4rem 14.4rem;
+  }
+
+  .content-card {
+    width: 1500px;
+    padding: 4.8rem 6rem 3.6rem 6rem;
+    margin-left: -180px;
+  }
+
+  .main-title,
+  .sub-title {
+    font-size: 36px;
+  }
+
+  .overview-description {
+    font-size: 26px;
+  }
+
+  .benefits-list li {
+    font-size: 29px;
+  }
+
+  .benefits-list img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 29px;
+  }
+
+  .dropdown-content {
+    font-size: 29px;
+  }
+
+  .dropdown-subtitle {
+    font-size: 26px;
+  }
+
+  .dropdown-course-info {
+    font-size: 26px;
+  }
+
+  .level-detail span {
+    font-size: 29px;
+  }
+
+  .tab-button {
+    font-size: 29px;
+  }
+}
+
+/* 2K: 2560px */
+@media (min-width: 2560px) {
+  .page-container {
+    margin: 18rem 18rem;
+  }
+
+  .content-card {
+    width: 1875px;
+    padding: 6rem 7.5rem 4.5rem 7.5rem;
+    margin-left: -225px;
+  }
+
+  .main-title,
+  .sub-title {
+    font-size: 45px;
+  }
+
+  .overview-description {
+    font-size: 33px;
+  }
+
+  .benefits-list li {
+    font-size: 36px;
+  }
+
+  .benefits-list img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 36px;
+  }
+
+  .dropdown-content {
+    font-size: 36px;
+  }
+
+  .dropdown-subtitle {
+    font-size: 33px;
+  }
+
+  .dropdown-course-info {
+    font-size: 33px;
+  }
+
+  .level-detail span {
+    font-size: 36px;
+  }
+
+  .tab-button {
+    font-size: 36px;
+  }
+}
+
+/* 4K: 3840px */
+@media (min-width: 3840px) {
+  .page-container {
+    margin: 24rem 24rem;
+  }
+
+  .content-card {
+    width: 2500px;
+    padding: 8rem 10rem 6rem 10rem;
+    margin-left: -300px;
+  }
+
+  .main-title,
+  .sub-title {
+    font-size: 60px;
+  }
+
+  .overview-description {
+    font-size: 44px;
+  }
+
+  .benefits-list li {
+    font-size: 48px;
+  }
+
+  .benefits-list img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .dropdown-header h3 {
+    font-size: 48px;
+  }
+
+  .dropdown-content {
+    font-size: 48px;
+  }
+
+  .dropdown-subtitle {
+    font-size: 44px;
+  }
+
+  .dropdown-course-info {
+    font-size: 44px;
+  }
+
+  .level-detail span {
+    font-size: 48px;
+  }
+
+  .tab-button {
+    font-size: 48px;
   }
 }

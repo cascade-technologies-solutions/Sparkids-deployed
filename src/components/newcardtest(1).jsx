@@ -16,7 +16,7 @@ const BoxLayoutCard1 = () => {
 
   const scroll = (direction) => {
     const container = cardContainerRef.current;
-    const cardWidth = container.firstElementChild.offsetWidth + 45.01;
+    const cardWidth = container.firstElementChild.offsetWidth + 55;
     const scrollAmount = direction === "left" ? -cardWidth : cardWidth;
     container.scrollBy({ left: scrollAmount, behavior: "smooth" });
   };
