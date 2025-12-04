@@ -30,6 +30,11 @@ function SplashCursor({
     const canvas = canvasRef.current;
     if (!canvas) return;
 
+    // Detect mobile device
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
+    const colorIntensity = isMobile ? 0.5 : 0.15; // Increased intensity for mobile
+    const splatForceMultiplier = isMobile ? 1.5 : 1.0; // Increased force for mobile
+
     function pointerPrototype() {
       this.id = -1;
       this.texcoordX = 0;
@@ -53,7 +58,7 @@ function SplashCursor({
       PRESSURE_ITERATIONS,
       CURL,
       SPLAT_RADIUS,
-      SPLAT_FORCE,
+      SPLAT_FORCE: SPLAT_FORCE * splatForceMultiplier,
       SHADING,
       COLOR_UPDATE_SPEED,
       PAUSED: false,
@@ -949,9 +954,10 @@ function SplashCursor({
 
     function clickSplat(pointer) {
       const color = generateColor();
-      color.r *= 10.0;
-      color.g *= 10.0;
-      color.b *= 10.0;
+      const clickIntensity = isMobile ? 15.0 : 10.0; // Higher intensity for mobile clicks
+      color.r *= clickIntensity;
+      color.g *= clickIntensity;
+      color.b *= clickIntensity;
       let dx = 10 * (Math.random() - 0.5);
       let dy = 30 * (Math.random() - 0.5);
       splat(pointer.texcoordX, pointer.texcoordY, dx, dy, color);
@@ -1027,9 +1033,9 @@ function SplashCursor({
 
     function generateColor() {
       let c = HSVtoRGB(Math.random(), 1.0, 1.0);
-      c.r *= 0.15;
-      c.g *= 0.15;
-      c.b *= 0.15;
+      c.r *= colorIntensity;
+      c.g *= colorIntensity;
+      c.b *= colorIntensity;
       return c;
     }
 
