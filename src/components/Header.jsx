@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect, useRef } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { ThemeContext } from "../context/ThemeContext";
 import "../styles/header.css";
 
@@ -9,6 +9,7 @@ function Header() {
   const { isDarkMode, toggleTheme } = useContext(ThemeContext);
   const dropdownRef = useRef(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleNav = () => setIsNavOpen(!isNavOpen);
   const closeNav = () => {
@@ -19,7 +20,12 @@ function Header() {
   const handleDropdownToggle = (e) => {
     e.preventDefault();
     e.stopPropagation();
+    const wasOpen = isDropdownOpen;
     setIsDropdownOpen(!isDropdownOpen);
+    // Navigate to /courses when opening the dropdown
+    if (!wasOpen) {
+      navigate("/courses");
+    }
   };
 
   // Close dropdown when clicking on other nav items
@@ -149,6 +155,9 @@ function Header() {
 
             {isDropdownOpen && (
               <div className="dropdown-menu-custom">
+                <NavLink to="/courses" className="dropdown-item" onClick={handleNavItemClick}>
+                  All Courses
+                </NavLink>
                 <NavLink to="/abacus" className="dropdown-item" onClick={handleNavItemClick}>
                   Abacus
                 </NavLink>
@@ -168,8 +177,8 @@ function Header() {
                 <NavLink to="/reading" className="dropdown-item" onClick={handleNavItemClick}>
                   Reading
                 </NavLink>
-                <NavLink to="/courses" className="dropdown-item" onClick={handleNavItemClick}>
-                  All Courses
+                <NavLink to="/spellingbee" className="dropdown-item" onClick={handleNavItemClick}>
+                  Spelling Bee
                 </NavLink>
               </div>
             )}
