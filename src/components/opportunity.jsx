@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import opport1 from "../Assets/home-img/opport1.jpg";
 import opport2 from "../Assets/home-img/opport2.jpg";
-import opport3 from "../Assets/home-img/opport3.jpg";
+import opport3 from "../Assets/home-img/opport3.png";
 import "../styles/opportunity.css";
 
 const Opportunity = () => {
