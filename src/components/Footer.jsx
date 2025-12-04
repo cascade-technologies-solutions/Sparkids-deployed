@@ -73,9 +73,9 @@ const Footer = () => {
         <div className="footer-section">
           <h3>Resources</h3>
           <ul>
-            {/* <li><Link to="/faq">FAQ’s</Link></li> */}
-            <li><Link to="/franchise#faq">FAQ’s</Link></li>
-            <li><Link to="/#testimonials">Testimonials</Link></li>
+            {/* <li><Link to="/faq">FAQ's</Link></li> */}
+            <li><Link to="/franchise#faq">FAQ's</Link></li>
+            {/* <li><Link to="/#testimonials">Testimonials</Link></li> */}
             <li><Link to="/blogs">Blogs</Link></li>
             <li><Link to="/policies">Policies</Link></li>
             <li><Link to="/terms">Terms & Conditions</Link></li>

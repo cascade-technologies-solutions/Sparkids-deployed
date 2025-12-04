@@ -3,7 +3,7 @@ import React from 'react';
 import AbacusHero from '../components/AbacusHero';
 import AbacusOverview from '../components/AbacusOverview';
 //import Footer from '../components/Footer';
-import HomeTestimonials from '../components/hometestimonial';
+//import HomeTestimonials from '../components/hometestimonial';
 import Coursecard from '../components/newcardtest(1)';
 import FAQ from '../components/FranchiseFAQ';
 
@@ -13,7 +13,7 @@ export const AbacusPage = () => {
       <AbacusHero />
       <AbacusOverview />
       <FAQ />
-      <HomeTestimonials />
+      {/* <HomeTestimonials /> */}
       <Coursecard />
     </div>
   );

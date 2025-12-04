@@ -2,7 +2,7 @@ import React from "react";
 import SpellingBeeHero from "../components/SpellingBeeHero";
 import SpellingBeeOverview from "../components/SpellingBeeOverview";
 import FranchiseFAQ from "../components/FranchiseFAQ";
-import HomeTestimonials from "../components/hometestimonial";
+//import HomeTestimonials from "../components/hometestimonial";
 import Coursecard from '../components/newcardtest(1)';
 
 const SpellingBeePage = () => {
@@ -11,7 +11,7 @@ const SpellingBeePage = () => {
             <SpellingBeeHero />
             <SpellingBeeOverview />
             <Coursecard />
-            <HomeTestimonials />
+            {/* <HomeTestimonials /> */}
             <FranchiseFAQ />
         </div>
     );

@@ -3,7 +3,7 @@ import React from 'react';
 import AboutUs from '../components/ReadingHero';
 import ReadingOverview from '../components/ReadingOverview';
 //import Footer from '../components/Footer';
-import HomeTestimonials from '../components/hometestimonial';
+//import HomeTestimonials from '../components/hometestimonial';
 import Coursecard from '../components/newcardtest(1)';
 import FAQ from '../components/FranchiseFAQ';
 
@@ -13,7 +13,7 @@ export const ReadingPage = () => {
       <AboutUs />
       <ReadingOverview />
       <FAQ />
-      <HomeTestimonials />
+      {/* <HomeTestimonials /> */}
       <Coursecard />
     </div>
   );
