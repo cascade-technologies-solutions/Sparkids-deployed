@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Sparkids-deployed/static/css/main.aa4f3d8b.css",
-    "main.js": "/Sparkids-deployed/static/js/main.94186818.js",
+    "main.js": "/Sparkids-deployed/static/js/main.63ee8512.js",
     "static/css/699.b1cf94a1.chunk.css": "/Sparkids-deployed/static/css/699.b1cf94a1.chunk.css",
     "static/js/699.1b513dc6.chunk.js": "/Sparkids-deployed/static/js/699.1b513dc6.chunk.js",
     "static/css/237.efe95df1.chunk.css": "/Sparkids-deployed/static/css/237.efe95df1.chunk.css",
@@ -89,7 +89,7 @@
     "static/media/ourstory1.png": "/Sparkids-deployed/static/media/ourstory1.282f0b3bd8f9bd04d6d3.png",
     "index.html": "/Sparkids-deployed/index.html",
     "main.aa4f3d8b.css.map": "/Sparkids-deployed/static/css/main.aa4f3d8b.css.map",
-    "main.94186818.js.map": "/Sparkids-deployed/static/js/main.94186818.js.map",
+    "main.63ee8512.js.map": "/Sparkids-deployed/static/js/main.63ee8512.js.map",
     "699.b1cf94a1.chunk.css.map": "/Sparkids-deployed/static/css/699.b1cf94a1.chunk.css.map",
     "699.1b513dc6.chunk.js.map": "/Sparkids-deployed/static/js/699.1b513dc6.chunk.js.map",
     "237.efe95df1.chunk.css.map": "/Sparkids-deployed/static/css/237.efe95df1.chunk.css.map",
@@ -115,6 +115,6 @@
   },
   "entrypoints": [
     "static/css/main.aa4f3d8b.css",
-    "static/js/main.94186818.js"
+    "static/js/main.63ee8512.js"
   ]
 }
