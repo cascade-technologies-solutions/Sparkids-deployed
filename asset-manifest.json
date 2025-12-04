@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Sparkids-deployed/static/css/main.aa4f3d8b.css",
-    "main.js": "/Sparkids-deployed/static/js/main.0417e9a3.js",
+    "main.js": "/Sparkids-deployed/static/js/main.ec8ca40d.js",
     "static/css/78.a6dcad70.chunk.css": "/Sparkids-deployed/static/css/78.a6dcad70.chunk.css",
     "static/js/78.d34370fb.chunk.js": "/Sparkids-deployed/static/js/78.d34370fb.chunk.js",
     "static/css/237.efe95df1.chunk.css": "/Sparkids-deployed/static/css/237.efe95df1.chunk.css",
@@ -23,7 +23,7 @@
     "static/js/453.a83fd9ba.chunk.js": "/Sparkids-deployed/static/js/453.a83fd9ba.chunk.js",
     "static/js/338.b3d16d3a.chunk.js": "/Sparkids-deployed/static/js/338.b3d16d3a.chunk.js",
     "static/js/382.c522699e.chunk.js": "/Sparkids-deployed/static/js/382.c522699e.chunk.js",
-    "static/css/632.06e5a75f.chunk.css": "/Sparkids-deployed/static/css/632.06e5a75f.chunk.css",
+    "static/css/632.cb8cce2f.chunk.css": "/Sparkids-deployed/static/css/632.cb8cce2f.chunk.css",
     "static/css/526.a07ae318.chunk.css": "/Sparkids-deployed/static/css/526.a07ae318.chunk.css",
     "static/media/franchisehero.png": "/Sparkids-deployed/static/media/franchisehero.62e19172435d7749c4cb.png",
     "static/media/educators.png": "/Sparkids-deployed/static/media/educators.dfb47cc63dc4e3b9ad63.png",
@@ -91,7 +91,7 @@
     "static/media/ourstory1.png": "/Sparkids-deployed/static/media/ourstory1.282f0b3bd8f9bd04d6d3.png",
     "index.html": "/Sparkids-deployed/index.html",
     "main.aa4f3d8b.css.map": "/Sparkids-deployed/static/css/main.aa4f3d8b.css.map",
-    "main.0417e9a3.js.map": "/Sparkids-deployed/static/js/main.0417e9a3.js.map",
+    "main.ec8ca40d.js.map": "/Sparkids-deployed/static/js/main.ec8ca40d.js.map",
     "78.a6dcad70.chunk.css.map": "/Sparkids-deployed/static/css/78.a6dcad70.chunk.css.map",
     "78.d34370fb.chunk.js.map": "/Sparkids-deployed/static/js/78.d34370fb.chunk.js.map",
     "237.efe95df1.chunk.css.map": "/Sparkids-deployed/static/css/237.efe95df1.chunk.css.map",
@@ -113,11 +113,11 @@
     "453.a83fd9ba.chunk.js.map": "/Sparkids-deployed/static/js/453.a83fd9ba.chunk.js.map",
     "338.b3d16d3a.chunk.js.map": "/Sparkids-deployed/static/js/338.b3d16d3a.chunk.js.map",
     "382.c522699e.chunk.js.map": "/Sparkids-deployed/static/js/382.c522699e.chunk.js.map",
-    "632.06e5a75f.chunk.css.map": "/Sparkids-deployed/static/css/632.06e5a75f.chunk.css.map",
+    "632.cb8cce2f.chunk.css.map": "/Sparkids-deployed/static/css/632.cb8cce2f.chunk.css.map",
     "526.a07ae318.chunk.css.map": "/Sparkids-deployed/static/css/526.a07ae318.chunk.css.map"
   },
   "entrypoints": [
     "static/css/main.aa4f3d8b.css",
-    "static/js/main.0417e9a3.js"
+    "static/js/main.ec8ca40d.js"
   ]
 }
