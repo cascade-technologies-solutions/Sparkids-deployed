@@ -11,23 +11,28 @@ import media3 from "../Assets/contact-img/media3.png";
 const BranchCarousel = () => {
   const branches = [
     {
-      title: "Hubli, Vidya Nagar",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093785!2d144.96305791531665!3d-37.81410797975186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d9b7b78a9b0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1635828576584!5m2!1sen!2sau",
+      title: "Sparkids Abacus Learning Point, Vijayapur",
+      mapSrc: "https://www.google.com/maps?q=16.839444,75.711194&output=embed",
       description: "Description",
     },
     {
-      title: "Bangalore, Majestic Nagar",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093785!2d144.96305791531665!3d-37.81410797975186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d9b7b78a9b0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1635828576584!5m2!1sen!2sau",
+      title: "Chinmay Lok Sparkids Abacus Learning Point, Vijayapur",
+      mapSrc: "https://www.google.com/maps?q=16.839444,75.711194&output=embed",
       description: "Description",
     },
     {
-      title: "Gulbarga, RT Nagar",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093785!2d144.96305791531665!3d-37.81410797975186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d9b7b78a9b0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1635828576584!5m2!1sen!2sau",
+      title: "Samruddhi Sparkids Abacus Learning Point Vijayapur",
+      mapSrc: "https://www.google.com/maps?q=16.817917,75.740889&output=embed",
       description: "Description",
     },
     {
-      title: "Hubli, Vidya Nagar",
-      mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093785!2d144.96305791531665!3d-37.81410797975186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d9b7b78a9b0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1635828576584!5m2!1sen!2sau",
+      title: "Chinmay Lok Sparkids Abacus Learning Point, Vijayapur (2nd Branch)",
+      mapSrc: "https://www.google.com/maps?q=16.823944,75.727167&output=embed",
+      description: "Description",
+    },
+    {
+      title: "Haripriya Sparkids Abacus Learning Point Vijayapur",
+      mapSrc: "https://www.google.com/maps?q=16.826583,75.728722&output=embed",
       description: "Description",
     },
   ];
