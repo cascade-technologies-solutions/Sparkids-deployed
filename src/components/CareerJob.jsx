@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../styles/CareerJob.css";
-import { API_BASE_URL } from "../api";
+// import { API_BASE_URL } from "../api"; // Commented out - using Google Sheets instead
+import { submitJobApplication } from "../utils/googleSheets";
+import { GOOGLE_SHEETS_CONFIG } from "../config/googleSheets";
 
 // jobData replaced with your provided positions
 const jobData = [
@@ -269,24 +271,60 @@ function CareerJob() {
             <form
               onSubmit={async (e) => {
                 e.preventDefault();
-                const formData = new FormData(e.target);
+                
+                // Commented out - old API integration
+                // const formData = new FormData(e.target);
+                // try {
+                //   const response = await fetch(
+                //     `${API_BASE_URL}/job-application`,
+                //     {
+                //       method: "POST",
+                //       body: formData,
+                //     }
+                //   );
 
+                //   if (response.ok) {
+                //     alert("Application submitted successfully!");
+                //     e.target.reset();
+                //     setApplicationJobTitle(selectedJob?.type || jobData[0].type);
+                //   } else {
+                //     const errorText = await response.text();
+                //     alert(errorText || "Failed to submit. Please try again.");
+                //   }
+                // } catch (error) {
+                //   console.error("Error submitting the application:", error);
+                //   alert("An error occurred. Please try again.");
+                // }
+
+                // Google Sheets integration
                 try {
-                  const response = await fetch(
-                    `${API_BASE_URL}/job-application`,
-                    {
-                      method: "POST",
-                      body: formData,
-                    }
+                  const formData = new FormData(e.target);
+                  const resumeFile = formData.get("resume");
+
+                  const applicationData = {
+                    jobTitle: formData.get("jobTitle"),
+                    fullName: formData.get("fullName"),
+                    email: formData.get("email"),
+                    phoneNumber: formData.get("phoneNumber"),
+                    currentCTC: formData.get("currentCTC"),
+                    expectedCTC: formData.get("expectedCTC"),
+                    noticePeriod: formData.get("noticePeriod"),
+                    portfolioLink: formData.get("portfolioLink") || "",
+                    timestamp: new Date().toISOString(),
+                  };
+
+                  const result = await submitJobApplication(
+                    GOOGLE_SHEETS_CONFIG.jobApplication,
+                    applicationData,
+                    resumeFile
                   );
 
-                  if (response.ok) {
+                  if (result.success) {
                     alert("Application submitted successfully!");
                     e.target.reset();
                     setApplicationJobTitle(selectedJob?.type || jobData[0].type);
                   } else {
-                    const errorText = await response.text();
-                    alert(errorText || "Failed to submit. Please try again.");
+                    alert(result.message || "Failed to submit. Please try again.");
                   }
                 } catch (error) {
                   console.error("Error submitting the application:", error);

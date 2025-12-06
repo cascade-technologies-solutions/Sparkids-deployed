@@ -7,7 +7,9 @@ import bgImage3 from "../Assets/about-img/quesmem3.png";
 import bgImage4 from "../Assets/about-img/quesmem4.png";
 import bgImage5 from "../Assets/about-img/quesmem5.png";
 import bgImage6 from "../Assets/about-img/quesmem6.png";
-import { API_BASE_URL } from "../api";
+// import { API_BASE_URL } from "../api"; // Commented out - using Google Sheets instead
+import { submitPhoneNumber } from "../utils/googleSheets";
+import { GOOGLE_SHEETS_CONFIG } from "../config/googleSheets";
 
 const QuestionSection = () => {
   const [contact, setcontact] = useState("");
@@ -20,25 +22,43 @@ const QuestionSection = () => {
       return;
     }
 
+    // Commented out - old API integration
+    // try {
+    //   const formData = new FormData();
+    //   formData.append("phoneNumber", contact);
+
+    //   const response = await fetch(`${API_BASE_URL}/api/contact`, {
+    //     method: "POST",
+    //     body: formData,
+    //   });
+
+    //   if (response.ok) {
+    //     await response.text();
+    //     setResponseMessage("We will contact you shortly!");
+    //     setTimeout(() => setResponseMessage(""), 3000);
+    //   } else {
+    //     const errorText = await response.text();
+    //     setResponseMessage(errorText || "Failed to submit. Please try again.");
+    //   }
+    // } catch (error) {
+    //   console.error("Error contacting API:", error);
+    //   setResponseMessage("An error occurred. Please try again.");
+    // }
+
+    // Google Sheets integration
     try {
-      const formData = new FormData();
-      formData.append("phoneNumber", contact);
+      const result = await submitPhoneNumber(GOOGLE_SHEETS_CONFIG.questionForm, contact);
 
-      const response = await fetch(`${API_BASE_URL}/api/contact`, {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        await response.text();
+      if (result.success) {
         setResponseMessage("We will contact you shortly!");
         setTimeout(() => setResponseMessage(""), 3000);
+        // Reset input
+        setcontact("");
       } else {
-        const errorText = await response.text();
-        setResponseMessage(errorText || "Failed to submit. Please try again.");
+        setResponseMessage(result.message || "Failed to submit. Please try again.");
       }
     } catch (error) {
-      console.error("Error contacting API:", error);
+      console.error("Error submitting to Google Sheets:", error);
       setResponseMessage("An error occurred. Please try again.");
     }
   };

@@ -39,6 +39,7 @@
   margin-left: -426px;
   margin-right: 678px;
   margin-top:-5%;
+  text-align: left;
 }
 
 .careerhero-pagename  span a{
@@ -284,7 +285,7 @@ line-height: 53px;
 .careerhero-container {
   gap: 10px;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 
@@ -307,7 +308,7 @@ line-height: 53px;
     left:-90%;
     top:1%;
     font-size: 14px;
-
+    text-align: left;
   }
   .careerhero-image{
     width: 89%;

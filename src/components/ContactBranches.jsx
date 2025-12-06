@@ -1,14 +1,13 @@
-import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import React, { useState, useEffect } from "react";
 import "../styles/ContactBranches.css";
 import media1 from "../Assets/contact-img/media1.png";
 import media2 from "../Assets/contact-img/media2.png";
 import media3 from "../Assets/contact-img/media3.png";
 
 const BranchCarousel = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3);
+
   const branches = [
     {
       title: "Sparkids Abacus Learning Point, Vijayapur",
@@ -37,48 +36,102 @@ const BranchCarousel = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 431) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth < 768) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const nextSlide = () => {
+    if (currentIndex < branches.length - slidesToShow) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
+
   return (
     <div className="branch-carousel">
       <h2 className="branches-heading">All available branches</h2>
-      <Swiper
-        slidesPerView={1}
-        spaceBetween={10}
-        breakpoints={{
-          0: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          431: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-        }}
-        pagination={{ clickable: true }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        {branches.map((branch, index) => (
-          <SwiperSlide key={index}>
-            <div className="branch-card">
-              <h3>{branch.title}</h3>
-              <iframe
-                src={branch.mapSrc}
-                width="100%"
-                height="200"
-                style={{ border: 0, borderRadius: "8px" }}
-                allowFullScreen=""
-                loading="lazy"
-                title={`${branch.title} Map`}
-              ></iframe>
-              <p>{branch.description}</p>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      <div className="branch-slider-container">
+        <div className="branch-slider">
+          {branches
+            .slice(currentIndex, currentIndex + slidesToShow)
+            .map((branch, index) => (
+              <div key={currentIndex + index} className="branch-card">
+                <h3>{branch.title}</h3>
+                <iframe
+                  src={branch.mapSrc}
+                  width="100%"
+                  height="200"
+                  style={{ border: 0, borderRadius: "8px" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  title={`${branch.title} Map`}
+                ></iframe>
+                <p>{branch.description}</p>
+              </div>
+            ))}
+        </div>
+        <div className="branch-slider-buttons">
+          <button
+            className="branch-slider-button-left"
+            onClick={prevSlide}
+            disabled={currentIndex === 0}
+          >
+            <svg
+              width="15"
+              height="25"
+              viewBox="0 0 15 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.9023 1.44043L1.8125 12.5302L12.9023 23.62"
+                stroke="var(--bg-color)"
+                strokeWidth="2.21796"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            className="branch-slider-button-right"
+            onClick={nextSlide}
+            disabled={currentIndex >= branches.length - slidesToShow}
+          >
+            <svg
+              width="15"
+              height="25"
+              viewBox="0 0 15 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.8125 1.44043L12.9023 12.5302L1.8125 23.62"
+                stroke="var(--bg-color)"
+                strokeWidth="2.21796"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
 
       {/* Social Icons Section */}
       <div className="contact-social-section">

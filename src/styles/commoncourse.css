@@ -7,6 +7,7 @@
   top: 0px;
   padding: 2rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* Ensure good text contrast in dark theme */
@@ -251,7 +252,7 @@
     top: 0;
     left: 0;
     padding: 10px 0;
-    text-align: center;
+    text-align: left;
     width: 100%;
   }
 
@@ -301,6 +302,7 @@
     left: 0;
     top: 0;
     padding: 1rem 0;
+    text-align: left;
   }
 
   .maincourse-container {
@@ -412,7 +414,7 @@
   .pagename {
     font-size: 10px;
     padding: 0.5rem 0;
-    text-align: center;
+    text-align: left;
     margin-left: 0;
   }
 
