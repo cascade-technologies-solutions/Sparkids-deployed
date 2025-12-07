@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/ContactHero.css';
 import { Link } from "react-router-dom";
-import contactHeroImage from '../Assets/contactus-img/contacthero.png';
+import contactHeroImage from '../Assets/contactus-img/contacthero.webp';
 
 const ContactUs = () => {
   return (
