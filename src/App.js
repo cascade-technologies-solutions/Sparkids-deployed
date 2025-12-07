@@ -39,10 +39,10 @@ const LoadingFallback = () => (
 function App() {
   const [isLive, setIsLive] = useState(false);
 
-  // Target Date: December 7, 2025 at 04:00 PM IST
+  // Target Date: December 7, 2025 at 01:25 PM IST
   // ISO 8601 format with timezone offset for IST (+05:30)
   // 07/12/2025 = December 7th, 2025
-  const targetDate = new Date("2025-12-07T16:00:00+05:30");
+  const targetDate = new Date("2025-12-07T13:25:00+05:30");
 
   useEffect(() => {
     const checkTime = () => {
