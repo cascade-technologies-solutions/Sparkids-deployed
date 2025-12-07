@@ -1,16 +1,16 @@
 
 import { Link } from "react-router-dom";
 import React from 'react';
-import brainleft from '../Assets/home-img/brain-img/brainleft.png';
-import brainright from '../Assets/home-img/brain-img/brainright.png';
-import bulb from '../Assets/home-img/brain-img/bulb.png';
-import pencil from '../Assets/home-img/brain-img/pencil.png';
-import puzzle from '../Assets/home-img/brain-img/puzzle.png';
-import puzzle2 from '../Assets/home-img/brain-img/puzzle2.png';
-import symbol from '../Assets/home-img/brain-img/symbol.png';
-import gear from '../Assets/home-img/brain-img/gear.png';
+import brainleft from '../Assets/home-img/brain-img/brainleft.webp';
+import brainright from '../Assets/home-img/brain-img/brainright.webp';
+import bulb from '../Assets/home-img/brain-img/bulb.webp';
+import pencil from '../Assets/home-img/brain-img/pencil.webp';
+import puzzle from '../Assets/home-img/brain-img/puzzle.webp';
+import puzzle2 from '../Assets/home-img/brain-img/puzzle2.webp';
+import symbol from '../Assets/home-img/brain-img/symbol.webp';
+import gear from '../Assets/home-img/brain-img/gear.webp';
 import '../styles/hero.css';
-import watermark from '../Assets/home-img/watermark.png';
+import watermark from '../Assets/home-img/watermark.webp';
 
 const Hero = () => {
   return (

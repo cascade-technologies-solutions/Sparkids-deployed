@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import '../styles/educator.css';
-import Educators from '../Assets/home-img/educators.png';
-import Shape from '../Assets/home-img/edushape.png';
+import Educators from '../Assets/home-img/educators.webp';
+import Shape from '../Assets/home-img/edushape.webp';
 
 const Educator = () => {
   return (

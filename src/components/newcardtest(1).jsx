@@ -1,15 +1,16 @@
 import React, { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/newcardtest(1).css";
-import courseAge from "../Assets/home-img/course-age.png";
-import courseLevel from "../Assets/home-img/course-level.png";
-import courseTime from "../Assets/home-img/course-time.png";
-import courseLearnMore from "../Assets/home-img/course-learnmore.png";
-import vedicMathsImage from "../Assets/home-img/courseimg2.png";
-import handwritingImage from "../Assets/home-img/courseimg4.png";
-import rubiksCubeImage from "../Assets/home-img/courseimg3.png";
-import readingImage from "../Assets/home-img/courseimg5.png";
-import abacusImage from "../Assets/home-img/courseimg1.png";
+import courseAge from "../Assets/home-img/course-age.webp";
+import courseLevel from "../Assets/home-img/course-level.webp";
+import courseTime from "../Assets/home-img/course-time.webp";
+import courseLearnMore from "../Assets/home-img/course-learnmore.webp";
+import vedicMathsImage from "../Assets/home-img/courseimg2.webp";
+import handwritingImage from "../Assets/home-img/courseimg4.webp";
+import rubiksCubeImage from "../Assets/home-img/courseimg3.webp";
+import readingImage from "../Assets/home-img/courseimg5.webp";
+import spellingBeeImage from "../Assets/home-img/courseimg6.webp";
+import abacusImage from "../Assets/home-img/courseimg1.webp";
 
 const BoxLayoutCard1 = () => {
   const cardContainerRef = useRef(null);
@@ -67,7 +68,7 @@ const BoxLayoutCard1 = () => {
       path: "/reading",
     },
     {
-      image: readingImage,
+      image: spellingBeeImage,
       title: "Spelling Bee",
       rating: "4.9",
       description: "Strengthen language and reading comprehension skills",

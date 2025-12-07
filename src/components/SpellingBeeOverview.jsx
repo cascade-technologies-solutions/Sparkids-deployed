@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/AbacusOverview.css"; // Using the same CSS file
-import point from "../Assets/courses-img/checkpoint.png"; // Importing the image
+import point from "../Assets/courses-img/checkpoint.webp"; // Importing the image
 
 const SpellingBeeOverview = () => {
     const [activeTab, setActiveTab] = useState("overview");

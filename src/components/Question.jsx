@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/question.css";
+<<<<<<< Updated upstream
 import questionbg from "../Assets/about-img/questionbg.png";
 import bgImage from "../Assets/about-img/quesmem.png";
 import bgImage2 from "../Assets/about-img/quesmem2.png";
@@ -10,6 +11,16 @@ import bgImage6 from "../Assets/about-img/quesmem6.png";
 // import { API_BASE_URL } from "../api"; // Commented out - using Google Sheets instead
 import { submitPhoneNumber } from "../utils/googleSheets";
 import { GOOGLE_SHEETS_CONFIG } from "../config/googleSheets";
+=======
+import questionbg from "../Assets/about-img/questionbg.webp";
+import bgImage from "../Assets/about-img/quesmem.webp";
+import bgImage2 from "../Assets/about-img/quesmem2.webp";
+import bgImage3 from "../Assets/about-img/quesmem3.webp";
+import bgImage4 from "../Assets/about-img/quesmem4.webp";
+import bgImage5 from "../Assets/about-img/quesmem5.webp";
+import bgImage6 from "../Assets/about-img/quesmem6.webp";
+import { API_BASE_URL } from "../api";
+>>>>>>> Stashed changes
 
 const QuestionSection = () => {
   const [contact, setcontact] = useState("");
