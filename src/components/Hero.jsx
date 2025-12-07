@@ -30,9 +30,9 @@ const Hero = () => {
           <Link to="/franchise" className="opportunity-btn glow">Get Franchise</Link>
         </div>
         <div className="hero-stats">
-          <p className="stats-text">
+          <div className="stats-text">
             <h1>9000+ Students <br /><span className="highlight"> have started their studies </span> </h1>
-          </p>
+          </div>
         </div>
         <div className="opportunity-note">
           <h1>
