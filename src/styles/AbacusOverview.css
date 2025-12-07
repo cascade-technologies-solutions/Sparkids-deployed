@@ -4,7 +4,7 @@
 }
 
 .tab-header {
-  gap: 40px;
+  gap: 60px;
   background: none;
   border-bottom: 2px solid rgba(238, 238, 238, 0.3);
   margin-left: -15rem;
@@ -309,14 +309,14 @@
 @media (max-width: 1024px) {
   .page-container {
     margin: 2rem 1.5rem;
-    margin-top: -80px;
+    margin-top: 2rem;
   }
 
   .tab-header {
     padding: 15px 20px;
     margin-left: 0;
     margin-bottom: 10px;
-    gap: 15px;
+    gap: 25px;
   }
 
   .tab-button {
@@ -401,14 +401,14 @@
 @media (max-width: 768px) {
   .page-container {
     margin: 1.5rem 1rem;
-    margin-top: -60px;
+    margin-top: 1.5rem;
   }
 
   .tab-header {
     padding: 12px 10px;
     margin-left: 0;
     margin-bottom: 15px;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
