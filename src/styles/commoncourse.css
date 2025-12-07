@@ -213,7 +213,154 @@
   }
 }
 
-@media (max-width: 768px) {
+/* Tablet: 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .maincourse-container {
+    padding: 30px 20px;
+    height: auto;
+  }
+
+  .maincourse-section {
+    width: 100%;
+    max-width: 950px;
+    height: auto;
+    min-height: 500px;
+    padding: 30px 40px;
+    margin: 0 auto;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+
+  .maincourse-content {
+    max-width: 48%;
+    flex: 1;
+  }
+
+  .maincourse-heading {
+    font-size: 42px;
+    margin-bottom: 15px;
+  }
+
+  .maincourse-points-list,
+  .maincourse-points-list span {
+    font-size: 20px;
+  }
+
+  .maincourse-subcontent li {
+    font-size: 20px;
+    line-height: 1.8;
+  }
+
+  .maincourse-subcontent span {
+    font-size: 20px;
+  }
+
+  .maincourse-button {
+    width: 320px;
+    height: 52px;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .maincourse-image {
+    max-width: 48%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .maincourse-image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .pagename {
+    font-size: 20px;
+    padding: 1.5rem 2rem;
+  }
+}
+
+/* Tablet: 768px */
+@media (min-width: 426px) and (max-width: 768px) {
+  .maincourse-container {
+    padding: 25px 15px;
+    height: auto;
+  }
+
+  .maincourse-section {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: auto;
+    padding: 25px 30px;
+    margin: 0 auto;
+    flex-direction: row;
+    box-sizing: border-box;
+  }
+
+  .maincourse-content {
+    max-width: 50%;
+    flex: 1;
+    padding-right: 15px;
+  }
+
+  .maincourse-heading {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .maincourse-points-list,
+  .maincourse-points-list span {
+    font-size: 18px;
+  }
+
+  .maincourse-subcontent li {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .maincourse-subcontent span {
+    font-size: 18px;
+  }
+
+  .maincourse-button {
+    width: 280px;
+    height: 50px;
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .maincourse-image {
+    max-width: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+  .maincourse-image img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .pagename {
+    font-size: 18px;
+    padding: 1rem 1.5rem;
+  }
+
+  .maincourse-points-wholelist {
+    padding: 0;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 425px) {
   .maincourse-container {
     flex-direction: column;
     padding: 20px;

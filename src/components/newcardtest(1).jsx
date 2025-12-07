@@ -216,21 +216,10 @@ const BoxLayoutCard1 = () => {
       </div>
       <div className="Card cube-container" ref={cardContainerRef}>
         {cards.map((card, index) => {
-          const offset = index - currentIndex;
-          const rotateY = offset * 25; // 25 degrees per card offset
-          const translateZ = -Math.abs(offset) * 50; // Move cards back in 3D space
-          const opacity = Math.max(0.3, 1 - Math.abs(offset) * 0.2);
-          const scale = Math.max(0.8, 1 - Math.abs(offset) * 0.1);
-          
           return (
             <div 
               className="product-box1 cube-card" 
               key={index}
-              style={{
-                transform: `perspective(1000px) rotateY(${rotateY}deg) translateZ(${translateZ}px) scale(${scale})`,
-                opacity: opacity,
-                transition: 'transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease',
-              }}
             >
               <img src={card.image} alt={card.title} className="product-image" />
               <div className="description-box1">

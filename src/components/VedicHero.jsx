@@ -33,10 +33,12 @@ const VedicHero = () => {
   }, []);
 
   const getImageStyles = () => {
-    if (screenWidth >= 768) {
+    if (screenWidth >= 1025) {
       return { width: "419px", height: "542px" };
-    } else if (screenWidth >= 426 && screenWidth < 768) {
-      return { width: "313px", height: "387px" };
+    } else if (screenWidth >= 769 && screenWidth <= 1024) {
+      return { width: "380px", height: "auto" };
+    } else if (screenWidth >= 426 && screenWidth <= 768) {
+      return { width: "320px", height: "auto" };
     } else if (screenWidth >= 375 && screenWidth <= 425) {
       return { width: "303px", height: "355px" };
     } else if (screenWidth >= 321 && screenWidth <= 375) {

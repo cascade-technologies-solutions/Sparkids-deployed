@@ -1,324 +1,144 @@
-import React, { useRef, useMemo } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, PerspectiveCamera, Environment } from '@react-three/drei';
-import * as THREE from 'three';
+import React, { useState, useEffect } from 'react';
+import hourglassBg from '../Assets/timer/hourglass-bg.png';
+import './ThreeHourglass.css';
 
-// Sand particle component
-function SandParticles({ count = 2000, progress = 0 }) {
-  const particlesRef = useRef();
+const ThreeHourglass = () => {
+  // Target date: December 7, 2025 at 02:30 PM
+  const targetDate = new Date('2025-12-07T14:30:00').getTime();
   
-  // Create particle positions
-  const { positions, velocities, inTopChamber } = useMemo(() => {
-    const positions = new Float32Array(count * 3);
-    const velocities = new Float32Array(count * 3);
-    const inTopChamber = new Array(count).fill(true);
-    
-    // Initialize particles in top chamber
-    for (let i = 0; i < count; i++) {
-      const angle = Math.random() * Math.PI * 2;
-      const radius = 0.3 + Math.random() * 0.2;
-      const height = 0.2 + Math.random() * 0.3;
-      
-      positions[i * 3] = Math.cos(angle) * radius;
-      positions[i * 3 + 1] = height;
-      positions[i * 3 + 2] = Math.sin(angle) * radius;
-      
-      velocities[i * 3] = 0;
-      velocities[i * 3 + 1] = 0;
-      velocities[i * 3 + 2] = 0;
-    }
-    
-    return { positions, velocities, inTopChamber };
-  }, [count]);
-  
-  useFrame((state, delta) => {
-    if (!particlesRef.current) return;
-    
-    const positions = particlesRef.current.geometry.attributes.position.array;
-    
-    // Update each particle
-    for (let i = 0; i < count; i++) {
-      const idx = i * 3;
-      let x = positions[idx];
-      let y = positions[idx + 1];
-      let z = positions[idx + 2];
-      
-      // Top chamber bounds (conical shape)
-      const topRadius = 0.5;
-      const topHeight = 0.6;
-      const topY = 0.3;
-      const distFromCenter = Math.hypot(x, z);
-      const relativeY = y - topY;
-      
-      // Check if particle is in top chamber
-      const maxRadiusAtY = topRadius * (1 - relativeY / topHeight);
-      const inTop = relativeY > 0 && relativeY < topHeight && distFromCenter < maxRadiusAtY;
-      
-      if (inTop && inTopChamber[i]) {
-        // Particle is in top chamber - check if it should fall through neck
-        const neckY = 0.05;
-        const neckRadius = 0.03;
-        
-        if (y < neckY && distFromCenter < neckRadius) {
-          // Particle passes through neck
-          inTopChamber[i] = false;
-          velocities[i * 3 + 1] = -0.5; // Start falling
-        } else if (y > neckY) {
-          // Particle moves down in top chamber
-          velocities[i * 3 + 1] -= delta * 0.3; // Gravity
-        }
-      } else if (!inTopChamber[i]) {
-        // Particle is falling or in bottom chamber
-        const bottomY = -0.3;
-        const bottomHeight = 0.6;
-        const bottomRadius = 0.5;
-        const relativeBottomY = y - bottomY;
-        
-        // Check if particle hits bottom or pile
-        const maxRadiusAtBottomY = bottomRadius * (relativeBottomY / bottomHeight);
-        const pileHeight = Math.max(0, (1 - progress) * 0.4); // Pile grows as sand accumulates
-        const angleOfRepose = 0.6; // Sand pile angle
-        
-        if (relativeBottomY < pileHeight) {
-          // Particle is on or below pile surface
-          const pileRadius = pileHeight * angleOfRepose;
-          if (distFromCenter < pileRadius) {
-            // Particle is on pile - adjust position to pile surface
-            const targetY = bottomY + pileHeight - (distFromCenter / angleOfRepose);
-            if (y < targetY) {
-              y = targetY;
-              velocities[i * 3 + 1] = 0;
-            } else {
-              velocities[i * 3 + 1] *= 0.9; // Damping
-            }
-          } else {
-            // Particle is outside pile - continue falling
-            velocities[i * 3 + 1] -= delta * 0.5;
-          }
-        } else if (relativeBottomY < bottomHeight && distFromCenter < maxRadiusAtBottomY) {
-          // Particle is in bottom chamber, falling
-          velocities[i * 3 + 1] -= delta * 0.5;
-        } else {
-          // Particle hit bottom or side
-          velocities[i * 3 + 1] = 0;
-        }
-        
-        // Apply velocity
-        y += velocities[i * 3 + 1] * delta;
-        
-        // Add slight horizontal movement for realism
-        velocities[i * 3] *= 0.95;
-        velocities[i * 3 + 2] *= 0.95;
-        x += velocities[i * 3] * delta;
-        z += velocities[i * 3 + 2] * delta;
-      }
-      
-      // Update positions
-      positions[idx] = x;
-      positions[idx + 1] = y;
-      positions[idx + 2] = z;
-    }
-    
-    particlesRef.current.geometry.attributes.position.needsUpdate = true;
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+    total: 0
   });
-  
-  return (
-    <points ref={particlesRef}>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={count}
-          array={positions}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.015}
-        color="#fdd835"
-        sizeAttenuation={true}
-        transparent
-        opacity={0.9}
-      />
-    </points>
-  );
-}
+  const [isExpired, setIsExpired] = useState(false);
 
-// Glass container component
-function GlassContainer() {
-  const topChamberRef = useRef();
-  const bottomChamberRef = useRef();
-  const neckRef = useRef();
-  
-  // Create glass material
-  const glassMaterial = useMemo(() => {
-    return new THREE.MeshPhysicalMaterial({
-      transmission: 0.95,
-      opacity: 0.1,
-      transparent: true,
-      roughness: 0.1,
-      metalness: 0,
-      clearcoat: 1,
-      clearcoatRoughness: 0.1,
-      ior: 1.5,
-      thickness: 0.05,
-    });
-  }, []);
-  
-  // Top chamber geometry (inverted cone)
-  const topGeometry = useMemo(() => {
-    const shape = new THREE.Shape();
-    const radius = 0.5;
-    const height = 0.6;
-    shape.moveTo(0, 0);
-    shape.lineTo(radius, 0);
-    shape.lineTo(0.03, height);
-    shape.lineTo(0, height);
-    shape.lineTo(0, 0);
+  useEffect(() => {
+    const calculateTimeLeft = () => {
+      const now = Date.now();
+      const difference = targetDate - now;
+
+      if (difference <= 0) {
+        setIsExpired(true);
+        return {
+          days: 0,
+          hours: 0,
+          minutes: 0,
+          seconds: 0,
+          total: 0
+        };
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      return {
+        days,
+        hours,
+        minutes,
+        seconds,
+        total: difference
+      };
+    };
+
+    // Calculate immediately
+    setTimeLeft(calculateTimeLeft());
+
+    // Update every second
+    const timer = setInterval(() => {
+      const newTimeLeft = calculateTimeLeft();
+      setTimeLeft(newTimeLeft);
+      
+      if (newTimeLeft.total <= 0) {
+        clearInterval(timer);
+      }
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
+  const formatTime = () => {
+    if (isExpired) {
+      return 'Time\'s Up!';
+    }
     
-    const geometry = new THREE.LatheGeometry(
-      [
-        new THREE.Vector2(0.5, 0),
-        new THREE.Vector2(0.03, 0.6),
-        new THREE.Vector2(0, 0.6),
-      ],
-      32
-    );
-    return geometry;
-  }, []);
-  
-  // Bottom chamber geometry (cone)
-  const bottomGeometry = useMemo(() => {
-    const geometry = new THREE.LatheGeometry(
-      [
-        new THREE.Vector2(0.03, 0),
-        new THREE.Vector2(0.5, 0.6),
-        new THREE.Vector2(0, 0.6),
-      ],
-      32
-    );
-    return geometry;
-  }, []);
-  
-  // Neck geometry (cylinder)
-  const neckGeometry = useMemo(() => {
-    return new THREE.CylinderGeometry(0.03, 0.03, 0.1, 16);
-  }, []);
-  
-  return (
-    <group>
-      {/* Top chamber */}
-      <mesh
-        ref={topChamberRef}
-        geometry={topGeometry}
-        material={glassMaterial}
-        position={[0, 0.3, 0]}
-      />
-      
-      {/* Neck */}
-      <mesh
-        ref={neckRef}
-        geometry={neckGeometry}
-        material={glassMaterial}
-        position={[0, 0.05, 0]}
-      />
-      
-      {/* Bottom chamber */}
-      <mesh
-        ref={bottomChamberRef}
-        geometry={bottomGeometry}
-        material={glassMaterial}
-        position={[0, -0.3, 0]}
-      />
-    </group>
-  );
-}
+    const { days, hours, minutes, seconds } = timeLeft;
+    
+    if (days > 0) {
+      return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    } else if (hours > 0) {
+      return `${hours}h ${minutes}m ${seconds}s`;
+    } else if (minutes > 0) {
+      return `${minutes}m ${seconds}s`;
+    } else {
+      return `${seconds}s`;
+    }
+  };
 
-// Stand component
-function Stand() {
-  const standMaterial = useMemo(() => {
-    return new THREE.MeshStandardMaterial({
-      color: '#5d4037',
-      roughness: 0.7,
-      metalness: 0.3,
-    });
-  }, []);
-  
-  return (
-    <group>
-      {/* Top plate */}
-      <mesh
-        position={[0, 0.65, 0]}
-        material={standMaterial}
-      >
-        <cylinderGeometry args={[0.55, 0.55, 0.02, 32]} />
-      </mesh>
-      
-      {/* Bottom plate */}
-      <mesh
-        position={[0, -0.65, 0]}
-        material={standMaterial}
-      >
-        <cylinderGeometry args={[0.55, 0.55, 0.02, 32]} />
-      </mesh>
-      
-      {/* Left pillar */}
-      <mesh
-        position={[-0.5, 0, 0]}
-        material={standMaterial}
-      >
-        <boxGeometry args={[0.05, 1.3, 0.05]} />
-      </mesh>
-      
-      {/* Right pillar */}
-      <mesh
-        position={[0.5, 0, 0]}
-        material={standMaterial}
-      >
-        <boxGeometry args={[0.05, 1.3, 0.05]} />
-      </mesh>
-    </group>
-  );
-}
+  // Calculate animation duration based on time left (max 20 seconds for animation)
+  const animationDuration = Math.min(20, Math.max(1, timeLeft.total / 1000));
 
-// Main hourglass scene
-function HourglassScene({ progress = 0 }) {
   return (
-    <>
-      <PerspectiveCamera makeDefault position={[1.5, 0, 2]} fov={50} />
-      <ambientLight intensity={0.5} />
-      <directionalLight position={[5, 5, 5]} intensity={1} castShadow />
-      <pointLight position={[-5, 5, -5]} intensity={0.5} />
-      
-      <Stand />
-      <GlassContainer />
-      <SandParticles count={2000} progress={progress} />
-      
-      <OrbitControls
-        enablePan={false}
-        enableZoom={true}
-        enableRotate={true}
-        minDistance={2}
-        maxDistance={5}
-        autoRotate
-        autoRotateSpeed={0.5}
-      />
-      
-      <Environment preset="sunset" />
-    </>
-  );
-}
-
-// Main component
-const ThreeHourglass = ({ progress = 0 }) => {
-  return (
-    <div style={{ width: '100%', height: '400px', margin: '2rem 0' }}>
-      <Canvas
-        gl={{ antialias: true, alpha: true }}
-        dpr={[1, 2]}
-        style={{ background: 'transparent' }}
-      >
-        <HourglassScene progress={progress} />
-      </Canvas>
+    <div className="hourglass-container">
+      <h1 className="hourglass-title">Hourglass Countdown Timer</h1>
+      <div className="container-glass">
+        <div 
+          className="glass" 
+          style={{ backgroundImage: `url(${hourglassBg})` }}
+        ></div>
+        <div className="get-hourglass">
+          <svg width="140px" height="250px" viewBox="0 0 14 18">
+            <defs></defs>
+            <g id="sandclock" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+              <path 
+                d="M13.0986667,16.465 L12.7226667,16.465 C12.6796667,16.031 12.5996667,15.6073333 12.4886667,15.1963333 C12.084,13.6953333 11.269,12.3646667 10.352,11.3396667 C9.52833333,10.4183333 8.623,9.74333333 7.859,9.41433333 C7.859,9.41433333 7.56766667,9.20133333 7.56766667,8.97866667 C7.56766667,8.75633333 7.859,8.54533333 7.859,8.54533333 C9.687,7.74033333 12.3786667,4.93333333 12.7223333,1.50133333 L13.0986667,1.50133333 C13.5006667,1.50133333 13.8266667,1.17533333 13.8266667,0.773666667 C13.8266667,0.371666667 13.5006667,0.0456666667 13.0986667,0.0456666667 L0.776,0.0456666667 C0.374,0.0456666667 0.048,0.371666667 0.048,0.773666667 C0.048,1.17533333 0.374,1.50133333 0.776,1.50133333 L1.152,1.50133333 C1.49233333,4.93666667 4.15866667,7.745 6.00533333,8.54733333 C6.00533333,8.54733333 6.31133333,8.737 6.31133333,8.97866667 C6.31133333,9.22033333 6.01566667,9.421 6.01566667,9.421 C5.26233333,9.75266667 4.36333333,10.4246667 3.54166667,11.3396667 C2.62066667,12.3646667 1.79833333,13.6953333 1.389,15.1963333 C1.277,15.6073333 1.196,16.031 1.15266667,16.465 L0.776,16.465 C0.374,16.465 0.048,16.791 0.048,17.1926667 C0.048,17.5946667 0.374,17.9206667 0.776,17.9206667 L13.0986667,17.9206667 C13.5006667,17.9206667 13.8266667,17.5946667 13.8266667,17.1926667 C13.8263333,16.791 13.5006667,16.465 13.0986667,16.465 L13.0986667,16.465 Z M2.47033333,16.4923333 L1.892,16.4923333 C1.92166667,16.023 1.97666667,15.5933333 2.053,15.1963333 C2.273,14.054 2.67366667,13.1896667 3.18666667,12.4753333 C3.47733333,12.0703333 3.80133333,11.6873333 4.14033333,11.3396667 C4.80733333,10.6553333 5.88879069,10.1021427 6.19133333,9.82066667 C6.49387598,9.53919067 6.65833333,9.39266667 6.65833333,8.997 C6.65833333,8.60133333 6.45611593,8.47363293 6.03570577,8.2112428 C5.61529562,7.94885266 4.034,6.69966667 3.17433333,5.49566667 C2.488,4.53433333 2.00533333,3.328 1.891,1.50166667 L11.982,1.50166667 C11.8663333,3.322 11.378,4.52866667 10.687,5.49133333 C9.82466667,6.69266667 8.52740499,7.75976575 7.89733907,8.12268078 C7.26727316,8.48559582 7.22133333,8.61 7.22133333,8.98333333 C7.22133333,9.35666667 7.41784912,9.52330154 7.89733907,9.82066691 C8.37682903,10.1180323 9.08133333,10.6486667 9.75266667,11.3393333 C10.0873333,11.6833333 10.4066667,12.0626667 10.6933333,12.4633333 C11.2053333,13.179 11.6043333,14.0463333 11.823,15.196 C11.8983333,15.5926667 11.9523333,16.0223333 11.9816667,16.492 L11.4053333,16.492 C4.14033338,16.4920002 5.86059567,16.4920002 2.47033333,16.4923333 Z" 
+                id="Shape" 
+                fill="transparent"
+              ></path>
+              
+              <g id="sand">
+                <path 
+                  d="M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;" 
+                  id="Path-26" 
+                  fill={isExpired ? "#C62626" : "#e2cba5"}
+                >
+                  {!isExpired && (
+                    <>
+                      <animate 
+                        attributeName="d" 
+                        dur={`${animationDuration}s`} 
+                        repeatCount="indefinite" 
+                        keyTimes="0;.01;.2;.4;.7;.8;.99;1" 
+                        values="M2.33630371,3.07006836 C2.33630371,3.07006836 5.43261719,3.33813477 6.80957031,3.33813477 C8.18652344,3.33813477 11.3754883,3.07006836 11.3754883,3.07006836 C11.3754883,3.07006836 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,8.35028076 L7.09265137,8.46459961 L6.87243652,8.46459961 L6.87243652,8.35028076 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.33630371,3.07006836 2.33630371,3.07006836 Z; M2.375,3.11462402 C2.375,3.11462402 5.71569824,3.44421387 7.09265137,3.44421387 C8.46960449,3.44421387 11.4150391,3.31262207 11.4150391,3.31262207 C11.4150391,3.31262207 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.5496216 L7.09265137,16.47052 L6.87243652,16.47052 L6.87243652,15.5496216 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.375,3.11462402 2.375,3.11462402 Z; M2.49230957,3.31262207 C2.49230957,3.31262207 5.71569824,3.66851807 7.09265137,3.66851807 C8.46960449,3.66851807 11.3153076,3.53222656 11.3153076,3.53222656 C11.3153076,3.53222656 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,15.149231 L7.9152832,16.47052 L6.10144043,16.47052 L6.87243652,15.149231 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.49230957,3.31262207 2.49230957,3.31262207 Z; M2.98474121,4.37164307 C2.98474121,4.37164307 5.49548338,4.7074585 6.87243651,4.7074585 C8.24938963,4.7074585 10.8119509,4.64428711 10.8119509,4.64428711 C10.8119509,4.64428711 10.8122559,4.96514893 9.58630371,6.16516113 C8.36035156,7.36517334 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,12.5493774 L9.36248779,16.47052 L4.5581665,16.47052 L6.87243652,12.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 4.9704053,7.27703707 3.96130371,5.96057129 C2.5045166,4.06005859 2.98474121,4.37164307 2.98474121,4.37164307 Z; M4.49743651,6.36560059 C4.49743651,6.36560059 5.63000487,6.72412109 7.00695799,6.72412109 C8.38391112,6.72412109 9.56188963,6.36560059 9.56188963,6.36560059 C9.56188963,6.36560059 9.48870848,6.54571533 8.79962157,7.09661865 C8.11053465,7.64752197 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.01727463,8.16043491 4.82800292,6.81622307 C4.42932128,6.36560059 4.49743651,6.36560059 4.49743651,6.36560059 Z; M5.87017821,7.51904297 C5.87017821,7.51904297 6.14080809,7.70904542 6.87243651,7.64453126 C7.60406493,7.5800171 7.47180174,7.51904297 7.47180174,7.51904297 C7.47180174,7.51904297 8.51336669,7.23876953 7.82427977,7.78967285 C7.13519286,8.34057617 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 6.66632079,8.14239502 6.34619139,7.953125 C5.84610144,7.65745695 5.87017821,7.51904297 5.87017821,7.51904297 Z; M7.00695799,8.06219482 C7.00695799,8.06219482 6.27532958,8.12670898 7.00695799,8.06219482 C7.73858641,7.99768066 7.00695799,8.06219482 7.00695799,8.06219482 C7.00695799,8.06219482 7.78173827,7.71142576 7.09265135,8.26232908 C6.40356444,8.8132324 7.09265137,8.2623291 7.09265137,8.2623291 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,8.2623291 C6.80957031,8.2623291 7.1925659,8.45159912 6.87243651,8.2623291 C6.37234656,7.96666105 7.00695799,8.06219482 7.00695799,8.06219482 Z; M7.00695799,10.3484497 C7.00695799,10.3484497 6.27532958,10.4129639 7.00695799,10.3484497 C7.73858641,10.2839355 7.00695799,10.3484497 7.00695799,10.3484497 C7.00695799,10.3484497 7.78173827,9.99768063 7.09265135,10.548584 C6.40356444,11.0994873 7.09265137,10.548584 7.09265137,10.548584 L7.09265137,10.5493774 L11.4924319,16.4705197 L2.52148436,16.4705197 L6.87243652,10.5493774 L6.80957031,10.548584 C6.80957031,10.548584 7.1925659,10.737854 6.87243651,10.548584 C6.37234656,10.2529159 7.00695799,10.3484497 7.00695799,10.3484497 Z;" 
+                      />
+                      <animate 
+                        attributeName="fill" 
+                        dur={`${animationDuration}s`} 
+                        repeatCount="indefinite" 
+                        keyTimes="0;.5;1" 
+                        values="#e2cba5;#e2cba5;#C62626;"
+                      />
+                    </>
+                  )}
+                </path>
+              </g>
+            </g>
+          </svg>
+        </div>
+        
+        <div className="txt-center">
+          <span id="timer">
+            <span id="time">{formatTime()}</span>    
+          </span>
+          <div className="target-date">
+            Target: December 7, 2025 at 02:30 PM
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
